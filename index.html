@@ -1,0 +1,2923 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ігор Матрофайло — AI-дослідник</title><!-- v3 -->
+<style>
+  :root {
+    --ivory: #FAF9F5;
+    --paper: #FFFFFF;
+    --slate: #141413;
+    --clay: #D97757;
+    --clay-d: #B85C3E;
+    --clay-l: #FDF0EB;
+    --oat: #E3DACC;
+    --olive: #788C5D;
+    --olive-l: #EEF3E8;
+    --g100: #F0EEE6;
+    --g200: #E6E3DA;
+    --g300: #D1CFC5;
+    --g500: #87867F;
+    --g700: #3D3D3A;
+    --blue: #4A7CC7;
+    --blue-l: #EEF3FC;
+    --serif: ui-serif, Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
+
+  /* HERO */
+  .hero { max-width: 1100px; margin: 0 auto; padding: 56px 52px 48px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
+  .hero-eyebrow { font-family: var(--mono); font-size: 11.5px; color: var(--clay); letter-spacing: 0.04em; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+  .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1.5px; background: var(--clay); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(44px, 6vw, 80px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .hero h1 em { font-style: italic; color: var(--clay); }
+  .hero-sub { font-size: 17px; color: var(--g500); max-width: 480px; line-height: 1.6; margin-bottom: 28px; }
+  .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 999px; border: 1.5px solid var(--g300); font-size: 13.5px; text-decoration: none; color: var(--slate); background: var(--paper); transition: all 0.15s; font-weight: 500; }
+  .hero-link:hover { border-color: var(--clay); color: var(--clay); background: var(--clay-l); }
+  .hero-stats { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; text-align: right; }
+  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; min-width: 110px; }
+  .stat-num { font-family: var(--serif); font-size: 30px; font-weight: 500; color: var(--slate); line-height: 1; }
+  .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
+
+  /* MAIN */
+  .content { max-width: 1100px; margin: 0 auto; padding: 40px 52px; }
+
+  /* FILTERS */
+  .toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+  .filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .filter-label { font-size: 12px; color: var(--g500); margin-right: 2px; }
+  .filter-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300); background: var(--paper); font-size: 13px; color: var(--g700); cursor: pointer; transition: all 0.15s; font-family: var(--sans); }
+  .filter-btn .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .filter-btn:hover { border-color: var(--oat); background: var(--g100); }
+  .filter-btn.active { border-color: var(--slate); background: var(--slate); color: white; }
+  .dot-company { background: var(--clay); }
+  .dot-topic { background: var(--olive); }
+  .dot-product { background: var(--blue); }
+  .legend { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  /* BUBBLE CANVAS */
+  .bubble-wrap { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; position: relative; overflow: hidden; margin-bottom: 40px; }
+  #bubble-canvas { display: block; width: 100%; cursor: default; }
+  .bubble-hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); font-size: 11px; color: var(--g500); font-family: var(--mono); background: var(--ivory); padding: 4px 12px; border-radius: 999px; border: 1px solid var(--g300); pointer-events: none; white-space: nowrap; }
+
+  /* TOOLTIP */
+  #tooltip { position: fixed; background: var(--slate); color: white; padding: 8px 13px; border-radius: 8px; font-size: 12.5px; pointer-events: none; display: none; z-index: 1000; max-width: 220px; line-height: 1.4; }
+  #tooltip strong { display: block; margin-bottom: 2px; font-size: 13px; }
+  #tooltip span { color: #ccc; font-size: 11.5px; }
+
+  /* SIDEBAR */
+  #sidebar { position: fixed; top: 0; right: -420px; width: 400px; height: 100vh; background: var(--paper); border-left: 1.5px solid var(--g300); z-index: 500; transition: right 0.28s cubic-bezier(0.4,0,0.2,1); overflow-y: auto; display: flex; flex-direction: column; }
+  #sidebar.open { right: 0; }
+  .sidebar-head { padding: 22px 22px 18px; border-bottom: 1.5px solid var(--g200); position: sticky; top: 0; background: var(--paper); z-index: 10; }
+  .sidebar-close { position: absolute; top: 18px; right: 18px; width: 28px; height: 28px; border-radius: 50%; background: var(--g100); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--g700); transition: background 0.12s; }
+  .sidebar-close:hover { background: var(--g200); }
+  .sidebar-tag { font-size: 10.5px; font-family: var(--mono); padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
+  .sidebar-tag.company { background: var(--clay-l); color: var(--clay-d); }
+  .sidebar-tag.topic { background: var(--olive-l); color: #3D5A2A; }
+  .sidebar-tag.product { background: var(--blue-l); color: #1E40AF; }
+  .sidebar-head h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 6px; padding-right: 36px; }
+  .sidebar-count { font-size: 13px; color: var(--g500); font-family: var(--mono); }
+  .sidebar-body { padding: 18px 22px; flex: 1; }
+  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em; color: var(--g500); margin-bottom: 10px; margin-top: 4px; }
+
+  /* POST CARDS */
+  .post-list { display: flex; flex-direction: column; gap: 7px; max-height: 65vh; overflow-y: auto; padding-right: 4px; }
+  .post-list::-webkit-scrollbar { width: 4px; }
+  .post-list::-webkit-scrollbar-track { background: var(--g100); border-radius: 2px; }
+  .post-list::-webkit-scrollbar-thumb { background: var(--g300); border-radius: 2px; }
+  .post-card { display: block; background: var(--g100); border-radius: 8px; padding: 10px 12px; font-size: 12.5px; color: var(--slate); line-height: 1.45; border-left: 2px solid var(--g300); text-decoration: none; transition: border-color 0.15s, background 0.12s; }
+  .post-card:hover { border-left-color: var(--clay); background: var(--clay-l); }
+  .post-date { font-size: 10px; color: var(--g500); font-family: var(--mono); margin-top: 4px; }
+  .post-no-link { cursor: default; opacity: 0.6; }
+
+  /* OVERLAY */
+  #overlay { position: fixed; inset: 0; background: rgba(20,20,19,0.12); z-index: 400; display: none; backdrop-filter: blur(1px); }
+  #overlay.show { display: block; }
+
+  /* FOOTER */
+  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--g500); flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--clay); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; padding: 28px 20px 24px; }
+    .hero-stats { flex-direction: row; align-items: flex-start; text-align: left; }
+    .content { padding: 24px 20px; }
+    footer { padding: 16px 20px 28px; flex-direction: column; align-items: flex-start; }
+    #sidebar { width: 100%; right: -100%; }
+  }
+</style>
+</head>
+<body>
+<div id="tooltip"><strong id="tt-name"></strong><span id="tt-count"></span></div>
+<div id="overlay" onclick="closeSidebar()"></div>
+<div id="sidebar">
+  <div class="sidebar-head">
+    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+    <div id="sb-tag" class="sidebar-tag company"></div>
+    <h3 id="sb-title"></h3>
+    <div class="sidebar-count" id="sb-count"></div>
+  </div>
+  <div class="sidebar-body">
+    <div class="sidebar-section-title">Останні пости в Telegram</div>
+    <div id="sb-posts" class="post-list"></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div>
+    <div class="hero-eyebrow">@imatrofAI · YouTube + Telegram</div>
+    <h1>Ігор Матрофайло<br>досліджує <em>AI</em></h1>
+    <p class="hero-sub">Теми, компанії та тренди що я висвітлюю у своїх постах і відео. Розмір бульбашки = кількість матеріалів.</p>
+    <div class="hero-links">
+      <a href="https://www.youtube.com/@imatrof" target="_blank" class="hero-link">▶ YouTube</a>
+      <a href="https://t.me/imatrofAI" target="_blank" class="hero-link">✈ Telegram</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">1 322</div><div class="stat-label">постів</div></div>
+    <div class="stat"><div class="stat-num">151</div><div class="stat-label">відео-скрипти</div></div>
+    <div class="stat"><div class="stat-num">49</div><div class="stat-label">тем</div></div>
+  </div>
+</header>
+
+<main class="content">
+  <div class="toolbar">
+    <div class="filters">
+      <span class="filter-label">Показати:</span>
+      <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
+      <button class="filter-btn" onclick="setFilter('company',this)"><span class="dot dot-company"></span> Компанії</button>
+      <button class="filter-btn" onclick="setFilter('topic',this)"><span class="dot dot-topic"></span> Теми</button>
+      <button class="filter-btn" onclick="setFilter('product',this)"><span class="dot dot-product"></span> Продукти</button>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--clay)"></div> Компанії</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--olive)"></div> Теми</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Продукти</div>
+    </div>
+  </div>
+  <div class="bubble-wrap">
+    <canvas id="bubble-canvas"></canvas>
+    <div class="bubble-hint">натисніть на бульбашку щоб відкрити пости</div>
+  </div>
+</main>
+
+<footer>
+  <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
+  <span>Дані: 2024–2026 · <a href="https://github.com/imatrofailo" target="_blank">GitHub</a></span>
+</footer>
+
+<script>
+const TOPICS = [
+  {
+    "id": "community",
+    "label": "Спільнота",
+    "count": 365,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Спільноти на різних платформах — де ми живемо?",
+        "date": "2024-08-25",
+        "url": "https://t.me/imatrofAI/138"
+      },
+      {
+        "title": "НОВИНИ AI вже на каналі — листопадовий випуск",
+        "date": "2025-11-16",
+        "url": "https://t.me/imatrofAI/1749"
+      },
+      {
+        "title": "Недільний AI-чекін — підсумки середини листопада",
+        "date": "2025-11-16",
+        "url": "https://t.me/imatrofAI/1748"
+      },
+      {
+        "title": "Зустріч з Майком — обмін досвідом YouTuber-ів",
+        "date": "2025-11-15",
+        "url": "https://t.me/imatrofAI/1747"
+      },
+      {
+        "title": "Ринок IT праці: #OpenToWork та ШІ-рекрутинг",
+        "date": "2025-11-02",
+        "url": "https://t.me/imatrofAI/1722"
+      },
+      {
+        "title": "IT Arena 2025 у Львові — анонс та виступи",
+        "date": "2025-10-30",
+        "url": "https://t.me/imatrofAI/1739"
+      },
+      {
+        "title": "НОВИНИ AI вже на каналі — жовтневий випуск",
+        "date": "2025-10-26",
+        "url": "https://t.me/imatrofAI/1711"
+      },
+      {
+        "title": "Недільний AI-чекін — середина жовтня",
+        "date": "2025-10-26",
+        "url": "https://t.me/imatrofAI/1710"
+      },
+      {
+        "title": "Anthropic знову тихенько викотили нову",
+        "date": "2025-10-16",
+        "url": "https://t.me/imatrofAI/1852"
+      },
+      {
+        "title": "Хороші новини veo 31 вже",
+        "date": "2025-10-15",
+        "url": "https://t.me/imatrofAI/1851"
+      },
+      {
+        "title": "А ось і перші великі",
+        "date": "2025-10-15",
+        "url": "https://t.me/imatrofAI/1850"
+      },
+      {
+        "title": "А поки ми чекаємо виходу",
+        "date": "2025-10-15",
+        "url": "https://t.me/imatrofAI/1849"
+      }
+    ]
+  },
+  {
+    "id": "openai",
+    "label": "OpenAI",
+    "count": 163,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Claude Projects vs GPTs vs Gemini Gems",
+        "date": "2024-08-31",
+        "url": "https://t.me/imatrofAI/158"
+      },
+      {
+        "title": "ChatGPT — 2 роки та плани на 1 мільярд користувачів",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/531"
+      },
+      {
+        "title": "OpenAI — містичні повідомлення та нові чутки",
+        "date": "2024-10-26",
+        "url": "https://t.me/imatrofAI/346"
+      },
+      {
+        "title": "OpenAI Advanced Voice для всіх та код у ChatGPT",
+        "date": "2024-11-24",
+        "url": "https://t.me/imatrofAI/485"
+      },
+      {
+        "title": "GPT 5.5 — новий реліз від OpenAI",
+        "date": "2026-04-23",
+        "url": "https://t.me/imatrofAI/2640"
+      },
+      {
+        "title": "OpenAI Workspace Agents — відповідь на Anthropic Cowork",
+        "date": "2026-04-22",
+        "url": "https://t.me/imatrofAI/2638"
+      },
+      {
+        "title": "GPT Images 2.0 — нова модель генерації зображень від OpenAI",
+        "date": "2026-04-21",
+        "url": "https://t.me/imatrofAI/2634"
+      },
+      {
+        "title": "OpenAI Codex став агентною платформою для всього",
+        "date": "2026-04-16",
+        "url": "https://t.me/imatrofAI/2622"
+      },
+      {
+        "title": "OpenAI vs Anthropic: хто першим до IPO",
+        "date": "2026-04-14",
+        "url": "https://t.me/imatrofAI/2609"
+      },
+      {
+        "title": "Скидання лімітів у Codex — маленьке великоднє свято",
+        "date": "2026-04-11",
+        "url": "https://t.me/imatrofAI/2605"
+      },
+      {
+        "title": "ChatGPT в Apple CarPlay — тестую",
+        "date": "2026-04-08",
+        "url": "https://t.me/imatrofAI/2595"
+      },
+      {
+        "title": "ChatGPT — перший застосунок вранці",
+        "date": "2025-11-09",
+        "url": "https://t.me/imatrofAI/1737"
+      }
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "label": "Інфраструктура",
+    "count": 118,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "ChatGPT — 2 роки та плани на 1 мільярд користувачів",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/531"
+      },
+      {
+        "title": "Andreessen Horowitz (a16z) — топ AI сервісів 2024",
+        "date": "2024-08-29",
+        "url": "https://t.me/imatrofAI/151"
+      },
+      {
+        "title": "Progressive AI — прогрес генеративного ШІ",
+        "date": "2024-11-28",
+        "url": "https://t.me/imatrofAI/510"
+      },
+      {
+        "title": "OpenAI — містичні повідомлення та нові чутки",
+        "date": "2024-10-26",
+        "url": "https://t.me/imatrofAI/346"
+      },
+      {
+        "title": "Робот G1 від Unitree — нові тести спритності",
+        "date": "2025-11-08",
+        "url": "https://t.me/imatrofAI/1736"
+      },
+      {
+        "title": "AI-бульбашка чи коловорот грошей?",
+        "date": "2025-10-29",
+        "url": "https://t.me/imatrofAI/1716"
+      },
+      {
+        "title": "Як працюють трансформери — наочний приклад з Reddit",
+        "date": "2025-10-27",
+        "url": "https://t.me/imatrofAI/1713"
+      },
+      {
+        "title": "Тренування роботів на фізичних даних",
+        "date": "2025-10-24",
+        "url": "https://t.me/imatrofAI/1707"
+      },
+      {
+        "title": "OpenAI та Retro Biosciences — ШІ у медицині",
+        "date": "2025-10-17",
+        "url": "https://t.me/imatrofAI/1695"
+      },
+      {
+        "title": "Агент видалив базу даних — оновлення безпеки",
+        "date": "2025-10-05",
+        "url": "https://t.me/imatrofAI/1646"
+      },
+      {
+        "title": "Чому LLM генерують різні відповіді? (Технічне пояснення)",
+        "date": "2025-09-28",
+        "url": "https://t.me/imatrofAI/1648"
+      },
+      {
+        "title": "OpenAI Open Source: gpt-oss-1 та gpt-oss-mini",
+        "date": "2025-09-27",
+        "url": "https://t.me/imatrofAI/1446"
+      }
+    ]
+  },
+  {
+    "id": "philosophy",
+    "label": "Філософія AI",
+    "count": 84,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "LinkedIn та приховані інструкції — кейс Кемерона Маттіса",
+        "date": "2025-11-14",
+        "url": "https://t.me/imatrofAI/1744"
+      },
+      {
+        "title": "AI-пошук в Google: Менше кліків по лінках?",
+        "date": "2025-11-07",
+        "url": "https://t.me/imatrofAI/1735"
+      },
+      {
+        "title": "AI-бульбашка чи коловорот грошей?",
+        "date": "2025-10-29",
+        "url": "https://t.me/imatrofAI/1716"
+      },
+      {
+        "title": "Як працюють трансформери — наочний приклад з Reddit",
+        "date": "2025-10-27",
+        "url": "https://t.me/imatrofAI/1713"
+      },
+      {
+        "title": "Монополія Chrome та виклик AI-браузерів",
+        "date": "2025-10-19",
+        "url": "https://t.me/imatrofAI/1702"
+      },
+      {
+        "title": "Дослідження Anthropic: швидкість розуму ШІ",
+        "date": "2025-10-15",
+        "url": "https://t.me/imatrofAI/1687"
+      },
+      {
+        "title": "Сем Альтман про ментальне здоров'я та сон",
+        "date": "2025-10-13",
+        "url": "https://t.me/imatrofAI/1679"
+      },
+      {
+        "title": "Дослідження: Як люди реально використовують ChatGPT",
+        "date": "2025-10-11",
+        "url": "https://t.me/imatrofAI/1673"
+      },
+      {
+        "title": "AI забирає роботу? Аналіз 62 млн резюме",
+        "date": "2025-09-30",
+        "url": "https://t.me/imatrofAI/1637"
+      },
+      {
+        "title": "Чому LLM генерують різні відповіді? (Технічне пояснення)",
+        "date": "2025-09-28",
+        "url": "https://t.me/imatrofAI/1648"
+      },
+      {
+        "title": "Андрій Карпати: Як будувався GPT",
+        "date": "2025-09-23",
+        "url": "https://t.me/imatrofAI/1624"
+      },
+      {
+        "title": "Андрій Карпати: Пост-передбачення про ШІ",
+        "date": "2025-09-23",
+        "url": "https://t.me/imatrofAI/1441"
+      }
+    ]
+  },
+  {
+    "id": "agents",
+    "label": "AI-агенти",
+    "count": 78,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "MCP — місток між Claude та вашими даними",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/530"
+      },
+      {
+        "title": "Спеціалізовані AI-агенти: Email-асистент",
+        "date": "2025-11-03",
+        "url": "https://t.me/imatrofAI/1723"
+      },
+      {
+        "title": "n8n — нові можливості для автоматизації з ШІ",
+        "date": "2025-11-01",
+        "url": "https://t.me/imatrofAI/1721"
+      },
+      {
+        "title": "Команда розробки AI-агентів — нові вакансії",
+        "date": "2025-10-29",
+        "url": "https://t.me/imatrofAI/1718"
+      },
+      {
+        "title": "Notion 3.0 — нова ера ШІ-агентів у нотатках",
+        "date": "2025-10-20",
+        "url": "https://t.me/imatrofAI/1703"
+      },
+      {
+        "title": "Монополія Chrome та виклик AI-браузерів",
+        "date": "2025-10-19",
+        "url": "https://t.me/imatrofAI/1702"
+      },
+      {
+        "title": "HeyGen: AI-агент для створення відео",
+        "date": "2025-10-14",
+        "url": "https://t.me/imatrofAI/1680"
+      },
+      {
+        "title": "ШІ допоможе шукати роботу у 2026 році",
+        "date": "2025-10-06",
+        "url": "https://t.me/imatrofAI/1647"
+      },
+      {
+        "title": "Агент видалив базу даних — оновлення безпеки",
+        "date": "2025-10-05",
+        "url": "https://t.me/imatrofAI/1646"
+      },
+      {
+        "title": "AI-агенти в Agile командах — беклог та епіки",
+        "date": "2025-09-29",
+        "url": "https://t.me/imatrofAI/1635"
+      },
+      {
+        "title": "ШІ-агент у групових чатах — автоматизація контексту",
+        "date": "2025-09-26",
+        "url": "https://t.me/imatrofAI/1631"
+      },
+      {
+        "title": "Тест Comet від Perplexity — швидкість вражає",
+        "date": "2025-09-22",
+        "url": "https://t.me/imatrofAI/1435"
+      }
+    ]
+  },
+  {
+    "id": "design",
+    "label": "Дизайн",
+    "count": 71,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Stability AI — гайд по промптах для зображень",
+        "date": "2024-11-29",
+        "url": "https://t.me/imatrofAI/525"
+      },
+      {
+        "title": "Примірка одягу в 1 клік через ШІ",
+        "date": "2024-08-28",
+        "url": "https://t.me/imatrofAI/147"
+      },
+      {
+        "title": "Перший повнометражний AI-фільм та Flux-інструменти",
+        "date": "2024-11-25",
+        "url": "https://t.me/imatrofAI/488"
+      },
+      {
+        "title": "Google: 5 мільярдів зображень за місяць!",
+        "date": "2025-11-05",
+        "url": "https://t.me/imatrofAI/1730"
+      },
+      {
+        "title": "Реклама про Claude — новий рівень креативу від Mother",
+        "date": "2025-10-23",
+        "url": "https://t.me/imatrofAI/1706"
+      },
+      {
+        "title": "Luma Ray3 — новий рівень реалістичності відео",
+        "date": "2025-10-18",
+        "url": "https://t.me/imatrofAI/1698"
+      },
+      {
+        "title": "Paintit.ai — українська AI-платформа для дизайну",
+        "date": "2025-10-10",
+        "url": "https://t.me/imatrofAI/1672"
+      },
+      {
+        "title": "Реклама, згенерована AI — вже звична практика",
+        "date": "2025-10-03",
+        "url": "https://t.me/imatrofAI/1644"
+      },
+      {
+        "title": "Reddit тренд: ШІ-меми у ChatGPT",
+        "date": "2025-10-02",
+        "url": "https://t.me/imatrofAI/1654"
+      },
+      {
+        "title": "Секрет успіху ШІ стартапів — просто про складне",
+        "date": "2025-08-29",
+        "url": "https://t.me/imatrofAI/1538"
+      },
+      {
+        "title": "ChatGPT: Котики та стилі генерації зображень",
+        "date": "2025-08-24",
+        "url": "https://t.me/imatrofAI/1392"
+      },
+      {
+        "title": "Режим думання: Auto, Fast або Thinking",
+        "date": "2025-08-21",
+        "url": "https://t.me/imatrofAI/1515"
+      }
+    ]
+  },
+  {
+    "id": "coding",
+    "label": "Кодинг",
+    "count": 70,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "MCP — місток між Claude та вашими даними",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/530"
+      },
+      {
+        "title": "OpenAI Advanced Voice для всіх та код у ChatGPT",
+        "date": "2024-11-24",
+        "url": "https://t.me/imatrofAI/485"
+      },
+      {
+        "title": "Команда розробки AI-агентів — нові вакансії",
+        "date": "2025-10-29",
+        "url": "https://t.me/imatrofAI/1718"
+      },
+      {
+        "title": "Vibe-coding у FAANG — досвід інженера",
+        "date": "2025-10-28",
+        "url": "https://t.me/imatrofAI/1715"
+      },
+      {
+        "title": "OpenAI викотили GPT-5-Codex",
+        "date": "2025-10-09",
+        "url": "https://t.me/imatrofAI/1669"
+      },
+      {
+        "title": "MCP кастомні конектори у ChatGPT",
+        "date": "2025-09-25",
+        "url": "https://t.me/imatrofAI/1645"
+      },
+      {
+        "title": "Андрій Карпати: Як будувався GPT",
+        "date": "2025-09-23",
+        "url": "https://t.me/imatrofAI/1624"
+      },
+      {
+        "title": "Cursor сповільнює розробників? Неочікувана статистика",
+        "date": "2025-09-18",
+        "url": "https://t.me/imatrofAI/1429"
+      },
+      {
+        "title": "Практичне застосування Gemma 3 27B",
+        "date": "2025-09-07",
+        "url": "https://t.me/imatrofAI/1597"
+      },
+      {
+        "title": "OpenAI Codex — заміна GitHub Copilot?",
+        "date": "2025-09-04",
+        "url": "https://t.me/imatrofAI/1589"
+      },
+      {
+        "title": "Локальні моделі: Плюси, мінуси та 4 приклади інтеграції",
+        "date": "2025-09-02",
+        "url": "https://t.me/imatrofAI/1406"
+      },
+      {
+        "title": "Astronomer — гра навайбкодена за популярністю",
+        "date": "2025-08-31",
+        "url": "https://t.me/imatrofAI/1402"
+      }
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "label": "ChatGPT",
+    "count": 70,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "ChatGPT — 2 роки та плани на 1 мільярд користувачів",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/531"
+      },
+      {
+        "title": "OpenAI Advanced Voice для всіх та код у ChatGPT",
+        "date": "2024-11-24",
+        "url": "https://t.me/imatrofAI/485"
+      },
+      {
+        "title": "ChatGPT в Apple CarPlay — тестую",
+        "date": "2026-04-08",
+        "url": "https://t.me/imatrofAI/2595"
+      },
+      {
+        "title": "ChatGPT — перший застосунок вранці",
+        "date": "2025-11-09",
+        "url": "https://t.me/imatrofAI/1737"
+      },
+      {
+        "title": "ChatGPT: Вибір інтенсивності різонінгу",
+        "date": "2025-10-16",
+        "url": "https://t.me/imatrofAI/1692"
+      },
+      {
+        "title": "ChatGPT: Верифікація за паспортом",
+        "date": "2025-10-12",
+        "url": "https://t.me/imatrofAI/1678"
+      },
+      {
+        "title": "ChatGPT: Верифікація віку за паспортом",
+        "date": "2025-10-12",
+        "url": "https://t.me/imatrofAI/1678"
+      },
+      {
+        "title": "Дослідження: Як люди реально використовують ChatGPT",
+        "date": "2025-10-11",
+        "url": "https://t.me/imatrofAI/1673"
+      },
+      {
+        "title": "Reddit тренд: ШІ-меми у ChatGPT",
+        "date": "2025-10-02",
+        "url": "https://t.me/imatrofAI/1654"
+      },
+      {
+        "title": "ChatGPT: Поради для досвідчених користувачів",
+        "date": "2025-10-01",
+        "url": "https://t.me/imatrofAI/1653"
+      },
+      {
+        "title": "Відео про ChatGPT агента — вересневий розбір",
+        "date": "2025-09-19",
+        "url": "https://t.me/imatrofAI/1431"
+      },
+      {
+        "title": "Секрет нових функцій ChatGPT — системний промпт",
+        "date": "2025-09-14",
+        "url": "https://t.me/imatrofAI/1425"
+      }
+    ]
+  },
+  {
+    "id": "google",
+    "label": "Google",
+    "count": 65,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Claude Projects vs GPTs vs Gemini Gems",
+        "date": "2024-08-31",
+        "url": "https://t.me/imatrofAI/158"
+      },
+      {
+        "title": "ШІ для пошти — чому Google зволікає?",
+        "date": "2024-08-27",
+        "url": "https://t.me/imatrofAI/140"
+      },
+      {
+        "title": "LLM вперлись у стелю? Демis Хасабіс vs Ян Лекун",
+        "date": "2026-04-16",
+        "url": "https://t.me/imatrofAI/2619"
+      },
+      {
+        "title": "Тестую Gemma 4 на телефоні — Google AI Edge",
+        "date": "2026-04-08",
+        "url": "https://t.me/imatrofAI/2594"
+      },
+      {
+        "title": "AI-пошук в Google: Менше кліків по лінках?",
+        "date": "2025-11-07",
+        "url": "https://t.me/imatrofAI/1735"
+      },
+      {
+        "title": "Google: 5 мільярдів зображень за місяць!",
+        "date": "2025-11-05",
+        "url": "https://t.me/imatrofAI/1730"
+      },
+      {
+        "title": "Монополія Chrome та виклик AI-браузерів",
+        "date": "2025-10-19",
+        "url": "https://t.me/imatrofAI/1702"
+      },
+      {
+        "title": "Google Gemini в топі AppStore — історичний момент",
+        "date": "2025-10-08",
+        "url": "https://t.me/imatrofAI/1668"
+      },
+      {
+        "title": "Google оцифрував петабайти супер-детальних карт",
+        "date": "2025-09-26",
+        "url": "https://t.me/imatrofAI/1445"
+      },
+      {
+        "title": "ШІ-пошук: чому ми забуваємо про Google",
+        "date": "2025-09-21",
+        "url": "https://t.me/imatrofAI/1434"
+      },
+      {
+        "title": "NotebookLM: Нові формати аудіо-подкастів",
+        "date": "2025-09-12",
+        "url": "https://t.me/imatrofAI/1617"
+      },
+      {
+        "title": "Практичне застосування Gemma 3 27B",
+        "date": "2025-09-07",
+        "url": "https://t.me/imatrofAI/1597"
+      }
+    ]
+  },
+  {
+    "id": "multimodal",
+    "label": "Мультимодальність",
+    "count": 64,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Doom на 2D зображеннях — затратний геймінг",
+        "date": "2024-08-31",
+        "url": "https://t.me/imatrofAI/159"
+      },
+      {
+        "title": "OpenAI Advanced Voice для всіх та код у ChatGPT",
+        "date": "2024-11-24",
+        "url": "https://t.me/imatrofAI/485"
+      },
+      {
+        "title": "O2Daisy — AI-бабуся проти шахраїв",
+        "date": "2024-11-23",
+        "url": "https://t.me/imatrofAI/484"
+      },
+      {
+        "title": "Цифровий двійник Михайла Федорова — анонс",
+        "date": "2025-11-16",
+        "url": "https://t.me/imatrofAI/1750"
+      },
+      {
+        "title": "Контракт на $3M для AI-артистки Xania Monet",
+        "date": "2025-11-12",
+        "url": "https://t.me/imatrofAI/1740"
+      },
+      {
+        "title": "Google: 5 мільярдів зображень за місяць!",
+        "date": "2025-11-05",
+        "url": "https://t.me/imatrofAI/1730"
+      },
+      {
+        "title": "ElevenLabs: Нова суперсила перекладу та крінж",
+        "date": "2025-10-06",
+        "url": "https://t.me/imatrofAI/1664"
+      },
+      {
+        "title": "Google оцифрував петабайти супер-детальних карт",
+        "date": "2025-09-26",
+        "url": "https://t.me/imatrofAI/1445"
+      },
+      {
+        "title": "Валентин — новий ШІ-друг Ані",
+        "date": "2025-09-25",
+        "url": "https://t.me/imatrofAI/1443"
+      },
+      {
+        "title": "Suno Radio — нескінченний стрім ШІ-музики",
+        "date": "2025-09-10",
+        "url": "https://t.me/imatrofAI/1417"
+      },
+      {
+        "title": "Apple FastVLM на Hugging Face — несподіваний реліз",
+        "date": "2025-09-08",
+        "url": "https://t.me/imatrofAI/1602"
+      },
+      {
+        "title": "Google Translate: Режим Live Translate",
+        "date": "2025-09-01",
+        "url": "https://t.me/imatrofAI/1581"
+      }
+    ]
+  },
+  {
+    "id": "video-generation",
+    "label": "Відео AI",
+    "count": 52,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Перший повнометражний AI-фільм та Flux-інструменти",
+        "date": "2024-11-25",
+        "url": "https://t.me/imatrofAI/488"
+      },
+      {
+        "title": "Higgsfield AI — від першого посту до світового успіху",
+        "date": "2025-10-22",
+        "url": "https://t.me/imatrofAI/1705"
+      },
+      {
+        "title": "Luma Ray3 — новий рівень реалістичності відео",
+        "date": "2025-10-18",
+        "url": "https://t.me/imatrofAI/1698"
+      },
+      {
+        "title": "HeyGen: AI-агент для створення відео",
+        "date": "2025-10-14",
+        "url": "https://t.me/imatrofAI/1680"
+      },
+      {
+        "title": "Clip Genius від Genspark — AI-монтажер у вас в руках",
+        "date": "2025-09-15",
+        "url": "https://t.me/imatrofAI/1625"
+      },
+      {
+        "title": "Higgsfield: 365 днів Nano Banana безкоштовно",
+        "date": "2025-09-05",
+        "url": "https://t.me/imatrofAI/1591"
+      },
+      {
+        "title": "Untold — трейлер згенерований за допомогою AI",
+        "date": "2025-08-07",
+        "url": "https://t.me/imatrofAI/1348"
+      },
+      {
+        "title": "Genie 3 — інтерактивне відео нового покоління",
+        "date": "2025-08-03",
+        "url": "https://t.me/imatrofAI/1457"
+      },
+      {
+        "title": "HeyGen — ніша знайдена (Product Placement)",
+        "date": "2025-07-24",
+        "url": "https://t.me/imatrofAI/1317"
+      },
+      {
+        "title": "HeyGen — Product Placement в один клік",
+        "date": "2025-07-18",
+        "url": "https://t.me/imatrofAI/1301"
+      },
+      {
+        "title": "Midjourney Video V1 — офіційний доступ",
+        "date": "2025-07-10",
+        "url": "https://t.me/imatrofAI/1297"
+      },
+      {
+        "title": "Krea 1 — реліз першої власної моделі",
+        "date": "2025-06-28",
+        "url": "https://t.me/imatrofAI/1267"
+      }
+    ]
+  },
+  {
+    "id": "nova-model",
+    "label": "Нові моделі",
+    "count": 49,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "OpenAI викотили GPT-5-Codex",
+        "date": "2025-10-09",
+        "url": "https://t.me/imatrofAI/1669"
+      },
+      {
+        "title": "Claude Opus 4.1 — тихий апгрейд флагмана",
+        "date": "2025-09-30",
+        "url": "https://t.me/imatrofAI/1452"
+      },
+      {
+        "title": "OpenAI Open Source: gpt-oss-1 та gpt-oss-mini",
+        "date": "2025-09-27",
+        "url": "https://t.me/imatrofAI/1446"
+      },
+      {
+        "title": "Практичне застосування Gemma 3 27B",
+        "date": "2025-09-07",
+        "url": "https://t.me/imatrofAI/1597"
+      },
+      {
+        "title": "Gemini 2.5 Flash Image Preview — Nano-banana в Google",
+        "date": "2025-09-01",
+        "url": "https://t.me/imatrofAI/1574"
+      },
+      {
+        "title": "Claude Sonnet 4: 1 мільйон токенів контексту",
+        "date": "2025-08-22",
+        "url": "https://t.me/imatrofAI/1520"
+      },
+      {
+        "title": "xAI анонсували Grok 4 — дві версії моделі",
+        "date": "2025-08-13",
+        "url": "https://t.me/imatrofAI/1359"
+      },
+      {
+        "title": "GPT-5 — анонс та перші подробиці релізу",
+        "date": "2025-08-05",
+        "url": "https://t.me/imatrofAI/1462"
+      },
+      {
+        "title": "Сем Альтман: Ідеальний ШІ — це малі розумні моделі",
+        "date": "2025-07-20",
+        "url": "https://t.me/imatrofAI/1300"
+      },
+      {
+        "title": "OpenAI o3-pro — нова модель для Pro-підписників",
+        "date": "2025-06-27",
+        "url": "https://t.me/imatrofAI/1260"
+      },
+      {
+        "title": "Gemini 2.5 Pro — оновлення флагмана Google",
+        "date": "2025-06-20",
+        "url": "https://t.me/imatrofAI/1240"
+      },
+      {
+        "title": "Gemma 3n — ШІ для слабких пристроїв",
+        "date": "2025-06-16",
+        "url": "https://t.me/imatrofAI/1190"
+      }
+    ]
+  },
+  {
+    "id": "productivity",
+    "label": "Продуктивність",
+    "count": 49,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "ШІ для пошти — чому Google зволікає?",
+        "date": "2024-08-27",
+        "url": "https://t.me/imatrofAI/140"
+      },
+      {
+        "title": "ChatGPT — перший застосунок вранці",
+        "date": "2025-11-09",
+        "url": "https://t.me/imatrofAI/1737"
+      },
+      {
+        "title": "Спеціалізовані AI-агенти: Email-асистент",
+        "date": "2025-11-03",
+        "url": "https://t.me/imatrofAI/1723"
+      },
+      {
+        "title": "n8n — нові можливості для автоматизації з ШІ",
+        "date": "2025-11-01",
+        "url": "https://t.me/imatrofAI/1721"
+      },
+      {
+        "title": "Notion 3.0 — нова ера ШІ-агентів у нотатках",
+        "date": "2025-10-20",
+        "url": "https://t.me/imatrofAI/1703"
+      },
+      {
+        "title": "ChatGPT: Вибір інтенсивності різонінгу",
+        "date": "2025-10-16",
+        "url": "https://t.me/imatrofAI/1692"
+      },
+      {
+        "title": "Ringostat: Українська ШІ-платформа для дзвінків",
+        "date": "2025-10-07",
+        "url": "https://t.me/imatrofAI/1667"
+      },
+      {
+        "title": "ChatGPT: Поради для досвідчених користувачів",
+        "date": "2025-10-01",
+        "url": "https://t.me/imatrofAI/1653"
+      },
+      {
+        "title": "AI-агенти в Agile командах — беклог та епіки",
+        "date": "2025-09-29",
+        "url": "https://t.me/imatrofAI/1635"
+      },
+      {
+        "title": "Claude: Редагування офісних документів у чаті",
+        "date": "2025-09-22",
+        "url": "https://t.me/imatrofAI/1638"
+      },
+      {
+        "title": "Довідки про доходи за вечір — ШІ-автоматизація",
+        "date": "2025-09-17",
+        "url": "https://t.me/imatrofAI/1615"
+      },
+      {
+        "title": "Clip Genius від Genspark — AI-монтажер у вас в руках",
+        "date": "2025-09-15",
+        "url": "https://t.me/imatrofAI/1625"
+      }
+    ]
+  },
+  {
+    "id": "anthropic",
+    "label": "Anthropic",
+    "count": 45,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Claude Projects vs GPTs vs Gemini Gems",
+        "date": "2024-08-31",
+        "url": "https://t.me/imatrofAI/158"
+      },
+      {
+        "title": "MCP — місток між Claude та вашими даними",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/530"
+      },
+      {
+        "title": "Anthropic будує власний стек: Claude Code + Cowork + Design",
+        "date": "2026-04-22",
+        "url": "https://t.me/imatrofAI/2637"
+      },
+      {
+        "title": "Claude Design — Anthropic запустили AI-інструмент для дизайну",
+        "date": "2026-04-17",
+        "url": "https://t.me/imatrofAI/2625"
+      },
+      {
+        "title": "Anthropic запустили ClaudeDevs — офіційний X акаунт для Claude Code",
+        "date": "2026-04-17",
+        "url": "https://t.me/imatrofAI/2624"
+      },
+      {
+        "title": "Claude Opus 4.7 — новий реліз",
+        "date": "2026-04-16",
+        "url": "https://t.me/imatrofAI/2620"
+      },
+      {
+        "title": "Claude Code оновлення: стало схоже на Codex, з'явилась аналітика",
+        "date": "2026-04-15",
+        "url": "https://t.me/imatrofAI/2616"
+      },
+      {
+        "title": "Claude + TurboTax: AI заходить у сфери дорогої експертизи",
+        "date": "2026-04-14",
+        "url": "https://t.me/imatrofAI/2613"
+      },
+      {
+        "title": "OpenAI vs Anthropic: хто першим до IPO",
+        "date": "2026-04-14",
+        "url": "https://t.me/imatrofAI/2609"
+      },
+      {
+        "title": "Claude Managed Agents — нова платформа для побудови агентів від Anthropic",
+        "date": "2026-04-10",
+        "url": "https://t.me/imatrofAI/2602"
+      },
+      {
+        "title": "AI-система пошуку роботи на базі Claude Code — 700+ вакансій",
+        "date": "2026-04-09",
+        "url": "https://t.me/imatrofAI/2599"
+      },
+      {
+        "title": "Claude Mythos — викотили але не для всіх. Project Glasswing",
+        "date": "2026-04-07",
+        "url": "https://t.me/imatrofAI/2593"
+      }
+    ]
+  },
+  {
+    "id": "enterprise",
+    "label": "AI у бізнесі",
+    "count": 44,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Andreessen Horowitz (a16z) — топ AI сервісів 2024",
+        "date": "2024-08-29",
+        "url": "https://t.me/imatrofAI/151"
+      },
+      {
+        "title": "Claude Managed Agents — нова платформа для побудови агентів від Anthropic",
+        "date": "2026-04-10",
+        "url": "https://t.me/imatrofAI/2602"
+      },
+      {
+        "title": "Спеціалізовані AI-агенти: Email-асистент",
+        "date": "2025-11-03",
+        "url": "https://t.me/imatrofAI/1723"
+      },
+      {
+        "title": "AI-бульбашка чи коловорот грошей?",
+        "date": "2025-10-29",
+        "url": "https://t.me/imatrofAI/1716"
+      },
+      {
+        "title": "Vibe-coding у FAANG — досвід інженера",
+        "date": "2025-10-28",
+        "url": "https://t.me/imatrofAI/1715"
+      },
+      {
+        "title": "Notion 3.0 — нова ера ШІ-агентів у нотатках",
+        "date": "2025-10-20",
+        "url": "https://t.me/imatrofAI/1703"
+      },
+      {
+        "title": "Paintit.ai — українська AI-платформа для дизайну",
+        "date": "2025-10-10",
+        "url": "https://t.me/imatrofAI/1672"
+      },
+      {
+        "title": "Ringostat: Українська ШІ-платформа для дзвінків",
+        "date": "2025-10-07",
+        "url": "https://t.me/imatrofAI/1667"
+      },
+      {
+        "title": "Реклама, згенерована AI — вже звична практика",
+        "date": "2025-10-03",
+        "url": "https://t.me/imatrofAI/1644"
+      },
+      {
+        "title": "AI-агенти в Agile командах — беклог та епіки",
+        "date": "2025-09-29",
+        "url": "https://t.me/imatrofAI/1635"
+      },
+      {
+        "title": "Олексій Мінаков — консультант у сфері AI",
+        "date": "2025-09-24",
+        "url": "https://t.me/imatrofAI/1442"
+      },
+      {
+        "title": "Research vs Development у ШІ-компаніях",
+        "date": "2025-09-22",
+        "url": "https://t.me/imatrofAI/1439"
+      }
+    ]
+  },
+  {
+    "id": "security",
+    "label": "Безпека",
+    "count": 37,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "O2Daisy — AI-бабуся проти шахраїв",
+        "date": "2024-11-23",
+        "url": "https://t.me/imatrofAI/484"
+      },
+      {
+        "title": "LinkedIn та приховані інструкції — кейс Кемерона Маттіса",
+        "date": "2025-11-14",
+        "url": "https://t.me/imatrofAI/1744"
+      },
+      {
+        "title": "OSINT та ШІ — нові інструменти розвідки",
+        "date": "2025-11-10",
+        "url": "https://t.me/imatrofAI/1738"
+      },
+      {
+        "title": "ChatGPT: Верифікація за паспортом",
+        "date": "2025-10-12",
+        "url": "https://t.me/imatrofAI/1678"
+      },
+      {
+        "title": "ChatGPT: Верифікація віку за паспортом",
+        "date": "2025-10-12",
+        "url": "https://t.me/imatrofAI/1678"
+      },
+      {
+        "title": "Агент видалив базу даних — оновлення безпеки",
+        "date": "2025-10-05",
+        "url": "https://t.me/imatrofAI/1646"
+      },
+      {
+        "title": "Сем Альтман: Жахливі компроміси прямо зараз",
+        "date": "2025-09-02",
+        "url": "https://t.me/imatrofAI/1549"
+      },
+      {
+        "title": "Grok: Упередженість у відповідях (деталі)",
+        "date": "2025-08-28",
+        "url": "https://t.me/imatrofAI/1398"
+      },
+      {
+        "title": "Хто розробляє і хто ламає LLM? (Red Teaming)",
+        "date": "2025-08-26",
+        "url": "https://t.me/imatrofAI/1529"
+      },
+      {
+        "title": "Маск проти Apple: Вимога інтеграції X та Grok",
+        "date": "2025-08-18",
+        "url": "https://t.me/imatrofAI/1509"
+      },
+      {
+        "title": "Reddit: Як ШІ видає себе за людину (тест)",
+        "date": "2025-08-11",
+        "url": "https://t.me/imatrofAI/1354"
+      },
+      {
+        "title": "Харарі про ШІ: Інформаційні мережі та майбутнє",
+        "date": "2025-07-15",
+        "url": "https://t.me/imatrofAI/1295"
+      }
+    ]
+  },
+  {
+    "id": "ukraine",
+    "label": "Україна",
+    "count": 22,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Цифровий двійник Михайла Федорова — анонс",
+        "date": "2025-11-16",
+        "url": "https://t.me/imatrofAI/1750"
+      },
+      {
+        "title": "OSINT та ШІ — нові інструменти розвідки",
+        "date": "2025-11-10",
+        "url": "https://t.me/imatrofAI/1738"
+      },
+      {
+        "title": "IT Arena 2025 у Львові — анонс та виступи",
+        "date": "2025-10-30",
+        "url": "https://t.me/imatrofAI/1739"
+      },
+      {
+        "title": "Paintit.ai — українська AI-платформа для дизайну",
+        "date": "2025-10-10",
+        "url": "https://t.me/imatrofAI/1672"
+      },
+      {
+        "title": "Ringostat: Українська ШІ-платформа для дзвінків",
+        "date": "2025-10-07",
+        "url": "https://t.me/imatrofAI/1667"
+      },
+      {
+        "title": "Українські AI НОВИНИ — спеціальний випуск",
+        "date": "2025-09-28",
+        "url": "https://t.me/imatrofAI/1634"
+      },
+      {
+        "title": "Олексій Мінаков — консультант у сфері AI",
+        "date": "2025-09-24",
+        "url": "https://t.me/imatrofAI/1442"
+      },
+      {
+        "title": "Довідки про доходи за вечір — ШІ-автоматизація",
+        "date": "2025-09-17",
+        "url": "https://t.me/imatrofAI/1615"
+      },
+      {
+        "title": "Дія.AI — Україна перша у світі із державним ШІ-помічником",
+        "date": "2025-09-10",
+        "url": "https://t.me/imatrofAI/1610"
+      },
+      {
+        "title": "З Днем Незалежності України! 💙💛",
+        "date": "2025-08-24",
+        "url": "https://t.me/imatrofAI/1566"
+      },
+      {
+        "title": "Вакансія Computer Vision Engineer у SQUAD",
+        "date": "2025-08-15",
+        "url": "https://t.me/imatrofAI/1369"
+      },
+      {
+        "title": "Grammarly — український успіх та нові фішки",
+        "date": "2025-08-11",
+        "url": "https://t.me/imatrofAI/1353"
+      }
+    ]
+  },
+  {
+    "id": "gemini",
+    "label": "Gemini",
+    "count": 21,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "Google Gemini в топі AppStore — історичний момент",
+        "date": "2025-10-08",
+        "url": "https://t.me/imatrofAI/1668"
+      },
+      {
+        "title": "Gemini 2.5 Flash Image Preview — Nano-banana в Google",
+        "date": "2025-09-01",
+        "url": "https://t.me/imatrofAI/1574"
+      },
+      {
+        "title": "Історія чатів у Gemini — технічні деталі",
+        "date": "2025-09-01",
+        "url": "https://t.me/imatrofAI/1546"
+      },
+      {
+        "title": "Google Gemini: генерація казок та історій",
+        "date": "2025-08-04",
+        "url": "https://t.me/imatrofAI/1461"
+      },
+      {
+        "title": "Gemini 2.5 Pro — оновлення флагмана Google",
+        "date": "2025-06-20",
+        "url": "https://t.me/imatrofAI/1240"
+      },
+      {
+        "title": "Оновлення Gemini 2.5 Flash — швидкість та мультимодальність",
+        "date": "2025-06-12",
+        "url": "https://t.me/imatrofAI/1181"
+      },
+      {
+        "title": "Google I/O — перший день анонсів 2025",
+        "date": "2025-06-11",
+        "url": "https://t.me/imatrofAI/1177"
+      },
+      {
+        "title": "SignGemma — переклад мови жестів у текст",
+        "date": "2025-06-01",
+        "url": "https://t.me/imatrofAI/1209"
+      },
+      {
+        "title": "Gemini Advanced для розробників — VS Code та інше",
+        "date": "2025-05-30",
+        "url": "https://t.me/imatrofAI/1160"
+      },
+      {
+        "title": "Метод погроз для ШІ — Сергій Брін про Gemini",
+        "date": "2025-05-28",
+        "url": "https://t.me/imatrofAI/1202"
+      },
+      {
+        "title": "Google I/O 2025 — анонс Gemini 2.5 Pro",
+        "date": "2025-05-14",
+        "url": "https://t.me/imatrofAI/1134"
+      },
+      {
+        "title": "Gemini — нове меню інтеграцій через @",
+        "date": "2025-04-22",
+        "url": "https://t.me/imatrofAI/1076"
+      }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "label": "Perplexity",
+    "count": 18,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Perplexity Pro безкоштовно на 12 місяців",
+        "date": "2025-10-01",
+        "url": "https://t.me/imatrofAI/1641"
+      },
+      {
+        "title": "Тест Comet від Perplexity — швидкість вражає",
+        "date": "2025-09-22",
+        "url": "https://t.me/imatrofAI/1435"
+      },
+      {
+        "title": "Comet від Perplexity — нове відео на каналі",
+        "date": "2025-08-27",
+        "url": "https://t.me/imatrofAI/1565"
+      },
+      {
+        "title": "Wormhole — гра у браузері Comet від Perplexity",
+        "date": "2025-08-25",
+        "url": "https://t.me/imatrofAI/1559"
+      },
+      {
+        "title": "Dia AI та Comet — нове покоління AI браузерів",
+        "date": "2025-08-14",
+        "url": "https://t.me/imatrofAI/1367"
+      },
+      {
+        "title": "Comet — AI браузер від Perplexity",
+        "date": "2025-08-14",
+        "url": "https://t.me/imatrofAI/1367"
+      },
+      {
+        "title": "Пам'ять у Perplexity — інтеграція в запити",
+        "date": "2025-06-21",
+        "url": "https://t.me/imatrofAI/1245"
+      },
+      {
+        "title": "Perplexity Sports — спортивний пошук нового рівня",
+        "date": "2025-06-11",
+        "url": "https://t.me/imatrofAI/1218"
+      },
+      {
+        "title": "Досвід з Labs від Perplexity — тестування нових фішок",
+        "date": "2025-06-10",
+        "url": "https://t.me/imatrofAI/1216"
+      },
+      {
+        "title": "Perplexity DeepResearch — великий буст інструментів",
+        "date": "2025-06-02",
+        "url": "https://t.me/imatrofAI/1210"
+      },
+      {
+        "title": "Perplexity Finance — заміна Yahoo та Google Finance",
+        "date": "2025-05-02",
+        "url": "https://t.me/imatrofAI/1143"
+      },
+      {
+        "title": "Perplexity Voice — голосовий пошук нового покоління",
+        "date": "2025-05-01",
+        "url": "https://t.me/imatrofAI/1098"
+      }
+    ]
+  },
+  {
+    "id": "runway",
+    "label": "Runway",
+    "count": 15,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Runway — анонс нових можливостей для відео",
+        "date": "2025-04-01",
+        "url": "https://t.me/imatrofAI/986"
+      },
+      {
+        "title": "Runway — боротьба з галюцинаціями у відео",
+        "date": "2024-12-03",
+        "url": "https://t.me/imatrofAI/548"
+      },
+      {
+        "title": "Runway Gen-3 Alpha Turbo — контроль руху (Brush)",
+        "date": "2024-11-05",
+        "url": "https://t.me/imatrofAI/402"
+      },
+      {
+        "title": "Runway Act-One — нова ера анімації обличчя",
+        "date": "2024-10-24",
+        "url": "https://t.me/imatrofAI/340"
+      },
+      {
+        "title": "Runway Gen-3 — відео по першому та останньому кадру",
+        "date": "2024-10-08",
+        "url": "https://t.me/imatrofAI/289"
+      },
+      {
+        "title": "Runway Gen-3 — вертикальний формат 9:16",
+        "date": "2024-10-02",
+        "url": "https://t.me/imatrofAI/240"
+      },
+      {
+        "title": "Спостереження про ШІ відео — MJ, Luma, Runway",
+        "date": "2024-09-25",
+        "url": "https://t.me/imatrofAI/246"
+      },
+      {
+        "title": "AI контент для брендів — нове відео та MJ + Luma",
+        "date": "2024-09-17",
+        "url": "https://t.me/imatrofAI/228"
+      },
+      {
+        "title": "Порівняння Runway Gen-3 Alpha — тест моделей",
+        "date": "2024-09-14",
+        "url": "https://t.me/imatrofAI/225"
+      },
+      {
+        "title": "Огляд тижня: Runway, Роботизація та Фаст-фуд драйв",
+        "date": "2024-08-12",
+        "url": "https://t.me/imatrofAI/96"
+      },
+      {
+        "title": "Runway — генерація відео з першого кадру",
+        "date": "2024-08-03",
+        "url": "https://t.me/imatrofAI/78"
+      },
+      {
+        "title": "Runway — нова модель відеогенерації",
+        "date": "2024-07-12",
+        "url": "https://t.me/imatrofAI/36"
+      }
+    ]
+  },
+  {
+    "id": "xai",
+    "label": "xAI (Grok)",
+    "count": 14,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Дзвінок Ані та Валентину на телефон",
+        "date": "2025-08-31",
+        "url": "https://t.me/imatrofAI/1544"
+      },
+      {
+        "title": "Grok: Упередженість у відповідях (деталі)",
+        "date": "2025-08-28",
+        "url": "https://t.me/imatrofAI/1398"
+      },
+      {
+        "title": "Голосовий режим Grok — чому він такий популярний?",
+        "date": "2025-08-22",
+        "url": "https://t.me/imatrofAI/1384"
+      },
+      {
+        "title": "Маск проти Apple: Вимога інтеграції X та Grok",
+        "date": "2025-08-18",
+        "url": "https://t.me/imatrofAI/1509"
+      },
+      {
+        "title": "xAI анонсували Grok 4 — дві версії моделі",
+        "date": "2025-08-13",
+        "url": "https://t.me/imatrofAI/1359"
+      },
+      {
+        "title": "Шаховий турнір між LLM — Grok 4 vs OpenAI o3",
+        "date": "2025-08-02",
+        "url": "https://t.me/imatrofAI/1456"
+      },
+      {
+        "title": "Grok в Telegram — Дуров + Маск = Велика база даних",
+        "date": "2025-05-30",
+        "url": "https://t.me/imatrofAI/1206"
+      },
+      {
+        "title": "Генерація зображень через Flux у Twitter (X)",
+        "date": "2025-03-26",
+        "url": "https://t.me/imatrofAI/967"
+      },
+      {
+        "title": "Grok 3 — найрозумніший ШІ на світі?",
+        "date": "2025-02-17",
+        "url": "https://t.me/imatrofAI/853"
+      },
+      {
+        "title": "Енергетична криза та Маск у Мемфісі",
+        "date": "2025-01-06",
+        "url": "https://t.me/imatrofAI/741"
+      },
+      {
+        "title": "Grok 2 — тепер безкоштовний від xAI",
+        "date": "2024-12-07",
+        "url": "https://t.me/imatrofAI/576"
+      },
+      {
+        "title": "Тиждень ШІ: Grok 2 + Flux та MadeByGoogle",
+        "date": "2024-08-20",
+        "url": "https://t.me/imatrofAI/126"
+      }
+    ]
+  },
+  {
+    "id": "health",
+    "label": "Здоровʼя",
+    "count": 14,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "OpenAI та Retro Biosciences — ШІ у медицині",
+        "date": "2025-10-17",
+        "url": "https://t.me/imatrofAI/1695"
+      },
+      {
+        "title": "Сем Альтман про ментальне здоров'я та сон",
+        "date": "2025-10-13",
+        "url": "https://t.me/imatrofAI/1679"
+      },
+      {
+        "title": "ШІ вчиться читати дані тіла — 60 млн годин тренувань",
+        "date": "2025-09-12",
+        "url": "https://t.me/imatrofAI/1420"
+      },
+      {
+        "title": "Google DeepMind PH-LLM — персональний health-coach",
+        "date": "2025-09-02",
+        "url": "https://t.me/imatrofAI/1550"
+      },
+      {
+        "title": "Google DeepMind AlphaGenome — ШІ в генетиці",
+        "date": "2025-08-05",
+        "url": "https://t.me/imatrofAI/1341"
+      },
+      {
+        "title": "SignGemma — переклад мови жестів у текст",
+        "date": "2025-06-01",
+        "url": "https://t.me/imatrofAI/1209"
+      },
+      {
+        "title": "Довголіття та ШІ — прогнози на майбутнє",
+        "date": "2025-04-26",
+        "url": "https://t.me/imatrofAI/1084"
+      },
+      {
+        "title": "Біохакінг: Ритуал перед сном від Браяна Джонсона",
+        "date": "2025-03-03",
+        "url": "https://t.me/imatrofAI/903"
+      },
+      {
+        "title": "Evo 2 — ШІ, що створює нові живі організми",
+        "date": "2025-02-25",
+        "url": "https://t.me/imatrofAI/884"
+      },
+      {
+        "title": "Оновлення GPT-4o mini та ШІ для тварин",
+        "date": "2024-11-14",
+        "url": "https://t.me/imatrofAI/435"
+      },
+      {
+        "title": "Neuralink — другий пацієнт Алекс та нові рекорди",
+        "date": "2024-08-23",
+        "url": "https://t.me/imatrofAI/131"
+      },
+      {
+        "title": "Медицина та технології — майбутнє вже тут",
+        "date": "2024-08-11",
+        "url": "https://t.me/imatrofAI/97"
+      }
+    ]
+  },
+  {
+    "id": "meta",
+    "label": "Meta",
+    "count": 13,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Спроба номер 3267 від Meta — нова модель",
+        "date": "2026-04-09",
+        "url": "https://t.me/imatrofAI/2600"
+      },
+      {
+        "title": "Марк Цукерберг: Кожному — по персональному суперінтелекту",
+        "date": "2025-09-17",
+        "url": "https://t.me/imatrofAI/1428"
+      },
+      {
+        "title": "Meta купує Scale AI за $15 млрд",
+        "date": "2025-07-03",
+        "url": "https://t.me/imatrofAI/1276"
+      },
+      {
+        "title": "Meta — лідер у наданні ШІ користувачам",
+        "date": "2025-04-07",
+        "url": "https://t.me/imatrofAI/1015"
+      },
+      {
+        "title": "Розбір Llama 3 від Андрія Карпатого",
+        "date": "2025-02-28",
+        "url": "https://t.me/imatrofAI/898"
+      },
+      {
+        "title": "Meta — таємниця людського мовлення",
+        "date": "2025-02-20",
+        "url": "https://t.me/imatrofAI/870"
+      },
+      {
+        "title": "Meta: невдалий початок 2025 року",
+        "date": "2025-01-05",
+        "url": "https://t.me/imatrofAI/734"
+      },
+      {
+        "title": "Meta Connect: Роботизація та тактильне навчання",
+        "date": "2024-11-04",
+        "url": "https://t.me/imatrofAI/395"
+      },
+      {
+        "title": "Meta Connect 2024 — окуляри Orion та Llama 3.2",
+        "date": "2024-09-26",
+        "url": "https://t.me/imatrofAI/254"
+      },
+      {
+        "title": "Огляд новин за тиждень: OpenAI, Meta, Mistral",
+        "date": "2024-07-25",
+        "url": "https://t.me/imatrofAI/64"
+      },
+      {
+        "title": "Llama 3.1 від Meta — відкритий код та Huggingface",
+        "date": "2024-07-23",
+        "url": "https://t.me/imatrofAI/56"
+      },
+      {
+        "title": "Новини тижня: Llama 3.1 та нові ліміти",
+        "date": "2024-07-22",
+        "url": "https://t.me/imatrofAI/55"
+      }
+    ]
+  },
+  {
+    "id": "vibe-coding",
+    "label": "Vibe Coding",
+    "count": 12,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Недільний AI Чекін #78 — плагіни та LLM Wiki",
+        "date": "2026-04-19",
+        "url": "https://t.me/imatrofAI/2629"
+      },
+      {
+        "title": "Vibe-coding у FAANG — досвід інженера",
+        "date": "2025-10-28",
+        "url": "https://t.me/imatrofAI/1715"
+      },
+      {
+        "title": "Відеоподкаст по лекції Андрія Карпати",
+        "date": "2025-09-16",
+        "url": "https://t.me/imatrofAI/1427"
+      },
+      {
+        "title": "Astronomer — гра навайбкодена за популярністю",
+        "date": "2025-08-31",
+        "url": "https://t.me/imatrofAI/1402"
+      },
+      {
+        "title": "Claude Code: Режим навчання для вайб-кодингу",
+        "date": "2025-08-27",
+        "url": "https://t.me/imatrofAI/1531"
+      },
+      {
+        "title": "Anthropic: Мінікурс з вайб-кодингу",
+        "date": "2025-08-24",
+        "url": "https://t.me/imatrofAI/1526"
+      },
+      {
+        "title": "Cursor на мобільному та у веб — вайбкодинг всюди",
+        "date": "2025-08-01",
+        "url": "https://t.me/imatrofAI/1329"
+      },
+      {
+        "title": "Маркетинг на вайбі — новий підхід до стратегії",
+        "date": "2025-07-30",
+        "url": "https://t.me/imatrofAI/1326"
+      },
+      {
+        "title": "Context Engineering — нова дисципліна від Карпатого",
+        "date": "2025-07-25",
+        "url": "https://t.me/imatrofAI/1319"
+      },
+      {
+        "title": "Андрій Карпати про три етапи розробки софту",
+        "date": "2025-07-21",
+        "url": "https://t.me/imatrofAI/1304"
+      },
+      {
+        "title": "Програмування на вайбі — спробуйте самі!",
+        "date": "2025-05-04",
+        "url": "https://t.me/imatrofAI/1111"
+      },
+      {
+        "title": "Vibe Coding — новий стиль програмування від Карпатого",
+        "date": "2025-02-26",
+        "url": "https://t.me/imatrofAI/1071"
+      }
+    ]
+  },
+  {
+    "id": "grok",
+    "label": "Grok",
+    "count": 10,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "Grok: Упередженість у відповідях (деталі)",
+        "date": "2025-08-28",
+        "url": "https://t.me/imatrofAI/1398"
+      },
+      {
+        "title": "Голосовий режим Grok — чому він такий популярний?",
+        "date": "2025-08-22",
+        "url": "https://t.me/imatrofAI/1384"
+      },
+      {
+        "title": "Маск проти Apple: Вимога інтеграції X та Grok",
+        "date": "2025-08-18",
+        "url": "https://t.me/imatrofAI/1509"
+      },
+      {
+        "title": "xAI анонсували Grok 4 — дві версії моделі",
+        "date": "2025-08-13",
+        "url": "https://t.me/imatrofAI/1359"
+      },
+      {
+        "title": "Шаховий турнір між LLM — Grok 4 vs OpenAI o3",
+        "date": "2025-08-02",
+        "url": "https://t.me/imatrofAI/1456"
+      },
+      {
+        "title": "Grok в Telegram — Дуров + Маск = Велика база даних",
+        "date": "2025-05-30",
+        "url": "https://t.me/imatrofAI/1206"
+      },
+      {
+        "title": "Grok 3 — найрозумніший ШІ на світі?",
+        "date": "2025-02-17",
+        "url": "https://t.me/imatrofAI/853"
+      },
+      {
+        "title": "Grok 2 — тепер безкоштовний від xAI",
+        "date": "2024-12-07",
+        "url": "https://t.me/imatrofAI/576"
+      },
+      {
+        "title": "Grok-2 + Flux: Хайп чи реальність Ілона Маска?",
+        "date": "2024-08-15",
+        "url": "https://t.me/imatrofAI/115"
+      },
+      {
+        "title": "Grok-2 та Grok-2 mini — анонс від xAI",
+        "date": "2024-08-14",
+        "url": "https://t.me/imatrofAI/107"
+      }
+    ]
+  },
+  {
+    "id": "microsoft",
+    "label": "Microsoft",
+    "count": 9,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "GitHub перетворюється на AI соцмережу для коду",
+        "date": "2026-04-20",
+        "url": "https://t.me/imatrofAI/2631"
+      },
+      {
+        "title": "Microsoft: Copilot-режим в Edge — розумний браузер",
+        "date": "2025-09-11",
+        "url": "https://t.me/imatrofAI/1418"
+      },
+      {
+        "title": "Драма навколо Windsurf: OpenAI, Microsoft та IP",
+        "date": "2025-08-25",
+        "url": "https://t.me/imatrofAI/1393"
+      },
+      {
+        "title": "GitHub Copilot Chat — тепер у відкритому коді",
+        "date": "2025-08-03",
+        "url": "https://t.me/imatrofAI/1335"
+      },
+      {
+        "title": "Microsoft Build та запуск NLWeb",
+        "date": "2025-06-10",
+        "url": "https://t.me/imatrofAI/1176"
+      },
+      {
+        "title": "Сем Альтман у Сенаті США — виступ про майбутнє",
+        "date": "2025-05-26",
+        "url": "https://t.me/imatrofAI/1154"
+      },
+      {
+        "title": "Microsoft Clippy повертається як ШІ-помічник",
+        "date": "2025-05-12",
+        "url": "https://t.me/imatrofAI/1130"
+      },
+      {
+        "title": "Microsoft у квантовій гонці — перемога над Google та IBM",
+        "date": "2025-02-22",
+        "url": "https://t.me/imatrofAI/877"
+      }
+    ]
+  },
+  {
+    "id": "robotics",
+    "label": "Робототехніка",
+    "count": 9,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Робот G1 від Unitree — нові тести спритності",
+        "date": "2025-11-08",
+        "url": "https://t.me/imatrofAI/1736"
+      },
+      {
+        "title": "Тренування роботів на фізичних даних",
+        "date": "2025-10-24",
+        "url": "https://t.me/imatrofAI/1707"
+      },
+      {
+        "title": "Мультиагентний досвід — Tesla та автономні помічники",
+        "date": "2025-03-05",
+        "url": "https://t.me/imatrofAI/915"
+      },
+      {
+        "title": "Apple та Pixar-лампа — кроки в робототехніку",
+        "date": "2025-02-10",
+        "url": "https://t.me/imatrofAI/830"
+      },
+      {
+        "title": "Meta Connect: Роботизація та тактильне навчання",
+        "date": "2024-11-04",
+        "url": "https://t.me/imatrofAI/395"
+      },
+      {
+        "title": "Роботизація у Китаї — шалені темпи прогресу",
+        "date": "2024-09-02",
+        "url": "https://t.me/imatrofAI/174"
+      },
+      {
+        "title": "Boston Dynamics Atlas — фізкультура по-роботівськи 🤸‍♂️",
+        "date": "2024-08-23",
+        "url": "https://t.me/imatrofAI/132"
+      },
+      {
+        "title": "Огляд тижня: Runway, Роботизація та Фаст-фуд драйв",
+        "date": "2024-08-12",
+        "url": "https://t.me/imatrofAI/96"
+      },
+      {
+        "title": "Хатній робот від 1X Technologies та майбутнє роботехніки",
+        "date": "2024-09-02",
+        "url": "https://t.me/imatrofAI/168"
+      }
+    ]
+  },
+  {
+    "id": "apple",
+    "label": "Apple",
+    "count": 8,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Apple FastVLM на Hugging Face — несподіваний реліз",
+        "date": "2025-09-08",
+        "url": "https://t.me/imatrofAI/1602"
+      },
+      {
+        "title": "Apple в паралельній AI-реальності",
+        "date": "2025-09-05",
+        "url": "https://t.me/imatrofAI/1410"
+      },
+      {
+        "title": "Маск проти Apple: Вимога інтеграції X та Grok",
+        "date": "2025-08-18",
+        "url": "https://t.me/imatrofAI/1509"
+      },
+      {
+        "title": "Apple: дослідження про \"розум\" LLM",
+        "date": "2025-06-26",
+        "url": "https://t.me/imatrofAI/1257"
+      },
+      {
+        "title": "Apple WWDC 2025 — розчарування та Siri",
+        "date": "2025-06-25",
+        "url": "https://t.me/imatrofAI/1252"
+      },
+      {
+        "title": "Apple та Pixar-лампа — кроки в робототехніку",
+        "date": "2025-02-10",
+        "url": "https://t.me/imatrofAI/830"
+      },
+      {
+        "title": "OpenAI Адвент Календар — День 5: ChatGPT на Apple",
+        "date": "2024-12-11",
+        "url": "https://t.me/imatrofAI/604"
+      },
+      {
+        "title": "Apple Event 2024 — Apple Intelligence та фото-функції",
+        "date": "2024-09-20",
+        "url": "https://t.me/imatrofAI/200"
+      }
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "label": "ElevenLabs",
+    "count": 8,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Цифровий двійник Михайла Федорова — анонс",
+        "date": "2025-11-16",
+        "url": "https://t.me/imatrofAI/1750"
+      },
+      {
+        "title": "ElevenLabs: Нова суперсила перекладу та крінж",
+        "date": "2025-10-06",
+        "url": "https://t.me/imatrofAI/1664"
+      },
+      {
+        "title": "ElevenLabs: Безкоштовний доступ до топових сервісів",
+        "date": "2025-08-25",
+        "url": "https://t.me/imatrofAI/1527"
+      },
+      {
+        "title": "ElevenLabs: Музична генерація та нові джингли",
+        "date": "2025-08-01",
+        "url": "https://t.me/imatrofAI/1454"
+      },
+      {
+        "title": "AI-голос, який неможливо відрізнити від людини",
+        "date": "2025-03-15",
+        "url": "https://t.me/imatrofAI/944"
+      },
+      {
+        "title": "ElevenLabs Voice Design — генерація голосу з промпту",
+        "date": "2024-10-25",
+        "url": "https://t.me/imatrofAI/345"
+      },
+      {
+        "title": "ElevenLabs — мобільний додаток з напрацюваннями моделей",
+        "date": "2024-08-27",
+        "url": "https://t.me/imatrofAI/141"
+      },
+      {
+        "title": "ElevenLabs: Даббінг для контент-мейкерів",
+        "date": "2024-07-16",
+        "url": "https://t.me/imatrofAI/43"
+      }
+    ]
+  },
+  {
+    "id": "heygen",
+    "label": "HeyGen",
+    "count": 7,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "HeyGen: AI-агент для створення відео",
+        "date": "2025-10-14",
+        "url": "https://t.me/imatrofAI/1680"
+      },
+      {
+        "title": "HeyGen — ніша знайдена (Product Placement)",
+        "date": "2025-07-24",
+        "url": "https://t.me/imatrofAI/1317"
+      },
+      {
+        "title": "HeyGen — Product Placement в один клік",
+        "date": "2025-07-18",
+        "url": "https://t.me/imatrofAI/1301"
+      },
+      {
+        "title": "HeyGen — масштабне оновлення аватарів та інструментів",
+        "date": "2025-06-24",
+        "url": "https://t.me/imatrofAI/1249"
+      },
+      {
+        "title": "Heygen 5.0 — новий рівень реалістичності аватарів",
+        "date": "2025-05-17",
+        "url": "https://t.me/imatrofAI/1140"
+      },
+      {
+        "title": "Аватар без камери — нові можливості HeyGen",
+        "date": "2024-11-08",
+        "url": "https://t.me/imatrofAI/415"
+      },
+      {
+        "title": "HeyGen Avatar 3.0 — реалістичність вражає",
+        "date": "2024-10-22",
+        "url": "https://t.me/imatrofAI/334"
+      }
+    ]
+  },
+  {
+    "id": "claude-code",
+    "label": "Claude Code",
+    "count": 7,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "Anthropic будує власний стек: Claude Code + Cowork + Design",
+        "date": "2026-04-22",
+        "url": "https://t.me/imatrofAI/2637"
+      },
+      {
+        "title": "Anthropic запустили ClaudeDevs — офіційний X акаунт для Claude Code",
+        "date": "2026-04-17",
+        "url": "https://t.me/imatrofAI/2624"
+      },
+      {
+        "title": "Claude Opus 4.7 — новий реліз",
+        "date": "2026-04-16",
+        "url": "https://t.me/imatrofAI/2620"
+      },
+      {
+        "title": "Claude Code оновлення: стало схоже на Codex, з'явилась аналітика",
+        "date": "2026-04-15",
+        "url": "https://t.me/imatrofAI/2616"
+      },
+      {
+        "title": "Claude Managed Agents — нова платформа для побудови агентів від Anthropic",
+        "date": "2026-04-10",
+        "url": "https://t.me/imatrofAI/2602"
+      },
+      {
+        "title": "AI-система пошуку роботи на базі Claude Code — 700+ вакансій",
+        "date": "2026-04-09",
+        "url": "https://t.me/imatrofAI/2599"
+      },
+      {
+        "title": "Куди ділись токени — детективна історія з Claude Code",
+        "date": "2026-04-07",
+        "url": "https://t.me/imatrofAI/2590"
+      }
+    ]
+  },
+  {
+    "id": "deepseek",
+    "label": "DeepSeek",
+    "count": 6,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Manus Wide Research — мультиагентний оркестратор",
+        "date": "2025-08-16",
+        "url": "https://t.me/imatrofAI/1501"
+      },
+      {
+        "title": "Minimax — китайський агент та витрати кредитів",
+        "date": "2025-07-05",
+        "url": "https://t.me/imatrofAI/1281"
+      },
+      {
+        "title": "Manus — новий потужний AI-агент з Китаю",
+        "date": "2025-03-05",
+        "url": "https://t.me/imatrofAI/915"
+      },
+      {
+        "title": "DeepSeek — технології поза політикою?",
+        "date": "2025-01-22",
+        "url": "https://t.me/imatrofAI/773"
+      },
+      {
+        "title": "DeepSeek R1 — новий король різонінгу?",
+        "date": "2025-01-15",
+        "url": "https://t.me/imatrofAI/768"
+      },
+      {
+        "title": "DeepSeek — китайська LLM обходить конкурентів",
+        "date": "2024-12-29",
+        "url": "https://t.me/imatrofAI/787"
+      }
+    ]
+  },
+  {
+    "id": "suno",
+    "label": "Suno",
+    "count": 6,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Контракт на $3M для AI-артистки Xania Monet",
+        "date": "2025-11-12",
+        "url": "https://t.me/imatrofAI/1740"
+      },
+      {
+        "title": "Suno Radio — нескінченний стрім ШІ-музики",
+        "date": "2025-09-10",
+        "url": "https://t.me/imatrofAI/1417"
+      },
+      {
+        "title": "NotaGen — чи може ШІ написати симфонію?",
+        "date": "2025-03-18",
+        "url": "https://t.me/imatrofAI/949"
+      },
+      {
+        "title": "Suno v4 — новий рівень AI музики",
+        "date": "2024-12-17",
+        "url": "https://t.me/imatrofAI/671"
+      },
+      {
+        "title": "Perplexity Store та Suno v4",
+        "date": "2024-11-22",
+        "url": "https://t.me/imatrofAI/479"
+      },
+      {
+        "title": "Suno AI — музична революція продовжується",
+        "date": "2024-11-01",
+        "url": "https://t.me/imatrofAI/360"
+      }
+    ]
+  },
+  {
+    "id": "midjourney",
+    "label": "Midjourney",
+    "count": 6,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Midjourney Video V1 — офіційний доступ",
+        "date": "2025-07-10",
+        "url": "https://t.me/imatrofAI/1297"
+      },
+      {
+        "title": "Midjourney — велике оновлення інтерфейсу та функцій",
+        "date": "2025-04-07",
+        "url": "https://t.me/imatrofAI/1027"
+      },
+      {
+        "title": "Лідерборд GenAI зображень — початок 2025",
+        "date": "2025-01-10",
+        "url": "https://t.me/imatrofAI/752"
+      },
+      {
+        "title": "ШІ-редактори зображень від Midjourney та Ideogram",
+        "date": "2024-11-01",
+        "url": "https://t.me/imatrofAI/361"
+      },
+      {
+        "title": "Спостереження про ШІ відео — MJ, Luma, Runway",
+        "date": "2024-09-25",
+        "url": "https://t.me/imatrofAI/246"
+      },
+      {
+        "title": "Flux vs Midjourney — битва за реалістичність",
+        "date": "2024-08-13",
+        "url": "https://t.me/imatrofAI/85"
+      }
+    ]
+  },
+  {
+    "id": "llama",
+    "label": "Llama",
+    "count": 6,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "Марк Цукерберг: Кожному — по персональному суперінтелекту",
+        "date": "2025-09-17",
+        "url": "https://t.me/imatrofAI/1428"
+      },
+      {
+        "title": "Meta — лідер у наданні ШІ користувачам",
+        "date": "2025-04-07",
+        "url": "https://t.me/imatrofAI/1015"
+      },
+      {
+        "title": "Розбір Llama 3 від Андрія Карпатого",
+        "date": "2025-02-28",
+        "url": "https://t.me/imatrofAI/898"
+      },
+      {
+        "title": "Meta Connect 2024 — окуляри Orion та Llama 3.2",
+        "date": "2024-09-26",
+        "url": "https://t.me/imatrofAI/254"
+      },
+      {
+        "title": "Llama 3.1 від Meta — відкритий код та Huggingface",
+        "date": "2024-07-23",
+        "url": "https://t.me/imatrofAI/56"
+      },
+      {
+        "title": "Новини тижня: Llama 3.1 та нові ліміти",
+        "date": "2024-07-22",
+        "url": "https://t.me/imatrofAI/55"
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "label": "Освіта",
+    "count": 5,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "AI-бот для англійської через свіжі новини",
+        "date": "2025-10-21",
+        "url": "https://t.me/imatrofAI/1704"
+      },
+      {
+        "title": "Студенти Львівської політехніки — ШІ-проект",
+        "date": "2025-06-01",
+        "url": "https://t.me/imatrofAI/1163"
+      },
+      {
+        "title": "Юра Гнатюк: AI в освіті та Креативній Практиці",
+        "date": "2025-05-31",
+        "url": "https://t.me/imatrofAI/1207"
+      },
+      {
+        "title": "Від дискет до ШІ — роздуми про освіту",
+        "date": "2025-05-28",
+        "url": "https://t.me/imatrofAI/1157"
+      }
+    ]
+  },
+  {
+    "id": "sora",
+    "label": "Sora",
+    "count": 5,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "Доступ до Sora та GPU — суперечливі новини OpenAI",
+        "date": "2025-03-22",
+        "url": "https://t.me/imatrofAI/952"
+      },
+      {
+        "title": "OpenAI: Sora та безпека відеогенерації",
+        "date": "2025-01-08",
+        "url": "https://t.me/imatrofAI/48"
+      },
+      {
+        "title": "OpenAI Адвент Календар — День 3: Sora для всіх Plus",
+        "date": "2024-12-09",
+        "url": "https://t.me/imatrofAI/586"
+      },
+      {
+        "title": "OpenAI SORA — колаб з креативними агенціями",
+        "date": "2024-07-17",
+        "url": "https://t.me/imatrofAI/45"
+      },
+      {
+        "title": "Фізика у ШІ-моделях: Runway та Sora",
+        "date": "2024-07-12",
+        "url": "https://t.me/imatrofAI/37"
+      }
+    ]
+  },
+  {
+    "id": "cursor",
+    "label": "Cursor",
+    "count": 4,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Cursor сповільнює розробників? Неочікувана статистика",
+        "date": "2025-09-18",
+        "url": "https://t.me/imatrofAI/1429"
+      },
+      {
+        "title": "Cursor на мобільному та у веб — вайбкодинг всюди",
+        "date": "2025-08-01",
+        "url": "https://t.me/imatrofAI/1329"
+      },
+      {
+        "title": "Cursor — перша повноцінна версія 1.0",
+        "date": "2025-06-23",
+        "url": "https://t.me/imatrofAI/1248"
+      },
+      {
+        "title": "Перший досвід з Cursor AI — відео на каналі",
+        "date": "2025-01-26",
+        "url": "https://t.me/imatrofAI/795"
+      }
+    ]
+  },
+  {
+    "id": "labor-market",
+    "label": "Ринок праці",
+    "count": 4,
+    "cat": "topic",
+    "color": "#788C5D",
+    "posts": [
+      {
+        "title": "Ринок IT праці: #OpenToWork та ШІ-рекрутинг",
+        "date": "2025-11-02",
+        "url": "https://t.me/imatrofAI/1722"
+      },
+      {
+        "title": "Команда розробки AI-агентів — нові вакансії",
+        "date": "2025-10-29",
+        "url": "https://t.me/imatrofAI/1718"
+      },
+      {
+        "title": "ШІ допоможе шукати роботу у 2026 році",
+        "date": "2025-10-06",
+        "url": "https://t.me/imatrofAI/1647"
+      },
+      {
+        "title": "AI забирає роботу? Аналіз 62 млн резюме",
+        "date": "2025-09-30",
+        "url": "https://t.me/imatrofAI/1637"
+      }
+    ]
+  },
+  {
+    "id": "notebooklm",
+    "label": "NotebookLM",
+    "count": 4,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "NotebookLM: Нові формати аудіо-подкастів",
+        "date": "2025-09-12",
+        "url": "https://t.me/imatrofAI/1617"
+      },
+      {
+        "title": "Агент-дослідник: локальна міні-версія NotebookLM",
+        "date": "2025-08-02",
+        "url": "https://t.me/imatrofAI/1333"
+      },
+      {
+        "title": "Google NotebookLM — відео-огляд на каналі",
+        "date": "2025-04-06",
+        "url": "https://t.me/imatrofAI/1014"
+      },
+      {
+        "title": "NotebookLM — оновлення та подкасти українською",
+        "date": "2025-03-20",
+        "url": "https://t.me/imatrofAI/1014"
+      }
+    ]
+  },
+  {
+    "id": "mistral",
+    "label": "Mistral",
+    "count": 3,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Mistral OCR — перетворення PDF у текст з високою точністю",
+        "date": "2025-03-04",
+        "url": "https://t.me/imatrofAI/910"
+      },
+      {
+        "title": "Mistral AI — французький опір та нові моделі",
+        "date": "2025-02-12",
+        "url": "https://t.me/imatrofAI/832"
+      },
+      {
+        "title": "Огляд новин за тиждень: OpenAI, Meta, Mistral",
+        "date": "2024-07-25",
+        "url": "https://t.me/imatrofAI/64"
+      }
+    ]
+  },
+  {
+    "id": "krea",
+    "label": "Krea",
+    "count": 3,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Krea 1 — реліз першої власної моделі",
+        "date": "2025-06-28",
+        "url": "https://t.me/imatrofAI/1267"
+      },
+      {
+        "title": "Krea AI — 3D-об'єкти з зображень",
+        "date": "2025-03-31",
+        "url": "https://t.me/imatrofAI/990"
+      },
+      {
+        "title": "Krea AI Video Lora — персоналізація відео",
+        "date": "2025-03-26",
+        "url": "https://t.me/imatrofAI/990"
+      }
+    ]
+  },
+  {
+    "id": "mcp",
+    "label": "MCP",
+    "count": 3,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "MCP — місток між Claude та вашими даними",
+        "date": "2024-11-30",
+        "url": "https://t.me/imatrofAI/530"
+      },
+      {
+        "title": "MCP кастомні конектори у ChatGPT",
+        "date": "2025-09-25",
+        "url": "https://t.me/imatrofAI/1645"
+      }
+    ]
+  },
+  {
+    "id": "figma",
+    "label": "Figma",
+    "count": 2,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Replit — конвертація дизайну Figma у код",
+        "date": "2025-06-29",
+        "url": "https://t.me/imatrofAI/1268"
+      },
+      {
+        "title": "Figma — ШІ на озброєнні дизайнерів",
+        "date": "2024-06-27",
+        "url": "https://t.me/imatrofAI/18"
+      }
+    ]
+  },
+  {
+    "id": "bytedance",
+    "label": "ByteDance",
+    "count": 2,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "ByteDance — AI-редактор коду Trae",
+        "date": "2025-01-28",
+        "url": "https://t.me/imatrofAI/798"
+      },
+      {
+        "title": "ByteDance — ШІ новини з Піднебесної",
+        "date": "2025-01-25",
+        "url": "https://t.me/imatrofAI/798"
+      }
+    ]
+  },
+  {
+    "id": "nvidia",
+    "label": "Nvidia",
+    "count": 2,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Evo 2 — ШІ, що створює нові живі організми",
+        "date": "2025-02-25",
+        "url": "https://t.me/imatrofAI/884"
+      },
+      {
+        "title": "NVIDIA Digits — міні-ПК для ШІ-задач",
+        "date": "2025-01-05",
+        "url": "https://t.me/imatrofAI/742"
+      }
+    ]
+  },
+  {
+    "id": "replit",
+    "label": "Replit",
+    "count": 2,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Replit — конвертація дизайну Figma у код",
+        "date": "2025-06-29",
+        "url": "https://t.me/imatrofAI/1268"
+      },
+      {
+        "title": "Replit — ШІ зробить кожного програмістом",
+        "date": "2025-01-12",
+        "url": "https://t.me/imatrofAI/760"
+      }
+    ]
+  },
+  {
+    "id": "codex",
+    "label": "Codex",
+    "count": 2,
+    "cat": "product",
+    "color": "#4A7CC7",
+    "posts": [
+      {
+        "title": "OpenAI Codex став агентною платформою для всього",
+        "date": "2026-04-16",
+        "url": "https://t.me/imatrofAI/2622"
+      },
+      {
+        "title": "Скидання лімітів у Codex — маленьке великоднє свято",
+        "date": "2026-04-11",
+        "url": "https://t.me/imatrofAI/2605"
+      }
+    ]
+  },
+  {
+    "id": "adobe",
+    "label": "Adobe",
+    "count": 1,
+    "cat": "company",
+    "color": "#D97757",
+    "posts": [
+      {
+        "title": "Adobe Video Model та наздоганяння ринку",
+        "date": "2024-10-16",
+        "url": "https://t.me/imatrofAI/315"
+      }
+    ]
+  }
+];
+
+const canvas = document.getElementById('bubble-canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+
+let W, H, bubbles = [], activeFilter = 'all', selectedId = null, animFrame;
+
+function initCanvas() {
+  const wrap = canvas.parentElement;
+  const dpr = window.devicePixelRatio || 1;
+  W = wrap.clientWidth;
+  H = Math.min(Math.max(W * 0.65, 420), 680);
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+}
+
+function sizeFor(count) {
+  const allCounts = TOPICS.map(t => t.count);
+  const min = Math.min(...allCounts);
+  const max = Math.max(...allCounts);
+  const minR = 14, maxR = 72;
+  return minR + (Math.sqrt(count) - Math.sqrt(min)) / (Math.sqrt(max) - Math.sqrt(min)) * (maxR - minR);
+}
+
+function initBubbles() {
+  // Spread bubbles with some structure
+  const visible = TOPICS.filter(t => true);
+  bubbles = TOPICS.map((t, i) => {
+    const angle = (i / TOPICS.length) * Math.PI * 2;
+    const spread = 0.28 + Math.random() * 0.18;
+    return {
+      ...t,
+      r: sizeFor(t.count),
+      x: W * 0.5 + Math.cos(angle) * W * spread,
+      y: H * 0.5 + Math.sin(angle) * H * spread * 0.85,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      hovered: false,
+    };
+  });
+}
+
+function tick() {
+  const cx = W / 2, cy = H / 2;
+  const damping = 0.96;
+
+  for (let i = 0; i < bubbles.length; i++) {
+    const b = bubbles[i];
+    const vis = isVisible(b);
+
+    // Gravity toward center (weaker for invisible)
+    const g = vis ? 0.008 : 0.003;
+    b.vx += (cx - b.x) * g;
+    b.vy += (cy - b.y) * g * 0.9;
+
+    // Collision avoidance
+    for (let j = i + 1; j < bubbles.length; j++) {
+      const o = bubbles[j];
+      const dx = b.x - o.x, dy = b.y - o.y;
+      const dist = Math.sqrt(dx*dx + dy*dy) || 0.001;
+      const gap = vis && isVisible(o) ? 6 : 2;
+      const minD = b.r + o.r + gap;
+      if (dist < minD) {
+        const force = (minD - dist) / dist * 0.055;
+        b.vx += dx * force; b.vy += dy * force;
+        o.vx -= dx * force; o.vy -= dy * force;
+      }
+    }
+
+    b.vx *= damping; b.vy *= damping;
+    b.x += b.vx; b.y += b.vy;
+
+    // Boundaries
+    const pad = b.r + 4;
+    if (b.x < pad) { b.x = pad; b.vx *= -0.4; }
+    if (b.x > W - pad) { b.x = W - pad; b.vx *= -0.4; }
+    if (b.y < pad) { b.y = pad; b.vy *= -0.4; }
+    if (b.y > H - pad) { b.y = H - pad; b.vy *= -0.4; }
+  }
+}
+
+function isVisible(b) {
+  return activeFilter === 'all' || b.cat === activeFilter;
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  for (const b of bubbles) {
+    const vis = isVisible(b);
+    let alpha = vis ? 1 : 0.06;
+    if (vis && selectedId && selectedId !== b.id) alpha = 0.22;
+
+    const s = (b.hovered && vis) ? 1.07 : 1;
+
+    ctx.save();
+    ctx.translate(b.x, b.y);
+    ctx.scale(s, s);
+    ctx.globalAlpha = alpha;
+
+    if (vis && alpha > 0.3) {
+      ctx.shadowColor = 'rgba(0,0,0,0.07)';
+      ctx.shadowBlur = 14;
+      ctx.shadowOffsetY = 2;
+    }
+
+    ctx.beginPath();
+    ctx.arc(0, 0, b.r, 0, Math.PI * 2);
+    ctx.fillStyle = hexAlpha(b.color, 0.13);
+    ctx.fill();
+
+    if (selectedId === b.id) {
+      ctx.strokeStyle = b.color;
+      ctx.lineWidth = 2.5;
+    } else {
+      ctx.strokeStyle = hexAlpha(b.color, b.hovered ? 0.85 : 0.45);
+      ctx.lineWidth = 1.5;
+    }
+    ctx.stroke();
+    ctx.shadowColor = 'transparent';
+
+    if (vis) {
+      const fs = Math.max(8.5, Math.min(b.r * 0.26, 13.5));
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = b.color;
+
+      const showCount = b.r > 25;
+      if (showCount) {
+        ctx.font = `600 ${fs}px system-ui,sans-serif`;
+        ctx.fillText(b.label, 0, -6);
+        ctx.font = `${Math.max(8, fs - 2)}px var(--mono, monospace)`;
+        ctx.fillStyle = hexAlpha(b.color, 0.65);
+        ctx.fillText(b.count, 0, 8);
+      } else {
+        ctx.font = `600 ${fs}px system-ui,sans-serif`;
+        ctx.fillText(b.label, 0, 0);
+      }
+    }
+
+    ctx.restore();
+  }
+
+  animFrame = requestAnimationFrame(() => { tick(); draw(); });
+}
+
+function hexAlpha(hex, a) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const bl = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${bl},${a})`;
+}
+
+function getBubbleAt(x, y) {
+  for (let i = bubbles.length - 1; i >= 0; i--) {
+    const b = bubbles[i];
+    if (!isVisible(b)) continue;
+    const dx = b.x - x, dy = b.y - y;
+    if (dx*dx + dy*dy <= b.r * b.r) return b;
+  }
+  return null;
+}
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  const hit = getBubbleAt(mx, my);
+  bubbles.forEach(b => b.hovered = false);
+  if (hit) {
+    hit.hovered = true;
+    canvas.style.cursor = 'pointer';
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+    document.getElementById('tt-name').textContent = hit.label;
+    document.getElementById('tt-count').textContent = hit.count + ' матеріалів';
+  } else {
+    canvas.style.cursor = 'default';
+    tooltip.style.display = 'none';
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  tooltip.style.display = 'none';
+  bubbles.forEach(b => b.hovered = false);
+});
+
+canvas.addEventListener('click', e => {
+  const rect = canvas.getBoundingClientRect();
+  const hit = getBubbleAt(e.clientX - rect.left, e.clientY - rect.top);
+  if (hit) openSidebar(hit);
+  else closeSidebar();
+});
+
+function openSidebar(topic) {
+  selectedId = topic.id;
+  const tag = document.getElementById('sb-tag');
+  const labels = { company:'Компанія', topic:'Тема', product:'Продукт' };
+  tag.textContent = labels[topic.cat] || topic.cat;
+  tag.className = `sidebar-tag ${topic.cat}`;
+  document.getElementById('sb-title').textContent = topic.label;
+  document.getElementById('sb-count').textContent = topic.count + ' матеріалів у Telegram';
+
+  const posts = document.getElementById('sb-posts');
+  if (topic.posts && topic.posts.length > 0) {
+    posts.innerHTML = topic.posts.map(p => {
+      if (p.url) {
+        return `<a href="${p.url}" target="_blank" rel="noopener" class="post-card">
+          ${p.title || '(без заголовку)'}
+          <div class="post-date">${p.date} · t.me/imatrofAI</div>
+        </a>`;
+      } else {
+        return `<div class="post-card post-no-link">
+          ${p.title || '(без заголовку)'}
+          <div class="post-date">${p.date}</div>
+        </div>`;
+      }
+    }).join('');
+  } else {
+    posts.innerHTML = '<div style="color:var(--g500);font-size:13px;">Пости не знайдено</div>';
+  }
+
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('overlay').classList.add('show');
+}
+
+function closeSidebar() {
+  selectedId = null;
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+}
+
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if (selectedId) closeSidebar();
+}
+
+function start() {
+  if (animFrame) cancelAnimationFrame(animFrame);
+  initCanvas();
+  initBubbles();
+  draw();
+}
+
+window.addEventListener('resize', () => {
+  if (animFrame) cancelAnimationFrame(animFrame);
+  setTimeout(start, 80);
+});
+
+start();
+</script>
+</body>
+</html>
