@@ -18,6 +18,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
 
+  /* ── Header ── */
   .page-header { max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat); }
   .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
   .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
@@ -26,23 +27,109 @@
   .content { max-width: 1100px; margin: 0 auto; padding: 36px 52px 60px; }
 
   .chart-section { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; overflow: hidden; }
-  .chart-head { padding: 20px 24px 16px; border-bottom: 1.5px solid var(--g200); }
-  .chart-head h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
-  .chart-head p  { font-size: 12.5px; color: var(--g500); }
+  .chart-head { padding: 20px 24px 16px; border-bottom: 1.5px solid var(--g200); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .chart-head div h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  .chart-head div p  { font-size: 12.5px; color: var(--g500); }
+  .hint-label { font-size: 11.5px; color: var(--g500); font-family: var(--mono); white-space: nowrap; }
+
   .chart-body { padding: 24px; }
 
-  #tooltip { position: fixed; background: var(--slate); color: white; padding: 8px 13px; border-radius: 8px; font-size: 12.5px; pointer-events: none; display: none; z-index: 1000; max-width: 280px; line-height: 1.4; }
-  #tooltip strong { display: block; font-size: 13px; margin-bottom: 2px; }
-  #tooltip span { color: #ccc; font-size: 11.5px; }
+  #treemap-canvas { display: block; width: 100%; border-radius: 8px; cursor: default; }
 
   .chart-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
   .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
 
-  #treemap-canvas { display: block; width: 100%; border-radius: 8px; cursor: default; }
-
   .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
 
+  /* ── Tooltip ── */
+  #tooltip {
+    position: fixed; background: var(--slate); color: white;
+    padding: 8px 13px; border-radius: 8px; font-size: 12.5px;
+    pointer-events: none; display: none; z-index: 900; max-width: 280px; line-height: 1.4;
+  }
+  #tooltip strong { display: block; font-size: 13px; margin-bottom: 2px; }
+  #tooltip span { color: #ccc; font-size: 11.5px; }
+
+  /* ── Sidebar overlay backdrop ── */
+  #sidebar-backdrop {
+    position: fixed; inset: 0; z-index: 950;
+    background: rgba(20,20,19,0.25);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  #sidebar-backdrop.visible { opacity: 1; pointer-events: auto; }
+
+  /* ── Sidebar ── */
+  #sidebar {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 960;
+    width: 360px; max-width: 100vw;
+    background: var(--paper);
+    border-left: 1.5px solid var(--g300);
+    display: flex; flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+  }
+  #sidebar.open { transform: translateX(0); }
+
+  .sidebar-head {
+    padding: 20px 20px 16px;
+    border-bottom: 1.5px solid var(--g200);
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .sidebar-head-text { flex: 1; min-width: 0; }
+  .sidebar-category {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.07em;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    display: inline-block; margin-bottom: 6px;
+  }
+  .sidebar-category.company { background: var(--clay-l); color: var(--clay-d); }
+  .sidebar-category.topic   { background: var(--olive-l); color: #3D5A2A; }
+  .sidebar-category.product { background: var(--blue-l); color: #1E40AF; }
+
+  .sidebar-title { font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 4px; }
+  .sidebar-count { font-size: 12px; color: var(--g500); font-family: var(--mono); }
+
+  .sidebar-close {
+    flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px;
+    border: 1.5px solid var(--g300); background: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 16px; color: var(--g500);
+    transition: all 0.13s; line-height: 1;
+  }
+  .sidebar-close:hover { border-color: var(--clay); color: var(--clay); background: var(--clay-l); }
+
+  /* ── Sidebar search ── */
+  .sidebar-search-wrap { padding: 12px 20px; border-bottom: 1px solid var(--g200); }
+  .sidebar-search-wrap input {
+    width: 100%; padding: 7px 12px; border-radius: 8px;
+    border: 1.5px solid var(--g300); background: var(--ivory);
+    font-size: 13px; font-family: var(--sans); color: var(--slate);
+    outline: none; transition: border-color 0.13s;
+  }
+  .sidebar-search-wrap input:focus { border-color: var(--clay); }
+  .sidebar-search-wrap input::placeholder { color: var(--g500); }
+
+  /* ── Post list ── */
+  .sidebar-list { flex: 1; overflow-y: auto; padding: 8px 0; }
+
+  .post-item {
+    display: block; padding: 12px 20px; text-decoration: none; color: var(--slate);
+    border-bottom: 1px solid var(--g100);
+    transition: background 0.12s;
+  }
+  .post-item:hover { background: var(--g100); }
+  .post-item:last-child { border-bottom: none; }
+
+  .post-item-date { font-family: var(--mono); font-size: 10.5px; color: var(--g500); margin-bottom: 4px; }
+  .post-item-title { font-size: 13px; font-weight: 600; line-height: 1.4; margin-bottom: 4px; }
+  .post-item-preview { font-size: 11.5px; color: var(--g700); line-height: 1.5;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  .sidebar-empty { padding: 40px 20px; text-align: center; color: var(--g500); font-size: 13px; }
+
+  /* ── Footer ── */
   footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   footer a { color: var(--clay); text-decoration: none; }
 
@@ -50,6 +137,8 @@
     .page-header, .content, footer { padding-left: 20px; padding-right: 20px; }
     .page-header { padding-top: 24px; }
     .chart-body { padding: 16px; }
+    #sidebar { width: 100vw; top: auto; height: 70vh; border-left: none; border-top: 1.5px solid var(--g300); transform: translateY(100%); border-radius: 16px 16px 0 0; }
+    #sidebar.open { transform: translateY(0); }
   }
 </style>
 </head>
@@ -57,17 +146,39 @@
 
 <div id="tooltip"><strong id="tt-name"></strong><span id="tt-count"></span></div>
 
+<!-- Sidebar backdrop -->
+<div id="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+  <div class="sidebar-head">
+    <div class="sidebar-head-text">
+      <span class="sidebar-category" id="sb-category"></span>
+      <div class="sidebar-title" id="sb-title">—</div>
+      <div class="sidebar-count" id="sb-count"></div>
+    </div>
+    <button class="sidebar-close" onclick="closeSidebar()">×</button>
+  </div>
+  <div class="sidebar-search-wrap">
+    <input type="text" id="sb-search" placeholder="Пошук по постах…" oninput="renderSidebarPosts()">
+  </div>
+  <div class="sidebar-list" id="sb-list"></div>
+</div>
+
 <header class="page-header">
   <div class="page-eyebrow">Карта</div>
   <h1>Теплова карта тем</h1>
-  <p>Площа прямокутника = кількість матеріалів. Наведи для деталей.</p>
+  <p>Площа прямокутника = кількість матеріалів. Натисни — побачиш пости.</p>
 </header>
 
 <main class="content">
   <section class="chart-section">
     <div class="chart-head">
-      <h2>Treemap</h2>
-      <p>Порівняй масштаб тем і компаній за кількістю постів та відео.</p>
+      <div>
+        <h2>Treemap</h2>
+        <p>Порівняй масштаб тем і компаній за кількістю постів та відео.</p>
+      </div>
+      <span class="hint-label">← натисни на прямокутник</span>
     </div>
     <div class="chart-body">
       <canvas id="treemap-canvas"></canvas>
@@ -89,9 +200,9 @@
 <script>
 'use strict';
 
-const tooltip = document.getElementById('tooltip');
-const ttName  = document.getElementById('tt-name');
-const ttCount = document.getElementById('tt-count');
+const tooltip  = document.getElementById('tooltip');
+const ttName   = document.getElementById('tt-name');
+const ttCount  = document.getElementById('tt-count');
 
 function showTip(e, name, count) {
   tooltip.style.display = 'block';
@@ -138,7 +249,113 @@ function layoutBinary(items, x, y, w, h) {
   }
 }
 
+// ── Sidebar state ─────────────────────────────────────────────────────────────
+
+let activeTopic = null;  // { id, label, category, color, posts[] }
+
+function openSidebar(topic) {
+  activeTopic = topic;
+  document.getElementById('sb-search').value = '';
+  document.getElementById('sb-title').textContent = topic.label;
+  document.getElementById('sb-count').textContent = `${topic.posts.length} матеріалів`;
+
+  const catEl = document.getElementById('sb-category');
+  catEl.textContent = topic.category === 'company' ? 'Компанія' : topic.category === 'product' ? 'Продукт' : 'Тема';
+  catEl.className = 'sidebar-category ' + topic.category;
+
+  renderSidebarPosts();
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sidebar-backdrop').classList.add('visible');
+}
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebar-backdrop').classList.remove('visible');
+  activeTopic = null;
+  if (document.getElementById('treemap-canvas')._rects) {
+    redrawTreemap();  // clear highlight
+  }
+}
+
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderSidebarPosts() {
+  if (!activeTopic) return;
+  const q     = (document.getElementById('sb-search').value || '').toLowerCase();
+  const posts = activeTopic.posts.filter(p =>
+    !q || p.title.toLowerCase().includes(q) || (p.preview||'').toLowerCase().includes(q)
+  );
+
+  const list = document.getElementById('sb-list');
+  if (!posts.length) {
+    list.innerHTML = `<div class="sidebar-empty">Нічого не знайдено</div>`;
+    return;
+  }
+
+  list.innerHTML = posts.map(p => `
+    <a href="${esc(p.url || '#')}" target="_blank" rel="noopener" class="post-item">
+      <div class="post-item-date">${p.date || ''}</div>
+      <div class="post-item-title">${esc(p.title)}</div>
+      ${p.preview ? `<div class="post-item-preview">${esc(p.preview)}</div>` : ''}
+    </a>
+  `).join('');
+
+  document.getElementById('sb-count').textContent =
+    q ? `${posts.length} з ${activeTopic.posts.length} матеріалів` : `${activeTopic.posts.length} матеріалів`;
+}
+
+// ── Treemap ───────────────────────────────────────────────────────────────────
+
+let ALL_TOPICS = [];
+let highlightId = null;
+
+function redrawTreemap() {
+  const canvas = document.getElementById('treemap-canvas');
+  if (!canvas._rects) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W   = parseFloat(canvas.style.width);
+  const H   = parseFloat(canvas.style.height);
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const PAD = 1.5;
+  for (const r of canvas._rects) {
+    const rw = r.w - PAD*2, rh = r.h - PAD*2;
+    if (rw < 1 || rh < 1) continue;
+
+    const isHl = r.id === highlightId;
+    ctx.fillStyle   = hexAlpha(r.color, isHl ? 0.28 : 0.15);
+    ctx.strokeStyle = hexAlpha(r.color, isHl ? 0.80 : 0.45);
+    ctx.lineWidth   = isHl ? 2 : 1;
+    ctx.fillRect(r.x + PAD, r.y + PAD, rw, rh);
+    ctx.strokeRect(r.x + PAD, r.y + PAD, rw, rh);
+
+    if (rw > 36 && rh > 22) {
+      const fs = Math.min(13, Math.max(9, Math.min(rw * 0.12, rh * 0.22)));
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(r.x + PAD + 3, r.y + PAD + 3, rw - 6, rh - 6);
+      ctx.clip();
+      ctx.fillStyle    = r.color;
+      ctx.font         = `${isHl ? 700 : 600} ${fs}px system-ui,sans-serif`;
+      ctx.textAlign    = 'center';
+      ctx.textBaseline = 'middle';
+      const cy = rh > 36 ? r.y + r.h/2 - 7 : r.y + r.h/2;
+      ctx.fillText(r.label, r.x + r.w/2, cy);
+      if (rh > 34) {
+        ctx.font      = `${Math.max(8, fs - 2.5)}px var(--mono,monospace)`;
+        ctx.fillStyle = hexAlpha(r.color, 0.6);
+        ctx.fillText(r.value, r.x + r.w/2, r.y + r.h/2 + fs * 0.85);
+      }
+      ctx.restore();
+    }
+  }
+}
+
 function renderTreemap(topics) {
+  ALL_TOPICS = topics;
   const canvas = document.getElementById('treemap-canvas');
   const dpr    = window.devicePixelRatio || 1;
   const W      = canvas.parentElement.clientWidth;
@@ -155,50 +372,32 @@ function renderTreemap(topics) {
     .sort((a, b) => b.count - a.count)
     .map(t => ({ id: t.id, label: t.label, value: t.count, color: t.color }));
 
-  const rects = layoutBinary(items, 0, 0, W, H);
-  const PAD   = 1.5;
-
-  for (const r of rects) {
-    const rw = r.w - PAD * 2, rh = r.h - PAD * 2;
-    if (rw < 1 || rh < 1) continue;
-
-    ctx.fillStyle = hexAlpha(r.color, 0.15);
-    ctx.fillRect(r.x + PAD, r.y + PAD, rw, rh);
-    ctx.strokeStyle = hexAlpha(r.color, 0.45);
-    ctx.lineWidth   = 1;
-    ctx.strokeRect(r.x + PAD, r.y + PAD, rw, rh);
-
-    if (rw > 36 && rh > 22) {
-      const fs = Math.min(13, Math.max(9, Math.min(rw * 0.12, rh * 0.22)));
-      ctx.save();
-      ctx.beginPath();
-      ctx.rect(r.x + PAD + 3, r.y + PAD + 3, rw - 6, rh - 6);
-      ctx.clip();
-      ctx.fillStyle    = r.color;
-      ctx.font         = `600 ${fs}px system-ui,sans-serif`;
-      ctx.textAlign    = 'center';
-      ctx.textBaseline = 'middle';
-      const cy = rh > 36 ? r.y + r.h/2 - 7 : r.y + r.h/2;
-      ctx.fillText(r.label, r.x + r.w/2, cy);
-      if (rh > 34) {
-        ctx.font      = `${Math.max(8, fs - 2.5)}px var(--mono,monospace)`;
-        ctx.fillStyle = hexAlpha(r.color, 0.6);
-        ctx.fillText(r.value, r.x + r.w/2, r.y + r.h/2 + fs * 0.85);
-      }
-      ctx.restore();
-    }
-  }
+  canvas._rects = layoutBinary(items, 0, 0, W, H);
+  redrawTreemap();
 
   canvas.onmousemove = e => {
     const rect = canvas.getBoundingClientRect();
     const mx = e.clientX - rect.left, my = e.clientY - rect.top;
-    const hit = rects.find(r => mx >= r.x && mx <= r.x + r.w && my >= r.y && my <= r.y + r.h);
+    const hit = canvas._rects.find(r => mx >= r.x && mx <= r.x + r.w && my >= r.y && my <= r.y + r.h);
     canvas.style.cursor = hit ? 'pointer' : 'default';
-    if (hit) showTip(e, hit.label, `${hit.value} матеріалів`);
+    if (hit) showTip(e, hit.label, `${hit.value} матеріалів · клікни щоб переглянути`);
     else hideTip();
   };
+
   canvas.onmouseleave = hideTip;
-  canvas._rects = rects;
+
+  canvas.onclick = e => {
+    hideTip();
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const hit = canvas._rects.find(r => mx >= r.x && mx <= r.x + r.w && my >= r.y && my <= r.y + r.h);
+    if (!hit) return;
+    const topic = ALL_TOPICS.find(t => t.id === hit.id);
+    if (!topic) return;
+    highlightId = hit.id;
+    redrawTreemap();
+    openSidebar(topic);
+  };
 }
 
 fetch('../data/topics.json')
@@ -217,6 +416,10 @@ window.addEventListener('resize', () => {
   if (canvas._rects) {
     fetch('../data/topics.json').then(r=>r.json()).then(d => renderTreemap(d.topics));
   }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeSidebar();
 });
 </script>
 
