@@ -20,454 +20,286 @@
   body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
 
   /* HERO */
-  .hero { max-width: 1100px; margin: 0 auto; padding: 56px 52px 48px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
-  .hero-eyebrow { font-family: var(--mono); font-size: 11.5px; color: var(--clay); letter-spacing: 0.04em; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
-  .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1.5px; background: var(--clay); }
-  .hero h1 { font-family: var(--serif); font-size: clamp(44px, 6vw, 80px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 16px; }
-  .hero h1 em { font-style: italic; color: var(--clay); }
-  .hero-sub { font-size: 17px; color: var(--g500); max-width: 480px; line-height: 1.6; margin-bottom: 28px; }
-  .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
-  .hero-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 999px; border: 1.5px solid var(--g300); font-size: 13.5px; text-decoration: none; color: var(--slate); background: var(--paper); transition: all 0.15s; font-weight: 500; }
-  .hero-link:hover { border-color: var(--clay); color: var(--clay); background: var(--clay-l); }
-  .hero-stats { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; text-align: right; }
-  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; min-width: 110px; }
-  .stat-num { font-family: var(--serif); font-size: 30px; font-weight: 500; color: var(--slate); line-height: 1; }
-  .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
-
-  /* MAIN */
-  .content { max-width: 1100px; margin: 0 auto; padding: 40px 52px; }
-
-  /* TOOLBAR */
-  .toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
-  .filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .filter-label { font-size: 12px; color: var(--g500); margin-right: 2px; }
-  .filter-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300); background: var(--paper); font-size: 13px; color: var(--g700); cursor: pointer; transition: all 0.15s; font-family: var(--sans); }
-  .filter-btn .dot { width: 7px; height: 7px; border-radius: 50%; }
-  .filter-btn:hover { border-color: var(--oat); background: var(--g100); }
-  .filter-btn.active { border-color: var(--slate); background: var(--slate); color: white; }
-  .dot-company { background: var(--clay); }
-  .dot-topic   { background: var(--olive); }
-  .dot-product { background: var(--blue); }
-  .legend { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
-  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-  /* BUBBLE CANVAS */
-  .bubble-wrap { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; position: relative; overflow: hidden; margin-bottom: 40px; }
-  #bubble-canvas { display: block; width: 100%; cursor: default; }
-  .bubble-hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); font-size: 11px; color: var(--g500); font-family: var(--mono); background: var(--ivory); padding: 4px 12px; border-radius: 999px; border: 1px solid var(--g300); pointer-events: none; white-space: nowrap; }
-
-  /* TOOLTIP */
-  #tooltip { position: fixed; background: var(--slate); color: white; padding: 8px 13px; border-radius: 8px; font-size: 12.5px; pointer-events: none; display: none; z-index: 1000; max-width: 220px; line-height: 1.4; }
-  #tooltip strong { display: block; margin-bottom: 2px; font-size: 13px; }
-  #tooltip span { color: #ccc; font-size: 11.5px; }
-
-  /* SIDEBAR */
-  #sidebar { position: fixed; top: 0; right: -420px; width: 400px; height: 100vh; background: var(--paper); border-left: 1.5px solid var(--g300); z-index: 500; transition: right 0.28s cubic-bezier(0.4,0,0.2,1); overflow-y: auto; display: flex; flex-direction: column; }
-  #sidebar.open { right: 0; }
-  .sidebar-head { padding: 22px 22px 18px; border-bottom: 1.5px solid var(--g200); position: sticky; top: 0; background: var(--paper); z-index: 10; }
-  .sidebar-close { position: absolute; top: 18px; right: 18px; width: 28px; height: 28px; border-radius: 50%; background: var(--g100); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--g700); transition: background 0.12s; }
-  .sidebar-close:hover { background: var(--g200); }
-  .sidebar-tag { font-size: 10.5px; font-family: var(--mono); padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
-  .sidebar-tag.company { background: var(--clay-l); color: var(--clay-d); }
-  .sidebar-tag.topic   { background: var(--olive-l); color: #3D5A2A; }
-  .sidebar-tag.product { background: var(--blue-l); color: #1E40AF; }
-  .sidebar-head h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 6px; padding-right: 36px; }
-  .sidebar-count { font-size: 13px; color: var(--g500); font-family: var(--mono); }
-  .sidebar-body { padding: 18px 22px; flex: 1; }
-  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em; color: var(--g500); margin-bottom: 10px; }
-
-  /* POST GRID (compact squares) */
-  .post-grid { display: flex; flex-wrap: wrap; gap: 4px; }
-  .post-sq {
-    width: 20px; height: 20px; border-radius: 4px; cursor: pointer;
-    border: 1.5px solid transparent; transition: transform 0.1s;
-    flex-shrink: 0; position: relative;
+  .hero {
+    max-width: 1100px; margin: 0 auto;
+    padding: 64px 52px 52px;
+    border-bottom: 1.5px solid var(--oat);
   }
-  .post-sq:hover { transform: scale(1.35); z-index: 20; }
-  .post-sq.yt { border-style: dashed; }
+  .hero-eyebrow {
+    font-family: var(--mono); font-size: 11.5px; color: var(--clay);
+    letter-spacing: 0.04em; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: inline-block; width: 28px; height: 1.5px; background: var(--clay);
+  }
+  .hero h1 {
+    font-family: var(--serif); font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 500; line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 18px;
+  }
+  .hero h1 em { font-style: italic; color: var(--clay); }
+  .hero-sub {
+    font-size: 17px; color: var(--g500); max-width: 500px;
+    line-height: 1.6; margin-bottom: 32px;
+  }
+  .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 18px; border-radius: 999px; border: 1.5px solid var(--g300);
+    font-size: 13.5px; text-decoration: none; color: var(--slate);
+    background: var(--paper); transition: all 0.15s; font-weight: 500;
+  }
+  .hero-link:hover { border-color: var(--clay); color: var(--clay); background: var(--clay-l); }
 
-  /* OVERLAY */
-  #overlay { position: fixed; inset: 0; background: rgba(20,20,19,0.12); z-index: 400; display: none; backdrop-filter: blur(1px); }
-  #overlay.show { display: block; }
+  /* VIEWS SECTION */
+  .views {
+    max-width: 1100px; margin: 0 auto;
+    padding: 52px 52px 64px;
+  }
+  .views-label {
+    font-family: var(--mono); font-size: 11px; color: var(--g500);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px;
+  }
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
 
-  /* LOADING */
-  .loading { display: flex; align-items: center; justify-content: center; height: 420px; font-family: var(--mono); font-size: 13px; color: var(--g500); gap: 10px; }
+  /* TILE CARD */
+  .tile {
+    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px;
+    padding: 28px 24px 24px;
+    text-decoration: none; color: var(--slate);
+    display: flex; flex-direction: column; gap: 0;
+    transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+    cursor: pointer;
+  }
+  .tile:hover {
+    border-color: var(--clay);
+    box-shadow: 0 4px 24px rgba(217,119,87,0.12);
+    transform: translateY(-2px);
+  }
+
+  .tile-preview {
+    width: 100%; height: 120px; border-radius: 10px;
+    margin-bottom: 20px; display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    background: var(--g100);
+  }
+  .tile-preview svg { width: 100%; height: 100%; }
+
+  .tile-name {
+    font-family: var(--serif); font-size: 22px; font-weight: 500;
+    margin-bottom: 8px; line-height: 1.2;
+  }
+  .tile-desc {
+    font-size: 13.5px; color: var(--g500); line-height: 1.5; flex: 1;
+  }
+  .tile-arrow {
+    margin-top: 18px; font-size: 12px; color: var(--clay);
+    font-family: var(--mono); display: flex; align-items: center; gap: 6px;
+    opacity: 0; transition: opacity 0.15s;
+  }
+  .tile:hover .tile-arrow { opacity: 1; }
 
   /* FOOTER */
-  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--g500); flex-wrap: wrap; gap: 12px; }
+  footer {
+    max-width: 1100px; margin: 0 auto;
+    padding: 20px 52px 36px;
+    border-top: 1.5px solid var(--g300);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--g500); flex-wrap: wrap; gap: 12px;
+  }
   footer a { color: var(--clay); text-decoration: none; }
 
-  @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding: 28px 20px 24px; }
-    .hero-stats { flex-direction: row; align-items: flex-start; text-align: left; }
-    .content { padding: 24px 20px; }
+  @media (max-width: 900px) {
+    .tiles { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .hero { padding: 32px 20px 28px; }
+    .views { padding: 32px 20px 40px; }
     footer { padding: 16px 20px 28px; flex-direction: column; align-items: flex-start; }
-    #sidebar { width: 100%; right: -100%; }
+    .tiles { grid-template-columns: 1fr; }
+    .tile-preview { height: 100px; }
   }
 </style>
 </head>
 <body>
 
-<div id="tooltip"><strong id="tt-name"></strong><span id="tt-count"></span></div>
-<div id="overlay" onclick="closeSidebar()"></div>
-
-<div id="sidebar">
-  <div class="sidebar-head">
-    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
-    <div id="sb-tag" class="sidebar-tag company"></div>
-    <h3 id="sb-title"></h3>
-    <div class="sidebar-count" id="sb-count"></div>
-  </div>
-  <div class="sidebar-body">
-    <div class="sidebar-section-title" id="sb-section-title">Пости</div>
-    <div id="sb-posts" class="post-grid"></div>
-  </div>
-</div>
-
 <header class="hero">
-  <div>
-    <div class="hero-eyebrow">@imatrofAI · YouTube + Telegram</div>
-    <h1>Ігор Матрофайло<br>досліджує <em>AI</em></h1>
-    <p class="hero-sub">Теми, компанії та тренди що я висвітлюю у своїх постах і відео. Розмір бульбашки = кількість матеріалів.</p>
-    <div class="hero-links">
-      <a href="https://www.youtube.com/@imatrof" target="_blank" class="hero-link">▶ YouTube</a>
-      <a href="https://t.me/imatrofAI" target="_blank" class="hero-link">✈ Telegram</a>
-    </div>
-  </div>
-  <div class="hero-stats">
-    <div class="stat"><div class="stat-num" id="stat-posts">—</div><div class="stat-label">Telegram постів</div></div>
-    <div class="stat"><div class="stat-num" id="stat-youtube">—</div><div class="stat-label">YouTube записів</div></div>
-    <div class="stat"><div class="stat-num" id="stat-topics">—</div><div class="stat-label">тем</div></div>
+  <div class="hero-eyebrow">@imatrofAI · YouTube + Telegram</div>
+  <h1>Ігор Матрофайло<br>досліджує <em>AI</em></h1>
+  <p class="hero-sub">2300+ постів і відео про штучний інтелект — компанії, продукти, тренди. Обирай зручний спосіб дослідження.</p>
+  <div class="hero-links">
+    <a href="https://www.youtube.com/@imatrof" target="_blank" class="hero-link">▶ YouTube</a>
+    <a href="https://t.me/imatrofAI" target="_blank" class="hero-link">✈ Telegram</a>
   </div>
 </header>
 
-<main class="content">
-  <div class="toolbar">
-    <div class="filters">
-      <span class="filter-label">Показати:</span>
-      <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
-      <button class="filter-btn" onclick="setFilter('company',this)"><span class="dot dot-company"></span> Компанії</button>
-      <button class="filter-btn" onclick="setFilter('topic',this)"><span class="dot dot-topic"></span> Теми</button>
-      <button class="filter-btn" onclick="setFilter('product',this)"><span class="dot dot-product"></span> Продукти</button>
-    </div>
-    <div class="legend">
-      <div class="legend-item"><div class="legend-dot" style="background:var(--clay)"></div> Компанії</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--olive)"></div> Теми</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Продукти</div>
-    </div>
+<section class="views">
+  <div class="views-label">Оберіть вигляд</div>
+  <div class="tiles">
+
+    <!-- Бульбашки -->
+    <a href="/pages/bubbles.html" class="tile">
+      <div class="tile-preview">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="80" cy="58" r="44" fill="#D97757" fill-opacity="0.12" stroke="#D97757" stroke-opacity="0.4" stroke-width="1.5"/>
+          <text x="80" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="system-ui">OpenAI</text>
+          <text x="80" y="68" text-anchor="middle" font-size="9" fill="#D97757" fill-opacity="0.6" font-family="monospace">163</text>
+
+          <circle cx="170" cy="44" r="28" fill="#4A7CC7" fill-opacity="0.12" stroke="#4A7CC7" stroke-opacity="0.4" stroke-width="1.5"/>
+          <text x="170" y="48" text-anchor="middle" font-size="10" font-weight="600" fill="#4A7CC7" font-family="system-ui">Агенти</text>
+
+          <circle cx="168" cy="90" r="18" fill="#788C5D" fill-opacity="0.12" stroke="#788C5D" stroke-opacity="0.4" stroke-width="1.5"/>
+          <text x="168" y="94" text-anchor="middle" font-size="8.5" font-weight="600" fill="#788C5D" font-family="system-ui">MCP</text>
+
+          <circle cx="30" cy="32" r="14" fill="#D97757" fill-opacity="0.12" stroke="#D97757" stroke-opacity="0.35" stroke-width="1.5"/>
+          <circle cx="28" cy="90" r="10" fill="#4A7CC7" fill-opacity="0.12" stroke="#4A7CC7" stroke-opacity="0.3" stroke-width="1.5"/>
+          <circle cx="210" cy="68" r="12" fill="#788C5D" fill-opacity="0.12" stroke="#788C5D" stroke-opacity="0.3" stroke-width="1.5"/>
+          <circle cx="128" cy="22" r="8" fill="#D97757" fill-opacity="0.10" stroke="#D97757" stroke-opacity="0.3" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="tile-name">Бульбашки</div>
+      <div class="tile-desc">Дослідж теми через розмір і зв'язки — розмір бульбашки рівний кількості матеріалів.</div>
+      <div class="tile-arrow">Відкрити →</div>
+    </a>
+
+    <!-- Карта -->
+    <a href="/pages/karta.html" class="tile">
+      <div class="tile-preview">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Treemap layout preview -->
+          <rect x="6" y="6" width="108" height="72" rx="3" fill="#D97757" fill-opacity="0.13" stroke="#D97757" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="60" y="38" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757" font-family="system-ui">OpenAI</text>
+          <text x="60" y="51" text-anchor="middle" font-size="8" fill="#D97757" fill-opacity="0.6" font-family="monospace">163</text>
+
+          <rect x="118" y="6" width="66" height="72" rx="3" fill="#4A7CC7" fill-opacity="0.13" stroke="#4A7CC7" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="151" y="38" text-anchor="middle" font-size="9.5" font-weight="600" fill="#4A7CC7" font-family="system-ui">Anthropic</text>
+          <text x="151" y="51" text-anchor="middle" font-size="8" fill="#4A7CC7" fill-opacity="0.6" font-family="monospace">98</text>
+
+          <rect x="188" y="6" width="46" height="72" rx="3" fill="#788C5D" fill-opacity="0.13" stroke="#788C5D" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="211" y="42" text-anchor="middle" font-size="8.5" font-weight="600" fill="#788C5D" font-family="system-ui">Google</text>
+
+          <rect x="6" y="82" width="72" height="32" rx="3" fill="#D97757" fill-opacity="0.10" stroke="#D97757" stroke-opacity="0.35" stroke-width="1"/>
+          <rect x="82" y="82" width="50" height="32" rx="3" fill="#4A7CC7" fill-opacity="0.10" stroke="#4A7CC7" stroke-opacity="0.35" stroke-width="1"/>
+          <rect x="136" y="82" width="40" height="32" rx="3" fill="#788C5D" fill-opacity="0.10" stroke="#788C5D" stroke-opacity="0.35" stroke-width="1"/>
+          <rect x="180" y="82" width="54" height="32" rx="3" fill="#D97757" fill-opacity="0.08" stroke="#D97757" stroke-opacity="0.3" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="tile-name">Карта</div>
+      <div class="tile-desc">Порівняй масштаб тем і компаній — площа прямокутника пропорційна до кількості постів.</div>
+      <div class="tile-arrow">Відкрити →</div>
+    </a>
+
+    <!-- Грід -->
+    <a href="/pages/hrid.html" class="tile">
+      <div class="tile-preview">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <rect id="sq" width="9" height="9" rx="2"/>
+          </defs>
+          <!-- Row of clay squares (OpenAI cluster) -->
+          <g fill="#D97757" fill-opacity="0.75">
+            <rect x="12" y="12" width="9" height="9" rx="2"/>
+            <rect x="23" y="12" width="9" height="9" rx="2"/>
+            <rect x="34" y="12" width="9" height="9" rx="2"/>
+            <rect x="45" y="12" width="9" height="9" rx="2"/>
+            <rect x="56" y="12" width="9" height="9" rx="2"/>
+            <rect x="67" y="12" width="9" height="9" rx="2"/>
+            <rect x="78" y="12" width="9" height="9" rx="2"/>
+            <rect x="12" y="23" width="9" height="9" rx="2"/>
+            <rect x="23" y="23" width="9" height="9" rx="2"/>
+            <rect x="34" y="23" width="9" height="9" rx="2"/>
+            <rect x="45" y="23" width="9" height="9" rx="2"/>
+            <rect x="56" y="23" width="9" height="9" rx="2"/>
+          </g>
+          <!-- Blue squares (product cluster) -->
+          <g fill="#4A7CC7" fill-opacity="0.75">
+            <rect x="89" y="12" width="9" height="9" rx="2"/>
+            <rect x="100" y="12" width="9" height="9" rx="2"/>
+            <rect x="111" y="12" width="9" height="9" rx="2"/>
+            <rect x="122" y="12" width="9" height="9" rx="2"/>
+            <rect x="133" y="12" width="9" height="9" rx="2"/>
+            <rect x="89" y="23" width="9" height="9" rx="2"/>
+            <rect x="100" y="23" width="9" height="9" rx="2"/>
+            <rect x="111" y="23" width="9" height="9" rx="2"/>
+          </g>
+          <!-- Olive squares (topic cluster) -->
+          <g fill="#788C5D" fill-opacity="0.75">
+            <rect x="144" y="12" width="9" height="9" rx="2"/>
+            <rect x="155" y="12" width="9" height="9" rx="2"/>
+            <rect x="166" y="12" width="9" height="9" rx="2"/>
+            <rect x="177" y="12" width="9" height="9" rx="2"/>
+            <rect x="188" y="12" width="9" height="9" rx="2"/>
+            <rect x="199" y="12" width="9" height="9" rx="2"/>
+            <rect x="144" y="23" width="9" height="9" rx="2"/>
+            <rect x="155" y="23" width="9" height="9" rx="2"/>
+            <rect x="166" y="23" width="9" height="9" rx="2"/>
+          </g>
+          <!-- Row 3: mixed -->
+          <g fill="#D97757" fill-opacity="0.6">
+            <rect x="12" y="34" width="9" height="9" rx="2"/>
+            <rect x="23" y="34" width="9" height="9" rx="2"/>
+            <rect x="34" y="34" width="9" height="9" rx="2"/>
+            <rect x="45" y="34" width="9" height="9" rx="2"/>
+            <rect x="56" y="34" width="9" height="9" rx="2"/>
+          </g>
+          <g fill="#4A7CC7" fill-opacity="0.6">
+            <rect x="67" y="34" width="9" height="9" rx="2"/>
+            <rect x="78" y="34" width="9" height="9" rx="2"/>
+            <rect x="89" y="34" width="9" height="9" rx="2"/>
+            <rect x="100" y="34" width="9" height="9" rx="2"/>
+          </g>
+          <g fill="#788C5D" fill-opacity="0.6">
+            <rect x="111" y="34" width="9" height="9" rx="2"/>
+            <rect x="122" y="34" width="9" height="9" rx="2"/>
+            <rect x="133" y="34" width="9" height="9" rx="2"/>
+            <rect x="144" y="34" width="9" height="9" rx="2"/>
+            <rect x="155" y="34" width="9" height="9" rx="2"/>
+            <rect x="166" y="34" width="9" height="9" rx="2"/>
+          </g>
+          <!-- More rows fading out -->
+          <g fill="#D97757" fill-opacity="0.4">
+            <rect x="12" y="45" width="9" height="9" rx="2"/>
+            <rect x="23" y="45" width="9" height="9" rx="2"/>
+            <rect x="34" y="45" width="9" height="9" rx="2"/>
+            <rect x="45" y="45" width="9" height="9" rx="2"/>
+          </g>
+          <g fill="#4A7CC7" fill-opacity="0.4">
+            <rect x="56" y="45" width="9" height="9" rx="2"/>
+            <rect x="67" y="45" width="9" height="9" rx="2"/>
+            <rect x="78" y="45" width="9" height="9" rx="2"/>
+          </g>
+          <g fill="#788C5D" fill-opacity="0.4">
+            <rect x="89" y="45" width="9" height="9" rx="2"/>
+            <rect x="100" y="45" width="9" height="9" rx="2"/>
+            <rect x="111" y="45" width="9" height="9" rx="2"/>
+            <rect x="122" y="45" width="9" height="9" rx="2"/>
+          </g>
+          <!-- Fade overlay -->
+          <rect x="6" y="60" width="228" height="54" fill="url(#fade)" rx="4"/>
+          <defs>
+            <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F0EEE6" stop-opacity="0"/>
+              <stop offset="100%" stop-color="#F0EEE6" stop-opacity="0.9"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="tile-name">Грід</div>
+      <div class="tile-desc">Переглянь кожен пост окремо — кожен квадрат це один матеріал, клікни щоб відкрити.</div>
+      <div class="tile-arrow">Відкрити →</div>
+    </a>
+
   </div>
-  <div class="bubble-wrap">
-    <canvas id="bubble-canvas"></canvas>
-    <div class="bubble-hint">натисніть на бульбашку щоб відкрити пости</div>
-    <div class="loading" id="loading">Завантаження даних…</div>
-  </div>
-</main>
+</section>
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
   <span>Дані: 2024–2026 · <a href="https://github.com/imatrofailo" target="_blank">GitHub</a></span>
 </footer>
-
-<script>
-'use strict';
-
-const canvas = document.getElementById('bubble-canvas');
-const ctx    = canvas.getContext('2d');
-const tooltip = document.getElementById('tooltip');
-
-let TOPICS = [];
-let W, H, bubbles = [], activeFilter = 'all', selectedId = null, animFrame;
-
-// ── Data loading ──────────────────────────────────────────────────────────────
-
-fetch('data/topics.json')
-  .then(r => r.json())
-  .then(data => {
-    TOPICS = data.topics;
-    document.getElementById('stat-posts').textContent   = data.total_posts.toLocaleString('uk');
-    document.getElementById('stat-youtube').textContent = (data.total_youtube || 0).toLocaleString('uk');
-    document.getElementById('stat-topics').textContent  = data.topics.length;
-    document.getElementById('loading').style.display = 'none';
-    canvas.style.display = 'block';
-    start();
-  })
-  .catch(err => {
-    document.getElementById('loading').textContent = 'Помилка завантаження даних';
-    console.error(err);
-  });
-
-canvas.style.display = 'none';
-
-// ── Canvas helpers ────────────────────────────────────────────────────────────
-
-function initCanvas() {
-  const wrap = canvas.parentElement;
-  const dpr = window.devicePixelRatio || 1;
-  W = wrap.clientWidth;
-  H = Math.min(Math.max(W * 0.65, 420), 680);
-  canvas.style.width  = W + 'px';
-  canvas.style.height = H + 'px';
-  canvas.width  = W * dpr;
-  canvas.height = H * dpr;
-  ctx.scale(dpr, dpr);
-}
-
-function sizeFor(count) {
-  const counts = TOPICS.map(t => t.count);
-  const min = Math.min(...counts), max = Math.max(...counts);
-  const minR = 14, maxR = 72;
-  return minR + (Math.sqrt(count) - Math.sqrt(min)) / (Math.sqrt(max) - Math.sqrt(min)) * (maxR - minR);
-}
-
-function initBubbles() {
-  bubbles = TOPICS.map((t, i) => {
-    const angle  = (i / TOPICS.length) * Math.PI * 2;
-    const spread = 0.28 + Math.random() * 0.18;
-    return {
-      ...t,
-      cat: t.category,
-      r:  sizeFor(t.count),
-      x:  W * 0.5 + Math.cos(angle) * W * spread,
-      y:  H * 0.5 + Math.sin(angle) * H * spread * 0.85,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
-      hovered: false,
-    };
-  });
-}
-
-// ── Simulation ────────────────────────────────────────────────────────────────
-
-function tick() {
-  const cx = W / 2, cy = H / 2;
-  const damping = 0.96;
-
-  for (let i = 0; i < bubbles.length; i++) {
-    const b = bubbles[i];
-    const vis = isVisible(b);
-    const g = vis ? 0.008 : 0.003;
-
-    b.vx += (cx - b.x) * g;
-    b.vy += (cy - b.y) * g * 0.9;
-
-    for (let j = i + 1; j < bubbles.length; j++) {
-      const o = bubbles[j];
-      const dx = b.x - o.x, dy = b.y - o.y;
-      const dist = Math.sqrt(dx * dx + dy * dy) || 0.001;
-      const gap  = vis && isVisible(o) ? 6 : 2;
-      const minD = b.r + o.r + gap;
-      if (dist < minD) {
-        const force = (minD - dist) / dist * 0.055;
-        b.vx += dx * force; b.vy += dy * force;
-        o.vx -= dx * force; o.vy -= dy * force;
-      }
-    }
-
-    b.vx *= damping; b.vy *= damping;
-    b.x  += b.vx;   b.y  += b.vy;
-
-    const pad = b.r + 4;
-    if (b.x < pad)     { b.x = pad;     b.vx *= -0.4; }
-    if (b.x > W - pad) { b.x = W - pad; b.vx *= -0.4; }
-    if (b.y < pad)     { b.y = pad;     b.vy *= -0.4; }
-    if (b.y > H - pad) { b.y = H - pad; b.vy *= -0.4; }
-  }
-}
-
-// ── Rendering ─────────────────────────────────────────────────────────────────
-
-function isVisible(b) {
-  return activeFilter === 'all' || b.cat === activeFilter;
-}
-
-function hexAlpha(hex, a) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `rgba(${r},${g},${b},${a})`;
-}
-
-function draw() {
-  ctx.clearRect(0, 0, W, H);
-
-  for (const b of bubbles) {
-    const vis = isVisible(b);
-    let alpha = vis ? 1 : 0.06;
-    if (vis && selectedId && selectedId !== b.id) alpha = 0.22;
-
-    const s = (b.hovered && vis) ? 1.07 : 1;
-
-    ctx.save();
-    ctx.translate(b.x, b.y);
-    ctx.scale(s, s);
-    ctx.globalAlpha = alpha;
-
-    if (vis && alpha > 0.3) {
-      ctx.shadowColor   = 'rgba(0,0,0,0.07)';
-      ctx.shadowBlur    = 14;
-      ctx.shadowOffsetY = 2;
-    }
-
-    ctx.beginPath();
-    ctx.arc(0, 0, b.r, 0, Math.PI * 2);
-    ctx.fillStyle = hexAlpha(b.color, 0.13);
-    ctx.fill();
-
-    if (selectedId === b.id) {
-      ctx.strokeStyle = b.color; ctx.lineWidth = 2.5;
-    } else {
-      ctx.strokeStyle = hexAlpha(b.color, b.hovered ? 0.85 : 0.45);
-      ctx.lineWidth = 1.5;
-    }
-    ctx.stroke();
-    ctx.shadowColor = 'transparent';
-
-    if (vis) {
-      const fs = Math.max(8.5, Math.min(b.r * 0.26, 13.5));
-      ctx.textAlign    = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillStyle    = b.color;
-
-      if (b.r > 25) {
-        ctx.font = `600 ${fs}px system-ui,sans-serif`;
-        ctx.fillText(b.label, 0, -6);
-        ctx.font = `${Math.max(8, fs - 2)}px var(--mono, monospace)`;
-        ctx.fillStyle = hexAlpha(b.color, 0.65);
-        ctx.fillText(b.count, 0, 8);
-      } else {
-        ctx.font = `600 ${fs}px system-ui,sans-serif`;
-        ctx.fillText(b.label, 0, 0);
-      }
-    }
-
-    ctx.restore();
-  }
-
-  animFrame = requestAnimationFrame(() => { tick(); draw(); });
-}
-
-// ── Interaction ───────────────────────────────────────────────────────────────
-
-function getBubbleAt(x, y) {
-  for (let i = bubbles.length - 1; i >= 0; i--) {
-    const b = bubbles[i];
-    if (!isVisible(b)) continue;
-    const dx = b.x - x, dy = b.y - y;
-    if (dx * dx + dy * dy <= b.r * b.r) return b;
-  }
-  return null;
-}
-
-canvas.addEventListener('mousemove', e => {
-  const rect = canvas.getBoundingClientRect();
-  const hit  = getBubbleAt(e.clientX - rect.left, e.clientY - rect.top);
-  bubbles.forEach(b => b.hovered = false);
-  if (hit) {
-    hit.hovered = true;
-    canvas.style.cursor = 'pointer';
-    tooltip.style.display = 'block';
-    tooltip.style.left    = (e.clientX + 14) + 'px';
-    tooltip.style.top     = (e.clientY - 10) + 'px';
-    document.getElementById('tt-name').textContent  = hit.label;
-    document.getElementById('tt-count').textContent = hit.count + ' матеріалів';
-  } else {
-    canvas.style.cursor   = 'default';
-    tooltip.style.display = 'none';
-  }
-});
-
-canvas.addEventListener('mouseleave', () => {
-  tooltip.style.display = 'none';
-  bubbles.forEach(b => b.hovered = false);
-});
-
-canvas.addEventListener('click', e => {
-  const rect = canvas.getBoundingClientRect();
-  const hit  = getBubbleAt(e.clientX - rect.left, e.clientY - rect.top);
-  if (hit) openSidebar(hit);
-  else closeSidebar();
-});
-
-// ── Sidebar ───────────────────────────────────────────────────────────────────
-
-function openSidebar(topic) {
-  selectedId = topic.id;
-  const labels = { company: 'Компанія', topic: 'Тема', product: 'Продукт' };
-  const tag = document.getElementById('sb-tag');
-  tag.textContent = labels[topic.cat] || topic.cat;
-  tag.className   = `sidebar-tag ${topic.cat}`;
-  document.getElementById('sb-title').textContent = topic.label;
-  document.getElementById('sb-count').textContent = topic.count + ' матеріалів';
-
-  const tgCount = topic.posts.filter(p => !p.url || p.url.includes('t.me')).length;
-  const ytCount = topic.posts.filter(p => p.url && p.url.includes('youtube')).length;
-  const parts = [];
-  if (tgCount) parts.push(`${tgCount} Telegram`);
-  if (ytCount) parts.push(`${ytCount} YouTube`);
-  document.getElementById('sb-section-title').textContent = parts.join(' · ') || 'Матеріали';
-
-  const grid = document.getElementById('sb-posts');
-  grid.innerHTML = '';
-
-  if (!topic.posts || !topic.posts.length) {
-    grid.innerHTML = '<div style="color:var(--g500);font-size:13px;">Пости не знайдено</div>';
-  } else {
-    for (const p of topic.posts) {
-      const sq = document.createElement(p.url ? 'a' : 'div');
-      sq.className = 'post-sq' + (p.url && p.url.includes('youtube') ? ' yt' : '');
-      sq.style.background = hexAlpha(topic.color, 0.75);
-      sq.style.borderColor = hexAlpha(topic.color, 0.3);
-      if (p.url) { sq.href = p.url; sq.target = '_blank'; sq.rel = 'noopener'; }
-
-      sq.addEventListener('mouseenter', e => {
-        const src = p.url && p.url.includes('youtube') ? ' ▶ YT' : '';
-        tooltip.style.display = 'block';
-        tooltip.style.left    = (e.clientX + 12) + 'px';
-        tooltip.style.top     = (e.clientY - 10) + 'px';
-        document.getElementById('tt-name').textContent  = (p.title || '(без заголовку)') + src;
-        document.getElementById('tt-count').textContent = p.date || '';
-      });
-      sq.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
-      grid.appendChild(sq);
-    }
-  }
-
-  document.getElementById('sidebar').classList.add('open');
-  document.getElementById('overlay').classList.add('show');
-}
-
-function closeSidebar() {
-  selectedId = null;
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('overlay').classList.remove('show');
-}
-
-function setFilter(cat, btn) {
-  activeFilter = cat;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  if (selectedId) closeSidebar();
-}
-
-function esc(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-// ── Boot ──────────────────────────────────────────────────────────────────────
-
-function start() {
-  if (animFrame) cancelAnimationFrame(animFrame);
-  initCanvas();
-  initBubbles();
-  draw();
-}
-
-window.addEventListener('resize', () => {
-  if (animFrame) cancelAnimationFrame(animFrame);
-  setTimeout(start, 80);
-});
-</script>
 
 <script src="nav.js"></script>
 </body>

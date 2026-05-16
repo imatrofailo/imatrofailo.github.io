@@ -2,13 +2,13 @@
   'use strict';
 
   const PAGES = [
-    { href: 'index.html', label: 'Теми' },
-    { href: 'charts.html', label: 'Графіки' },
-    { href: 'tips.html', label: 'Практики' },
+    { href: '/pages/bubbles.html',  label: 'Бульбашки', key: 'bubbles.html' },
+    { href: '/pages/karta.html',    label: 'Карта',      key: 'karta.html' },
+    { href: '/pages/hrid.html',     label: 'Грід',       key: 'hrid.html' },
+    { href: '/pages/praktyky.html', label: 'Практики',   key: 'praktyky.html' },
   ];
 
-  const path = window.location.pathname;
-  const current = path.split('/').pop() || 'index.html';
+  const current = window.location.pathname.split('/').pop() || 'index.html';
 
   const style = document.createElement('style');
   style.textContent = `
@@ -48,9 +48,9 @@
   nav.id = 'site-nav';
   nav.innerHTML = `
     <div class="nav-inner">
-      <a class="nav-logo" href="index.html">@imatrofAI</a>
+      <a class="nav-logo" href="/">@imatrofAI</a>
       <div class="nav-links">
-        ${PAGES.map(p => `<a href="${p.href}" class="nav-link${current === p.href || (current === '' && p.href === 'index.html') ? ' active' : ''}">${p.label}</a>`).join('')}
+        ${PAGES.map(p => `<a href="${p.href}" class="nav-link${current === p.key ? ' active' : ''}">${p.label}</a>`).join('')}
       </div>
     </div>
   `;
