@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Практики — Ігор Матрофайло</title>
+<style>
+  :root {
+    --ivory:  #FAF9F5; --paper: #FFFFFF; --slate: #141413; --oat: #E3DACC;
+    --clay:   #D97757; --clay-d: #B85C3E; --clay-l: #FDF0EB;
+    --olive:  #788C5D; --olive-l: #EEF3E8;
+    --blue:   #4A7CC7; --blue-l: #EEF3FC;
+    --g100: #F0EEE6; --g200: #E6E3DA; --g300: #D1CFC5; --g500: #87867F; --g700: #3D3D3A;
+    --serif: ui-serif, Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
+
+  /* HEADER */
+  .page-header { max-width: 1100px; margin: 0 auto; padding: 40px 52px 32px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; }
+  .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+  .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
+  .page-header p { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
+  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; text-align: right; }
+  .stat-num   { font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1; }
+  .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
+
+  /* TOOLBAR */
+  .content { max-width: 1100px; margin: 0 auto; padding: 32px 52px 60px; }
+  .toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+  .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
+  .search-wrap input {
+    width: 100%; padding: 8px 14px 8px 36px; border-radius: 999px;
+    border: 1.5px solid var(--g300); background: var(--paper);
+    font-size: 13.5px; font-family: var(--sans); color: var(--slate);
+    outline: none; transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--clay); }
+  .search-wrap input::placeholder { color: var(--g500); }
+  .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--g500); pointer-events: none; }
+
+  .filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 12px; border-radius: 999px; border: 1.5px solid var(--g300);
+    background: var(--paper); font-size: 12.5px; color: var(--g700);
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .pill:hover { border-color: var(--oat); background: var(--g100); }
+  .pill.active { border-color: var(--clay); background: var(--clay-l); color: var(--clay-d); }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+  .results-count { font-size: 12px; color: var(--g500); font-family: var(--mono); margin-bottom: 16px; }
+
+  /* CARDS GRID */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+
+  .tip-card {
+    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px;
+    padding: 16px 18px; display: flex; flex-direction: column; gap: 10px;
+    text-decoration: none; color: var(--slate); transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .tip-card:hover { border-color: var(--clay); box-shadow: 0 2px 12px rgba(217,119,87,0.1); }
+
+  .tip-title { font-size: 14px; font-weight: 600; line-height: 1.4; }
+  .tip-preview { font-size: 12.5px; color: var(--g700); line-height: 1.5; flex: 1; }
+  .tip-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .tip-date { font-size: 11px; color: var(--g500); font-family: var(--mono); }
+  .tip-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+  .tip-tag {
+    font-size: 10px; font-family: var(--mono); padding: 2px 6px; border-radius: 4px;
+    background: var(--g100); color: var(--g500);
+  }
+  .tip-tag.company { background: var(--clay-l); color: var(--clay-d); }
+  .tip-tag.topic   { background: var(--olive-l); color: #3D5A2A; }
+  .tip-tag.product { background: var(--blue-l); color: #1E40AF; }
+
+  /* Empty state */
+  .empty { text-align: center; padding: 60px 20px; color: var(--g500); }
+  .empty-icon { font-size: 36px; margin-bottom: 12px; }
+  .empty p { font-size: 14px; }
+
+  /* Loading */
+  .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
+
+  /* Footer */
+  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--clay); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .page-header { grid-template-columns: 1fr; padding: 24px 20px 20px; }
+    .stat { text-align: left; width: fit-content; }
+    .content, footer { padding-left: 20px; padding-right: 20px; }
+    .cards-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <div class="page-eyebrow">#практика</div>
+    <h1>Практичні поради</h1>
+    <p>Тільки пости з реальними кейсами, інструкціями та how-to від @imatrofAI.</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="stat-count">—</div>
+    <div class="stat-label">порад</div>
+  </div>
+</header>
+
+<main class="content">
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search" placeholder="Пошук по заголовку…" oninput="renderCards()">
+    </div>
+    <div class="filter-pills" id="filter-pills">
+      <button class="pill active" data-filter="" onclick="setFilter('', this)">Всі</button>
+    </div>
+  </div>
+  <div class="results-count" id="results-count"></div>
+  <div id="loading" class="loading">Завантаження…</div>
+  <div class="cards-grid" id="cards"></div>
+</main>
+
+<footer>
+  <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
+  <span>Дані: 2024–2026</span>
+</footer>
+
+<script>
+'use strict';
+
+// Known tag → category mapping (company/topic/product)
+const COMPANIES = new Set(['openai','anthropic','google','meta','microsoft','nvidia','cursor','figma','deepseek','mistral','xai','apple','amazon','replit','vercel','lovable','midjourney','runway','elevenlabs','suno','pika','luma','kling','heygen','bytedance','adobe','intel','tesla','tencent','minimax','krea','higgsfield','grammarly','black-forest-labs','squad']);
+const PRODUCTS  = new Set(['chatgpt','claude-chat','claude-code','gemini','gpt-5','gpt-4-1','o1','o2','o3','o3-mini','o3-pro','o4-mini','opus-4','grok','llama','codex','sora','veo','flux','imagen','mcp','notebooklm','gemma-3','gemma-3n','windsurf','trae','kiro','jules','manus','codestral','qwen','genspark','ideogram','warmwire','comet','alphaevolve','alphaproof','gpt-oss','searchgpt','pyramid-flow','ph-llm']);
+
+function tagCategory(raw) {
+  const t = raw.replace(/^#/, '');
+  if (COMPANIES.has(t)) return 'company';
+  if (PRODUCTS.has(t))  return 'product';
+  return 'topic';
+}
+
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// State
+let ALL_TIPS   = [];
+let activeFilter = '';
+
+// Collect unique company/product tags across all tips for filter pills
+function buildFilters(tips) {
+  const seen  = new Set();
+  const pills = [];
+  for (const tip of tips) {
+    for (const t of (tip.tags || [])) {
+      const clean = t.replace(/^#/, '');
+      if (!seen.has(clean) && (COMPANIES.has(clean) || PRODUCTS.has(clean))) {
+        seen.add(clean);
+        pills.push({ tag: clean, cat: tagCategory(t) });
+      }
+    }
+  }
+  // Sort by frequency
+  const freq = {};
+  for (const tip of tips) {
+    for (const t of (tip.tags || [])) {
+      const c = t.replace(/^#/,'');
+      freq[c] = (freq[c] || 0) + 1;
+    }
+  }
+  pills.sort((a, b) => (freq[b.tag] || 0) - (freq[a.tag] || 0));
+  return pills.slice(0, 18);
+}
+
+function setFilter(tag, btn) {
+  activeFilter = tag;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards();
+}
+
+function renderCards() {
+  const query  = (document.getElementById('search').value || '').toLowerCase();
+  const cards  = document.getElementById('cards');
+  const resEl  = document.getElementById('results-count');
+
+  let tips = ALL_TIPS;
+
+  if (activeFilter) {
+    tips = tips.filter(t => (t.tags || []).some(tag => tag.replace(/^#/,'') === activeFilter));
+  }
+  if (query) {
+    tips = tips.filter(t =>
+      (t.title || '').toLowerCase().includes(query) ||
+      (t.preview || '').toLowerCase().includes(query)
+    );
+  }
+
+  resEl.textContent = `${tips.length} порад`;
+
+  if (!tips.length) {
+    cards.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🔍</div><p>Нічого не знайдено. Спробуй інший фільтр.</p></div>`;
+    return;
+  }
+
+  cards.innerHTML = tips.map(tip => {
+    const visibleTags = (tip.tags || [])
+      .filter(t => {
+        const c = t.replace(/^#/,'');
+        return COMPANIES.has(c) || PRODUCTS.has(c);
+      })
+      .slice(0, 3)
+      .map(t => {
+        const c = t.replace(/^#/,'');
+        const cat = tagCategory(t);
+        return `<span class="tip-tag ${cat}">${esc(c)}</span>`;
+      })
+      .join('');
+
+    return `<a href="${esc(tip.url || '#')}" target="_blank" rel="noopener" class="tip-card">
+      <div class="tip-title">${esc(tip.title || '(без заголовку)')}</div>
+      ${tip.preview ? `<div class="tip-preview">${esc(tip.preview)}</div>` : ''}
+      <div class="tip-footer">
+        <div class="tip-date">${tip.date || ''}</div>
+        <div class="tip-tags">${visibleTags}</div>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+// ── Load ──────────────────────────────────────────────────────────────────────
+
+fetch('data/tips.json')
+  .then(r => r.json())
+  .then(data => {
+    ALL_TIPS = data.tips || [];
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('stat-count').textContent = ALL_TIPS.length;
+
+    // Build filter pills
+    const pillsEl = document.getElementById('filter-pills');
+    const filters = buildFilters(ALL_TIPS);
+    for (const f of filters) {
+      const btn = document.createElement('button');
+      btn.className = `pill`;
+      btn.dataset.filter = f.tag;
+      btn.innerHTML = `<span class="dot" style="background:var(--${f.cat === 'company' ? 'clay' : f.cat === 'product' ? 'blue' : 'olive'})"></span>${esc(f.tag)}`;
+      btn.onclick = () => setFilter(f.tag, btn);
+      pillsEl.appendChild(btn);
+    }
+
+    renderCards();
+  })
+  .catch(err => {
+    document.getElementById('loading').textContent = 'Помилка завантаження';
+    console.error(err);
+  });
+</script>
+
+<script src="nav.js"></script>
+</body>
+</html>
