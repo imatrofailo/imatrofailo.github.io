@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-16T18:16:06",
-  "total": 3110,
+  "generated": "2026-05-16T22:00:47",
+  "total": 3201,
   "total_telegram": 2300,
-  "total_youtube": 810,
+  "total_youtube": 901,
   "posts": [
     {
       "title": "AI в SDLC не має зводитися лише до автоматизації окремих задач, як-от генерац...",
@@ -69,6 +69,16 @@
       "product": "",
       "topics": [],
       "source": "telegram"
+    },
+    {
+      "title": "НОВИНИ - May 8  2026",
+      "date": "2026-05-13",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\n**Title:**\n\n* НОВИНИ AI: КІНЕЦЬ! Ручний код помер, а AI будуватиме себе вже у 2028\n* НОВИНИ AI: ChatGPT стає Facebook, а Codex отримав суперсили!\n* НОВИНИ AI: Anth",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "SDLC трансформується. І це не про AI, який допомагає писати код. Це про спосі...",
@@ -254,6 +264,16 @@
       "product": "",
       "topics": [],
       "source": "telegram"
+    },
+    {
+      "title": "НОВИНИ - May 1  2026",
+      "date": "2026-05-06",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Як крупнимі поанмо в кийськаом одязі тримаю в руках миску рису і на фоні логотипи Kimi, Qwen, DeepSeek\n* Я в ролі гобліна зліва і напис gpt-5.5 і я в вигляді китайця",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Гарно зроблене відео. Коли агенти керують вашою компанією.",
@@ -468,6 +488,16 @@
       "source": "telegram"
     },
     {
+      "title": "НОВИНИ - Apr 24  2026",
+      "date": "2026-04-26",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\n**Title:**\n\n* НОВИНИ AI: GPT-5.5 — модель тижня, яку всі так чекали!\n* НОВИНИ AI: OpenAI МАНІЯ — два анонси, яких всі так чекали!\n* НОВИНИ AI: OpenAI випустив моде",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Щось давно не говорили про відкриті моделі. А дарма.",
       "date": "2026-04-25",
       "url": "https://t.me/imatrofAI/2643",
@@ -505,6 +535,16 @@
       "url": "https://www.youtube.com/@imatrof",
       "preview": "Відео: Hostinger + OpenClaw (Managed Service)",
       "company": "anthropic",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "Hostinger + OpenClaw (Managed Service)",
+      "date": "2026-04-24",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nOpenClaw — агент з 308K зірок, якого вже копіює Anthropic. Ставлю на VPS за 3 хвилини, показую власні плагіни і пояснюю чому використовую поруч з Claude Code.\n\n* OpenCl",
+      "company": "",
       "product": "",
       "topics": [],
       "source": "youtube"
@@ -640,6 +680,16 @@
       "source": "youtube"
     },
     {
+      "title": "НОВИНИ - Apr 17  2026",
+      "date": "2026-04-23",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Мій здивований вираз + логотип Meta на фоні\n* Заголовок: META ПОВЕРНУЛАСЬ! AI відкрила власний магазин\n**Title:**\n\n* \n* НОВИНИ AI: ПРОРИВ! Модель тижня, яку всі так ч",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Anthropic будує власний стек: Claude Code + Cowork + Design",
       "date": "2026-04-22",
       "url": "https://t.me/imatrofAI/2637",
@@ -722,6 +772,16 @@
       "topics": [
         "design"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Claude Design: 5 демо як Anthropic атакує Figma",
+      "date": "2026-04-22",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Провів цілий день за Claude Design — і от що мене зачепило. Anthropic будує не просто ще один AI-інструмент. Вони будують весь стек знаннєвої роботи. Показую 5 реальн",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -923,6 +983,16 @@
       "source": "youtube"
     },
     {
+      "title": "Я боюсь AI. Що робити?",
+      "date": "2026-04-15",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nЯ боюся AI. Не як якоїсь абстрактної загрози — а як реального тиску який відчуваю щодня. І сьогодні говорю про це чесно.\n\n**Title:**\n\n* Чесна розмова про AI якої всі та",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "OpenAI vs Anthropic: хто першим до IPO",
       "date": "2026-04-14",
       "url": "https://t.me/imatrofAI/2609",
@@ -1117,6 +1187,16 @@
       "topics": [
         "enterprise"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "НОВИНИ - Apr 10 2026",
+      "date": "2026-04-12",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я стою з широко розплющеними очима і показую на екран де написано \"171 ЕМОЦІЯ\"\n* Показую на логотип Anthropic і поряд знак оклику\n* Заголовок: CLAUDE МАЄ ЕМОЦІЇ — і н",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -7860,6 +7940,16 @@
       "source": "youtube"
     },
     {
+      "title": "НОВИНИ - Apr 3  2026",
+      "date": "2026-04-05",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Claude Code злили (і я сиджу на унітазі і зверху бачок)\n* Я тримаю прапор України і на ньому вилеекии буквами Cяйво і далі Уркїнська LLM\n* Я по вентру а но воні логот",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Ми з вами є свідками",
       "date": "2026-04-04",
       "url": "https://t.me/imatrofAI/2579",
@@ -9298,6 +9388,16 @@
       "source": "youtube"
     },
     {
+      "title": "НОВИНИ - Mar 27  2026",
+      "date": "2026-03-31",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\n**Title:**\n\n* НОВИНИ AI: Cursor ОБМАНУВ всіх. Що приховали від нас? \n* НОВИНИ AI: OpenAI ЗАКРИЛИ Sora. Причина вас здивує\n* НОВИНИ AI: Anthropic зробили ПРОРИВ! Cl",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Osint завжди здавався чимось для",
       "date": "2026-03-30",
       "url": "https://t.me/imatrofAI/2554",
@@ -9418,6 +9518,16 @@
         "coding",
         "vibe-coding"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Hostinger + Claude Code",
+      "date": "2026-03-27",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\nTitle:\n\n* Чому я більше не відкриваю ноутбук? CLAUDE CODE з телефону!\n* CLAUDE CODE агент на телефоні — це  реально! Покрокова інструкція\n* Я запустив CLAUDE CODE",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -9617,6 +9727,16 @@
       "source": "youtube"
     },
     {
+      "title": "НОВИНИ - Mar 20  2026",
+      "date": "2026-03-25",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\n**Title:**\n\n* НОВИНИ AI: ПРОРИВ! ChatGPT і Claude тепер малюють прямо в чаті — дочекайтесь!\n* НОВИНИ AI: Готові отримати токени замість зарплати? Nvidia GTC та нов",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Цукерберг будує собі aiагента як",
       "date": "2026-03-24",
       "url": "https://t.me/imatrofAI/2531",
@@ -9796,6 +9916,16 @@
       "topics": [
         "robotics"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "НОВИНИ - Mar 13  2026",
+      "date": "2026-03-22",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\n**Title:**\n\n* НОВИНИ AI: Чому всі хочуть стати твоїм AI-КОЛЕГОЮ?\n* НОВИНИ AI: Готові взяти КОЛЕГУ на роботу? Cowork, NotebookLM та інше\n* НОВИНИ AI: Microsoft СКОП",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -10279,6 +10409,16 @@
       "source": "telegram"
     },
     {
+      "title": "Hostinger + OpenClaw",
+      "date": "2026-02-27",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\nTitle:\n\n* OpenClaw в один клік: ПОВНА інструкція!\n* Чому я більше не використовую ChatGPT? Показую свого AI-агента!\n* OpenClaw: ПОВНИЙ гайд - від нуля до свого AI-",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Anthropic провів інтервю з власною",
       "date": "2026-02-26",
       "url": "https://t.me/imatrofAI/2437",
@@ -10559,6 +10699,16 @@
       "source": "telegram"
     },
     {
+      "title": "Агенти - Claude Code, Cowork, Codex, OpenClaw",
+      "date": "2026-02-14",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n* Я крупним планом, фон в темних кольорах і на фоні логотипи - Anthropic Claude Code, Anthropic Claude Cowork, OpenAI Codex, OpenClaw. А на передньому плані великими буквам",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Візьму вихідний поки ai працює",
       "date": "2026-02-13",
       "url": "https://t.me/imatrofAI/2393",
@@ -10577,6 +10727,16 @@
       "product": "",
       "topics": [],
       "source": "telegram"
+    },
+    {
+      "title": "OpenClaw + Telegram + Local LLM",
+      "date": "2026-02-13",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я крупним планом в руках над головою тримаю крабіка, фон в темних кольорах і на передньому плані великими буквами напис «OpenClaw + Telegram + Ollama».. Пост в стилі",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Stripe запустив x402 платежі і",
@@ -10917,6 +11077,16 @@
       "product": "",
       "topics": [],
       "source": "telegram"
+    },
+    {
+      "title": "Clawdbot",
+      "date": "2026-01-30",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я зліва крупним планом в масці для сну натягнуту на лоба сонний і справа вилкий напис “ПРАЦЮЄ КОЛИ ТИ СПИШ”. На фоні кімнати спальні заблюреної в темному світлі щоб б",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Тепер усі хто боявся говорити",
@@ -11689,6 +11859,16 @@
       "source": "youtube"
     },
     {
+      "title": "Nano Bana 2",
+      "date": "2025-12-18",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я на мене сипляться банани\n* Я тримаю в руха два великих банани як мечі але великі банани\n\n\n**Title:**\n\n* Два банани краще одного\n* NANO BANANA PRO - Два банани це си",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Ми вже бачили aiзгенеровану різдвяну",
       "date": "2025-12-17",
       "url": "https://t.me/imatrofAI/2189",
@@ -12005,6 +12185,16 @@
       "topics": [
         "security"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Атака Китайців",
+      "date": "2025-12-08",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я крупним планом в одязі хакери чорному фоні (напис ВАЙБ ХАКЕРИ)\n* Я крупним планом в одязі хакери  на чорному фоні(напи КИТАЙ АТАКУЄ)\n* Я курпним планом вишлядаю як",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -12364,6 +12554,16 @@
       "preview": "Відео: Gemini 3: Google викотив флагманську модель",
       "company": "google",
       "product": "gemini",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "Gemini 3",
+      "date": "2025-11-24",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я крупнимі плано пісіхаюсь і на фоно морська хвиля вилечезна і напис на фоні GOOGLE\n* Я крупним планом посміхаюсь в окулярах і кепці і тримую величезний логопи з напи",
+      "company": "",
+      "product": "",
       "topics": [],
       "source": "youtube"
     },
@@ -14206,6 +14406,16 @@
       "topics": [
         "video-generation"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "SORA 2",
+      "date": "2025-10-08",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я крупним планом в окулярах та кепці і на фоні написи Sora 2 (ПРОРИВ)\n* Я крупним планом в окулярах та кепці і на фоні написи Sora 2 (НОВИЙ ТІК ТОК)\n* Я крупнвм плано",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -16970,6 +17180,16 @@
       "source": "youtube"
     },
     {
+      "title": "Coment AI Browser",
+      "date": "2025-08-22",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "* Зробити окреме відео про агента\n* Новини мої з твітера\n\n\nhttps://youtu.be/ZsUz0urp0_E?si=XD8w2yhK_5NZb4-7\n\n\n\n\n\n**Sources!!!!**\n\nhttps://www.youtube.com/watch?v=4fJc4j0tjEs\n\nhttps",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Памʼятаєте динозаврика в Chrome? 🦖",
       "date": "2025-08-21",
       "url": "https://t.me/imatrofAI/1559",
@@ -17387,6 +17607,16 @@
       "source": "youtube"
     },
     {
+      "title": "ChatGPT 5 Розчарування",
+      "date": "2025-08-15",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n* Я курупним планом розчароваий (розчарування)\n* Я курпним планом показую великий палеуь вниз - thumb down (чесний огляд)\n* Я крупним планом тримаю в однйі руці великий біл",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Comet — AI браузер від Perplexity",
       "date": "2025-08-14",
       "url": "https://t.me/imatrofAI/1367",
@@ -17792,6 +18022,16 @@
       "topics": [
         "agents"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "AI Агенти",
+      "date": "2025-08-10",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n* \n\n\n\n\nTitle:\n\n* AI агенти на симуляція світу\n* АІ агенти у прийнятті рішень\n* **Чи потрібні нам такі AI агенти? | AI РОЗМОВИ**\n* AI вже поруч\n* Ну тупи це ШІ\n* ШІ Історії",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -18354,6 +18594,16 @@
       "source": "youtube"
     },
     {
+      "title": "ChatGPT Агент",
+      "date": "2025-08-03",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n* Я в окулярах крупним планом\n* я такий в бейсболці і показую пальцем і посміхаюсь\n* я такий  в окуляраз крупним планом сиджу спиною до кінескопного великого екрану\n\n\n\nTitl",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Агент-дослідник: локальна міні-версія NotebookLM",
       "date": "2025-08-02",
       "url": "https://t.me/imatrofAI/1333",
@@ -18803,6 +19053,16 @@
       "source": "youtube"
     },
     {
+      "title": "Gemma 3n (local LLM)",
+      "date": "2025-07-24",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "https://www.youtube.com/watch?v=ZL9LoF3tcSM&t=201s\n\n\n\nImport models localy - https://github.com/google-ai-edge/gallery/wiki/6.-Importing-Local-Models-(optional)\n\n\n\n3n-4b  - https:/",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "AI CLI повний комплект: Claude Code, Codex та Google CLI",
       "date": "2025-07-23",
       "url": "https://t.me/imatrofAI/1310",
@@ -19237,6 +19497,16 @@
       "topics": [
         "productivity"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Dia AI Browser",
+      "date": "2025-07-10",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "* Зробити окреме відео про агента\n* Новини мої з твітера\n\n\nhttps://youtu.be/ZsUz0urp0_E?si=XD8w2yhK_5NZb4-7\n\n\n\n\n\n**Sources!!!!**\n\nhttps://www.youtube.com/watch?v=4fJc4j0tjEs\n\nhttps",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -21666,6 +21936,16 @@
       "source": "youtube"
     },
     {
+      "title": "GPT 3o",
+      "date": "2025-05-01",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* як в продуктовий совет (я стою і не знаю яку кнопку обрати)\n* Мене чотири і над кожним назва моделі - вперед, зоіва, справа, задом\n* Я стою і маю чотири руки і в них",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Google DeepMind кидає виклик промтінгу",
       "date": "2025-04-30",
       "url": "https://t.me/imatrofAI/1096",
@@ -22119,6 +22399,16 @@
       "topics": [
         "coding"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "GPT 4.1",
+      "date": "2025-04-18",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n\n\n**Title:**\n\n* Топ‑модель для програмування від OpenAI\n* **OpenAI тримали інтригу 14 днів. Що приховує GPT 4.1?**\n* Чи варто оновлюватись? Все що потрібно знати про но",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -22653,6 +22943,16 @@
       "topics": [
         "learning"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Notebook LM",
+      "date": "2025-04-06",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* AI для навчання\n\n\n**Title:**\n\n\n\n* Найкращий AI інструмент для навчання у 2025\n* Найкращий AI інструмент для навчання у 2025! Показую 5 крутих інтеграцій\n* **Цей AI зм",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -23253,6 +23553,26 @@
       "source": "youtube"
     },
     {
+      "title": "Grok 3 + Windserf",
+      "date": "2025-03-21",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Grok 3 другий шанс\n* Grok 3 новий друг програміста\n* Танчики\n* Нова #1 LLM\n* Я і на  фоні чат зліва і справа редактор коду і стрілка переходу - даю другий шанс\n* Я і",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "MANUS + ANUS",
+      "date": "2025-03-21",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n\n\n\n\n**Title:**\n\n* Що таке Manus та як запусти AI агента локально?\n* Manus - AI агент. Як запустити локально?\n* AI агент Manus, який шокував всіх! Як запустити локально?",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "А пам’ятаєте AI-голос, який слухаєш і забуваєш, що це AI?",
       "date": "2025-03-20",
       "url": "https://t.me/imatrofAI/944",
@@ -23467,6 +23787,16 @@
       "preview": "Відео: Яка LLM КРАЩА у 2025? GPT 4.5 vs Claude 3.7 vs Gemini vs Grok - Порівняння",
       "company": "xai",
       "product": "grok",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "GPT 4,5 vs Claude 3,7 vs Gemini",
+      "date": "2025-03-15",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Хто краще ?\n* Яка LLM краща ?\n* Як обрати LLM у 2025?\n* Я дивлюсь в камеру і таки дуже задумлевий а на фоні 5 яскравих кил які відсвічують білим\n* Я дивлюсь в камуру",
+      "company": "",
+      "product": "",
       "topics": [],
       "source": "youtube"
     },
@@ -23725,6 +24055,16 @@
       "topics": [
         "coding"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Claude 3.7",
+      "date": "2025-03-08",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Новий найкращий на землі\n* Новий найкращий AI\n* Прргорамує на вайбі\n* Велике АІ оновлення\n* Йде в агенти\n* Ілона грок сховався\n* Перша гібридна LLM\n\n\n**Title:**\n\n* Cl",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -24208,6 +24548,16 @@
       "source": "youtube"
     },
     {
+      "title": "о3-mini Найдумаюча модель",
+      "date": "2025-02-24",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* я дивлюсь в камеру тримаю напис o3-mini на рівні роту і на фоні прапора OpemAI\n* я в космічному стилі дивлюсь в камер і фоні OpenAI і лінія тренду догори яка показує",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "🚨 НЕДІЛЬНИЙ AI-ЧЕКІН",
       "date": "2025-02-23",
       "url": "https://t.me/imatrofAI/875",
@@ -24307,6 +24657,16 @@
         "agents",
         "productivity"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Perplexity AI агент",
+      "date": "2025-02-21",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я дивлюсь на багато екранів компа\n* Я дивлюс в камеру і на фоні Google пошук\n* Я і за мною павутина інтернет\n* Я і за мною пошук інформації в інтернеті\n* Я тримаю вел",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -24803,6 +25163,16 @@
       "source": "youtube"
     },
     {
+      "title": "Deep Research",
+      "date": "2025-02-08",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* AI працює за мене\n* Делегуй роботу AI\n* 2025 Рік AI Агентів\n* Запускаємо AI агента локально\n* Тримаю слово Deep Research + Логотип OpenAI як прапор + Логотип Google я",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "GeoSpy AI – вміє визначати локацію по фото.",
       "date": "2025-02-07",
       "url": "https://t.me/imatrofAI/825",
@@ -25102,6 +25472,16 @@
       "topics": [
         "coding"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Мій перший досвід з Cursor",
+      "date": "2025-02-01",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонси 1:**\n\n* Напис - AI який пише код\n* Іконка Cursor \n* Фонову картинку треба підібрати - Cursor (man looks like engineer laying on the pink sofa and writing code)\n\n\n**Анонси",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -25428,6 +25808,16 @@
       "source": "youtube"
     },
     {
+      "title": "DeepSeek - R1 - Запускаємо Локально",
+      "date": "2025-01-25",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонси 1:**\n\n* Напис - Хто тепер краще думає\n* Іконка DeepSeek R1 + OpenAI o1\n* Фонову картинку треба підібрати - DeepSeek + OpenAI\n\n\n**Анонси 1:**\n\n* Напис - ChatGTP о1 в нокаут",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Технології поза політикою",
       "date": "2025-01-23",
       "url": "https://t.me/imatrofAI/773",
@@ -25572,6 +25962,16 @@
       "preview": "Відео: Постав собі LLM",
       "company": "meta",
       "product": "llama",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "Install Llama 3 localy",
+      "date": "2025-01-21",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* А в тебе вже стоїть? Цей текст зліва\n* Я стою з ноутом і на екрані типу чат як ChatGPT (і типу як pornhub заблюрене) і напис LLM\n![](https://prod-files-secure.s3.us-w",
+      "company": "",
+      "product": "",
       "topics": [],
       "source": "youtube"
     },
@@ -25935,6 +26335,16 @@
       "source": "youtube"
     },
     {
+      "title": "Ідеї використання o1",
+      "date": "2025-01-10",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nАнонс 1:\n\n* Логотип openai\n* Напис o1\n* Внизу текст -  Прокачай ChatGPT\n* І типу стрілочка яка показує рук вгору\n* Моє фото можна інше дати\n<!-- Unsupported block type:",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Ось трохи передбачень від людей, наближених до AI-теми, щодо того, куди розви...",
       "date": "2025-01-09",
       "url": "https://t.me/imatrofAI/745",
@@ -26233,6 +26643,16 @@
       "topics": [
         "multimodal"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "OpenAI о3",
+      "date": "2025-01-05",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nАнонс:\n\n**Aнонс 1:**\n\n* Такий як попередній різдвяний анонс (день 1)\n* Логотип openai\n* Зверху напис GPT o3\n* Внизу текст -  НАДПОТУЖНА МОДЕЛЬ\n\n\n**Анонс 2:**\n\n* Такий я",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -26595,6 +27015,16 @@
       "source": "youtube"
     },
     {
+      "title": "Mistral LLM",
+      "date": "2025-01-03",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n**Анонс 1**\n\n* Я такий на фоні кухні і Mistral іконка + прапор франції йде від іконки\n* А з іншого боку таки значок ChatGPT маленький ховається\n* І текст - Vive la Fran",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "В продовженні останніх оновлень від Google Deep Mind — вони виклали підсумки ...",
       "date": "2025-01-02",
       "url": "https://t.me/imatrofAI/723",
@@ -26843,6 +27273,16 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "Google Gemini Flash",
+      "date": "2024-12-27",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс1:**\n\n* Google (логотипчик) проти  (чи vs) OpenAI (логотипчик)\n* Моє якесь фото \n\n\n**Анонс2:**\n\n* Google (логотипчик) проти  (чи vs) OpenAI (логотипчик)\n* Моє якесь фото",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Маємо ще кілька днів до кінця року, щоб трохи повчитись!",
@@ -27376,6 +27816,16 @@
       "source": "telegram"
     },
     {
+      "title": "GPT Canvas",
+      "date": "2024-12-15",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n**Aнонс 1:**\n\n* Такий як попередній різдвяний анонс (день 1)\n* Зверху напис SORA\n* Внизу текст -  ВІДЕО CЮРПРИЗ\n\n\n**Анонс 2:**\n\n* Такий як попередній різдвяний анонс (день",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Анти-людська кампанія AI-стартапів у Сан-Франциско",
       "date": "2024-12-14",
       "url": "https://t.me/imatrofAI/633",
@@ -27647,6 +28097,16 @@
       "source": "telegram"
     },
     {
+      "title": "SORA - Day 3",
+      "date": "2024-12-10",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n**Aнонс 1:**\n\n* Такий як попередній різдвяний анонс (день 1)\n* Зверху напис SORA\n* Внизу текст -  ВІДЕО CЮРПРИЗ\n\n\n**Анонс 2:**\n\n* Такий як попередній різдвяний анонс (день",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Тут придумали Agile для штучного інтелекту.",
       "date": "2024-12-09",
       "url": "https://t.me/imatrofAI/582",
@@ -27761,6 +28221,16 @@
       "source": "telegram"
     },
     {
+      "title": "ChatGPT Fine-tune",
+      "date": "2024-12-09",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n**Aнонс 1:**\n\n* Такий як попередній різдвяний анонс (день 1)\n* Зверху напис GPT-4o-mini\n* Внизу текст -  FINE-TUNE CЮРПРИЗ\n\n\n**Анонс 2:**\n\n* Такий як попередній різдвяний а",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Agile для ШІ — нові підходи у розробці",
       "date": "2024-12-08",
       "url": "https://t.me/imatrofAI/582",
@@ -27838,6 +28308,16 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "ChatGPT + o1",
+      "date": "2024-12-07",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n\n\n**Aнонс 1:**\n\n* Зверху великими ChatGPT PRO + o1\n* Внизу текст - СВЯТО НАБЛИЖАЄТЬСЯ (яко лампочок дати)\n* Зліва логотив ChatGPT великий і вилазит вершечок ялинки за ним (",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "250 хакерам дали 24 години, щоб побачити, що можна створити використовуючи фу...",
@@ -28157,6 +28637,26 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "ChatGPT Canvas Огляд",
+      "date": "2024-12-01",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс 1 **(в стилі як отримати від ChatGTP те що я хочу)\n\n* Я справа або зліва\n* А з іншого боку логотип ChatGPT\n* І напис - ЦЕ + СТАЛОСЬ (жовто + біле)\n![](https://prod-files-se",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "Claude MCP",
+      "date": "2024-12-01",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анос**\n\n**Анонс 1:**\n\n* З крабіком анонс\n* Лише текст внизу має писта - МІСТОК ДО СВІТУ\n* І від ноутбука мають такі як щупальця виходити \n![](https://prod-files-secure.s3.us-west",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Значить затестив я “місток” між моделлю Claude і даними та застосунками на ко...",
@@ -28614,6 +29114,16 @@
       "source": "telegram"
     },
     {
+      "title": "ChatGPT для програмування",
+      "date": "2024-11-22",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n**Анонс 1:**\n\n* Я на кухні\n* Зліва від голови іконка зі стрілочкою + справа іконка ChatGPT\n<!-- Unsupported block type: column_list -->\n\n\n\n**Анонс 2:**\n\n* Так як внизу",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Маю хороші новини для розробників та всіх, хто любить писати код із ChatGPT.",
       "date": "2024-11-21",
       "url": "https://t.me/imatrofAI/487",
@@ -28972,6 +29482,16 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "Навчи свій AI - Krea",
+      "date": "2024-11-15",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n\n\n**Анонс 1:**\n\n* Я на кухні\n* І навколо мене ікони Flux, Krea AI, Fal AI, Replicate AI, Pinokio comouter, \n* І напис - ТЕПЕР ЦЕ МОЖЛИВО\n\n\n**Анонс 2:**\n\n* Я лечу як Sup",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "🏄‍♂️ А ось і OpenAI вийшов з гучною новиною. А я вже думав, невже вони тихо б...",
@@ -29553,6 +30073,26 @@
       "source": "telegram"
     },
     {
+      "title": "Мій Аватар",
+      "date": "2024-11-05",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс 1 (так як анонс про ChatGTP може більше):\n\n* Я за столон на кухні і зліва конка HeyGen тільки велика і до неї стрілка фіолетова (колі ввзяти з іконки)\n* І напис - Я | Аватар",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "SearchGPT огляд",
+      "date": "2024-11-05",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс 1 **(в стилі як отримати від ChatGTP те що я хочу)\n\n* Я тк як на фото\n* А з іншого боку логотип ChatGPT (тільки зроби його і тег червоний більшим ніж на фото)\n* І напис - Ц",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "🎬 Ух, а подивіться, що Runway зробив.",
       "date": "2024-11-04",
       "url": "https://t.me/imatrofAI/402",
@@ -30100,6 +30640,16 @@
       "source": "telegram"
     },
     {
+      "title": "Pik огляд",
+      "date": "2024-10-29",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nАнонс 1:\n\n* Екран розділено на три кадри - де перший мене роздуває / стискає / жмякає\n* І написи під кожним кадром - дути / чавити / тиснути\n\n\nAнонс 2:\n\n* Екран на 3 ча",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Claude 3.5 — керування комп'ютером та дата-аналіз",
       "date": "2024-10-28",
       "url": "https://t.me/imatrofAI/348",
@@ -30245,6 +30795,16 @@
       "source": "telegram"
     },
     {
+      "title": "Anthropic Агент",
+      "date": "2024-10-25",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс 1 (такий як Режим Канвас)\n\n* Напис - Взяли і зробили \n* Іконка Claude і червоний тег - New\n* І їх червоний краб виглядає ззаду мене (anthropic claude red crab)\n<!-- Unsupport",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "До речі, а ви бачили, яку круту штуку анонсували в Runway?",
       "date": "2024-10-24",
       "url": "https://t.me/imatrofAI/340",
@@ -30313,6 +30873,16 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "ChatGPT мій фінансовий радник",
+      "date": "2024-10-23",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* **Версія 1**\n* як стою як Алі - можна одягнути білу футболку і джинсовку або сорочку синю\n* На фоні можна на дворі то зробити фото або в кухні як ми робимо\n* Зліва кн",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "HeyGen Avatar 3.0 — реалістичність вражає",
@@ -30793,6 +31363,16 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "Топ 5 для віральних відео",
+      "date": "2024-10-08",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс 1:**\n\n* Я посередині і навколо мене віральні відео (типу як скрін з інстаграм) з млн переглядів\n**Анонс 2:**\n\n* Я посередині і навколо хмарка іконок - Kling AI, Runway, Lum",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Нарешті протестував Flux Pro 1.1 Pro 🫐",
@@ -31468,6 +32048,16 @@
       "source": "telegram"
     },
     {
+      "title": "Топ 5 AI тулів для фото / Дизайнемо бренд кави",
+      "date": "2024-09-20",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Анонс:\n\n<!-- Unsupported block type: column_list -->\n\n<!-- Unsupported block type: column_list -->\n\n**Анонс 1 - БАРІСТА: **\n\n* Зліва я стою звичайне фото на кухні а справа я стою я",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Маю для вас забавку - діпфейки в реальному часі прямо у веб-браузері.",
       "date": "2024-09-19",
       "url": "https://t.me/imatrofAI/236",
@@ -32043,6 +32633,16 @@
         "community"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "Промпти 90% супер сили",
+      "date": "2024-09-07",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс**:\n\n**Версія 1:**\n\n* Я такий стою як це дядько з бородою і на фоні наша кухня або двір\n* Збоку від мене телевон і на екрані з ChatGPT голосовий режим\n**Версія 2:**\n\n* Я так",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Мені здається, що Claude заслуговує трохи більше уваги.",
@@ -33087,6 +33687,16 @@
       "source": "telegram"
     },
     {
+      "title": "GPTs Store такий недолугий",
+      "date": "2024-08-17",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nВерсія 1\n\n* Я на фоні кухні тримаю як алі телефон в руках і такий в шоці\n* А з телефону вилазить GPT store + кілька іконок додатків GPT\n* напис білими буквами з тінню -",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Grok-2 + Flux: Хайп чи реальність Ілона Маска?",
       "date": "2024-08-15",
       "url": "https://t.me/imatrofAI/115",
@@ -33161,6 +33771,16 @@
       "product": "",
       "topics": [],
       "source": "telegram"
+    },
+    {
+      "title": "Топ 5 AI Tools по роботі з відео",
+      "date": "2024-08-14",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n**Версія 1:**\n\n* Як алі за ноутом веселий\n* Зліва просто ютуб іконка + справа ютуб іконка з зеленою галочкою, знак “+” і іконка AI\n* На фоні роздільна біла або чорна лі",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Flux: Швидкість та якість — новий лідер зображень",
@@ -33413,6 +34033,16 @@
         "productivity"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "Автомат пост соц мереж",
+      "date": "2024-08-06",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс**:\n\n* Версія 1:\n* Фото де я тримаю айпад такий серйозно здивовагий на фоні нашої кухні (кухня розмита щоб був контраст) + на айпаді моя система з make але перекреслена черв",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Я ось тільки добрався до новин, а тут несеться. Держава хоче закрити Телеграм...",
@@ -33678,6 +34308,16 @@
       "source": "telegram"
     },
     {
+      "title": "ChatGPT памʼять;  Як зекономити час та гроші",
+      "date": "2024-07-30",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**ЗРОБИТИ ДВА АНОНСИ ДЛЯ ТЕСТУВАННЯ:**\n\n* Анонс один (все як на цьому фото)\n* Напис - Пам’ять\n* Фото як я сиджу і щось роблю в блокноті і спереду ноутбук\n* І логотипчик ChatGPT дес",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Я ось що подумав - ці всі нові пошуковики на базі ШІ від OpenAI та Perplexity...",
       "date": "2024-07-29",
       "url": "https://t.me/imatrofAI/65",
@@ -33888,6 +34528,16 @@
         "productivity"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "Calendar + ChatGPT",
+      "date": "2024-07-24",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nВЕРСІЯ 1\n\n* Все таке як в Алі\n* Чотири іконки в хмарі літають - ChatGPT та Пошта та Google Calendar і Apple Calendar\n<!-- Unsupported block type: column_list -->\n\n**Tit",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Еволюція моделей: від тексту до дій",
@@ -34458,6 +35108,16 @@
       "source": "telegram"
     },
     {
+      "title": "Claude 3.5 Sonet",
+      "date": "2024-07-10",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Битва п'яти інтелектів (напис жовтим)\n* Сlaude 3.5 (напис білим)\n* Нове (червоним\n* Моє фото як Хобіт\n* Фон розмитий\n<!-- Unsupported block type: column_list -->\n\n\n\n*",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Матеріали до відео: GPTs та система контенту",
       "date": "2024-07-09",
       "url": "https://t.me/imatrofAI/25",
@@ -34469,6 +35129,16 @@
         "productivity"
       ],
       "source": "telegram"
+    },
+    {
+      "title": "GPT-4o",
+      "date": "2024-07-09",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Напис - Володарі штучного інтелекту\n* Малюнок - я стою як Гендольф + на фоні їх село хобітів або просто гори\n* Напис - НОВИНИ ШІ\n![](https://prod-files-secure.s3.us-w",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
     },
     {
       "title": "Claude 3.5 — перші враження та огляд на YouTube",
@@ -34887,6 +35557,16 @@
       "source": "youtube"
     },
     {
+      "title": "Цифровий Двійник",
+      "date": "2024-05-14",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nЩо буде через 10 років / \n\nЧи можна передбачити майбутнє / \n\nяк передбачають майбутнє/ \n\n**А що буде завтра?**\n\n**+я такий стою і моя цифрова тінь/двійник**\n\n**Я сьогод",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Llama 3 у Facebook та Instagram",
       "date": "2024-04-23",
       "url": "https://www.youtube.com/@imatrof",
@@ -34899,6 +35579,16 @@
       "source": "youtube"
     },
     {
+      "title": "Meta + Llama 3",
+      "date": "2024-04-23",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* я тримаю в руках мобільний зліва і на право йде червона або зелена стрілка до скріншоту фейсбуку з ШІ і заблюрено а сама ШІ кнопка (Ask Meta AI) підзумлена. Скріншот",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "ШІ створює музику",
       "date": "2024-04-16",
       "url": "https://www.youtube.com/@imatrof",
@@ -34908,6 +35598,16 @@
       "topics": [
         "video-generation"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "UDIO ШІ для Музики",
+      "date": "2024-04-16",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nМУЗИКА ЗМІНИЛАСЬ\n\nМУЗИКА СТАЄ ІНШОЮ\n\n<!-- Unsupported block type: column_list -->\n\n\n\n**Title:**\n\nUDIO змінює МУЗИКУ\n\nЯк ШІ робить музику\n\nЯк ШІ створює музику (Udio)\n\nU",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -34925,6 +35625,16 @@
       "source": "youtube"
     },
     {
+      "title": "ШІ в ІТ",
+      "date": "2024-03-31",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n**Роль ШТУЧНОГО ІНТЕЛЕКТУ в ІТ**\n\nШІ: \\> ЗРОБИ МЕНІ КОД\n\n\n\n\n\nref: 02:02 Сувої\n\nref: 12:29 CV\n\nref: 13:51 ChatGPT\n\nref: 14:00 SORA\n\n\n\n**Title:**\n\n**Як не втратити момент",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "YOLO та розпізнавання об'єктів",
       "date": "2024-03-20",
       "url": "https://www.youtube.com/@imatrof",
@@ -34938,6 +35648,16 @@
       "source": "youtube"
     },
     {
+      "title": "ШІ Практичне Застосування",
+      "date": "2024-03-20",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\nЯк бачить компʼютер?\n\nЯк бачить ШІ?\n\nЩо таке компʼютерний зір?\n\n+Я дивлюсь на букви як перевірка зору\n\n\n\nНапис - ти теж заклеюєш?\n\nКартинка лептом з заклеєною камерою с",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Vesuvius Challenge: $1M приз за розшифровку сувоїв",
       "date": "2024-03-09",
       "url": "https://www.youtube.com/@imatrof",
@@ -34948,6 +35668,16 @@
         "education",
         "nova-model"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "Везувій AI",
+      "date": "2024-03-09",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "ref 0:16 - Попереднє відео про сувої\n\nref 03:40 - Фермер\n\nref 05:57 - GitHub Coplito\n\nref 07:00 - Italy\n\nref 10:39 - а що далі ?\n\n\n\n\n\n\n\nSources: https://www.youtube.com/results?sea",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -34975,6 +35705,16 @@
       "source": "youtube"
     },
     {
+      "title": "Claude 3",
+      "date": "2024-03-06",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "ref 01:30 - Geminie vs GPT-4\n\nref 03:27 - Geminie 1.5\n\nref 06:46 - Google джин\n\nref 09:48 - Mistral vs ChatGPT\n\nref 25:44 - Google прикрив Gemini\n\n\n\nТестуємо конкурента gpt-4\n\n\n\nОг",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Mistral Large та партнерство з Microsoft",
       "date": "2024-03-05",
       "url": "https://www.youtube.com/@imatrof",
@@ -34999,6 +35739,16 @@
       "source": "youtube"
     },
     {
+      "title": "Mistrial Йду в Астрал",
+      "date": "2024-03-05",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "ref 01:12 - CHatGPT Memory new feature\n\nref 01:48 - Gemini 1.5\n\nref 04:39 - Gemini vs ChatGPT\n\nref 08:18 - Gemini (швидкість)\n\n\n\nЯк вам штучний інтелект від Mistral AI? \n\nКруто! Є",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Apple GPT та локальний ШІ на Mac",
       "date": "2024-02-27",
       "url": "https://www.youtube.com/@imatrof",
@@ -35012,6 +35762,16 @@
       "source": "youtube"
     },
     {
+      "title": "Куди пропав Apple?",
+      "date": "2024-02-27",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "<!-- Child Page: Video - А куда зник Apple -->\n\n\n\nref 02:10 - Gemini vs ChatGPT\n\nref 04:11 - Google прикрив gemini\n\nref 06:34- Телефони ьільше не потрібні\n\nref 09:55 - Мета тренує",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Llama 70B та самонавчання без людини",
       "date": "2024-02-20",
       "url": "https://www.youtube.com/@imatrof",
@@ -35021,6 +35781,16 @@
       "topics": [
         "learning"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "ШІ вчить сам себе",
+      "date": "2024-02-20",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "![](https://prod-files-secure.s3.us-west-2.amazonaws.com/63422dd9-b493-4c9b-a86c-a26aed006d55/aa961209-7f30-433b-8475-b5a167b0f28c/IMG_6731.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -35048,6 +35818,16 @@
       "source": "youtube"
     },
     {
+      "title": "Google Gemini 1.5",
+      "date": "2024-02-18",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "https://youtu.be/lSmG8hbLEts?si=tfMPxPRCuN2Hvldi\n\n\n\n01:46 - ref - Gemnie vs ChatGPT\n\n15:33 - ref - Sora\n\n\n\n\n\n\n\n\n\n**Анонс:**\n\nОце швидкість!\n\nGOT-4 програв?\n\nІ я їду на формулі 1 а",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Sora генератор відео до 60 секунд",
       "date": "2024-02-16",
       "url": "https://www.youtube.com/@imatrof",
@@ -35057,6 +35837,16 @@
       "topics": [
         "video-generation"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "OpenAI Sora",
+      "date": "2024-02-16",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Sora - https://openai.com/sora\n\nTechnical report - research - https://openai.com/research/video-generation-models-as-world-simulators\n\nПост Сема - https://x.com/sama/status/1758193",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -35076,6 +35866,26 @@
       "date": "2024-02-13",
       "url": "https://www.youtube.com/@imatrof",
       "preview": "Відео: Короткі новини з тегами",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "004 - Історії",
+      "date": "2024-02-13",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "<!-- Child Page: ✅ (1) New York Times подав в суд на OpenAI -->\n\n<!-- Child Page: ✅ (2) Google Poet -->\n\n<!-- Child Page: ✅ NO - ChatGPT продав машину за $1 -->\n\n<!-- Child Page: 🟨",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "Google запустив Gemini",
+      "date": "2024-02-13",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Картинка:**\n\nGoogle Gemini краще OpenAI ChatGPT?\n\n\n\nhttps://youtu.be/nheVIcpSRsc\n\nhttps://blog.google/products/gemini/bard-gemini-advanced-app/\n\n**Анонс:**\n\nЯ стою посередині і н",
       "company": "",
       "product": "",
       "topics": [],
@@ -35107,6 +35917,16 @@
       "source": "youtube"
     },
     {
+      "title": "Коли штучний інтелект замінить людину",
+      "date": "2024-02-07",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Чи замінить штучний інтелект людину?",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "Безкоштовна альтернатива Midjourney",
       "date": "2024-02-01",
       "url": "https://www.youtube.com/@imatrof",
@@ -35126,6 +35946,26 @@
       "topics": [
         "nova-model"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "009 - Llama3 Марк Цукерберг",
+      "date": "2024-02-01",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Title:**\n\nШокуюча новина - Марк Цукерберг анонсує загальний штучний інтелект (AGI)\n\nШокуюча новина - Марк Цукерберг анонсує LLama 3 - Загальний штучний інтелект (AGI) який буде д",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "011 - Leonardo AI",
+      "date": "2024-02-01",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Details**\n\nLeonardo.AI - Безкоштовна заміна Midjourney. Як користуватись?\n\n**Description**\n\nПривіт, друзі! З вами штучно інтелектуальні історії 🤖\n\nLeonardo.AI виповнився один рік",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -35166,6 +36006,26 @@
       "source": "youtube"
     },
     {
+      "title": "007 - Google Poet",
+      "date": "2024-01-22",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Нова модель Video Poet від Google представляє собою великий стрибок у генерації відео з використанням штучного інтелекту.",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "008 - Вбивці телефони Агенти вже серед на",
+      "date": "2024-01-22",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "Хто ці вбивці телефонів\n\nАгенти вже серед нас\n\nТелефони більше не потрібні\n\n\n\n**Title**\n\nТелефони більше не потрібні - штучно інтелектуальні агенти вже серед нас \n\n**Description**",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
       "title": "OpenAI запустив GPT Store",
       "date": "2024-01-13",
       "url": "https://www.youtube.com/@imatrof",
@@ -35176,6 +36036,16 @@
         "agents",
         "productivity"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "006 - OpenAI Store",
+      "date": "2024-01-13",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "https://youtu.be/2wYcJEcKVPk?si=XPgKUhcq_MQIcJjE\n\nhttps://youtu.be/KSQAErg-U_g?si=nzHVuDOYz5Yd4beY\n\nПриклад -\n\nПрогноз від Білла Гейтса шокує. Куди нас заведе штучн\n\n\n\n**Details**",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     },
     {
@@ -35225,6 +36095,46 @@
         "infrastructure",
         "computer-vision"
       ],
+      "source": "youtube"
+    },
+    {
+      "title": "001 - Історії - електрику chatgpt",
+      "date": "2024-01-12",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "#  Історії\n\n<!-- Child Page: Скільки енергії забирає гугл серч -->\n\n<!-- Child Page: Штучний інтелект на виробництві вносить нові стандарти безпеки -->\n\n<!-- Child Page: Художники",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "002 - Історії - тварини говорять",
+      "date": "2024-01-12",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "<!-- Child Page: Уявіть собі як би ми могли говорити з тваринами -->\n\n<!-- Child Page: Midjourney тепер генерить слова -->\n\n<!-- Child Page: Як це зустрічатись з АІ -->\n\n<!-- Child",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "003 - Сем прогноз",
+      "date": "2024-01-12",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "ChatGPT а шо то буде\n\nПрогноз від Сема на 2024\n\nШо чекати від ChatGPT у 2024\n\n<!-- Child Page: SHORT - Сем 2024 -->\n\n<!-- Child Page: LONG - Сем 2024 -->\n\n\n\n\n\n**Details**\n\nChatGPT",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "005 - Передбачення від дядька Білла",
+      "date": "2024-01-12",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Details**\n\nПрогноз від Білла Гейтса шокує. Куди нас заведе штучний інтелект?\n\n**Description**\n\nПривіт, друзі! З вами штучно інтелектуальні історії 🤖\n\n00:00 Прогноз від Білла Гейт",
+      "company": "",
+      "product": "",
+      "topics": [],
       "source": "youtube"
     }
   ]
