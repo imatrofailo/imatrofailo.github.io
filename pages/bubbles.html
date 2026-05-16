@@ -47,8 +47,15 @@
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
   .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
+  /* CHART SECTION (same as karta/hrid) */
+  .chart-section { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; overflow: hidden; margin-bottom: 40px; }
+  .chart-head { padding: 20px 24px 16px; border-bottom: 1.5px solid var(--g200); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .chart-head-left h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  .chart-head-left p  { font-size: 12.5px; color: var(--g500); }
+  .chart-body { padding: 24px; }
+
   /* BUBBLE CANVAS */
-  .bubble-wrap { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; position: relative; overflow: hidden; margin-bottom: 40px; }
+  .bubble-wrap { position: relative; overflow: hidden; }
   #bubble-canvas { display: block; width: 100%; cursor: default; }
   .bubble-hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); font-size: 11px; color: var(--g500); font-family: var(--mono); background: var(--ivory); padding: 4px 12px; border-radius: 999px; border: 1px solid var(--g300); pointer-events: none; white-space: nowrap; }
 
@@ -134,25 +141,33 @@
 </header>
 
 <main class="content">
-  <div class="toolbar">
-    <div class="filters">
-      <span class="filter-label">Показати:</span>
-      <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
-      <button class="filter-btn" onclick="setFilter('company',this)"><span class="dot dot-company"></span> Компанії</button>
-      <button class="filter-btn" onclick="setFilter('topic',this)"><span class="dot dot-topic"></span> Теми</button>
-      <button class="filter-btn" onclick="setFilter('product',this)"><span class="dot dot-product"></span> Продукти</button>
+  <section class="chart-section">
+    <div class="chart-head">
+      <div class="chart-head-left">
+        <h2>Бульбашки</h2>
+        <p>Розмір бульбашки = кількість матеріалів. Клікни щоб відкрити список постів по темі.</p>
+      </div>
+      <div class="filters">
+        <span class="filter-label">Показати:</span>
+        <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
+        <button class="filter-btn" onclick="setFilter('company',this)"><span class="dot dot-company"></span> Компанії</button>
+        <button class="filter-btn" onclick="setFilter('topic',this)"><span class="dot dot-topic"></span> Теми</button>
+        <button class="filter-btn" onclick="setFilter('product',this)"><span class="dot dot-product"></span> Продукти</button>
+      </div>
     </div>
-    <div class="legend">
-      <div class="legend-item"><div class="legend-dot" style="background:var(--clay)"></div> Компанії</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--olive)"></div> Теми</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Продукти</div>
+    <div class="chart-body">
+      <div class="bubble-wrap">
+        <canvas id="bubble-canvas"></canvas>
+        <div class="bubble-hint">натисніть на бульбашку щоб відкрити пости</div>
+        <div class="loading" id="loading">Завантаження даних…</div>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--clay)"></div> Компанії</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--olive)"></div> Теми</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Продукти</div>
+      </div>
     </div>
-  </div>
-  <div class="bubble-wrap">
-    <canvas id="bubble-canvas"></canvas>
-    <div class="bubble-hint">натисніть на бульбашку щоб відкрити пости</div>
-    <div class="loading" id="loading">Завантаження даних…</div>
-  </div>
+  </section>
 </main>
 
 <footer>

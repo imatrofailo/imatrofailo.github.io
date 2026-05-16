@@ -370,10 +370,9 @@ function renderTreemap(topics) {
   ALL_TOPICS = topics;
   const canvas = document.getElementById('treemap-canvas');
   const dpr    = window.devicePixelRatio || 1;
-  const W      = Math.floor(canvas.parentElement.getBoundingClientRect().width);
+  const W      = Math.floor(canvas.getBoundingClientRect().width);
   const H      = Math.min(Math.max(W * 0.52, 320), 520);
 
-  canvas.style.width  = W + 'px';
   canvas.style.height = H + 'px';
   canvas.width  = W * dpr;
   canvas.height = H * dpr;
