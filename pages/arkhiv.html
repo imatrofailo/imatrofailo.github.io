@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Архів постів — Ігор Матрофайло</title>
+<style>
+  :root {
+    --ivory:  #FAF9F5; --paper: #FFFFFF; --slate: #141413; --oat: #E3DACC;
+    --clay:   #D97757; --clay-d: #B85C3E; --clay-l: #FDF0EB;
+    --olive:  #788C5D; --olive-l: #EEF3E8;
+    --blue:   #4A7CC7; --blue-l: #EEF3FC;
+    --g100: #F0EEE6; --g200: #E6E3DA; --g300: #D1CFC5; --g500: #87867F; --g700: #3D3D3A;
+    --serif: ui-serif, Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
+
+  /* ── Header ── */
+  .page-header {
+    max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px;
+    border-bottom: 1.5px solid var(--oat);
+    display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px;
+  }
+  .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+  .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
+  .page-header p  { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
+
+  .stat-row { display: flex; gap: 12px; }
+  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; text-align: right; }
+  .stat-num   { font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1; }
+  .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
+
+  /* ── Toolbar ── */
+  .content { max-width: 1100px; margin: 0 auto; padding: 28px 52px 60px; }
+
+  .toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+  .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 380px; }
+  .search-wrap input {
+    width: 100%; padding: 8px 14px 8px 36px; border-radius: 999px;
+    border: 1.5px solid var(--g300); background: var(--paper);
+    font-size: 13.5px; font-family: var(--sans); color: var(--slate);
+    outline: none; transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--clay); }
+  .search-wrap input::placeholder { color: var(--g500); }
+  .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--g500); pointer-events: none; }
+
+  .filter-select {
+    padding: 7px 12px; border-radius: 8px; border: 1.5px solid var(--g300);
+    background: var(--paper); font-size: 13px; font-family: var(--sans); color: var(--slate);
+    outline: none; cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2387867F' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center;
+    padding-right: 28px;
+  }
+  .filter-select:focus { border-color: var(--clay); }
+
+  /* ── Tag company pills ── */
+  .company-pills { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 16px; }
+  .cpill {
+    padding: 4px 11px; border-radius: 999px; border: 1.5px solid var(--g200);
+    background: var(--paper); font-size: 11.5px; color: var(--g700); font-family: var(--mono);
+    cursor: pointer; transition: all 0.12s; white-space: nowrap;
+  }
+  .cpill:hover { border-color: var(--g300); background: var(--g100); }
+  .cpill.active { border-color: var(--clay); background: var(--clay-l); color: var(--clay-d); }
+
+  .results-info { font-size: 12px; color: var(--g500); font-family: var(--mono); margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+  .results-info .clear-btn { background: none; border: none; cursor: pointer; color: var(--clay); font-size: 11.5px; font-family: var(--mono); padding: 0; display: none; }
+  .results-info .clear-btn.visible { display: inline; }
+
+  /* ── Grid ── */
+  .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+
+  .post-card {
+    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px;
+    padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
+    text-decoration: none; color: var(--slate);
+    transition: border-color 0.13s, box-shadow 0.13s;
+  }
+  .post-card:hover { border-color: var(--clay); box-shadow: 0 2px 12px rgba(217,119,87,0.10); }
+
+  .card-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .card-date { font-size: 10.5px; color: var(--g500); font-family: var(--mono); }
+  .card-labels { display: flex; gap: 4px; }
+  .clabel {
+    font-size: 9.5px; font-family: var(--mono); padding: 2px 6px; border-radius: 4px;
+    white-space: nowrap;
+  }
+  .clabel.company { background: var(--clay-l); color: var(--clay-d); }
+  .clabel.product { background: var(--blue-l); color: #1E40AF; }
+  .clabel.topic   { background: var(--olive-l); color: #3D5A2A; }
+
+  .card-title {
+    font-size: 13.5px; font-weight: 600; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .card-preview {
+    font-size: 12px; color: var(--g700); line-height: 1.5;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  /* ── Pagination ── */
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 32px; flex-wrap: wrap; }
+  .page-btn {
+    min-width: 36px; height: 36px; padding: 0 10px; border-radius: 8px;
+    border: 1.5px solid var(--g300); background: var(--paper);
+    font-size: 13px; font-family: var(--mono); color: var(--g700);
+    cursor: pointer; transition: all 0.12s; display: flex; align-items: center; justify-content: center;
+  }
+  .page-btn:hover { border-color: var(--clay); color: var(--clay); }
+  .page-btn.active { border-color: var(--clay); background: var(--clay); color: var(--paper); }
+  .page-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  .page-info { font-size: 12px; color: var(--g500); font-family: var(--mono); padding: 0 8px; }
+
+  /* ── Empty / loading ── */
+  .empty { text-align: center; padding: 60px 20px; color: var(--g500); grid-column: 1/-1; }
+  .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
+
+  /* ── Footer ── */
+  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--clay); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .page-header { grid-template-columns: 1fr; padding: 24px 20px 20px; }
+    .stat-row { flex-wrap: wrap; }
+    .content, footer { padding-left: 20px; padding-right: 20px; }
+    .posts-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <div class="page-eyebrow">@imatrofAI · 2024–2026</div>
+    <h1>Архів постів</h1>
+    <p>Всі пости каналу — пошук, фільтр по компанії, темі та року.</p>
+  </div>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-num" id="stat-total">—</div>
+      <div class="stat-label">постів</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-years">3</div>
+      <div class="stat-label">роки</div>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search" placeholder="Пошук по постах…" oninput="onFilter()">
+    </div>
+    <select class="filter-select" id="year-sel" onchange="onFilter()">
+      <option value="">Всі роки</option>
+      <option value="2026">2026</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+    </select>
+    <select class="filter-select" id="topic-sel" onchange="onFilter()">
+      <option value="">Всі теми</option>
+    </select>
+  </div>
+
+  <div class="company-pills" id="company-pills"></div>
+
+  <div class="results-info">
+    <span id="results-count">Завантаження…</span>
+    <button class="clear-btn" id="clear-btn" onclick="clearFilters()">× скинути фільтри</button>
+  </div>
+
+  <div id="loading" class="loading">Завантаження архіву…</div>
+  <div class="posts-grid" id="grid"></div>
+  <div class="pagination" id="pagination"></div>
+</main>
+
+<footer>
+  <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
+  <span>Дані: 2024–2026</span>
+</footer>
+
+<script>
+'use strict';
+
+const PAGE_SIZE = 48;
+
+const TOPIC_LABELS = {
+  agents: 'Агенти', coding: 'Кодинг', 'nova-model': 'Нова модель',
+  'video-generation': 'Відео', philosophy: 'Філософія', productivity: 'Продуктивність',
+  learning: 'Навчання', infrastructure: 'Інфраструктура', design: 'Дизайн',
+  robotics: 'Роботика', security: 'Безпека', multimodal: 'Мультимодальні',
+  'labor-market': 'Ринок праці', mobile: 'Мобільні', enterprise: 'Для бізнесу',
+  'ukraine': 'Україна', 'vibe-coding': 'Vibe Coding',
+};
+
+const TOP_COMPANIES = ['openai','anthropic','google','meta','microsoft','nvidia',
+  'cursor','deepseek','mistral','xai','apple','elevenlabs','runway','midjourney'];
+
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+let ALL_POSTS = [];
+let filtered  = [];
+let currentPage = 1;
+let activeCompany = '';
+
+function buildTopicSelect(posts) {
+  const freq = {};
+  for (const p of posts) for (const t of p.topics) freq[t] = (freq[t]||0)+1;
+  const sel = document.getElementById('topic-sel');
+  Object.entries(freq)
+    .sort((a,b) => b[1]-a[1])
+    .slice(0,14)
+    .forEach(([t, cnt]) => {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = (TOPIC_LABELS[t] || t) + ` (${cnt})`;
+      sel.appendChild(opt);
+    });
+}
+
+function buildCompanyPills(posts) {
+  const freq = {};
+  for (const p of posts) if (p.company) freq[p.company] = (freq[p.company]||0)+1;
+  const pills = document.getElementById('company-pills');
+  const companies = TOP_COMPANIES.filter(c => freq[c]);
+  if (!companies.length) return;
+
+  pills.innerHTML = companies.map(c =>
+    `<button class="cpill" data-c="${esc(c)}" onclick="setCompany('${esc(c)}', this)">${esc(c)} <span style="color:var(--g500)">${freq[c]}</span></button>`
+  ).join('');
+}
+
+function setCompany(c, btn) {
+  activeCompany = (activeCompany === c) ? '' : c;
+  document.querySelectorAll('.cpill').forEach(p => p.classList.remove('active'));
+  if (activeCompany) btn.classList.add('active');
+  currentPage = 1;
+  applyFilters();
+  renderGrid();
+}
+
+function clearFilters() {
+  document.getElementById('search').value = '';
+  document.getElementById('year-sel').value = '';
+  document.getElementById('topic-sel').value = '';
+  activeCompany = '';
+  document.querySelectorAll('.cpill').forEach(p => p.classList.remove('active'));
+  currentPage = 1;
+  applyFilters();
+  renderGrid();
+}
+
+function onFilter() {
+  currentPage = 1;
+  applyFilters();
+  renderGrid();
+}
+
+function applyFilters() {
+  const q       = document.getElementById('search').value.toLowerCase();
+  const year    = document.getElementById('year-sel').value;
+  const topicF  = document.getElementById('topic-sel').value;
+
+  filtered = ALL_POSTS.filter(p => {
+    if (year    && !p.date.startsWith(year)) return false;
+    if (activeCompany && p.company !== activeCompany) return false;
+    if (topicF  && !p.topics.includes(topicF)) return false;
+    if (q && !(
+      p.title.toLowerCase().includes(q) ||
+      (p.preview||'').toLowerCase().includes(q)
+    )) return false;
+    return true;
+  });
+
+  // Update info
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  document.getElementById('results-count').textContent =
+    `${total} постів · сторінка ${currentPage} з ${pages || 1}`;
+
+  const hasFilter = q || year || activeCompany || topicF;
+  document.getElementById('clear-btn').classList.toggle('visible', !!hasFilter);
+  document.getElementById('stat-total').textContent = ALL_POSTS.length;
+}
+
+function renderGrid() {
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page  = filtered.slice(start, start + PAGE_SIZE);
+  const grid  = document.getElementById('grid');
+
+  if (!page.length) {
+    grid.innerHTML = `<div class="empty"><p style="font-size:14px;color:var(--g500)">Нічого не знайдено</p></div>`;
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = page.map(p => {
+    const labels = [];
+    if (p.company) labels.push(`<span class="clabel company">${esc(p.company)}</span>`);
+    if (p.product) labels.push(`<span class="clabel product">${esc(p.product)}</span>`);
+    p.topics.slice(0,1).forEach(t =>
+      labels.push(`<span class="clabel topic">${esc(TOPIC_LABELS[t] || t)}</span>`)
+    );
+
+    const preview = (p.preview || '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
+
+    return `<a href="${esc(p.url||'#')}" target="_blank" rel="noopener" class="post-card">
+      <div class="card-meta">
+        <span class="card-date">${p.date}</span>
+        <div class="card-labels">${labels.join('')}</div>
+      </div>
+      <div class="card-title">${esc(p.title)}</div>
+      ${preview ? `<div class="card-preview">${esc(preview)}</div>` : ''}
+    </a>`;
+  }).join('');
+
+  renderPagination();
+  grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderPagination() {
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  const pag   = document.getElementById('pagination');
+
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+
+  const maxVisible = 5;
+  let start = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+  let end   = Math.min(pages, start + maxVisible - 1);
+  if (end - start < maxVisible - 1) start = Math.max(1, end - maxVisible + 1);
+
+  let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>`;
+  if (start > 1) html += `<button class="page-btn" onclick="goPage(1)">1</button>${start>2?'<span class="page-info">…</span>':''}`;
+  for (let i = start; i <= end; i++)
+    html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+  if (end < pages) html += `${end<pages-1?'<span class="page-info">…</span>':''}<button class="page-btn" onclick="goPage(${pages})">${pages}</button>`;
+  html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===pages?'disabled':''}>›</button>`;
+
+  pag.innerHTML = html;
+}
+
+function goPage(p) {
+  const pages = Math.ceil(filtered.length / PAGE_SIZE);
+  currentPage = Math.max(1, Math.min(pages, p));
+  applyFilters();
+  renderGrid();
+}
+
+fetch('../data/posts.json')
+  .then(r => r.json())
+  .then(data => {
+    ALL_POSTS = data.posts || [];
+    document.getElementById('loading').style.display = 'none';
+    buildTopicSelect(ALL_POSTS);
+    buildCompanyPills(ALL_POSTS);
+    applyFilters();
+    renderGrid();
+  })
+  .catch(() => {
+    document.getElementById('loading').textContent = 'Помилка завантаження.';
+  });
+</script>
+
+<script src="../nav.js"></script>
+</body>
+</html>
