@@ -16,30 +16,50 @@
     --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
 
-  .page-header { max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat); }
+  /* ── Header (same as bubbles) ── */
+  .page-header { max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
   .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
   .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
-  .page-header p  { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 500px; }
+  .page-header p  { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
+  .header-stats { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 10px 14px; min-width: 100px; text-align: right; }
+  .stat-num { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--slate); line-height: 1; }
+  .stat-label { font-size: 10px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
 
   .content { max-width: 1100px; margin: 0 auto; padding: 36px 52px 60px; }
 
   .chart-section { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; overflow: hidden; }
-  .chart-head { padding: 20px 24px 16px; border-bottom: 1.5px solid var(--g200); }
-  .chart-head h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
-  .chart-head p  { font-size: 12.5px; color: var(--g500); }
+  .chart-head { padding: 20px 24px 16px; border-bottom: 1.5px solid var(--g200); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .chart-head-left h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  .chart-head-left p  { font-size: 12.5px; color: var(--g500); }
   .chart-body { padding: 24px; }
 
+  /* ── Filter toolbar (same style as bubbles) ── */
+  .filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .filter-label { font-size: 12px; color: var(--g500); margin-right: 2px; }
+  .filter-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300);
+    background: var(--paper); font-size: 13px; color: var(--g700);
+    cursor: pointer; transition: all 0.15s; font-family: var(--sans);
+  }
+  .filter-btn .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .filter-btn:hover { border-color: var(--oat); background: var(--g100); }
+  .filter-btn.active { border-color: var(--slate); background: var(--slate); color: white; }
+  .dot-company { background: var(--clay); }
+  .dot-topic   { background: var(--olive); }
+  .dot-product { background: var(--blue); }
+
+  /* ── Tooltip ── */
   #tooltip { position: fixed; background: var(--slate); color: white; padding: 8px 13px; border-radius: 8px; font-size: 12.5px; pointer-events: none; display: none; z-index: 1000; max-width: 280px; line-height: 1.4; }
   #tooltip strong { display: block; font-size: 13px; margin-bottom: 2px; }
   #tooltip span { color: #ccc; font-size: 11.5px; }
   #tooltip em { color: #aaa; font-size: 11px; font-style: normal; display: block; margin-top: 2px; }
 
-  .chart-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
-  .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
-
+  /* ── Waffle ── */
   #waffle { display: flex; flex-wrap: wrap; gap: 3px; line-height: 0; }
   .wsq {
     width: 12px; height: 12px; border-radius: 2px; cursor: pointer;
@@ -47,6 +67,11 @@
   }
   .wsq:hover { transform: scale(1.5); z-index: 10; position: relative; }
   .wsq.yt { opacity: 0.6; }
+  .wsq.hidden { display: none; }
+
+  .chart-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
 
   .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
 
@@ -54,8 +79,9 @@
   footer a { color: var(--clay); text-decoration: none; }
 
   @media (max-width: 768px) {
-    .page-header, .content, footer { padding-left: 20px; padding-right: 20px; }
-    .page-header { padding-top: 24px; }
+    .page-header { grid-template-columns: 1fr; padding: 24px 20px 20px; }
+    .header-stats { flex-direction: row; align-items: flex-start; }
+    .content, footer { padding-left: 20px; padding-right: 20px; }
     .chart-body { padding: 16px; }
     .wsq { width: 9px; height: 9px; }
   }
@@ -66,16 +92,32 @@
 <div id="tooltip"><strong id="tt-name"></strong><span id="tt-count"></span><em id="tt-src"></em></div>
 
 <header class="page-header">
-  <div class="page-eyebrow">Грід</div>
-  <h1>Кожен квадрат — пост</h1>
-  <p>Всі матеріали згруповані за темою. Наведи для назви, клікни щоб відкрити.</p>
+  <div>
+    <div class="page-eyebrow">Грід</div>
+    <h1>Теми і компанії</h1>
+    <p>Кожен квадрат = один пост. Наведи для назви і дати, клікни щоб відкрити оригінал.</p>
+  </div>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-num" id="stat-posts">—</div><div class="stat-label">Telegram постів</div></div>
+    <div class="stat"><div class="stat-num" id="stat-youtube">—</div><div class="stat-label">YouTube записів</div></div>
+    <div class="stat"><div class="stat-num" id="stat-topics">—</div><div class="stat-label">тем</div></div>
+  </div>
 </header>
 
 <main class="content">
   <section class="chart-section">
     <div class="chart-head">
-      <h2>Waffle</h2>
-      <p>Кожен квадрат = 1 матеріал, згрупований за темою і компанією.</p>
+      <div class="chart-head-left">
+        <h2>Waffle</h2>
+        <p>Кожен квадрат = 1 матеріал, згрупований за темою і компанією.</p>
+      </div>
+      <div class="filters">
+        <span class="filter-label">Показати:</span>
+        <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
+        <button class="filter-btn" onclick="setFilter('company',this)"><span class="dot dot-company"></span> Компанії</button>
+        <button class="filter-btn" onclick="setFilter('topic',this)"><span class="dot dot-topic"></span> Теми</button>
+        <button class="filter-btn" onclick="setFilter('product',this)"><span class="dot dot-product"></span> Продукти</button>
+      </div>
     </div>
     <div class="chart-body">
       <div id="waffle"></div>
@@ -118,6 +160,18 @@ function hexAlpha(hex, a) {
   return `rgba(${r},${g},${b},${a})`;
 }
 
+let activeFilter = 'all';
+
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.wsq').forEach(el => {
+    const elCat = el.dataset.cat;
+    el.classList.toggle('hidden', cat !== 'all' && elCat !== cat);
+  });
+}
+
 function renderWaffle(topics) {
   const container = document.getElementById('waffle');
   container.innerHTML = '';
@@ -135,15 +189,19 @@ function renderWaffle(topics) {
     if (!t.posts || !t.posts.length) continue;
 
     for (const p of t.posts) {
+      const isYt = p.url && p.url.includes('youtube');
       const el = document.createElement(p.url ? 'a' : 'div');
-      el.className = 'wsq' + (p.url && p.url.includes('youtube') ? ' yt' : '');
-      el.style.background  = hexAlpha(t.color, p.url && p.url.includes('youtube') ? 0.5 : 0.8);
-      el.style.borderColor = hexAlpha(t.color, 0.3);
+      el.className = 'wsq' + (isYt ? ' yt' : '');
+      el.dataset.cat = t.category;
+      el.style.background = hexAlpha(t.color, isYt ? 0.5 : 0.8);
       if (p.url) { el.href = p.url; el.target = '_blank'; el.rel = 'noopener'; }
 
       el.addEventListener('mouseenter', e => {
-        const src = p.url && p.url.includes('youtube') ? '▶ YouTube' : 'Telegram';
-        showTip(e, p.title || t.label, p.date || '', `${t.label} · ${src}`);
+        showTip(e,
+          p.title || t.label,
+          p.date || '',
+          `${t.label} · ${isYt ? '▶ YouTube' : 'Telegram'}`
+        );
       });
       el.addEventListener('mouseleave', hideTip);
       frag.appendChild(el);
@@ -157,6 +215,9 @@ fetch('../data/topics.json')
   .then(r => r.json())
   .then(data => {
     document.getElementById('waffle-loading').style.display = 'none';
+    document.getElementById('stat-posts').textContent   = (data.total_posts || 0).toLocaleString('uk');
+    document.getElementById('stat-youtube').textContent = (data.total_youtube || 0).toLocaleString('uk');
+    document.getElementById('stat-topics').textContent  = data.topics.length;
     renderWaffle(data.topics);
   })
   .catch(err => {
