@@ -2,22 +2,25 @@
 
 Інструкція для агентів що працюють з цим репозиторієм.
 
+> **Читай першим:** [docs/ROADMAP.md](docs/ROADMAP.md) — план 10 пунктів, що зроблено, що лишилось.
+
 ---
 
 ## Структура репозиторію
 
 ```
 imatrofailo.github.io/
-  index.html       ← Bubble Explorer (головна)
-  charts.html      ← Treemap + Waffle (planned)
-  tips.html        ← Practical Tips (planned)
-  nav.js           ← Shared navigation (planned)
-  DESIGN.md        ← Дизайн-токени і компоненти (читай перед CSS-змінами)
+  index.html       ← Bubble Explorer (головна) ✅
+  charts.html      ← Treemap + Waffle ✅
+  tips.html        ← Practical Tips ✅
+  nav.js           ← Shared navigation ✅
+  DESIGN.md        ← Дизайн-токени і компоненти (читай перед CSS-змінами) ✅
   CLAUDE.md        ← Цей файл
   data/
     topics.json    ← Генерується generate_index.py (не редагувати вручну)
     tips.json      ← Генерується generate_index.py (не редагувати вручну)
   docs/
+    ROADMAP.md     ← План 10 пунктів (9/10 done), що лишилось ✅
     adr/           ← Architecture Decision Records
 ```
 
