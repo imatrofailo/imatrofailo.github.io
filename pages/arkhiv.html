@@ -30,9 +30,12 @@
   .page-header p  { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
 
   .stat-row { display: flex; gap: 12px; }
-  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; text-align: right; }
-  .stat-num   { font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1; }
-  .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
+  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 10px 14px; min-width: 90px; text-align: right; }
+  .stat-num   { font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1; }
+  .stat-label { font-size: 10px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
+
+  .clabel.youtube { background: #FEF0EB; color: #B83000; }
+  .clabel.yt-badge { background: var(--clay-l); color: var(--clay-d); font-weight: 600; }
 
   /* ── Toolbar ── */
   .content { max-width: 1100px; margin: 0 auto; padding: 28px 52px 60px; }
@@ -142,14 +145,9 @@
     <p>Всі пости каналу — пошук, фільтр по компанії, темі та року.</p>
   </div>
   <div class="stat-row">
-    <div class="stat">
-      <div class="stat-num" id="stat-total">—</div>
-      <div class="stat-label">постів</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" id="stat-years">3</div>
-      <div class="stat-label">роки</div>
-    </div>
+    <div class="stat"><div class="stat-num" id="stat-tg">—</div><div class="stat-label">Telegram</div></div>
+    <div class="stat"><div class="stat-num" id="stat-yt">—</div><div class="stat-label">YouTube</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">роки</div></div>
   </div>
 </header>
 
@@ -167,6 +165,11 @@
     </select>
     <select class="filter-select" id="topic-sel" onchange="onFilter()">
       <option value="">Всі теми</option>
+    </select>
+    <select class="filter-select" id="src-sel" onchange="onFilter()">
+      <option value="">Всі джерела</option>
+      <option value="telegram">Telegram</option>
+      <option value="youtube">▶ YouTube</option>
     </select>
   </div>
 
@@ -253,6 +256,7 @@ function clearFilters() {
   document.getElementById('search').value = '';
   document.getElementById('year-sel').value = '';
   document.getElementById('topic-sel').value = '';
+  document.getElementById('src-sel').value = '';
   activeCompany = '';
   document.querySelectorAll('.cpill').forEach(p => p.classList.remove('active'));
   currentPage = 1;
@@ -270,11 +274,13 @@ function applyFilters() {
   const q       = document.getElementById('search').value.toLowerCase();
   const year    = document.getElementById('year-sel').value;
   const topicF  = document.getElementById('topic-sel').value;
+  const srcF    = document.getElementById('src-sel').value;
 
   filtered = ALL_POSTS.filter(p => {
     if (year    && !p.date.startsWith(year)) return false;
     if (activeCompany && p.company !== activeCompany) return false;
     if (topicF  && !p.topics.includes(topicF)) return false;
+    if (srcF    && p.source !== srcF) return false;
     if (q && !(
       p.title.toLowerCase().includes(q) ||
       (p.preview||'').toLowerCase().includes(q)
@@ -288,9 +294,8 @@ function applyFilters() {
   document.getElementById('results-count').textContent =
     `${total} постів · сторінка ${currentPage} з ${pages || 1}`;
 
-  const hasFilter = q || year || activeCompany || topicF;
+  const hasFilter = q || year || activeCompany || topicF || srcF;
   document.getElementById('clear-btn').classList.toggle('visible', !!hasFilter);
-  document.getElementById('stat-total').textContent = ALL_POSTS.length;
 }
 
 function renderGrid() {
@@ -306,6 +311,7 @@ function renderGrid() {
 
   grid.innerHTML = page.map(p => {
     const labels = [];
+    if (p.source === 'youtube') labels.push(`<span class="clabel yt-badge">▶ YT</span>`);
     if (p.company) labels.push(`<span class="clabel company">${esc(p.company)}</span>`);
     if (p.product) labels.push(`<span class="clabel product">${esc(p.product)}</span>`);
     p.topics.slice(0,1).forEach(t =>
@@ -361,6 +367,8 @@ fetch('../data/posts.json')
   .then(r => r.json())
   .then(data => {
     ALL_POSTS = data.posts || [];
+    document.getElementById('stat-tg').textContent = (data.total_telegram || 0).toLocaleString('uk');
+    document.getElementById('stat-yt').textContent = (data.total_youtube  || 0).toLocaleString('uk');
     document.getElementById('loading').style.display = 'none';
     buildTopicSelect(ALL_POSTS);
     buildCompanyPills(ALL_POSTS);

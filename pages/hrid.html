@@ -60,14 +60,24 @@
   #tooltip em { color: #aaa; font-size: 11px; font-style: normal; display: block; margin-top: 2px; }
 
   /* ── Waffle ── */
-  #waffle { display: flex; flex-wrap: wrap; gap: 3px; line-height: 0; }
+  #waffle { display: flex; flex-direction: column; gap: 10px; }
+  .topic-group { }
+  .topic-group.hidden { display: none; }
+  .topic-group-label {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10.5px; font-family: var(--mono); margin-bottom: 4px;
+    cursor: default; user-select: none;
+  }
+  .tgl-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .tgl-name { font-weight: 600; }
+  .tgl-count { color: var(--g300); font-size: 10px; }
+  .topic-squares { display: flex; flex-wrap: wrap; gap: 3px; line-height: 0; }
   .wsq {
     width: 12px; height: 12px; border-radius: 2px; cursor: pointer;
     transition: transform 0.08s; flex-shrink: 0;
   }
   .wsq:hover { transform: scale(1.5); z-index: 10; position: relative; }
   .wsq.yt { opacity: 0.6; }
-  .wsq.hidden { display: none; }
 
   .chart-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
@@ -163,13 +173,19 @@ const CAT_CFG = {
 };
 const PHI = 0.6180339887;
 
-function topicHSLA(category, idx, alpha) {
+function topicHSL(category, idx) {
   const c = CAT_CFG[category] || CAT_CFG.topic;
   const t = (idx * PHI) % 1;
   const u = (idx * 0.382) % 1;
-  const h = (c.h0 + t * c.hSpan).toFixed(0);
-  const s = (c.s0 + u * c.sSpan).toFixed(0);
-  const l = (c.l0 + ((idx * 0.5) % 1) * c.lSpan).toFixed(0);
+  return [
+    +(c.h0 + t * c.hSpan).toFixed(0),
+    +(c.s0 + u * c.sSpan).toFixed(0),
+    +(c.l0 + ((idx * 0.5) % 1) * c.lSpan).toFixed(0),
+  ];
+}
+
+function topicHSLA(category, idx, alpha) {
+  const [h, s, l] = topicHSL(category, idx);
   return `hsla(${h},${s}%,${l}%,${alpha})`;
 }
 
@@ -196,7 +212,7 @@ function setFilter(cat, btn) {
   activeFilter = cat;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.wsq').forEach(el => {
+  document.querySelectorAll('.topic-group').forEach(el => {
     el.classList.toggle('hidden', cat !== 'all' && el.dataset.cat !== cat);
   });
 }
@@ -219,12 +235,31 @@ function renderWaffle(topics) {
   for (const t of sorted) {
     if (!t.posts || !t.posts.length) continue;
     const idx = colorMap.get(t.id) || 0;
+    const [h, s, l] = topicHSL(t.category, idx);
+    const color = `hsl(${h},${s}%,${l}%)`;
+
+    // Topic group wrapper
+    const group = document.createElement('div');
+    group.className = 'topic-group';
+    group.dataset.cat = t.category;
+
+    // Label row: colored dot + name + count
+    const label = document.createElement('div');
+    label.className = 'topic-group-label';
+    label.innerHTML =
+      `<span class="tgl-dot" style="background:${color}"></span>` +
+      `<span class="tgl-name" style="color:${color}">${t.label}</span>` +
+      `<span class="tgl-count">${t.count}</span>`;
+    group.appendChild(label);
+
+    // Squares row
+    const squares = document.createElement('div');
+    squares.className = 'topic-squares';
 
     for (const p of t.posts) {
       const isYt = p.url && p.url.includes('youtube');
       const el = document.createElement(p.url ? 'a' : 'div');
       el.className = 'wsq' + (isYt ? ' yt' : '');
-      el.dataset.cat = t.category;
       el.style.background = topicHSLA(t.category, idx, isYt ? 0.45 : 0.82);
       if (p.url) { el.href = p.url; el.target = '_blank'; el.rel = 'noopener'; }
 
@@ -236,8 +271,11 @@ function renderWaffle(topics) {
         );
       });
       el.addEventListener('mouseleave', hideTip);
-      frag.appendChild(el);
+      squares.appendChild(el);
     }
+
+    group.appendChild(squares);
+    frag.appendChild(group);
   }
 
   container.appendChild(frag);
