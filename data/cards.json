@@ -1,0 +1,307 @@
+{
+  "generated": "2026-05-16",
+  "total": 23,
+  "cards": [
+    {
+      "id": "tg-2416",
+      "url": "https://t.me/imatrofAI/2416",
+      "date": "2026-02-20",
+      "segment": "teams",
+      "title": "5 рівнів AI-зрілості: де ви зараз?",
+      "summary": "Ден Шапіро пропонує шкалу 0–4: від «вручну» до «агенти годинами без втручання». Справжня цінність — з рівня 3+.",
+      "viz": {
+        "type": "ladder",
+        "levels": [
+          {"n": 4, "label": "Агент автономно", "active": true},
+          {"n": 3, "label": "Агент з наглядом", "active": true},
+          {"n": 2, "label": "AI пропонує", "active": false},
+          {"n": 1, "label": "AI асистує", "active": false},
+          {"n": 0, "label": "Без AI", "active": false}
+        ]
+      }
+    },
+    {
+      "id": "tg-2700",
+      "url": "https://t.me/imatrofAI/2700",
+      "date": "2026-05-15",
+      "segment": "agents",
+      "title": "AI в SDLC: накопичуй контекст, а не лише автоматизуй",
+      "summary": "Кожна AI-дія має залишати цифровий слід: рішення, ризики, edge cases. Наступні агенти працюють на готовому контексті.",
+      "viz": {
+        "type": "stack",
+        "layers": [
+          {"label": "Новий агент", "color": "clay", "icon": "🤖"},
+          {"label": "Проєктна Wiki", "color": "olive", "icon": "📚"},
+          {"label": "Цифровий слід", "color": "blue", "icon": "🔗"},
+          {"label": "AI-активність", "color": "g300", "icon": "⚡"}
+        ]
+      }
+    },
+    {
+      "id": "tg-2646",
+      "url": "https://t.me/imatrofAI/2646",
+      "date": "2026-04-27",
+      "segment": "tools",
+      "title": "LLM Wiki (підхід Карпаті): тисячі md-файлів як другий мозок",
+      "summary": "Всі пости, відео, вебінари — у md-файлах. Claude відкриває сесію з готовим контекстом замість пояснень з нуля.",
+      "viz": {
+        "type": "flow",
+        "steps": ["TG пости", "md-файли", "LLM Wiki", "Готовий контекст"]
+      }
+    },
+    {
+      "id": "tg-2652",
+      "url": "https://t.me/imatrofAI/2652",
+      "date": "2026-04-29",
+      "segment": "agents",
+      "title": "Linear → OpenClaw → Hermes: агентний контент-пайплайн",
+      "summary": "Картка в Linear → OpenClaw (codex-5.4) → локальний Hermes шукає інфо → оновлює картку → «In Human Review».",
+      "viz": {
+        "type": "flow",
+        "steps": ["Linear картка", "OpenClaw", "Hermes research", "Linear оновлено"]
+      }
+    },
+    {
+      "id": "tg-2303",
+      "url": "https://t.me/imatrofAI/2303",
+      "date": "2026-01-17",
+      "segment": "agents",
+      "title": "LLM Council: кілька моделей рецензують одна одну",
+      "summary": "Один запит → кілька моделей через OpenRouter → анонімне peer-review → Chairman LLM збирає фінал.",
+      "viz": {
+        "type": "council",
+        "models": ["GPT-4o", "Claude", "Gemini", "Llama"],
+        "chair": "Chairman LLM"
+      }
+    },
+    {
+      "id": "tg-2682",
+      "url": "https://t.me/imatrofAI/2682",
+      "date": "2026-05-07",
+      "segment": "agents",
+      "title": "MCP як новий стандарт: сервіси обирають Claude Cowork",
+      "summary": "Higgsfield, Meta Ads та інші запускають власні MCP і демонструють їх через Claude Cowork — новий де-факто інтерфейс.",
+      "viz": {
+        "type": "flow",
+        "steps": ["Ваш сервіс", "MCP сервер", "Claude Cowork", "Результат"]
+      }
+    },
+    {
+      "id": "tg-2667",
+      "url": "https://t.me/imatrofAI/2667",
+      "date": "2026-05-04",
+      "segment": "coding",
+      "title": "Як ефективно працювати з Claude Code / Codex",
+      "summary": "Готуй повну md-інструкцію до запуску, обмежуй сесію до 5–10 промптів, subagent — без фанатизму.",
+      "viz": {
+        "type": "steps",
+        "items": ["Повна md-інструкція перед стартом", "5–10 промптів на задачу", "Subagent — тільки де справді треба"]
+      }
+    },
+    {
+      "id": "tg-2674",
+      "url": "https://t.me/imatrofAI/2674",
+      "date": "2026-05-04",
+      "segment": "coding",
+      "title": "/goal у Codex CLI: шаблон промпту для агента",
+      "summary": "Команда /goal приймає: anti-patterns, референс-репо, опис юзера. Але вимагає присутності — галюцинації без контролю ростуть.",
+      "viz": {
+        "type": "steps",
+        "items": ["Anti-patterns: що НЕ робити", "Референс-репо як приклад", "Опис юзера і мети"]
+      }
+    },
+    {
+      "id": "tg-2589",
+      "url": "https://t.me/imatrofAI/2589",
+      "date": "2026-04-07",
+      "segment": "tools",
+      "title": "Економ 75% токенів: навчи Claude відповідати коротко",
+      "summary": "Додай у system prompt: «Відповідай максимально коротко». Claude переходить в режим cave-man — суть без води.",
+      "viz": {
+        "type": "gauge",
+        "value": 75,
+        "unit": "%",
+        "label": "економія output-токенів"
+      }
+    },
+    {
+      "id": "tg-2586",
+      "url": "https://t.me/imatrofAI/2586",
+      "date": "2026-04-06",
+      "segment": "tools",
+      "title": "Токено-тривожність: 4 способи зберегти бюджет",
+      "summary": "Конвертуй PDF у markdown, роби короткі сесії, підключай тільки потрібні плагіни, не юзай Opus/Max для всього.",
+      "viz": {
+        "type": "steps",
+        "items": ["PDF/PPT → Markdown", "Короткі сесії замість довгих чатів", "Тільки потрібні плагіни", "Opus/Max — тільки для складних задач"]
+      }
+    },
+    {
+      "id": "tg-2051",
+      "url": "https://t.me/imatrofAI/2051",
+      "date": "2025-11-24",
+      "segment": "tools",
+      "title": "Золота середина промпту: 4 компоненти",
+      "summary": "Чіткий контекст + роль + формат + критерії якості — без зайвої деталізації. Зберігай у пам'ять для шорткатів.",
+      "viz": {
+        "type": "steps",
+        "items": ["Контекст: хто ти і що відбувається", "Роль: яку задачу виконуєш", "Формат: як має виглядати відповідь", "Критерії: що означає «добре»"]
+      }
+    },
+    {
+      "id": "tg-2253",
+      "url": "https://t.me/imatrofAI/2253",
+      "date": "2026-01-07",
+      "segment": "teams",
+      "title": "Карпаті про агентів: 20–40% приросту — але треба замірювати",
+      "summary": "Новий рівень абстракції: агенти + контекст + MCP + IDE. Реальний приріст є, але тільки з вимірюванням і готовністю команди.",
+      "viz": {
+        "type": "gauge",
+        "value": 40,
+        "unit": "%",
+        "label": "максимальний приріст продуктивності"
+      }
+    },
+    {
+      "id": "tg-2680",
+      "url": "https://t.me/imatrofAI/2680",
+      "date": "2026-05-07",
+      "segment": "coding",
+      "title": "HyperFrames: LLM генерує HTML → відео",
+      "summary": "Фреймворк перетворює HTML-артефакти (які LLM вміють робити) у відео через покадровий рендер — з pet-проєкту в стартап.",
+      "viz": {
+        "type": "flow",
+        "steps": ["LLM prompt", "HTML артефакт", "Покадровий рендер", "Відео"]
+      }
+    },
+    {
+      "id": "tg-2523",
+      "url": "https://t.me/imatrofAI/2523",
+      "date": "2026-03-21",
+      "segment": "tools",
+      "title": "Claude Code Channels: агент у Telegram і Discord",
+      "summary": "Підключи Claude Code до месенджера — пиши завдання прямо у чат, агент виконує і звітує.",
+      "viz": {
+        "type": "compare",
+        "before": {"label": "Раніше", "text": "Термінал + IDE"},
+        "after": {"label": "Тепер", "text": "Telegram / Discord"}
+      }
+    },
+    {
+      "id": "tg-2518",
+      "url": "https://t.me/imatrofAI/2518",
+      "date": "2026-03-19",
+      "segment": "tools",
+      "title": "Dispatch: запускай Claude Code з мобільного",
+      "summary": "З Claude на телефоні пишеш /remote-control → запускається сесія Claude Code на комп'ютері.",
+      "viz": {
+        "type": "flow",
+        "steps": ["Claude Mobile", "/remote-control", "Claude Code Desktop", "Задача виконана"]
+      }
+    },
+    {
+      "id": "tg-2533",
+      "url": "https://t.me/imatrofAI/2533",
+      "date": "2026-03-24",
+      "segment": "tools",
+      "title": "Claude керує комп'ютером: кліки, форми, задачі",
+      "summary": "Після поглинання Vercept: Claude вводить текст у форми, клікає мишкою, проходить покрокові задачі — з мобільного.",
+      "viz": {
+        "type": "flow",
+        "steps": ["Твоя задача", "Claude аналізує екран", "Кліки / введення", "Результат"]
+      }
+    },
+    {
+      "id": "tg-2487",
+      "url": "https://t.me/imatrofAI/2487",
+      "date": "2026-03-10",
+      "segment": "agents",
+      "title": "OpenAI Kanban-оркестратор: тягни картку — агент виконує",
+      "summary": "Команда тягає картки на канбан-борді, кожну задачу виконує Codex-агент. Локально або в хмарі.",
+      "viz": {
+        "type": "compare",
+        "before": {"label": "Раніше", "text": "Розробник → код"},
+        "after": {"label": "Тепер", "text": "Картка → Codex агент"}
+      }
+    },
+    {
+      "id": "tg-2465",
+      "url": "https://t.me/imatrofAI/2465",
+      "date": "2026-03-03",
+      "segment": "tools",
+      "title": "Перенеси пам'ять з ChatGPT у Claude за 2 хвилини",
+      "summary": "Спеціальний промпт → вставляєш у ChatGPT → отримуєш зведений контекст → копіюєш у Claude.",
+      "viz": {
+        "type": "flow",
+        "steps": ["ChatGPT пам'ять", "Спец-промпт", "Зведений контекст", "Claude пам'ять"]
+      }
+    },
+    {
+      "id": "tg-2624",
+      "url": "https://t.me/imatrofAI/2624",
+      "date": "2026-04-17",
+      "segment": "tools",
+      "title": "ClaudeDevs: де слідкувати за оновленнями Claude Code",
+      "summary": "Anthropic централізував оновлення: акаунт @ClaudeDevs у X, секція What's New у документації, щомісячні вебінари.",
+      "viz": {
+        "type": "steps",
+        "items": ["@ClaudeDevs у X — анонси", "docs.anthropic.com → What's New", "Вебінари «What we shipped» щомісяця"]
+      }
+    },
+    {
+      "id": "tg-2370",
+      "url": "https://t.me/imatrofAI/2370",
+      "date": "2026-02-06",
+      "segment": "agents",
+      "title": "OpenAI Frontier: семантичний шар над бізнес-даними",
+      "summary": "CRM + Data Warehouse + Ticketing → єдиний семантичний шар → агенти мають спільний бізнес-контекст.",
+      "viz": {
+        "type": "stack",
+        "layers": [
+          {"label": "AI Агенти", "color": "clay", "icon": "🤖"},
+          {"label": "Семантичний шар", "color": "olive", "icon": "🔗"},
+          {"label": "CRM / DWH / Tickets", "color": "blue", "icon": "🗄️"}
+        ]
+      }
+    },
+    {
+      "id": "tg-2534",
+      "url": "https://t.me/imatrofAI/2534",
+      "date": "2026-03-25",
+      "segment": "coding",
+      "title": "Claude Code --enable-auto-mode: автономний режим",
+      "summary": "Новий флаг вмикає автономний запуск агента без підтверджень на кожен крок.",
+      "viz": {
+        "type": "compare",
+        "before": {"label": "Без флагу", "text": "Підтвердження кожного кроку"},
+        "after": {"label": "--enable-auto-mode", "text": "Агент діє автономно"}
+      }
+    },
+    {
+      "id": "tg-2565",
+      "url": "https://t.me/imatrofAI/2565",
+      "date": "2026-04-01",
+      "segment": "tools",
+      "title": "OpenClaw /buddy: персональний AI-компаньйон",
+      "summary": "Команда /buddy в OpenClaw — персоналізований асистент, який адаптується до твого стилю роботи.",
+      "viz": {
+        "type": "compare",
+        "before": {"label": "Звичайний чат", "text": "Один стиль для всіх"},
+        "after": {"label": "/buddy", "text": "Адаптується до тебе"}
+      }
+    },
+    {
+      "id": "tg-2659",
+      "url": "https://t.me/imatrofAI/2659",
+      "date": "2026-05-02",
+      "segment": "coding",
+      "title": "Codex /pet: налаштуй свого AI-компаньйона",
+      "summary": "Команди /pet і /hatch pet у Codex — кастомізація персонажа-компаньйона для більш особистого досвіду.",
+      "viz": {
+        "type": "compare",
+        "before": {"label": "Стандартно", "text": "Безликий асистент"},
+        "after": {"label": "/hatch pet", "text": "Твій Codex-компаньйон"}
+      }
+    }
+  ]
+}

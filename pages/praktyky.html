@@ -6,10 +6,10 @@
 <title>Практики — Ігор Матрофайло</title>
 <style>
   :root {
-    --ivory:  #FAF9F5; --paper: #FFFFFF; --slate: #141413; --oat: #E3DACC;
-    --clay:   #D97757; --clay-d: #B85C3E; --clay-l: #FDF0EB;
-    --olive:  #788C5D; --olive-l: #EEF3E8;
-    --blue:   #4A7CC7; --blue-l: #EEF3FC;
+    --ivory: #FAF9F5; --paper: #FFFFFF; --slate: #141413; --oat: #E3DACC;
+    --clay: #D97757; --clay-d: #B85C3E; --clay-l: #FDF0EB;
+    --olive: #788C5D; --olive-l: #EEF3E8;
+    --blue: #4A7CC7; --blue-l: #EEF3FC;
     --g100: #F0EEE6; --g200: #E6E3DA; --g300: #D1CFC5; --g500: #87867F; --g700: #3D3D3A;
     --serif: ui-serif, Georgia, "Times New Roman", serif;
     --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -20,113 +20,127 @@
   body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
 
   /* ── Header ── */
-  .page-header {
-    max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px;
-    border-bottom: 1.5px solid var(--oat);
-    display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px;
-  }
+  .page-header { max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
   .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
   .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
   .page-header p { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
+  .header-stats { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 10px 14px; min-width: 100px; text-align: right; }
+  .stat-num { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--slate); line-height: 1; }
+  .stat-label { font-size: 10px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
 
-  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; text-align: right; }
-  .stat-num   { font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1; }
-  .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
-
-  /* ── Toolbar ── */
+  /* ── Content ── */
   .content { max-width: 1100px; margin: 0 auto; padding: 32px 52px 60px; }
 
-  .toolbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-  .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
-  .search-wrap input {
-    width: 100%; padding: 8px 14px 8px 36px; border-radius: 999px;
-    border: 1.5px solid var(--g300); background: var(--paper);
-    font-size: 13.5px; font-family: var(--sans); color: var(--slate);
-    outline: none; transition: border-color 0.15s;
-  }
-  .search-wrap input:focus { border-color: var(--clay); }
-  .search-wrap input::placeholder { color: var(--g500); }
-  .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--g500); pointer-events: none; }
-
-  /* ── Segment pills ── */
-  .segments { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
-  .seg-pill {
+  /* ── Filter pills ── */
+  .filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+  .filter-label { font-size: 12px; color: var(--g500); margin-right: 2px; }
+  .filter-btn {
     display: inline-flex; align-items: center; gap: 6px;
     padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300);
-    background: var(--paper); font-size: 12.5px; color: var(--g700);
-    cursor: pointer; transition: all 0.15s; white-space: nowrap; font-weight: 500;
+    background: var(--paper); font-size: 13px; color: var(--g700);
+    cursor: pointer; transition: all 0.15s; font-family: var(--sans);
   }
-  .seg-pill:hover { border-color: var(--oat); background: var(--g100); }
-  .seg-pill.active { border-color: var(--clay); background: var(--clay-l); color: var(--clay-d); }
-  .seg-pill .seg-icon { font-size: 14px; }
-  .seg-pill .seg-count { font-family: var(--mono); font-size: 10px; color: var(--g500); }
-  .seg-pill.active .seg-count { color: var(--clay); }
-
-  /* ── Tag filter strip ── */
-  .tag-strip { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 20px; }
-  .tag-pill {
-    display: inline-flex; align-items: center; gap: 4px;
-    padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--g200);
-    background: var(--paper); font-size: 11.5px; color: var(--g700);
-    cursor: pointer; transition: all 0.12s; font-family: var(--mono);
-  }
-  .tag-pill:hover { border-color: var(--g300); background: var(--g100); }
-  .tag-pill.active { border-color: var(--blue); background: var(--blue-l); color: var(--blue); }
-  .tag-pill .dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-
-  .results-count { font-size: 12px; color: var(--g500); font-family: var(--mono); margin-bottom: 18px; }
+  .filter-btn:hover { border-color: var(--oat); background: var(--g100); }
+  .filter-btn.active { border-color: var(--slate); background: var(--slate); color: white; }
 
   /* ── Cards grid ── */
-  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 16px; }
 
-  .tip-card {
-    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 14px;
-    display: flex; flex-direction: column;
-    text-decoration: none; color: var(--slate);
+  .card {
+    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px;
+    overflow: hidden; display: flex; flex-direction: column;
     transition: border-color 0.15s, box-shadow 0.15s;
-    overflow: hidden;
+    text-decoration: none; color: var(--slate);
   }
-  .tip-card:hover { border-color: var(--clay); box-shadow: 0 3px 16px rgba(217,119,87,0.12); }
+  .card:hover { border-color: var(--clay); box-shadow: 0 4px 20px rgba(217,119,87,0.12); }
+  .card.hidden { display: none; }
 
-  .card-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  /* ── Viz area ── */
+  .card-viz {
+    height: 130px; background: var(--g100); display: flex; align-items: center;
+    justify-content: center; padding: 16px; position: relative; overflow: hidden;
+  }
 
+  /* Ladder viz */
+  .viz-ladder { display: flex; flex-direction: column-reverse; gap: 4px; width: 100%; }
+  .ladder-row { display: flex; align-items: center; gap: 8px; padding: 3px 6px; border-radius: 5px; }
+  .ladder-row.active { background: var(--clay-l); }
+  .ladder-n { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--clay); width: 16px; text-align: center; }
+  .ladder-bar { height: 5px; border-radius: 3px; background: var(--g300); flex: 1; }
+  .ladder-row.active .ladder-bar { background: var(--clay); }
+  .ladder-label { font-size: 10.5px; color: var(--g700); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  .ladder-row.active .ladder-label { color: var(--clay-d); font-weight: 600; }
+
+  /* Stack viz */
+  .viz-stack { display: flex; flex-direction: column-reverse; gap: 5px; width: 100%; }
+  .stack-layer { display: flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 7px; border: 1.5px solid; }
+  .stack-layer.clay  { background: var(--clay-l);  border-color: rgba(217,119,87,0.3);  }
+  .stack-layer.olive { background: var(--olive-l); border-color: rgba(120,140,93,0.3);  }
+  .stack-layer.blue  { background: var(--blue-l);  border-color: rgba(74,124,199,0.3);  }
+  .stack-layer.g300  { background: var(--g100);    border-color: var(--g300);            }
+  .stack-icon { font-size: 14px; }
+  .stack-label { font-size: 11px; font-weight: 600; color: var(--g700); }
+
+  /* Flow viz */
+  .viz-flow { display: flex; align-items: center; gap: 4px; width: 100%; flex-wrap: wrap; justify-content: center; }
+  .flow-step { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 8px; padding: 4px 8px; font-size: 10.5px; font-weight: 600; color: var(--g700); white-space: nowrap; text-align: center; }
+  .flow-arrow { color: var(--clay); font-size: 14px; flex-shrink: 0; }
+
+  /* Council viz */
+  .viz-council { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
+  .council-models { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+  .council-model { background: var(--blue-l); border: 1.5px solid rgba(74,124,199,0.3); border-radius: 6px; padding: 3px 8px; font-size: 10px; font-weight: 600; color: #1E40AF; }
+  .council-arrow-down { color: var(--clay); font-size: 11px; font-family: var(--mono); }
+  .council-chair { background: var(--clay-l); border: 1.5px solid rgba(217,119,87,0.4); border-radius: 8px; padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--clay-d); }
+
+  /* Steps viz */
+  .viz-steps { display: flex; flex-direction: column; gap: 5px; width: 100%; }
+  .step-row { display: flex; align-items: flex-start; gap: 8px; }
+  .step-num { width: 18px; height: 18px; border-radius: 50%; background: var(--clay); color: white; font-size: 10px; font-weight: 700; font-family: var(--mono); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .step-text { font-size: 10.5px; color: var(--g700); line-height: 1.35; }
+
+  /* Gauge viz */
+  .viz-gauge { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 100%; }
+  .gauge-number { display: flex; align-items: baseline; gap: 2px; }
+  .gauge-value { font-family: var(--serif); font-size: 52px; font-weight: 500; color: var(--clay); line-height: 1; }
+  .gauge-unit { font-family: var(--mono); font-size: 22px; color: var(--clay); }
+  .gauge-label { font-size: 11px; color: var(--g500); text-align: center; }
+
+  /* Compare viz */
+  .viz-compare { display: flex; gap: 6px; width: 100%; height: 100%; align-items: stretch; }
+  .compare-col { flex: 1; border-radius: 8px; padding: 8px 10px; display: flex; flex-direction: column; gap: 4px; }
+  .compare-col.before { background: var(--g100); border: 1.5px solid var(--g300); }
+  .compare-col.after  { background: var(--clay-l); border: 1.5px solid rgba(217,119,87,0.35); }
+  .compare-col-label { font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .compare-col.before .compare-col-label { color: var(--g500); }
+  .compare-col.after  .compare-col-label { color: var(--clay-d); }
+  .compare-col-text { font-size: 11px; color: var(--g700); font-weight: 500; line-height: 1.35; }
+
+  /* ── Card body ── */
+  .card-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .card-segment {
-    display: inline-block; font-family: var(--mono); font-size: 9.5px;
-    letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 8px;
-    border-radius: 4px; background: var(--g100); color: var(--g500);
-    align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: var(--mono); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 8px;
+    border-radius: 4px; align-self: flex-start;
   }
-  .card-segment.agents  { background: var(--clay-l);  color: var(--clay-d); }
-  .card-segment.coding  { background: var(--blue-l);  color: #1E40AF; }
-  .card-segment.tools   { background: var(--olive-l); color: #3D5A2A; }
-  .card-segment.lean    { background: #F3F0FF; color: #5B21B6; }
+  .seg-agents  { background: var(--clay-l);  color: var(--clay-d); }
+  .seg-coding  { background: var(--blue-l);  color: #1E40AF; }
+  .seg-tools   { background: var(--olive-l); color: #3D5A2A; }
+  .seg-teams   { background: #F3F0FF;        color: #5B21B6; }
 
-  .card-title { font-size: 14.5px; font-weight: 600; line-height: 1.4; }
+  .card-title { font-size: 13.5px; font-weight: 700; line-height: 1.4; color: var(--slate); }
+  .card-summary { font-size: 12px; color: var(--g500); line-height: 1.5; flex: 1;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-footer { display: flex; align-items: center; justify-content: space-between;
+    padding-top: 8px; border-top: 1px solid var(--g100); margin-top: 4px; }
+  .card-date { font-family: var(--mono); font-size: 10.5px; color: var(--g500); }
+  .card-link { font-size: 11.5px; color: var(--clay); font-weight: 600; }
 
-  .card-excerpt {
-    font-size: 13px; color: var(--g700); line-height: 1.6; flex: 1;
-    display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
-  }
-
-  .card-footer {
-    padding: 12px 20px; border-top: 1px solid var(--g200);
-    display: flex; align-items: center; justify-content: space-between; gap: 8px;
-  }
-  .card-date { font-size: 11px; color: var(--g500); font-family: var(--mono); }
-  .card-tags { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
-  .card-tag {
-    font-size: 10px; font-family: var(--mono); padding: 2px 6px; border-radius: 4px;
-    background: var(--g100); color: var(--g500);
-  }
-  .card-tag.company { background: var(--clay-l); color: var(--clay-d); }
-  .card-tag.topic   { background: var(--olive-l); color: #3D5A2A; }
-  .card-tag.product { background: var(--blue-l); color: #1E40AF; }
-
-  /* ── Empty / loading ── */
-  .empty { text-align: center; padding: 60px 20px; color: var(--g500); grid-column: 1/-1; }
-  .empty-icon { font-size: 36px; margin-bottom: 12px; }
-  .empty p { font-size: 14px; }
+  /* ── Loading / empty ── */
   .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
+  .empty { text-align: center; padding: 60px 20px; color: var(--g500); font-size: 14px; display: none; }
 
   /* ── Footer ── */
   footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -134,7 +148,7 @@
 
   @media (max-width: 768px) {
     .page-header { grid-template-columns: 1fr; padding: 24px 20px 20px; }
-    .stat { text-align: left; width: fit-content; }
+    .header-stats { flex-direction: row; align-items: flex-start; }
     .content, footer { padding-left: 20px; padding-right: 20px; }
     .cards-grid { grid-template-columns: 1fr; }
   }
@@ -144,186 +158,182 @@
 
 <header class="page-header">
   <div>
-    <div class="page-eyebrow">взяв і зробив</div>
-    <h1>Практичні поради</h1>
-    <p>Пости з реальними кейсами, інструкціями та how-to від <a href="https://t.me/imatrofAI" target="_blank" style="color:var(--clay);text-decoration:none;">@imatrofAI</a>.</p>
+    <div class="page-eyebrow">Практики</div>
+    <h1>Взяв і зробив</h1>
+    <p>Відібрані вручну how-to пости: промпти, пайплайни і підходи які можна застосувати сьогодні.</p>
   </div>
-  <div class="stat">
-    <div class="stat-num" id="stat-count">—</div>
-    <div class="stat-label">практик</div>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-num" id="stat-total">—</div><div class="stat-label">практик</div></div>
+    <div class="stat"><div class="stat-num" id="stat-visible">—</div><div class="stat-label">показано</div></div>
   </div>
 </header>
 
 <main class="content">
-  <div class="toolbar">
-    <div class="search-wrap">
-      <span class="search-icon">⌕</span>
-      <input type="text" id="search" placeholder="Пошук по заголовку або тексту…" oninput="renderCards()">
-    </div>
+  <div class="filters">
+    <span class="filter-label">Фільтр:</span>
+    <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
+    <button class="filter-btn" onclick="setFilter('agents',this)">🤖 Агенти</button>
+    <button class="filter-btn" onclick="setFilter('coding',this)">💻 Кодинг</button>
+    <button class="filter-btn" onclick="setFilter('tools',this)">🛠️ Інструменти</button>
+    <button class="filter-btn" onclick="setFilter('teams',this)">👥 Команди</button>
   </div>
 
-  <div class="segments" id="segments">
-    <button class="seg-pill active" data-seg="" onclick="setSeg('', this)">
-      <span class="seg-icon">✦</span> Всі <span class="seg-count" id="cnt-all"></span>
-    </button>
-    <button class="seg-pill" data-seg="agents" onclick="setSeg('agents', this)">
-      <span class="seg-icon">🤖</span> Агенти <span class="seg-count" id="cnt-agents"></span>
-    </button>
-    <button class="seg-pill" data-seg="coding" onclick="setSeg('coding', this)">
-      <span class="seg-icon">💻</span> Кодинг <span class="seg-count" id="cnt-coding"></span>
-    </button>
-    <button class="seg-pill" data-seg="tools" onclick="setSeg('tools', this)">
-      <span class="seg-icon">🛠</span> Інструменти <span class="seg-count" id="cnt-tools"></span>
-    </button>
-    <button class="seg-pill" data-seg="lean" onclick="setSeg('lean', this)">
-      <span class="seg-icon">📐</span> Для команд <span class="seg-count" id="cnt-lean"></span>
-    </button>
-  </div>
-
-  <div class="tag-strip" id="tag-strip"></div>
-
-  <div class="results-count" id="results-count"></div>
-  <div id="loading" class="loading">Завантаження…</div>
-  <div class="cards-grid" id="cards"></div>
+  <div class="loading" id="loading">Завантаження…</div>
+  <div class="empty" id="empty">Нічого не знайдено</div>
+  <div class="cards-grid" id="grid"></div>
 </main>
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span>Дані: 2024–2026</span>
+  <span>Відібрано вручну · 2025–2026</span>
 </footer>
 
 <script>
 'use strict';
 
-const COMPANIES = new Set(['openai','anthropic','google','meta','microsoft','nvidia','cursor','figma','deepseek','mistral','xai','apple','amazon','replit','vercel','lovable','midjourney','runway','elevenlabs','suno','pika','luma','kling','heygen','bytedance','adobe','intel','tesla','tencent','minimax','krea','higgsfield','grammarly','black-forest-labs','squad']);
-const PRODUCTS  = new Set(['chatgpt','claude-chat','claude-code','gemini','gpt-5','gpt-4-1','o1','o2','o3','o3-mini','o3-pro','o4-mini','opus-4','grok','llama','codex','sora','veo','flux','imagen','mcp','notebooklm','gemma-3','gemma-3n','windsurf','trae','kiro','jules','manus','codestral','qwen','genspark','ideogram','warmwire','comet','alphaevolve','alphaproof','gpt-oss','searchgpt','pyramid-flow','ph-llm']);
+const SEG_LABELS = {
+  agents: '🤖 Агенти', coding: '💻 Кодинг',
+  tools:  '🛠️ Інструменти', teams: '👥 Команди'
+};
 
-function tagCategory(raw) {
-  const t = raw.replace(/^#/, '');
-  if (COMPANIES.has(t)) return 'company';
-  if (PRODUCTS.has(t))  return 'product';
-  return 'topic';
+function setFilter(seg, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('hidden', seg !== 'all' && el.dataset.seg !== seg);
+  });
+  const visible = document.querySelectorAll('.card:not(.hidden)').length;
+  document.getElementById('stat-visible').textContent = visible;
+  document.getElementById('empty').style.display = visible === 0 ? 'block' : 'none';
 }
 
 function esc(s) {
-  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-let ALL_TIPS = [];
-let activeSeg = '';
-let activeTag = '';
+// ── Viz renderers ──────────────────────────────────────────────────────────
 
-const SEG_LABELS = { agents: 'agents', coding: 'coding', tools: 'tools', lean: 'lean' };
-
-function buildTagStrip(tips) {
-  const freq = {};
-  for (const tip of tips) {
-    for (const t of (tip.tags || [])) {
-      const c = t.replace(/^#/, '');
-      if (COMPANIES.has(c) || PRODUCTS.has(c)) freq[c] = (freq[c] || 0) + 1;
-    }
+function renderViz(viz) {
+  switch (viz.type) {
+    case 'ladder':  return renderLadder(viz);
+    case 'stack':   return renderStack(viz);
+    case 'flow':    return renderFlow(viz);
+    case 'council': return renderCouncil(viz);
+    case 'steps':   return renderSteps(viz);
+    case 'gauge':   return renderGauge(viz);
+    case 'compare': return renderCompare(viz);
+    default:        return '<div style="color:var(--g500);font-size:12px">—</div>';
   }
-  const sorted = Object.entries(freq).sort((a,b) => b[1]-a[1]).slice(0, 16);
-  const strip = document.getElementById('tag-strip');
-  strip.innerHTML = sorted.map(([tag, cnt]) => {
-    const cat = tagCategory(tag);
-    const dotColor = cat === 'company' ? 'var(--clay)' : cat === 'product' ? 'var(--blue)' : 'var(--olive)';
-    return `<button class="tag-pill" data-tag="${esc(tag)}" onclick="setTag('${esc(tag)}', this)">
-      <span class="dot" style="background:${dotColor}"></span>${esc(tag)} <span style="color:var(--g500);font-size:10px">${cnt}</span>
-    </button>`;
+}
+
+function renderLadder(viz) {
+  const rows = [...viz.levels].map(l =>
+    `<div class="ladder-row${l.active ? ' active' : ''}">
+      <span class="ladder-n">${l.n}</span>
+      <div class="ladder-bar"></div>
+      <span class="ladder-label">${esc(l.label)}</span>
+    </div>`
+  ).join('');
+  return `<div class="viz-ladder">${rows}</div>`;
+}
+
+function renderStack(viz) {
+  const layers = viz.layers.map(l =>
+    `<div class="stack-layer ${esc(l.color)}">
+      <span class="stack-icon">${l.icon}</span>
+      <span class="stack-label">${esc(l.label)}</span>
+    </div>`
+  ).join('');
+  return `<div class="viz-stack">${layers}</div>`;
+}
+
+function renderFlow(viz) {
+  const parts = viz.steps.flatMap((s, i) => {
+    const step = `<div class="flow-step">${esc(s)}</div>`;
+    return i < viz.steps.length - 1 ? [step, '<span class="flow-arrow">→</span>'] : [step];
   }).join('');
+  return `<div class="viz-flow">${parts}</div>`;
 }
 
-function updateSegCounts(tips) {
-  document.getElementById('cnt-all').textContent = tips.length;
-  ['agents','coding','tools','lean'].forEach(seg => {
-    const el = document.getElementById('cnt-' + seg);
-    if (el) el.textContent = tips.filter(t => t.segment === seg).length;
-  });
+function renderCouncil(viz) {
+  const models = viz.models.map(m => `<div class="council-model">${esc(m)}</div>`).join('');
+  return `<div class="viz-council">
+    <div class="council-models">${models}</div>
+    <div class="council-arrow-down">↓ peer review ↓</div>
+    <div class="council-chair">⚖️ ${esc(viz.chair)}</div>
+  </div>`;
 }
 
-function setSeg(seg, btn) {
-  activeSeg = seg;
-  activeTag = '';
-  document.querySelectorAll('.seg-pill').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
-  renderCards();
+function renderSteps(viz) {
+  const rows = viz.items.map((item, i) =>
+    `<div class="step-row">
+      <div class="step-num">${i + 1}</div>
+      <div class="step-text">${esc(item)}</div>
+    </div>`
+  ).join('');
+  return `<div class="viz-steps">${rows}</div>`;
 }
 
-function setTag(tag, btn) {
-  activeTag = (activeTag === tag) ? '' : tag;
-  document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
-  if (activeTag) btn.classList.add('active');
-  renderCards();
+function renderGauge(viz) {
+  return `<div class="viz-gauge">
+    <div class="gauge-number">
+      <span class="gauge-value">${viz.value}</span><span class="gauge-unit">${esc(viz.unit)}</span>
+    </div>
+    <div class="gauge-label">${esc(viz.label)}</div>
+  </div>`;
 }
 
-function getExcerpt(body, maxLen) {
-  if (!body) return '';
-  const clean = body.replace(/\s+/g, ' ').trim();
-  if (clean.length <= maxLen) return clean;
-  return clean.slice(0, maxLen).replace(/\s\S+$/, '') + '…';
+function renderCompare(viz) {
+  return `<div class="viz-compare">
+    <div class="compare-col before">
+      <div class="compare-col-label">${esc(viz.before.label)}</div>
+      <div class="compare-col-text">${esc(viz.before.text)}</div>
+    </div>
+    <div class="compare-col after">
+      <div class="compare-col-label">${esc(viz.after.label)}</div>
+      <div class="compare-col-text">${esc(viz.after.text)}</div>
+    </div>
+  </div>`;
 }
 
-function renderCards() {
-  const query  = (document.getElementById('search').value || '').toLowerCase();
-  const cardsEl = document.getElementById('cards');
-  const resEl   = document.getElementById('results-count');
+// ── Render all cards ────────────────────────────────────────────────────────
 
-  let tips = ALL_TIPS;
-
-  if (activeSeg) tips = tips.filter(t => t.segment === activeSeg);
-  if (activeTag) tips = tips.filter(t => (t.tags || []).some(tag => tag.replace(/^#/,'') === activeTag));
-  if (query) {
-    tips = tips.filter(t =>
-      (t.title || '').toLowerCase().includes(query) ||
-      (t.body  || '').toLowerCase().includes(query)
-    );
-  }
-
-  resEl.textContent = `${tips.length} практик`;
-  document.getElementById('stat-count').textContent = ALL_TIPS.length;
-
-  if (!tips.length) {
-    cardsEl.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><p>Нічого не знайдено. Спробуй інший фільтр.</p></div>`;
-    return;
-  }
-
-  cardsEl.innerHTML = tips.map(tip => {
-    const seg = tip.segment || 'tools';
-    const excerpt = esc(getExcerpt(tip.body || tip.preview || '', 340));
-    const visibleTags = (tip.tags || [])
-      .map(t => t.replace(/^#/,''))
-      .filter(t => COMPANIES.has(t) || PRODUCTS.has(t))
-      .slice(0, 3)
-      .map(t => `<span class="card-tag ${tagCategory(t)}">${esc(t)}</span>`)
-      .join('');
-
-    return `<a href="${esc(tip.url || '#')}" target="_blank" rel="noopener" class="tip-card">
+function renderCards(cards) {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  for (const c of cards) {
+    const el = document.createElement('a');
+    el.className = 'card';
+    el.href = c.url;
+    el.target = '_blank';
+    el.rel = 'noopener';
+    el.dataset.seg = c.segment;
+    el.innerHTML = `
+      <div class="card-viz">${renderViz(c.viz)}</div>
       <div class="card-body">
-        <span class="card-segment ${esc(seg)}">${esc(seg)}</span>
-        <div class="card-title">${esc(tip.title || '(без заголовку)')}</div>
-        ${excerpt ? `<div class="card-excerpt">${excerpt}</div>` : ''}
-      </div>
-      <div class="card-footer">
-        <div class="card-date">${tip.date || ''}</div>
-        <div class="card-tags">${visibleTags}</div>
-      </div>
-    </a>`;
-  }).join('');
+        <span class="card-segment seg-${esc(c.segment)}">${esc(SEG_LABELS[c.segment] || c.segment)}</span>
+        <div class="card-title">${esc(c.title)}</div>
+        <div class="card-summary">${esc(c.summary)}</div>
+        <div class="card-footer">
+          <span class="card-date">${esc(c.date)}</span>
+          <span class="card-link">Читати →</span>
+        </div>
+      </div>`;
+    grid.appendChild(el);
+  }
+  document.getElementById('stat-total').textContent = cards.length;
+  document.getElementById('stat-visible').textContent = cards.length;
 }
 
-fetch('../data/tips.json')
+fetch('../data/cards.json')
   .then(r => r.json())
   .then(data => {
-    ALL_TIPS = data.tips || [];
     document.getElementById('loading').style.display = 'none';
-    updateSegCounts(ALL_TIPS);
-    buildTagStrip(ALL_TIPS);
-    renderCards();
+    renderCards(data.cards || []);
   })
-  .catch(() => {
-    document.getElementById('loading').textContent = 'Помилка завантаження даних.';
+  .catch(err => {
+    document.getElementById('loading').textContent = 'Помилка завантаження';
+    console.error(err);
   });
 </script>
 
