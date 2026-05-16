@@ -16,18 +16,27 @@
     --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
 
-  .page-header { max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; }
+  /* ── Header ── */
+  .page-header {
+    max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px;
+    border-bottom: 1.5px solid var(--oat);
+    display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px;
+  }
   .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
   .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
   .page-header p { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
+
   .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 14px 18px; text-align: right; }
   .stat-num   { font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1; }
   .stat-label { font-size: 10.5px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
 
+  /* ── Toolbar ── */
   .content { max-width: 1100px; margin: 0 auto; padding: 32px 52px 60px; }
-  .toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+
+  .toolbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
   .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
   .search-wrap input {
     width: 100%; padding: 8px 14px 8px 36px; border-radius: 999px;
@@ -39,47 +48,87 @@
   .search-wrap input::placeholder { color: var(--g500); }
   .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--g500); pointer-events: none; }
 
-  .filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
-  .pill {
-    display: inline-flex; align-items: center; gap: 5px;
-    padding: 5px 12px; border-radius: 999px; border: 1.5px solid var(--g300);
+  /* ── Segment pills ── */
+  .segments { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .seg-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300);
     background: var(--paper); font-size: 12.5px; color: var(--g700);
-    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap; font-weight: 500;
   }
-  .pill:hover { border-color: var(--oat); background: var(--g100); }
-  .pill.active { border-color: var(--clay); background: var(--clay-l); color: var(--clay-d); }
-  .pill .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .seg-pill:hover { border-color: var(--oat); background: var(--g100); }
+  .seg-pill.active { border-color: var(--clay); background: var(--clay-l); color: var(--clay-d); }
+  .seg-pill .seg-icon { font-size: 14px; }
+  .seg-pill .seg-count { font-family: var(--mono); font-size: 10px; color: var(--g500); }
+  .seg-pill.active .seg-count { color: var(--clay); }
 
-  .results-count { font-size: 12px; color: var(--g500); font-family: var(--mono); margin-bottom: 16px; }
+  /* ── Tag filter strip ── */
+  .tag-strip { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 20px; }
+  .tag-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--g200);
+    background: var(--paper); font-size: 11.5px; color: var(--g700);
+    cursor: pointer; transition: all 0.12s; font-family: var(--mono);
+  }
+  .tag-pill:hover { border-color: var(--g300); background: var(--g100); }
+  .tag-pill.active { border-color: var(--blue); background: var(--blue-l); color: var(--blue); }
+  .tag-pill .dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
 
-  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .results-count { font-size: 12px; color: var(--g500); font-family: var(--mono); margin-bottom: 18px; }
+
+  /* ── Cards grid ── */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
 
   .tip-card {
-    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px;
-    padding: 16px 18px; display: flex; flex-direction: column; gap: 10px;
-    text-decoration: none; color: var(--slate); transition: border-color 0.15s, box-shadow 0.15s;
+    background: var(--paper); border: 1.5px solid var(--g300); border-radius: 14px;
+    display: flex; flex-direction: column;
+    text-decoration: none; color: var(--slate);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    overflow: hidden;
   }
-  .tip-card:hover { border-color: var(--clay); box-shadow: 0 2px 12px rgba(217,119,87,0.1); }
+  .tip-card:hover { border-color: var(--clay); box-shadow: 0 3px 16px rgba(217,119,87,0.12); }
 
-  .tip-title { font-size: 14px; font-weight: 600; line-height: 1.4; }
-  .tip-preview { font-size: 12.5px; color: var(--g700); line-height: 1.5; flex: 1; }
-  .tip-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-  .tip-date { font-size: 11px; color: var(--g500); font-family: var(--mono); }
-  .tip-tags { display: flex; gap: 4px; flex-wrap: wrap; }
-  .tip-tag {
+  .card-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+  .card-segment {
+    display: inline-block; font-family: var(--mono); font-size: 9.5px;
+    letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 8px;
+    border-radius: 4px; background: var(--g100); color: var(--g500);
+    align-self: flex-start;
+  }
+  .card-segment.agents  { background: var(--clay-l);  color: var(--clay-d); }
+  .card-segment.coding  { background: var(--blue-l);  color: #1E40AF; }
+  .card-segment.tools   { background: var(--olive-l); color: #3D5A2A; }
+  .card-segment.lean    { background: #F3F0FF; color: #5B21B6; }
+
+  .card-title { font-size: 14.5px; font-weight: 600; line-height: 1.4; }
+
+  .card-excerpt {
+    font-size: 13px; color: var(--g700); line-height: 1.6; flex: 1;
+    display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  .card-footer {
+    padding: 12px 20px; border-top: 1px solid var(--g200);
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  }
+  .card-date { font-size: 11px; color: var(--g500); font-family: var(--mono); }
+  .card-tags { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+  .card-tag {
     font-size: 10px; font-family: var(--mono); padding: 2px 6px; border-radius: 4px;
     background: var(--g100); color: var(--g500);
   }
-  .tip-tag.company { background: var(--clay-l); color: var(--clay-d); }
-  .tip-tag.topic   { background: var(--olive-l); color: #3D5A2A; }
-  .tip-tag.product { background: var(--blue-l); color: #1E40AF; }
+  .card-tag.company { background: var(--clay-l); color: var(--clay-d); }
+  .card-tag.topic   { background: var(--olive-l); color: #3D5A2A; }
+  .card-tag.product { background: var(--blue-l); color: #1E40AF; }
 
-  .empty { text-align: center; padding: 60px 20px; color: var(--g500); }
+  /* ── Empty / loading ── */
+  .empty { text-align: center; padding: 60px 20px; color: var(--g500); grid-column: 1/-1; }
   .empty-icon { font-size: 36px; margin-bottom: 12px; }
   .empty p { font-size: 14px; }
-
   .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
 
+  /* ── Footer ── */
   footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   footer a { color: var(--clay); text-decoration: none; }
 
@@ -95,26 +144,44 @@
 
 <header class="page-header">
   <div>
-    <div class="page-eyebrow">#практика</div>
+    <div class="page-eyebrow">взяв і зробив</div>
     <h1>Практичні поради</h1>
-    <p>Тільки пости з реальними кейсами, інструкціями та how-to від @imatrofAI.</p>
+    <p>Пости з реальними кейсами, інструкціями та how-to від <a href="https://t.me/imatrofAI" target="_blank" style="color:var(--clay);text-decoration:none;">@imatrofAI</a>.</p>
   </div>
   <div class="stat">
     <div class="stat-num" id="stat-count">—</div>
-    <div class="stat-label">порад</div>
+    <div class="stat-label">практик</div>
   </div>
 </header>
 
 <main class="content">
   <div class="toolbar">
     <div class="search-wrap">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="search" placeholder="Пошук по заголовку…" oninput="renderCards()">
-    </div>
-    <div class="filter-pills" id="filter-pills">
-      <button class="pill active" data-filter="" onclick="setFilter('', this)">Всі</button>
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search" placeholder="Пошук по заголовку або тексту…" oninput="renderCards()">
     </div>
   </div>
+
+  <div class="segments" id="segments">
+    <button class="seg-pill active" data-seg="" onclick="setSeg('', this)">
+      <span class="seg-icon">✦</span> Всі <span class="seg-count" id="cnt-all"></span>
+    </button>
+    <button class="seg-pill" data-seg="agents" onclick="setSeg('agents', this)">
+      <span class="seg-icon">🤖</span> Агенти <span class="seg-count" id="cnt-agents"></span>
+    </button>
+    <button class="seg-pill" data-seg="coding" onclick="setSeg('coding', this)">
+      <span class="seg-icon">💻</span> Кодинг <span class="seg-count" id="cnt-coding"></span>
+    </button>
+    <button class="seg-pill" data-seg="tools" onclick="setSeg('tools', this)">
+      <span class="seg-icon">🛠</span> Інструменти <span class="seg-count" id="cnt-tools"></span>
+    </button>
+    <button class="seg-pill" data-seg="lean" onclick="setSeg('lean', this)">
+      <span class="seg-icon">📐</span> Для команд <span class="seg-count" id="cnt-lean"></span>
+    </button>
+  </div>
+
+  <div class="tag-strip" id="tag-strip"></div>
+
   <div class="results-count" id="results-count"></div>
   <div id="loading" class="loading">Завантаження…</div>
   <div class="cards-grid" id="cards"></div>
@@ -142,83 +209,105 @@ function esc(s) {
   return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-let ALL_TIPS   = [];
-let activeFilter = '';
+let ALL_TIPS = [];
+let activeSeg = '';
+let activeTag = '';
 
-function buildFilters(tips) {
-  const seen  = new Set();
-  const pills = [];
-  for (const tip of tips) {
-    for (const t of (tip.tags || [])) {
-      const clean = t.replace(/^#/, '');
-      if (!seen.has(clean) && (COMPANIES.has(clean) || PRODUCTS.has(clean))) {
-        seen.add(clean);
-        pills.push({ tag: clean, cat: tagCategory(t) });
-      }
-    }
-  }
+const SEG_LABELS = { agents: 'agents', coding: 'coding', tools: 'tools', lean: 'lean' };
+
+function buildTagStrip(tips) {
   const freq = {};
   for (const tip of tips) {
     for (const t of (tip.tags || [])) {
-      const c = t.replace(/^#/,'');
-      freq[c] = (freq[c] || 0) + 1;
+      const c = t.replace(/^#/, '');
+      if (COMPANIES.has(c) || PRODUCTS.has(c)) freq[c] = (freq[c] || 0) + 1;
     }
   }
-  pills.sort((a, b) => (freq[b.tag] || 0) - (freq[a.tag] || 0));
-  return pills.slice(0, 18);
+  const sorted = Object.entries(freq).sort((a,b) => b[1]-a[1]).slice(0, 16);
+  const strip = document.getElementById('tag-strip');
+  strip.innerHTML = sorted.map(([tag, cnt]) => {
+    const cat = tagCategory(tag);
+    const dotColor = cat === 'company' ? 'var(--clay)' : cat === 'product' ? 'var(--blue)' : 'var(--olive)';
+    return `<button class="tag-pill" data-tag="${esc(tag)}" onclick="setTag('${esc(tag)}', this)">
+      <span class="dot" style="background:${dotColor}"></span>${esc(tag)} <span style="color:var(--g500);font-size:10px">${cnt}</span>
+    </button>`;
+  }).join('');
 }
 
-function setFilter(tag, btn) {
-  activeFilter = tag;
-  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+function updateSegCounts(tips) {
+  document.getElementById('cnt-all').textContent = tips.length;
+  ['agents','coding','tools','lean'].forEach(seg => {
+    const el = document.getElementById('cnt-' + seg);
+    if (el) el.textContent = tips.filter(t => t.segment === seg).length;
+  });
+}
+
+function setSeg(seg, btn) {
+  activeSeg = seg;
+  activeTag = '';
+  document.querySelectorAll('.seg-pill').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
+  document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
   renderCards();
+}
+
+function setTag(tag, btn) {
+  activeTag = (activeTag === tag) ? '' : tag;
+  document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
+  if (activeTag) btn.classList.add('active');
+  renderCards();
+}
+
+function getExcerpt(body, maxLen) {
+  if (!body) return '';
+  const clean = body.replace(/\s+/g, ' ').trim();
+  if (clean.length <= maxLen) return clean;
+  return clean.slice(0, maxLen).replace(/\s\S+$/, '') + '…';
 }
 
 function renderCards() {
   const query  = (document.getElementById('search').value || '').toLowerCase();
-  const cards  = document.getElementById('cards');
-  const resEl  = document.getElementById('results-count');
+  const cardsEl = document.getElementById('cards');
+  const resEl   = document.getElementById('results-count');
 
   let tips = ALL_TIPS;
 
-  if (activeFilter) {
-    tips = tips.filter(t => (t.tags || []).some(tag => tag.replace(/^#/,'') === activeFilter));
-  }
+  if (activeSeg) tips = tips.filter(t => t.segment === activeSeg);
+  if (activeTag) tips = tips.filter(t => (t.tags || []).some(tag => tag.replace(/^#/,'') === activeTag));
   if (query) {
     tips = tips.filter(t =>
       (t.title || '').toLowerCase().includes(query) ||
-      (t.preview || '').toLowerCase().includes(query)
+      (t.body  || '').toLowerCase().includes(query)
     );
   }
 
-  resEl.textContent = `${tips.length} порад`;
+  resEl.textContent = `${tips.length} практик`;
+  document.getElementById('stat-count').textContent = ALL_TIPS.length;
 
   if (!tips.length) {
-    cards.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🔍</div><p>Нічого не знайдено. Спробуй інший фільтр.</p></div>`;
+    cardsEl.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><p>Нічого не знайдено. Спробуй інший фільтр.</p></div>`;
     return;
   }
 
-  cards.innerHTML = tips.map(tip => {
+  cardsEl.innerHTML = tips.map(tip => {
+    const seg = tip.segment || 'tools';
+    const excerpt = esc(getExcerpt(tip.body || tip.preview || '', 340));
     const visibleTags = (tip.tags || [])
-      .filter(t => {
-        const c = t.replace(/^#/,'');
-        return COMPANIES.has(c) || PRODUCTS.has(c);
-      })
+      .map(t => t.replace(/^#/,''))
+      .filter(t => COMPANIES.has(t) || PRODUCTS.has(t))
       .slice(0, 3)
-      .map(t => {
-        const c = t.replace(/^#/,'');
-        const cat = tagCategory(t);
-        return `<span class="tip-tag ${cat}">${esc(c)}</span>`;
-      })
+      .map(t => `<span class="card-tag ${tagCategory(t)}">${esc(t)}</span>`)
       .join('');
 
     return `<a href="${esc(tip.url || '#')}" target="_blank" rel="noopener" class="tip-card">
-      <div class="tip-title">${esc(tip.title || '(без заголовку)')}</div>
-      ${tip.preview ? `<div class="tip-preview">${esc(tip.preview)}</div>` : ''}
-      <div class="tip-footer">
-        <div class="tip-date">${tip.date || ''}</div>
-        <div class="tip-tags">${visibleTags}</div>
+      <div class="card-body">
+        <span class="card-segment ${esc(seg)}">${esc(seg)}</span>
+        <div class="card-title">${esc(tip.title || '(без заголовку)')}</div>
+        ${excerpt ? `<div class="card-excerpt">${excerpt}</div>` : ''}
+      </div>
+      <div class="card-footer">
+        <div class="card-date">${tip.date || ''}</div>
+        <div class="card-tags">${visibleTags}</div>
       </div>
     </a>`;
   }).join('');
@@ -229,24 +318,12 @@ fetch('../data/tips.json')
   .then(data => {
     ALL_TIPS = data.tips || [];
     document.getElementById('loading').style.display = 'none';
-    document.getElementById('stat-count').textContent = ALL_TIPS.length;
-
-    const pillsEl = document.getElementById('filter-pills');
-    const filters = buildFilters(ALL_TIPS);
-    for (const f of filters) {
-      const btn = document.createElement('button');
-      btn.className = `pill`;
-      btn.dataset.filter = f.tag;
-      btn.innerHTML = `<span class="dot" style="background:var(--${f.cat === 'company' ? 'clay' : f.cat === 'product' ? 'blue' : 'olive'})"></span>${esc(f.tag)}`;
-      btn.onclick = () => setFilter(f.tag, btn);
-      pillsEl.appendChild(btn);
-    }
-
+    updateSegCounts(ALL_TIPS);
+    buildTagStrip(ALL_TIPS);
     renderCards();
   })
-  .catch(err => {
-    document.getElementById('loading').textContent = 'Помилка завантаження';
-    console.error(err);
+  .catch(() => {
+    document.getElementById('loading').textContent = 'Помилка завантаження даних.';
   });
 </script>
 
