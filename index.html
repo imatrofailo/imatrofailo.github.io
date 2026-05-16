@@ -136,7 +136,8 @@
     </div>
   </div>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num" id="stat-posts">—</div><div class="stat-label">постів</div></div>
+    <div class="stat"><div class="stat-num" id="stat-posts">—</div><div class="stat-label">Telegram постів</div></div>
+    <div class="stat"><div class="stat-num" id="stat-youtube">—</div><div class="stat-label">YouTube записів</div></div>
     <div class="stat"><div class="stat-num" id="stat-topics">—</div><div class="stat-label">тем</div></div>
   </div>
 </header>
@@ -184,8 +185,9 @@ fetch('data/topics.json')
   .then(r => r.json())
   .then(data => {
     TOPICS = data.topics;
-    document.getElementById('stat-posts').textContent  = data.total_posts.toLocaleString('uk');
-    document.getElementById('stat-topics').textContent = data.topics.length;
+    document.getElementById('stat-posts').textContent   = data.total_posts.toLocaleString('uk');
+    document.getElementById('stat-youtube').textContent = (data.total_youtube || 0).toLocaleString('uk');
+    document.getElementById('stat-topics').textContent  = data.topics.length;
     document.getElementById('loading').style.display = 'none';
     canvas.style.display = 'block';
     start();
