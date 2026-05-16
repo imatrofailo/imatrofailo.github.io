@@ -14,6 +14,8 @@
     --serif: ui-serif, Georgia, "Times New Roman", serif;
     --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+    /* viz palette */
+    --vr: #C4614A; --vs: #7A8C62; --vd: #3A3A3A; --vm: #C5BAB0; --vl: #E8DFD8;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -24,25 +26,20 @@
   .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
   .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
   .page-header p { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
-  .header-stats { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
-  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 10px 14px; min-width: 100px; text-align: right; }
-  .stat-num { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--slate); line-height: 1; }
+  .header-stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 10px 18px; text-align: right; }
+  .stat-num { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--slate); line-height: 1; }
   .stat-label { font-size: 10px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
 
   /* ── Content ── */
-  .content { max-width: 1100px; margin: 0 auto; padding: 32px 52px 60px; }
+  .content { max-width: 1100px; margin: 0 auto; padding: 48px 52px 72px; }
 
-  /* ── Filter pills ── */
-  .filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
-  .filter-label { font-size: 12px; color: var(--g500); margin-right: 2px; }
-  .filter-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300);
-    background: var(--paper); font-size: 13px; color: var(--g700);
-    cursor: pointer; transition: all 0.15s; font-family: var(--sans);
-  }
-  .filter-btn:hover { border-color: var(--oat); background: var(--g100); }
-  .filter-btn.active { border-color: var(--slate); background: var(--slate); color: white; }
+  /* ── Practice sections ── */
+  .practice-section { margin-bottom: 56px; }
+  .practice-section:last-child { margin-bottom: 0; }
+
+  .section-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1.5px solid var(--g200); }
+  .section-header h2 { font-family: var(--serif); font-size: 26px; font-weight: 500; color: var(--slate); margin-bottom: 6px; }
+  .section-header p { font-size: 14px; color: var(--g500); max-width: 560px; }
 
   /* ── Cards grid ── */
   .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 16px; }
@@ -53,74 +50,19 @@
     transition: border-color 0.15s, box-shadow 0.15s;
     text-decoration: none; color: var(--slate);
   }
-  .card:hover { border-color: var(--clay); box-shadow: 0 4px 20px rgba(217,119,87,0.12); }
-  .card.hidden { display: none; }
+  .card:hover { border-color: var(--clay); box-shadow: 0 4px 20px rgba(196,97,74,0.10); }
 
   /* ── Viz area ── */
   .card-viz {
-    height: 130px; background: var(--g100); display: flex; align-items: center;
-    justify-content: center; padding: 16px; position: relative; overflow: hidden;
+    height: 140px; background: var(--g100); display: flex; align-items: center;
+    justify-content: center; padding: 0; overflow: hidden;
   }
-
-  /* Ladder viz */
-  .viz-ladder { display: flex; flex-direction: column-reverse; gap: 4px; width: 100%; }
-  .ladder-row { display: flex; align-items: center; gap: 8px; padding: 3px 6px; border-radius: 5px; }
-  .ladder-row.active { background: var(--clay-l); }
-  .ladder-n { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--clay); width: 16px; text-align: center; }
-  .ladder-bar { height: 5px; border-radius: 3px; background: var(--g300); flex: 1; }
-  .ladder-row.active .ladder-bar { background: var(--clay); }
-  .ladder-label { font-size: 10.5px; color: var(--g700); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
-  .ladder-row.active .ladder-label { color: var(--clay-d); font-weight: 600; }
-
-  /* Stack viz */
-  .viz-stack { display: flex; flex-direction: column-reverse; gap: 5px; width: 100%; }
-  .stack-layer { display: flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 7px; border: 1.5px solid; }
-  .stack-layer.clay  { background: var(--clay-l);  border-color: rgba(217,119,87,0.3);  }
-  .stack-layer.olive { background: var(--olive-l); border-color: rgba(120,140,93,0.3);  }
-  .stack-layer.blue  { background: var(--blue-l);  border-color: rgba(74,124,199,0.3);  }
-  .stack-layer.g300  { background: var(--g100);    border-color: var(--g300);            }
-  .stack-icon { font-size: 14px; }
-  .stack-label { font-size: 11px; font-weight: 600; color: var(--g700); }
-
-  /* Flow viz */
-  .viz-flow { display: flex; align-items: center; gap: 4px; width: 100%; flex-wrap: wrap; justify-content: center; }
-  .flow-step { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 8px; padding: 4px 8px; font-size: 10.5px; font-weight: 600; color: var(--g700); white-space: nowrap; text-align: center; }
-  .flow-arrow { color: var(--clay); font-size: 14px; flex-shrink: 0; }
-
-  /* Council viz */
-  .viz-council { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
-  .council-models { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
-  .council-model { background: var(--blue-l); border: 1.5px solid rgba(74,124,199,0.3); border-radius: 6px; padding: 3px 8px; font-size: 10px; font-weight: 600; color: #1E40AF; }
-  .council-arrow-down { color: var(--clay); font-size: 11px; font-family: var(--mono); }
-  .council-chair { background: var(--clay-l); border: 1.5px solid rgba(217,119,87,0.4); border-radius: 8px; padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--clay-d); }
-
-  /* Steps viz */
-  .viz-steps { display: flex; flex-direction: column; gap: 5px; width: 100%; }
-  .step-row { display: flex; align-items: flex-start; gap: 8px; }
-  .step-num { width: 18px; height: 18px; border-radius: 50%; background: var(--clay); color: white; font-size: 10px; font-weight: 700; font-family: var(--mono); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-  .step-text { font-size: 10.5px; color: var(--g700); line-height: 1.35; }
-
-  /* Gauge viz */
-  .viz-gauge { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 100%; }
-  .gauge-number { display: flex; align-items: baseline; gap: 2px; }
-  .gauge-value { font-family: var(--serif); font-size: 52px; font-weight: 500; color: var(--clay); line-height: 1; }
-  .gauge-unit { font-family: var(--mono); font-size: 22px; color: var(--clay); }
-  .gauge-label { font-size: 11px; color: var(--g500); text-align: center; }
-
-  /* Compare viz */
-  .viz-compare { display: flex; gap: 6px; width: 100%; height: 100%; align-items: stretch; }
-  .compare-col { flex: 1; border-radius: 8px; padding: 8px 10px; display: flex; flex-direction: column; gap: 4px; }
-  .compare-col.before { background: var(--g100); border: 1.5px solid var(--g300); }
-  .compare-col.after  { background: var(--clay-l); border: 1.5px solid rgba(217,119,87,0.35); }
-  .compare-col-label { font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-  .compare-col.before .compare-col-label { color: var(--g500); }
-  .compare-col.after  .compare-col-label { color: var(--clay-d); }
-  .compare-col-text { font-size: 11px; color: var(--g700); font-weight: 500; line-height: 1.35; }
+  .card-viz svg { width: 100%; height: 100%; display: block; }
 
   /* ── Card body ── */
-  .card-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .card-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
   .card-segment {
-    display: inline-flex; align-items: center; gap: 5px;
+    display: inline-flex; align-items: center;
     font-family: var(--mono); font-size: 10px; font-weight: 600;
     letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 8px;
     border-radius: 4px; align-self: flex-start;
@@ -130,25 +72,25 @@
   .seg-tools   { background: var(--olive-l); color: #3D5A2A; }
   .seg-teams   { background: #F3F0FF;        color: #5B21B6; }
 
-  .card-title { font-size: 13.5px; font-weight: 700; line-height: 1.4; color: var(--slate); }
-  .card-summary { font-size: 12px; color: var(--g500); line-height: 1.5; flex: 1;
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-title { font-size: 14px; font-weight: 700; line-height: 1.4; color: var(--slate); }
+  .card-summary { font-size: 13px; color: var(--g500); line-height: 1.6; flex: 1; }
   .card-footer { display: flex; align-items: center; justify-content: space-between;
-    padding-top: 8px; border-top: 1px solid var(--g100); margin-top: 4px; }
+    padding-top: 10px; border-top: 1px solid var(--g100); margin-top: 2px; }
   .card-date { font-family: var(--mono); font-size: 10.5px; color: var(--g500); }
   .card-link { font-size: 11.5px; color: var(--clay); font-weight: 600; }
 
-  /* ── Loading / empty ── */
-  .loading { display: flex; align-items: center; justify-content: center; height: 200px; font-family: var(--mono); font-size: 13px; color: var(--g500); }
-  .empty { text-align: center; padding: 60px 20px; color: var(--g500); font-size: 14px; display: none; }
+  /* ── Loading ── */
+  .loading { display: flex; align-items: center; justify-content: center; height: 200px;
+    font-family: var(--mono); font-size: 13px; color: var(--g500); }
 
   /* ── Footer ── */
-  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px;
+    border-top: 1.5px solid var(--g300); font-size: 12px; color: var(--g500);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   footer a { color: var(--clay); text-decoration: none; }
 
   @media (max-width: 768px) {
     .page-header { grid-template-columns: 1fr; padding: 24px 20px 20px; }
-    .header-stats { flex-direction: row; align-items: flex-start; }
     .content, footer { padding-left: 20px; padding-right: 20px; }
     .cards-grid { grid-template-columns: 1fr; }
   }
@@ -162,25 +104,15 @@
     <h1>Взяв і зробив</h1>
     <p>Відібрані вручну how-to пости: промпти, пайплайни і підходи які можна застосувати сьогодні.</p>
   </div>
-  <div class="header-stats">
-    <div class="stat"><div class="stat-num" id="stat-total">—</div><div class="stat-label">практик</div></div>
-    <div class="stat"><div class="stat-num" id="stat-visible">—</div><div class="stat-label">показано</div></div>
+  <div class="header-stat">
+    <div class="stat-num" id="stat-total">—</div>
+    <div class="stat-label">практик</div>
   </div>
 </header>
 
 <main class="content">
-  <div class="filters">
-    <span class="filter-label">Фільтр:</span>
-    <button class="filter-btn active" onclick="setFilter('all',this)">Всі</button>
-    <button class="filter-btn" onclick="setFilter('agents',this)">🤖 Агенти</button>
-    <button class="filter-btn" onclick="setFilter('coding',this)">💻 Кодинг</button>
-    <button class="filter-btn" onclick="setFilter('tools',this)">🛠️ Інструменти</button>
-    <button class="filter-btn" onclick="setFilter('teams',this)">👥 Команди</button>
-  </div>
-
   <div class="loading" id="loading">Завантаження…</div>
-  <div class="empty" id="empty">Нічого не знайдено</div>
-  <div class="cards-grid" id="grid"></div>
+  <div id="sections"></div>
 </main>
 
 <footer>
@@ -188,32 +120,216 @@
   <span>Відібрано вручну · 2025–2026</span>
 </footer>
 
+<script src="../nav.js" defer></script>
 <script>
 'use strict';
 
-const SEG_LABELS = {
-  agents: '🤖 Агенти', coding: '💻 Кодинг',
-  tools:  '🛠️ Інструменти', teams: '👥 Команди'
-};
+/* ── Viz palette (matches --v* CSS vars) ── */
+const VR = '#C4614A'; // brick red
+const VS = '#7A8C62'; // sage green
+const VD = '#3A3A3A'; // dark
+const VM = '#C5BAB0'; // warm mid gray
+const VL = '#E8DFD8'; // light warm
 
-function setFilter(seg, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.card').forEach(el => {
-    el.classList.toggle('hidden', seg !== 'all' && el.dataset.seg !== seg);
-  });
-  const visible = document.querySelectorAll('.card:not(.hidden)').length;
-  document.getElementById('stat-visible').textContent = visible;
-  document.getElementById('empty').style.display = visible === 0 ? 'block' : 'none';
+/* ── SVG renderers — pure geometry, no text ── */
+
+function renderLadder(viz) {
+  const levels = [...viz.levels].sort((a, b) => a.n - b.n); // level 0 at bottom
+  const n = levels.length;
+  const barH = 13, gap = 6;
+  const maxW = 200, minW = 56;
+  const totalH = n * (barH + gap) - gap;
+  const offsetY = Math.round((110 - totalH) / 2);
+
+  const bars = levels.map((lv, i) => {
+    const w = Math.round(minW + (maxW - minW) * (lv.n / (n - 1)));
+    const y = offsetY + (n - 1 - i) * (barH + gap);
+    const fill = lv.active ? VR : VM;
+    const dot = lv.active
+      ? `<circle cx="${20 + w + 8}" cy="${y + barH / 2}" r="3" fill="${VR}"/>`
+      : '';
+    return `<rect x="20" y="${y}" width="${w}" height="${barH}" rx="3" fill="${fill}"/>${dot}`;
+  }).join('');
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">${bars}</svg>`;
 }
 
-function esc(s) {
-  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function renderStack(viz) {
+  const layers = viz.layers;
+  const n = layers.length;
+  const colors = [VR, VS, VD, VM];
+  const barH = 20, gap = 5;
+  const maxW = 210;
+  const indent = 14;
+  const totalH = n * (barH + gap) - gap;
+  const offsetY = Math.round((110 - totalH) / 2);
+
+  const rects = layers.map((_, i) => {
+    const w = maxW - i * indent;
+    const x = 25 + Math.round(i * indent / 2);
+    const y = offsetY + i * (barH + gap);
+    const fill = colors[i % colors.length];
+    return `<rect x="${x}" y="${y}" width="${w}" height="${barH}" rx="4" fill="${fill}"/>`;
+  }).join('');
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">${rects}</svg>`;
 }
 
-// ── Viz renderers ──────────────────────────────────────────────────────────
+function renderFlow(viz) {
+  const steps = viz.steps;
+  const n = steps.length;
+  const boxW = n <= 3 ? 48 : n === 4 ? 40 : 34;
+  const boxH = 30;
+  const arrowGap = n <= 3 ? 18 : 14;
+  const totalW = n * boxW + (n - 1) * arrowGap;
+  const startX = Math.round((260 - totalW) / 2);
+  const y = Math.round((110 - boxH) / 2);
 
+  const items = steps.map((_, i) => {
+    const x = startX + i * (boxW + arrowGap);
+    const fill = i === n - 1 ? VR : VD;
+    const box = `<rect x="${x}" y="${y}" width="${boxW}" height="${boxH}" rx="5" fill="${fill}"/>`;
+
+    if (i < n - 1) {
+      const ax1 = x + boxW + 2;
+      const ax2 = x + boxW + arrowGap - 2;
+      const ay = y + boxH / 2;
+      const arrow = `
+        <line x1="${ax1}" y1="${ay}" x2="${ax2 - 4}" y2="${ay}" stroke="${VM}" stroke-width="1.5"/>
+        <polygon points="${ax2 - 4},${ay - 3} ${ax2},${ay} ${ax2 - 4},${ay + 3}" fill="${VM}"/>`;
+      return box + arrow;
+    }
+    return box;
+  }).join('');
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">${items}</svg>`;
+}
+
+function renderCouncil(viz) {
+  const bW = 52, bH = 26, gapX = 12, gapY = 10;
+  const gridW = 2 * bW + gapX;
+  const gx = Math.round((260 - gridW) / 2);
+  const gy = 12;
+
+  const positions = [
+    [gx, gy],
+    [gx + bW + gapX, gy],
+    [gx, gy + bH + gapY],
+    [gx + bW + gapX, gy + bH + gapY],
+  ];
+
+  const models = (viz.models || []).slice(0, 4);
+  const chairW = 80, chairH = 26;
+  const chairX = Math.round((260 - chairW) / 2);
+  const chairY = 78;
+
+  const connCX = gx + gridW / 2;
+  const connCY = chairY;
+
+  const lines = positions.slice(0, models.length).map(([px, py]) => {
+    const mx = px + bW / 2;
+    const my = py + bH;
+    return `<line x1="${mx}" y1="${my}" x2="${connCX}" y2="${connCY}" stroke="${VL}" stroke-width="1.5"/>`;
+  }).join('');
+
+  const boxes = positions.slice(0, models.length).map(([px, py]) =>
+    `<rect x="${px}" y="${py}" width="${bW}" height="${bH}" rx="4" fill="${VD}"/>`
+  ).join('');
+
+  const chair = `<rect x="${chairX}" y="${chairY}" width="${chairW}" height="${chairH}" rx="5" fill="${VR}"/>`;
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+    ${lines}${boxes}${chair}
+  </svg>`;
+}
+
+function renderSteps(viz) {
+  const n = (viz.items || []).length;
+  const maxH = 68, barW = n <= 4 ? 36 : 28, gap = 10;
+  const totalW = n * barW + (n - 1) * gap;
+  const startX = Math.round((260 - totalW) / 2);
+  const baseY = 95;
+
+  const bars = viz.items.map((_, i) => {
+    const frac = n === 1 ? 1 : i / (n - 1);
+    const h = Math.round(18 + (maxH - 18) * frac);
+    const x = startX + i * (barW + gap);
+    const y = baseY - h;
+    const fill = i === n - 1 ? VR : i === n - 2 ? VS : VD;
+    const dot = `<circle cx="${x + barW / 2}" cy="${y - 6}" r="4" fill="${fill}"/>`;
+    return `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="3" fill="${fill}"/>${dot}`;
+  }).join('');
+
+  const baseline = `<line x1="16" y1="${baseY + 1}" x2="244" y2="${baseY + 1}" stroke="${VL}" stroke-width="1.5"/>`;
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+    ${baseline}${bars}
+  </svg>`;
+}
+
+function renderGauge(viz) {
+  const pct = Math.min(1, Math.max(0.02, viz.value / 100));
+  const cx = 130, cy = 92, r = 60, sw = 13;
+
+  // Full upper semicircle: M (cx-r, cy) A r r 0 1 1 (cx+r, cy)
+  const bgPath = `M ${cx - r} ${cy} A ${r} ${r} 0 1 1 ${cx + r} ${cy}`;
+
+  // Fill arc: from leftmost point, clockwise (sweep=1) for pct * 180°
+  const endAngle = (1 - pct) * Math.PI;
+  const endX = (cx + r * Math.cos(endAngle)).toFixed(1);
+  const endY = (cy - r * Math.sin(endAngle)).toFixed(1);
+  const largeArc = pct > 0.5 ? 1 : 0;
+  const fillPath = `M ${cx - r} ${cy} A ${r} ${r} 0 ${largeArc} 1 ${endX} ${endY}`;
+
+  // End dot
+  const dotR = 5;
+  const dotPath = `<circle cx="${endX}" cy="${endY}" r="${dotR}" fill="${VR}"/>`;
+
+  // Start dot
+  const startDot = `<circle cx="${cx - r}" cy="${cy}" r="${dotR}" fill="${VL}"/>`;
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="${bgPath}" stroke="${VL}" stroke-width="${sw}" stroke-linecap="round" fill="none"/>
+    <path d="${fillPath}" stroke="${VR}" stroke-width="${sw}" stroke-linecap="round" fill="none"/>
+    ${startDot}${dotPath}
+  </svg>`;
+}
+
+function renderCompare(viz) {
+  const pW = 96, pH = 76, pY = 17;
+  const gap = 20;
+  const totalW = 2 * pW + gap;
+  const startX = Math.round((260 - totalW) / 2);
+  const bX = startX, aX = startX + pW + gap;
+
+  // Before panel (dashes = old/fragmented)
+  const beforeRect = `<rect x="${bX}" y="${pY}" width="${pW}" height="${pH}" rx="6" fill="${VL}"/>`;
+  const dashes = [34, 48, 62, 76].map(y =>
+    `<line x1="${bX + 10}" y1="${y}" x2="${bX + pW - 10}" y2="${y}" stroke="${VM}" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 5"/>`
+  ).join('');
+
+  // After panel (solid blocks = clean/new)
+  const afterRect = `<rect x="${aX}" y="${pY}" width="${pW}" height="${pH}" rx="6" fill="${VR}" opacity="0.12" stroke="${VR}" stroke-width="1.5" stroke-opacity="0.5"/>`;
+  const blocks = [31, 44, 57, 70].map((y, i) => {
+    const w = i % 2 === 0 ? pW - 18 : pW - 32;
+    return `<rect x="${aX + 9}" y="${y}" width="${w}" height="9" rx="2.5" fill="${VR}"/>`;
+  }).join('');
+
+  // Arrow connector
+  const arrowCX = startX + pW + Math.round(gap / 2);
+  const arrowCY = pY + Math.round(pH / 2);
+  const arrow = `
+    <line x1="${arrowCX - 6}" y1="${arrowCY}" x2="${arrowCX + 2}" y2="${arrowCY}" stroke="${VD}" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="${arrowCX + 2},${arrowCY - 3.5} ${arrowCX + 8},${arrowCY} ${arrowCX + 2},${arrowCY + 3.5}" fill="${VD}"/>`;
+
+  return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+    ${beforeRect}${dashes}${afterRect}${blocks}${arrow}
+  </svg>`;
+}
+
+/* ── Viz dispatcher ── */
 function renderViz(viz) {
+  if (!viz) return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>`;
   switch (viz.type) {
     case 'ladder':  return renderLadder(viz);
     case 'stack':   return renderStack(viz);
@@ -222,121 +338,97 @@ function renderViz(viz) {
     case 'steps':   return renderSteps(viz);
     case 'gauge':   return renderGauge(viz);
     case 'compare': return renderCompare(viz);
-    default:        return '<div style="color:var(--g500);font-size:12px">—</div>';
+    default:        return `<svg viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>`;
   }
 }
 
-function renderLadder(viz) {
-  const rows = [...viz.levels].map(l =>
-    `<div class="ladder-row${l.active ? ' active' : ''}">
-      <span class="ladder-n">${l.n}</span>
-      <div class="ladder-bar"></div>
-      <span class="ladder-label">${esc(l.label)}</span>
-    </div>`
-  ).join('');
-  return `<div class="viz-ladder">${rows}</div>`;
-}
+/* ── Section config ── */
+const SECTIONS = [
+  {
+    seg: 'agents',
+    title: 'Агенти',
+    desc: 'Архітектура та протоколи для AI-агентів — пайплайни, оркестрація, MCP.',
+    cls: 'seg-agents',
+  },
+  {
+    seg: 'coding',
+    title: 'Кодинг',
+    desc: 'Практики для розробників: ефективні промпти, автономні агенти, нові інструменти.',
+    cls: 'seg-coding',
+  },
+  {
+    seg: 'tools',
+    title: 'Інструменти',
+    desc: 'Конкретні налаштування і прийоми, що змінюють щоденну роботу з AI.',
+    cls: 'seg-tools',
+  },
+  {
+    seg: 'teams',
+    title: 'Команди',
+    desc: 'Як впроваджувати AI в командні процеси та вимірювати реальний приріст.',
+    cls: 'seg-teams',
+  },
+];
 
-function renderStack(viz) {
-  const layers = viz.layers.map(l =>
-    `<div class="stack-layer ${esc(l.color)}">
-      <span class="stack-icon">${l.icon}</span>
-      <span class="stack-label">${esc(l.label)}</span>
-    </div>`
-  ).join('');
-  return `<div class="viz-stack">${layers}</div>`;
-}
+const SEG_LABELS = {
+  agents: 'Агенти',
+  coding: 'Кодинг',
+  tools: 'Інструменти',
+  teams: 'Команди',
+};
 
-function renderFlow(viz) {
-  const parts = viz.steps.flatMap((s, i) => {
-    const step = `<div class="flow-step">${esc(s)}</div>`;
-    return i < viz.steps.length - 1 ? [step, '<span class="flow-arrow">→</span>'] : [step];
-  }).join('');
-  return `<div class="viz-flow">${parts}</div>`;
-}
-
-function renderCouncil(viz) {
-  const models = viz.models.map(m => `<div class="council-model">${esc(m)}</div>`).join('');
-  return `<div class="viz-council">
-    <div class="council-models">${models}</div>
-    <div class="council-arrow-down">↓ peer review ↓</div>
-    <div class="council-chair">⚖️ ${esc(viz.chair)}</div>
-  </div>`;
-}
-
-function renderSteps(viz) {
-  const rows = viz.items.map((item, i) =>
-    `<div class="step-row">
-      <div class="step-num">${i + 1}</div>
-      <div class="step-text">${esc(item)}</div>
-    </div>`
-  ).join('');
-  return `<div class="viz-steps">${rows}</div>`;
-}
-
-function renderGauge(viz) {
-  return `<div class="viz-gauge">
-    <div class="gauge-number">
-      <span class="gauge-value">${viz.value}</span><span class="gauge-unit">${esc(viz.unit)}</span>
-    </div>
-    <div class="gauge-label">${esc(viz.label)}</div>
-  </div>`;
-}
-
-function renderCompare(viz) {
-  return `<div class="viz-compare">
-    <div class="compare-col before">
-      <div class="compare-col-label">${esc(viz.before.label)}</div>
-      <div class="compare-col-text">${esc(viz.before.text)}</div>
-    </div>
-    <div class="compare-col after">
-      <div class="compare-col-label">${esc(viz.after.label)}</div>
-      <div class="compare-col-text">${esc(viz.after.text)}</div>
-    </div>
-  </div>`;
-}
-
-// ── Render all cards ────────────────────────────────────────────────────────
-
-function renderCards(cards) {
-  const grid = document.getElementById('grid');
-  grid.innerHTML = '';
-  for (const c of cards) {
-    const el = document.createElement('a');
-    el.className = 'card';
-    el.href = c.url;
-    el.target = '_blank';
-    el.rel = 'noopener';
-    el.dataset.seg = c.segment;
-    el.innerHTML = `
-      <div class="card-viz">${renderViz(c.viz)}</div>
+/* ── Render card ── */
+function buildCard(card, segCls) {
+  const date = card.date ? new Date(card.date).toLocaleDateString('uk', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+  return `
+    <a class="card" href="${card.url}" target="_blank" rel="noopener">
+      <div class="card-viz">${renderViz(card.viz)}</div>
       <div class="card-body">
-        <span class="card-segment seg-${esc(c.segment)}">${esc(SEG_LABELS[c.segment] || c.segment)}</span>
-        <div class="card-title">${esc(c.title)}</div>
-        <div class="card-summary">${esc(c.summary)}</div>
+        <span class="card-segment ${segCls}">${SEG_LABELS[card.segment] || card.segment}</span>
+        <div class="card-title">${card.title}</div>
+        <div class="card-summary">${card.summary}</div>
         <div class="card-footer">
-          <span class="card-date">${esc(c.date)}</span>
+          <span class="card-date">${date}</span>
           <span class="card-link">Читати →</span>
         </div>
-      </div>`;
-    grid.appendChild(el);
-  }
-  document.getElementById('stat-total').textContent = cards.length;
-  document.getElementById('stat-visible').textContent = cards.length;
+      </div>
+    </a>`;
 }
 
+/* ── Main ── */
 fetch('../data/cards.json')
   .then(r => r.json())
   .then(data => {
+    const cards = data.cards || [];
+    document.getElementById('stat-total').textContent = cards.length;
     document.getElementById('loading').style.display = 'none';
-    renderCards(data.cards || []);
+
+    // Group cards by segment
+    const bySegment = {};
+    cards.forEach(c => {
+      if (!bySegment[c.segment]) bySegment[c.segment] = [];
+      bySegment[c.segment].push(c);
+    });
+
+    const sectionsEl = document.getElementById('sections');
+    SECTIONS.forEach(sec => {
+      const segCards = bySegment[sec.seg] || [];
+      if (!segCards.length) return;
+
+      const cardsHtml = segCards.map(c => buildCard(c, sec.cls)).join('');
+      sectionsEl.insertAdjacentHTML('beforeend', `
+        <section class="practice-section">
+          <div class="section-header">
+            <h2>${sec.title}</h2>
+            <p>${sec.desc}</p>
+          </div>
+          <div class="cards-grid">${cardsHtml}</div>
+        </section>`);
+    });
   })
-  .catch(err => {
+  .catch(() => {
     document.getElementById('loading').textContent = 'Помилка завантаження';
-    console.error(err);
   });
 </script>
-
-<script src="../nav.js"></script>
 </body>
 </html>
