@@ -1,9 +1,29 @@
 {
-  "generated": "2026-05-31T12:04:46",
-  "total": 3204,
+  "generated": "2026-06-07T12:09:38",
+  "total": 3206,
   "total_telegram": 2300,
-  "total_youtube": 904,
+  "total_youtube": 906,
   "posts": [
+    {
+      "title": "НОВИНИ - June 7  2026",
+      "date": "2026-06-07",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* \n\n\n**Title:**\n\n* НОВИНИ AI: Anthropic ОБІГНАЛА OpenAI — і це тільки початок\n* НОВИНИ AI: Microsoft ЗАПУСКАЄ власні AI-моделі — кінець залежності від OpenAI\n* НОВИНИ A",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
+    {
+      "title": "НОВИНИ - May 31 2026",
+      "date": "2026-05-31",
+      "url": "https://www.youtube.com/@imatrof",
+      "preview": "**Анонс:**\n\n* Я крупним планом, позаду великий логотип Anthropic та фото Папи Лева XIV — АНТРОПІК ТА ПАПА\n* Я в студії, позаду екран з логотипом xAI і термінал — GROK BUILD\n* Я кру",
+      "company": "",
+      "product": "",
+      "topics": [],
+      "source": "youtube"
+    },
     {
       "title": "Codex + Hostinger + YouTube Analytics WebSite",
       "date": "2026-05-29",
