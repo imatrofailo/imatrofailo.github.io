@@ -1,0 +1,8 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Large clay bubble -->
+  <circle cx="26" cy="34" r="20" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-opacity="0.55" stroke-width="2"/>
+  <!-- Medium blue bubble -->
+  <circle cx="46" cy="24" r="13" fill="#4A7CC7" fill-opacity="0.15" stroke="#4A7CC7" stroke-opacity="0.55" stroke-width="1.8"/>
+  <!-- Small olive bubble -->
+  <circle cx="44" cy="48" r="8" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-opacity="0.55" stroke-width="1.6"/>
+</svg>

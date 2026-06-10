@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Сторінку не знайдено — imatrofailo.github.io">
+<meta name="robots" content="noindex">
+<title>404 — Сторінка не знайдена</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; display: flex; flex-direction: column; }
+
+  .page-header {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat);
+  }
+  .page-eyebrow {
+    font-family: var(--mono); font-size: 11px; color: var(--clay);
+    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .page-header h1 {
+    font-family: var(--serif); font-size: clamp(28px, 4vw, 48px);
+    font-weight: 500; line-height: 1.1;
+  }
+  .page-header p { margin-top: 10px; font-size: 15px; color: var(--g500); }
+
+  .content {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    padding: 64px 52px 72px; flex: 1;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 24px;
+  }
+
+  .error-code {
+    font-family: var(--serif); font-size: clamp(72px, 12vw, 144px);
+    font-weight: 500; line-height: 1; color: var(--clay); opacity: 0.22;
+    letter-spacing: -0.04em; margin-bottom: -8px;
+  }
+
+  .error-title {
+    font-family: var(--serif); font-size: clamp(26px, 4vw, 40px);
+    font-weight: 500; color: var(--slate);
+  }
+
+  .error-desc { font-size: 15px; color: var(--g500); max-width: 420px; }
+
+  .error-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 22px; border-radius: 999px; border: 1.5px solid var(--g300);
+    font-size: 14px; text-decoration: none; color: var(--slate);
+    background: var(--paper); transition: all 0.15s; font-weight: 500;
+  }
+  .btn:hover { border-color: var(--clay); color: var(--clay); background: var(--clay-l); }
+  .btn-primary {
+    background: var(--clay); border-color: var(--clay); color: #fff;
+  }
+  .btn-primary:hover { background: var(--clay-d); border-color: var(--clay-d); color: #fff; }
+
+  footer {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    padding: 20px 52px 36px; border-top: 1.5px solid var(--g300);
+    font-size: 12px; color: var(--g500);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  footer a { color: var(--clay); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .page-header, .content, footer { padding-left: 20px; padding-right: 20px; }
+    .content { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="page-eyebrow">Помилка</div>
+  <h1>Ігор Матрофайло</h1>
+  <p>AI-дослідник · 3200+ постів і відео про штучний інтелект</p>
+</header>
+
+<main class="content">
+  <div class="error-code">404</div>
+  <div class="error-title">Такої сторінки немає</div>
+  <p class="error-desc">
+    Можливо, посилання застаріле або адресу введено з помилкою.
+  </p>
+  <div class="error-actions">
+    <a href="/" class="btn btn-primary">На головну</a>
+    <a href="/pages/arkhiv.html" class="btn">Архів постів</a>
+  </div>
+</main>
+
+<footer>
+  <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
+  <span id="footer-year">2025–2026</span>
+</footer>
+
+<script src="/nav.js" defer></script>
+<script>
+  const y = new Date().getFullYear();
+  const el = document.getElementById('footer-year');
+  if (el && y > 2026) el.textContent = '2025–' + y;
+</script>
+</body>
+</html>
