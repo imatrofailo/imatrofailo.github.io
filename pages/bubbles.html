@@ -119,7 +119,7 @@
 <div id="tooltip"><strong id="tt-name"></strong><span id="tt-count"></span></div>
 <div id="overlay" onclick="closeSidebar()"></div>
 
-<div id="sidebar">
+<div id="sidebar" role="dialog" aria-modal="true" aria-label="Пости теми">
   <div class="sidebar-head">
     <button class="sidebar-close" onclick="closeSidebar()">✕</button>
     <div id="sb-tag" class="sidebar-tag company"></div>
@@ -162,7 +162,7 @@
     </div>
     <div class="chart-body">
       <div class="bubble-wrap">
-        <canvas id="bubble-canvas"></canvas>
+        <canvas id="bubble-canvas" role="img" aria-label="Інтерактивна карта тем"></canvas>
         <div class="bubble-hint">натисніть на бульбашку щоб відкрити пости</div>
         <div class="loading" id="loading">Завантаження даних…</div>
       </div>
@@ -189,6 +189,15 @@ const tooltip = document.getElementById('tooltip');
 
 let TOPICS = [];
 let W, H, bubbles = [], activeFilter = 'all', selectedId = null, animFrame;
+
+// ── Reduced-motion / battery-save flags ──────────────────────────────────────
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let staticMode = false;  // true when reduced-motion or tab hidden
+
+// requestDraw: re-render once in staticMode; normal no-op (rAF loop handles it)
+function requestDraw() {
+  if (staticMode) drawFrame();
+}
 
 // Cache for lazy-loaded per-topic data (id → topic with posts)
 const topicCache = new Map();
@@ -300,7 +309,7 @@ function hexAlpha(hex, a) {
   return `rgba(${r},${g},${b},${a})`;
 }
 
-function draw() {
+function drawFrame() {
   ctx.clearRect(0, 0, W, H);
 
   for (const b of bubbles) {
@@ -355,8 +364,13 @@ function draw() {
 
     ctx.restore();
   }
+}
 
-  animFrame = requestAnimationFrame(() => { tick(); draw(); });
+function draw() {
+  drawFrame();
+  if (!staticMode) {
+    animFrame = requestAnimationFrame(() => { tick(); draw(); });
+  }
 }
 
 function getBubbleAt(x, y) {
@@ -385,11 +399,13 @@ canvas.addEventListener('mousemove', e => {
     canvas.style.cursor   = 'default';
     tooltip.style.display = 'none';
   }
+  requestDraw();
 });
 
 canvas.addEventListener('mouseleave', () => {
   tooltip.style.display = 'none';
   bubbles.forEach(b => b.hovered = false);
+  requestDraw();
 });
 
 canvas.addEventListener('click', e => {
@@ -447,6 +463,8 @@ function openSidebar(topic) {
   const grid = document.getElementById('sb-posts');
   document.getElementById('sidebar').classList.add('open');
   document.getElementById('overlay').classList.add('show');
+  document.querySelector('#sidebar .sidebar-close').focus();
+  requestDraw();
 
   // Use cache if available
   if (topicCache.has(topic.id)) {
@@ -482,6 +500,7 @@ function closeSidebar() {
   selectedId = null;
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('overlay').classList.remove('show');
+  requestDraw();
 }
 
 function setFilter(cat, btn) {
@@ -489,14 +508,48 @@ function setFilter(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   if (selectedId) closeSidebar();
+  requestDraw();
+}
+
+function startDrawLoop() {
+  // Resume the rAF loop from current bubble positions (no re-scatter)
+  if (animFrame) cancelAnimationFrame(animFrame);
+  if (!staticMode) {
+    animFrame = requestAnimationFrame(() => { tick(); draw(); });
+  }
 }
 
 function start() {
   if (animFrame) cancelAnimationFrame(animFrame);
   initCanvas();
   initBubbles();
-  draw();
+
+  if (prefersReducedMotion) {
+    // Static mode: run physics synchronously to settle, then render once
+    staticMode = true;
+    for (let i = 0; i < 300; i++) tick();
+    drawFrame();
+  } else {
+    staticMode = false;
+    draw();
+  }
 }
+
+// Pause animation when tab is hidden, resume on return
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    if (animFrame) { cancelAnimationFrame(animFrame); animFrame = null; }
+  } else if (!staticMode && bubbles.length) {
+    startDrawLoop();
+  }
+});
+
+// Escape closes sidebar
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('sidebar').classList.contains('open')) {
+    closeSidebar();
+  }
+});
 
 window.addEventListener('resize', () => {
   if (animFrame) cancelAnimationFrame(animFrame);

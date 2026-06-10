@@ -160,7 +160,7 @@
 <div id="sidebar-backdrop" onclick="closeSidebar()"></div>
 
 <!-- Sidebar -->
-<div id="sidebar">
+<div id="sidebar" role="dialog" aria-modal="true" aria-label="Пости теми">
   <div class="sidebar-head">
     <div class="sidebar-head-text">
       <span class="sidebar-category" id="sb-category"></span>
@@ -198,7 +198,7 @@
       <span class="hint-label">← натисни на прямокутник</span>
     </div>
     <div class="chart-body">
-      <canvas id="treemap-canvas"></canvas>
+      <canvas id="treemap-canvas" role="img" aria-label="Treemap тем"></canvas>
       <div class="loading" id="treemap-loading">Завантаження…</div>
       <div class="chart-legend">
         <div class="legend-item"><div class="legend-dot" style="background:var(--clay)"></div>Компанії</div>
@@ -285,6 +285,7 @@ function openSidebar(topic) {
 
   document.getElementById('sidebar').classList.add('open');
   document.getElementById('sidebar-backdrop').classList.add('visible');
+  document.querySelector('#sidebar .sidebar-close').focus();
 
   // Use cache if available
   if (topicCache.has(topic.id)) {
