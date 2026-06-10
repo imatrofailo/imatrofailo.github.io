@@ -11,8 +11,8 @@
 ```
 imatrofailo.github.io/
   index.html       ← Bubble Explorer (головна) ✅
-  charts.html      ← Treemap + Waffle ✅
-  tips.html        ← Practical Tips ✅
+  charts.html      ← Legacy redirect → /pages/karta.html (залишено для старих посилань)
+  tips.html        ← Legacy redirect → /pages/praktyky.html (залишено для старих посилань)
   nav.js           ← Shared navigation ✅
   DESIGN.md        ← Дизайн-токени і компоненти (читай перед CSS-змінами) ✅
   CLAUDE.md        ← Цей файл
@@ -22,6 +22,12 @@ imatrofailo.github.io/
   docs/
     ROADMAP.md     ← План 10 пунктів (9/10 done), що лишилось ✅
     adr/           ← Architecture Decision Records
+  pages/
+    bubbles.html   ← Bubble Explorer ✅
+    karta.html     ← Treemap + Waffle ✅
+    hrid.html      ← Grid view ✅
+    praktyky.html  ← Practical Tips ✅
+    arkhiv.html    ← Archive ✅
 ```
 
 ---
