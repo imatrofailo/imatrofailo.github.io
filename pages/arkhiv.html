@@ -140,7 +140,7 @@
 
 <header class="page-header">
   <div>
-    <div class="page-eyebrow">@imatrofAI · 2024–2026</div>
+    <div class="page-eyebrow">@imatrofAI · 2024–<span class="js-year">2026</span></div>
     <h1>Архів постів</h1>
     <p>Всі пости каналу — пошук, фільтр по компанії, темі та року.</p>
   </div>
@@ -187,7 +187,7 @@
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span>Дані: 2024–2026</span>
+  <span>Дані: 2024–<span class="js-year">2026</span></span>
 </footer>
 
 <script>
@@ -381,5 +381,8 @@ fetch('../data/posts.json')
 </script>
 
 <script src="../nav.js"></script>
+<script>
+document.querySelectorAll('.js-year').forEach(el => el.textContent = new Date().getFullYear());
+</script>
 </body>
 </html>
