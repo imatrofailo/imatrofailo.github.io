@@ -27,20 +27,23 @@ Color tokens, fonts, component patterns. Читати перед будь-яки
 **Файл:** `CLAUDE.md`
 Структура репо, як оновлювати дані, як деплоїти, правила розробки.
 
-### [3] generate_index.py ✅ DONE
-**Файл:** `~/imatrof-space/imatrof-wiki/scripts/generate_index.py`
+### [3] generate_index.py ✅ DONE → переїхав у scripts/site/
+**Файл:** `~/imatrof-space/imatrof-wiki/scripts/site/generate_index.py` (оркестратор: site_update.py)
 
 Сканує `raw/telegram-history/*.md` + `raw/youtube-history/news-index.md` → пише:
-- `data/topics.json` — 92 теми, 2300 TG + 810 YT записів
-- `data/tips.json` — 517 практичних постів (#практика)
+- `data/topics-meta.json` — легкий мета (~8KB): id/label/category/color/count
+- `data/topics/<id>.json` — повні пости теми (lazy fetch)
+- `data/posts.json` — 3110+ постів TG+YT з labels
+- `data/topics.json` — повний список тем (сумісність)
 
 ```bash
-python3 scripts/generate_index.py \
+python3 scripts/site/generate_index.py \
   --wiki /path/to/worktree \
-  --output /tmp/imatrofailo-pages/data/
+  --output /home/claude-agent/imatrof-space/imatrofailo.github.io/data/
 ```
 
 **Ключове:** запускати з worktree де є нові пости (до merge в main).
+**Автоматично:** cron site-update.sh щодня о 08:00 Kyiv.
 
 ---
 
@@ -59,9 +62,9 @@ Bubble canvas, fetch `data/topics.json`, sidebar з постами, filter by ca
 **Файл:** `charts.html`
 Squarified treemap + waffle chart. Fetch `data/topics.json`. Hover → назва + кількість.
 
-### [7] tips.html — Practical Tips ✅ DONE
-**Файл:** `tips.html`
-Картки постів з #практика тегом. Fetch `data/tips.json`. Пошук + фільтр по тегах.
+### [7] tips.html → praktyky.html — Practical Tips ✅ DONE
+**Файл:** `pages/praktyky.html` (tips.html — legacy redirect)
+Картки практик. Fetch `data/cards.json` (editorial, update_cards.py). Пошук + фільтр по сегменту.
 
 ---
 
