@@ -20,10 +20,6 @@
 <title>Ігор Матрофайло — AI-дослідник</title>
 <link rel="stylesheet" href="/style.css">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
-
   /* HERO */
   .hero {
     max-width: 1100px; margin: 0 auto;
@@ -111,15 +107,8 @@
   }
   .tile:hover .tile-arrow { opacity: 1; }
 
-  /* FOOTER */
-  footer {
-    max-width: 1100px; margin: 0 auto;
-    padding: 20px 52px 36px;
-    border-top: 1.5px solid var(--g300);
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 12px; color: var(--g500); flex-wrap: wrap; gap: 12px;
-  }
-  footer a { color: var(--clay); text-decoration: none; }
+  /* FOOTER — override: index adds align-items:center */
+  footer { align-items: center; }
 
   @media (max-width: 900px) {
     .tiles { grid-template-columns: 1fr 1fr; }
