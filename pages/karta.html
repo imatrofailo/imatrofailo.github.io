@@ -268,21 +268,54 @@ function layoutBinary(items, x, y, w, h) {
 
 // ── Sidebar state ─────────────────────────────────────────────────────────────
 
-let activeTopic = null;  // { id, label, category, color, posts[] }
+let activeTopic = null;  // { id, label, category, color, count, posts[] (lazy) }
+
+// Cache for lazy-loaded per-topic data (id → topic with posts)
+const topicCache = new Map();
 
 function openSidebar(topic) {
   activeTopic = topic;
   document.getElementById('sb-search').value = '';
   document.getElementById('sb-title').textContent = topic.label;
-  document.getElementById('sb-count').textContent = `${topic.posts.length} матеріалів`;
+  document.getElementById('sb-count').textContent = `${topic.count} матеріалів`;
 
   const catEl = document.getElementById('sb-category');
   catEl.textContent = topic.category === 'company' ? 'Компанія' : topic.category === 'product' ? 'Продукт' : 'Тема';
   catEl.className = 'sidebar-category ' + topic.category;
 
-  renderSidebarPosts();
   document.getElementById('sidebar').classList.add('open');
   document.getElementById('sidebar-backdrop').classList.add('visible');
+
+  // Use cache if available
+  if (topicCache.has(topic.id)) {
+    activeTopic = topicCache.get(topic.id);
+    renderSidebarPosts();
+    return;
+  }
+
+  // Show loading state while fetching
+  const list = document.getElementById('sb-list');
+  list.innerHTML = `<div class="sidebar-empty">Завантаження…</div>`;
+
+  fetch(`../data/topics/${topic.id}.json`)
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(data => {
+      topicCache.set(topic.id, data);
+      // Only render if this topic is still active
+      if (activeTopic && activeTopic.id === topic.id) {
+        activeTopic = data;
+        renderSidebarPosts();
+      }
+    })
+    .catch(err => {
+      if (activeTopic && activeTopic.id === topic.id) {
+        list.innerHTML = `<div class="sidebar-empty">Помилка завантаження</div>`;
+      }
+      console.error('Failed to load topic', topic.id, err);
+    });
 }
 
 function closeSidebar() {
@@ -299,7 +332,7 @@ function esc(s) {
 }
 
 function renderSidebarPosts() {
-  if (!activeTopic) return;
+  if (!activeTopic || !activeTopic.posts) return;
   const q     = (document.getElementById('sb-search').value || '').toLowerCase();
   const posts = activeTopic.posts.filter(p =>
     !q || p.title.toLowerCase().includes(q) || (p.preview||'').toLowerCase().includes(q)
@@ -416,7 +449,7 @@ function renderTreemap(topics) {
   };
 }
 
-fetch('../data/topics.json')
+fetch('../data/topics-meta.json')
   .then(r => r.json())
   .then(data => {
     document.getElementById('treemap-loading').style.display = 'none';
@@ -433,7 +466,7 @@ fetch('../data/topics.json')
 window.addEventListener('resize', () => {
   const canvas = document.getElementById('treemap-canvas');
   if (canvas._rects) {
-    fetch('../data/topics.json').then(r=>r.json()).then(d => renderTreemap(d.topics));
+    fetch('../data/topics-meta.json').then(r=>r.json()).then(d => renderTreemap(d.topics));
   }
 });
 

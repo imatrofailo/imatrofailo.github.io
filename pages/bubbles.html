@@ -190,13 +190,23 @@ const tooltip = document.getElementById('tooltip');
 let TOPICS = [];
 let W, H, bubbles = [], activeFilter = 'all', selectedId = null, animFrame;
 
-fetch('../data/topics.json')
+// Cache for lazy-loaded per-topic data (id → topic with posts)
+const topicCache = new Map();
+
+// Precomputed min/max sqrt for sizeFor() — set once after TOPICS loaded
+let _sqrtMin = 0, _sqrtMax = 1;
+
+fetch('../data/topics-meta.json')
   .then(r => r.json())
   .then(data => {
     TOPICS = data.topics;
     document.getElementById('stat-posts').textContent   = data.total_posts.toLocaleString('uk');
     document.getElementById('stat-youtube').textContent = (data.total_youtube || 0).toLocaleString('uk');
     document.getElementById('stat-topics').textContent  = data.topics.length;
+    // Precompute min/max once
+    const counts = TOPICS.map(t => t.count);
+    _sqrtMin = Math.sqrt(Math.min(...counts));
+    _sqrtMax = Math.sqrt(Math.max(...counts));
     document.getElementById('loading').style.display = 'none';
     canvas.style.display = 'block';
     start();
@@ -221,10 +231,9 @@ function initCanvas() {
 }
 
 function sizeFor(count) {
-  const counts = TOPICS.map(t => t.count);
-  const min = Math.min(...counts), max = Math.max(...counts);
   const minR = 14, maxR = 72;
-  return minR + (Math.sqrt(count) - Math.sqrt(min)) / (Math.sqrt(max) - Math.sqrt(min)) * (maxR - minR);
+  const range = _sqrtMax - _sqrtMin || 1;
+  return minR + (Math.sqrt(count) - _sqrtMin) / range * (maxR - minR);
 }
 
 function initBubbles() {
@@ -390,6 +399,42 @@ canvas.addEventListener('click', e => {
   else closeSidebar();
 });
 
+function renderSidebarPosts(topic, posts) {
+  const grid = document.getElementById('sb-posts');
+  grid.innerHTML = '';
+
+  const tgCount = posts.filter(p => !p.url || p.url.includes('t.me')).length;
+  const ytCount = posts.filter(p => p.url && p.url.includes('youtube')).length;
+  const parts = [];
+  if (tgCount) parts.push(`${tgCount} Telegram`);
+  if (ytCount) parts.push(`${ytCount} YouTube`);
+  document.getElementById('sb-section-title').textContent = parts.join(' · ') || 'Матеріали';
+
+  if (!posts.length) {
+    grid.innerHTML = '<div style="color:var(--g500);font-size:13px;">Пости не знайдено</div>';
+    return;
+  }
+
+  for (const p of posts) {
+    const sq = document.createElement(p.url ? 'a' : 'div');
+    sq.className = 'post-sq' + (p.url && p.url.includes('youtube') ? ' yt' : '');
+    sq.style.background = hexAlpha(topic.color, 0.75);
+    sq.style.borderColor = hexAlpha(topic.color, 0.3);
+    if (p.url) { sq.href = p.url; sq.target = '_blank'; sq.rel = 'noopener'; }
+
+    sq.addEventListener('mouseenter', e => {
+      const src = p.url && p.url.includes('youtube') ? ' ▶ YT' : '';
+      tooltip.style.display = 'block';
+      tooltip.style.left    = (e.clientX + 12) + 'px';
+      tooltip.style.top     = (e.clientY - 10) + 'px';
+      document.getElementById('tt-name').textContent  = (p.title || '(без заголовку)') + src;
+      document.getElementById('tt-count').textContent = p.date || '';
+    });
+    sq.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    grid.appendChild(sq);
+  }
+}
+
 function openSidebar(topic) {
   selectedId = topic.id;
   const labels = { company: 'Компанія', topic: 'Тема', product: 'Продукт' };
@@ -399,41 +444,38 @@ function openSidebar(topic) {
   document.getElementById('sb-title').textContent = topic.label;
   document.getElementById('sb-count').textContent = topic.count + ' матеріалів';
 
-  const tgCount = topic.posts.filter(p => !p.url || p.url.includes('t.me')).length;
-  const ytCount = topic.posts.filter(p => p.url && p.url.includes('youtube')).length;
-  const parts = [];
-  if (tgCount) parts.push(`${tgCount} Telegram`);
-  if (ytCount) parts.push(`${ytCount} YouTube`);
-  document.getElementById('sb-section-title').textContent = parts.join(' · ') || 'Матеріали';
-
   const grid = document.getElementById('sb-posts');
-  grid.innerHTML = '';
-
-  if (!topic.posts || !topic.posts.length) {
-    grid.innerHTML = '<div style="color:var(--g500);font-size:13px;">Пости не знайдено</div>';
-  } else {
-    for (const p of topic.posts) {
-      const sq = document.createElement(p.url ? 'a' : 'div');
-      sq.className = 'post-sq' + (p.url && p.url.includes('youtube') ? ' yt' : '');
-      sq.style.background = hexAlpha(topic.color, 0.75);
-      sq.style.borderColor = hexAlpha(topic.color, 0.3);
-      if (p.url) { sq.href = p.url; sq.target = '_blank'; sq.rel = 'noopener'; }
-
-      sq.addEventListener('mouseenter', e => {
-        const src = p.url && p.url.includes('youtube') ? ' ▶ YT' : '';
-        tooltip.style.display = 'block';
-        tooltip.style.left    = (e.clientX + 12) + 'px';
-        tooltip.style.top     = (e.clientY - 10) + 'px';
-        document.getElementById('tt-name').textContent  = (p.title || '(без заголовку)') + src;
-        document.getElementById('tt-count').textContent = p.date || '';
-      });
-      sq.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
-      grid.appendChild(sq);
-    }
-  }
-
   document.getElementById('sidebar').classList.add('open');
   document.getElementById('overlay').classList.add('show');
+
+  // Use cache if available
+  if (topicCache.has(topic.id)) {
+    renderSidebarPosts(topic, topicCache.get(topic.id).posts);
+    return;
+  }
+
+  // Show loading state
+  grid.innerHTML = '<div style="color:var(--g500);font-size:13px;">Завантаження…</div>';
+  document.getElementById('sb-section-title').textContent = 'Матеріали';
+
+  fetch(`../data/topics/${topic.id}.json`)
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(data => {
+      topicCache.set(topic.id, data);
+      // Only render if this topic is still selected
+      if (selectedId === topic.id) {
+        renderSidebarPosts(topic, data.posts);
+      }
+    })
+    .catch(err => {
+      if (selectedId === topic.id) {
+        grid.innerHTML = '<div style="color:var(--g500);font-size:13px;">Помилка завантаження</div>';
+      }
+      console.error('Failed to load topic', topic.id, err);
+    });
 }
 
 function closeSidebar() {

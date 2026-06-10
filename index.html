@@ -366,7 +366,7 @@
 
 <script src="nav.js"></script>
 <script>
-fetch('/data/posts.json').then(r => r.json()).then(d => {
+fetch('/data/topics-meta.json').then(r => r.json()).then(d => {
   const n = (d.total || 0) + '+';
   document.querySelectorAll('.js-total').forEach(el => el.textContent = n);
 }).catch(() => {});
