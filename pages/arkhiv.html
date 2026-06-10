@@ -200,17 +200,9 @@
 
 const PAGE_SIZE = 48;
 
-const TOPIC_LABELS = {
-  agents: 'Агенти', coding: 'Кодинг', 'nova-model': 'Нова модель',
-  'video-generation': 'Відео', philosophy: 'Філософія', productivity: 'Продуктивність',
-  learning: 'Навчання', infrastructure: 'Інфраструктура', design: 'Дизайн',
-  robotics: 'Роботика', security: 'Безпека', multimodal: 'Мультимодальні',
-  'labor-market': 'Ринок праці', mobile: 'Мобільні', enterprise: 'Для бізнесу',
-  'ukraine': 'Україна', 'vibe-coding': 'Vibe Coding',
-};
-
-const TOP_COMPANIES = ['openai','anthropic','google','meta','microsoft','nvidia',
-  'cursor','deepseek','mistral','xai','apple','elevenlabs','runway','midjourney'];
+// Labels and company pills are built dynamically from data.labels and post frequencies.
+// No hardcoded maps — all translation comes from posts.json top-level 'labels' field.
+let LABELS = {}; // populated after fetch: id → human label (fallback: raw id)
 
 function esc(s) {
   return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -231,7 +223,7 @@ function buildTopicSelect(posts) {
     .forEach(([t, cnt]) => {
       const opt = document.createElement('option');
       opt.value = t;
-      opt.textContent = (TOPIC_LABELS[t] || t) + ` (${cnt})`;
+      opt.textContent = (LABELS[t] || t) + ` (${cnt})`;
       sel.appendChild(opt);
     });
 }
@@ -240,11 +232,15 @@ function buildCompanyPills(posts) {
   const freq = {};
   for (const p of posts) if (p.company) freq[p.company] = (freq[p.company]||0)+1;
   const pills = document.getElementById('company-pills');
-  const companies = TOP_COMPANIES.filter(c => freq[c]);
+  // Top-14 companies by post frequency, descending — fully dynamic
+  const companies = Object.entries(freq)
+    .sort((a,b) => b[1]-a[1])
+    .slice(0,14)
+    .map(([c]) => c);
   if (!companies.length) return;
 
   pills.innerHTML = companies.map(c =>
-    `<button class="cpill" data-c="${esc(c)}" onclick="setCompany('${esc(c)}', this)">${esc(c)} <span style="color:var(--g500)">${freq[c]}</span></button>`
+    `<button class="cpill" data-c="${esc(c)}" onclick="setCompany('${esc(c)}', this)">${esc(LABELS[c] || c)} <span style="color:var(--g500)">${freq[c]}</span></button>`
   ).join('');
 }
 
@@ -320,7 +316,7 @@ function renderGrid() {
     if (p.company) labels.push(`<span class="clabel company">${esc(p.company)}</span>`);
     if (p.product) labels.push(`<span class="clabel product">${esc(p.product)}</span>`);
     p.topics.slice(0,1).forEach(t =>
-      labels.push(`<span class="clabel topic">${esc(TOPIC_LABELS[t] || t)}</span>`)
+      labels.push(`<span class="clabel topic">${esc(LABELS[t] || t)}</span>`)
     );
 
     const preview = (p.preview || '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
@@ -371,6 +367,7 @@ function goPage(p) {
 fetch('../data/posts.json')
   .then(r => r.json())
   .then(data => {
+    LABELS = data.labels || {};  // id→label map; fallback to raw id if absent
     ALL_POSTS = data.posts || [];
     document.getElementById('stat-tg').textContent = (data.total_telegram || 0).toLocaleString('uk');
     document.getElementById('stat-yt').textContent = (data.total_youtube  || 0).toLocaleString('uk');
