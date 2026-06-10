@@ -20,44 +20,16 @@
 <title>Бульбашки — Ігор Матрофайло</title>
 <link rel="stylesheet" href="/style.css">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; }
-
-  /* HEADER */
-  .page-header { max-width: 1100px; margin: 0 auto; padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
-  .page-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
-  .page-header h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 48px); font-weight: 500; line-height: 1.1; }
-  .page-header p  { margin-top: 10px; font-size: 15px; color: var(--g500); max-width: 480px; }
-  .header-stats { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
-  .stat { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 12px; padding: 10px 14px; min-width: 100px; text-align: right; }
-  .stat-num { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--slate); line-height: 1; }
-  .stat-label { font-size: 10px; color: var(--g500); margin-top: 3px; font-family: var(--mono); }
-
   /* MAIN */
   .content { max-width: 1100px; margin: 0 auto; padding: 32px 52px; }
 
   /* TOOLBAR */
   .toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
-  .filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .filter-label { font-size: 12px; color: var(--g500); margin-right: 2px; }
-  .filter-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--g300); background: var(--paper); font-size: 13px; color: var(--g700); cursor: pointer; transition: all 0.15s; font-family: var(--sans); }
-  .filter-btn .dot { width: 7px; height: 7px; border-radius: 50%; }
-  .filter-btn:hover { border-color: var(--oat); background: var(--g100); }
-  .filter-btn.active { border-color: var(--slate); background: var(--slate); color: white; }
-  .dot-company { background: var(--clay); }
-  .dot-topic   { background: var(--olive); }
-  .dot-product { background: var(--blue); }
   .legend { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--g500); }
-  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; } /* override: circle (shared base is square) */
 
-  /* CHART SECTION (same as karta/hrid) */
-  .chart-section { background: var(--paper); border: 1.5px solid var(--g300); border-radius: 16px; overflow: hidden; margin-bottom: 40px; }
-  .chart-head { padding: 20px 24px 16px; border-bottom: 1.5px solid var(--g200); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .chart-head-left h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
-  .chart-head-left p  { font-size: 12.5px; color: var(--g500); }
-  .chart-body { padding: 24px; }
+  /* CHART SECTION */
+  .chart-section { margin-bottom: 40px; } /* override: adds spacing not in shared base */
 
   /* BUBBLE CANVAS */
   .bubble-wrap { position: relative; overflow: hidden; }
@@ -66,8 +38,6 @@
 
   /* TOOLTIP */
   #tooltip { position: fixed; background: var(--slate); color: white; padding: 8px 13px; border-radius: 8px; font-size: 12.5px; pointer-events: none; display: none; z-index: 1000; max-width: 220px; line-height: 1.4; }
-  #tooltip strong { display: block; margin-bottom: 2px; font-size: 13px; }
-  #tooltip span { color: #ccc; font-size: 11.5px; }
 
   /* SIDEBAR */
   #sidebar { position: fixed; top: 0; right: -420px; width: 400px; height: 100vh; background: var(--paper); border-left: 1.5px solid var(--g300); z-index: 500; transition: right 0.28s cubic-bezier(0.4,0,0.2,1); overflow-y: auto; display: flex; flex-direction: column; }
@@ -98,18 +68,11 @@
   #overlay { position: fixed; inset: 0; background: rgba(20,20,19,0.12); z-index: 400; display: none; backdrop-filter: blur(1px); }
   #overlay.show { display: block; }
 
-  /* LOADING */
-  .loading { display: flex; align-items: center; justify-content: center; height: 420px; font-family: var(--mono); font-size: 13px; color: var(--g500); gap: 10px; }
-
-  /* FOOTER */
-  footer { max-width: 1100px; margin: 0 auto; padding: 20px 52px 36px; border-top: 1.5px solid var(--g300); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--g500); flex-wrap: wrap; gap: 12px; }
-  footer a { color: var(--clay); text-decoration: none; }
+  /* LOADING — override: bubble canvas is taller than default 200px */
+  .loading { height: 420px; gap: 10px; }
 
   @media (max-width: 768px) {
-    .page-header { grid-template-columns: 1fr; padding: 24px 20px 20px; }
-    .header-stats { flex-direction: row; align-items: flex-start; }
     .content { padding: 24px 20px; }
-    footer { padding: 16px 20px 28px; flex-direction: column; align-items: flex-start; }
     #sidebar { width: 100%; right: -100%; }
   }
 </style>
