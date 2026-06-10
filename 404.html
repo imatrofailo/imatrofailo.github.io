@@ -10,23 +10,11 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--ivory); color: var(--slate); line-height: 1.55; min-height: 100vh; display: flex; flex-direction: column; }
-
-  .page-header {
-    max-width: 1100px; margin: 0 auto; width: 100%;
-    padding: 36px 52px 28px; border-bottom: 1.5px solid var(--oat);
-  }
-  .page-eyebrow {
-    font-family: var(--mono); font-size: 11px; color: var(--clay);
-    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px;
-  }
-  .page-header h1 {
-    font-family: var(--serif); font-size: clamp(28px, 4vw, 48px);
-    font-weight: 500; line-height: 1.1;
-  }
-  .page-header p { margin-top: 10px; font-size: 15px; color: var(--g500); }
+  /* 404 uses full-height flex layout — override body and key containers */
+  body { display: flex; flex-direction: column; } /* override: adds flex layout for sticky footer */
+  .page-header { width: 100%; grid-template-columns: 1fr; } /* override: no stats column, full-width */
+  .page-header p { max-width: none; } /* override: no max-width constraint */
+  footer { width: 100%; } /* override: explicit width for flex child */
 
   .content {
     max-width: 1100px; margin: 0 auto; width: 100%;
@@ -61,16 +49,7 @@
   }
   .btn-primary:hover { background: var(--clay-d); border-color: var(--clay-d); color: #fff; }
 
-  footer {
-    max-width: 1100px; margin: 0 auto; width: 100%;
-    padding: 20px 52px 36px; border-top: 1.5px solid var(--g300);
-    font-size: 12px; color: var(--g500);
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-  }
-  footer a { color: var(--clay); text-decoration: none; }
-
   @media (max-width: 768px) {
-    .page-header, .content, footer { padding-left: 20px; padding-right: 20px; }
     .content { padding-top: 40px; }
   }
 </style>
