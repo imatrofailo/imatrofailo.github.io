@@ -352,7 +352,7 @@
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span>Дані: 2024–2026 · <a href="https://github.com/imatrofailo" target="_blank">GitHub</a></span>
+  <span>Дані: 2024–<span class="js-year">2026</span> · <a href="https://github.com/imatrofailo" target="_blank">GitHub</a></span>
 </footer>
 
 <script src="nav.js"></script>
@@ -361,6 +361,9 @@ fetch('/data/posts.json').then(r => r.json()).then(d => {
   const n = (d.total || 0) + '+';
   document.querySelectorAll('.js-total').forEach(el => el.textContent = n);
 }).catch(() => {});
+</script>
+<script>
+document.querySelectorAll('.js-year').forEach(el => el.textContent = new Date().getFullYear());
 </script>
 </body>
 </html>

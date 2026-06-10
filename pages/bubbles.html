@@ -168,7 +168,7 @@
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span>Дані: 2024–2026 · <a href="https://github.com/imatrofailo" target="_blank">GitHub</a></span>
+  <span>Дані: 2024–<span class="js-year">2026</span> · <a href="https://github.com/imatrofailo" target="_blank">GitHub</a></span>
 </footer>
 
 <script>
@@ -454,5 +454,8 @@ window.addEventListener('resize', () => {
 </script>
 
 <script src="../nav.js"></script>
+<script>
+document.querySelectorAll('.js-year').forEach(el => el.textContent = new Date().getFullYear());
+</script>
 </body>
 </html>

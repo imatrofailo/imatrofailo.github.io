@@ -202,7 +202,7 @@
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span>Дані: 2024–2026</span>
+  <span>Дані: 2024–<span class="js-year">2026</span></span>
 </footer>
 
 <script>
@@ -434,5 +434,8 @@ document.addEventListener('keydown', e => {
 </script>
 
 <script src="../nav.js"></script>
+<script>
+document.querySelectorAll('.js-year').forEach(el => el.textContent = new Date().getFullYear());
+</script>
 </body>
 </html>
