@@ -267,15 +267,10 @@ function renderWaffle(topics) {
       el.className = 'wsq' + (isYt ? ' yt' : '');
       el.style.background = topicHSLA(t.category, idx, isYt ? 0.45 : 0.82);
       if (p.url) { el.href = p.url; el.target = '_blank'; el.rel = 'noopener'; }
-
-      el.addEventListener('mouseenter', e => {
-        showTip(e,
-          p.title || t.label,
-          p.date || '',
-          `${t.label} · ${isYt ? '▶ YouTube' : 'Telegram'}`
-        );
-      });
-      el.addEventListener('mouseleave', hideTip);
+      // Data attributes for delegated tooltip
+      el.dataset.title  = p.title || t.label;
+      el.dataset.date   = p.date || '';
+      el.dataset.src    = `${t.label} · ${isYt ? '▶ YouTube' : 'Telegram'}`;
       squares.appendChild(el);
     }
 
@@ -284,6 +279,16 @@ function renderWaffle(topics) {
   }
 
   container.appendChild(frag);
+
+  // Single delegated listeners for all .wsq elements (replaces ~6500 per-element handlers)
+  container.addEventListener('mouseover', e => {
+    const sq = e.target.closest('.wsq');
+    if (!sq) return;
+    showTip(e, sq.dataset.title, sq.dataset.date, sq.dataset.src);
+  });
+  container.addEventListener('mouseout', e => {
+    if (!e.relatedTarget || !e.relatedTarget.closest('.wsq')) hideTip();
+  });
 }
 
 fetch('../data/topics.json')
