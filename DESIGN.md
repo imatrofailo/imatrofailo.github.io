@@ -131,6 +131,72 @@
 
 ---
 
+## Shared CSS (style.css)
+
+`style.css` містить `:root` токени (кольори, шрифти) та спільні компоненти. Всі сторінки підключають його першим через `<link rel="stylesheet" href="/style.css">`.
+
+### Компоненти що живуть централізовано
+
+| Клас / Селектор | Опис |
+|---|---|
+| `* { box-sizing … }` | Reset |
+| `html` | scroll-behavior: smooth |
+| `body` | Базовий шрифт, фон, колір, line-height |
+| `.page-header` | Шапка сторінки: grid 1fr auto, padding, border-bottom |
+| `.page-eyebrow` | Надпис-мітка над заголовком: mono, 11px, clay |
+| `.page-header h1` | Заголовок сторінки: serif, clamp(28px–48px) |
+| `.page-header p` | Підзаголовок: 15px, g500, max-width 480px |
+| `.header-stats` | Колонка статистики в шапці |
+| `.stat` | Картка з числом: paper, border, border-radius 12px |
+| `.stat-num` | Число у стат-картці: serif, 24px |
+| `.stat-label` | Підпис числа: mono, 10px, g500 |
+| `.chart-section` | Обгортка чарта: paper, border, border-radius 16px, overflow hidden |
+| `.chart-head` | Шапка чарта: padding, border-bottom, flex space-between |
+| `.chart-head-left h2` | Заголовок чарта |
+| `.chart-head-left p` | Підзаголовок чарта |
+| `.chart-body` | Тіло чарта: padding 24px |
+| `.legend-item` | Елемент легенди: flex, gap, 12px |
+| `.filters` | Рядок фільтрів: flex, wrap, gap 8px |
+| `.filter-label` | Текст перед фільтрами |
+| `.filter-btn` | Кнопка-фільтр: pill, paper background |
+| `.filter-btn .dot` | Кольорова крапка в фільтрі |
+| `.filter-btn:hover` | Hover стан фільтра |
+| `.filter-btn.active` | Активний стан фільтра: slate fill |
+| `.dot-company` | Крапка: clay (компанії) |
+| `.dot-topic` | Крапка: olive (теми) |
+| `.dot-product` | Крапка: blue (продукти) |
+| `#tooltip strong` | Заголовок тултіпа |
+| `#tooltip span` | Підтекст тултіпа |
+| `.loading` | Лоадер: flex center, 200px height, mono |
+| `footer` | Підвал: 1100px center, padding, border-top, flex |
+| `footer a` | Посилання у підвалі: clay |
+| `@media (max-width: 768px)` | `.page-header` → single column; `.header-stats` → row; `.content, footer` padding 20px; `.chart-body` padding 16px |
+
+### Правила для нових сторінок
+
+- Підключай `/style.css` першим у `<head>`
+- Не копіюй перелічені вище правила у `<style>` сторінки
+- Якщо сторінка потребує відхилення від базового правила — залишай тільки override-декларацію з коментарем `/* override */`
+- Елементи що притаманні лише одній сторінці (sidebar, специфічний grid, canvas) — залишай у `<style>` сторінки
+
+### Відомі override-відхилення
+
+| Сторінка | Селектор | Відхилення |
+|---|---|---|
+| `bubbles.html` | `.chart-section` | Додає `margin-bottom: 40px` (відступ між секціями) |
+| `bubbles.html` | `.loading` | `height: 420px` (canvas вищий за default 200px) |
+| `arkhiv.html` | `.stat` | `min-width: 90px` (компактніші числа у рядку) |
+| `praktyky.html` | `.stat-num` | `font-size: 28px` (більший акцент, shared base 24px) |
+| `index.html` | `footer` | Додає `align-items: center` |
+| `404.html` | `body` | Додає flex-column для sticky footer |
+| `404.html` | `.page-header` | `width: 100%; grid-template-columns: 1fr` (без колонки статів) |
+| `404.html` | `.page-header p` | `max-width: none` |
+| `404.html` | `footer` | Додає `width: 100%` для flex child |
+| `bubbles.html`, `karta.html`, `hrid.html` | `#tooltip` | Різні `z-index` та `max-width` — залишається per-page |
+| `bubbles.html`, `karta.html`, `hrid.html` | `.legend-dot` | Різна форма: bubbles — коло (50%), karta/hrid — прямокутник (2px) |
+
+---
+
 ## Принципи архітектури
 
 - **Zero dependencies** — vanilla JS, без React/D3/npm
