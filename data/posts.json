@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-10T14:27:43",
+  "generated": "2026-06-10T19:12:26",
   "total": 3259,
   "total_telegram": 2353,
   "total_youtube": 906,
@@ -9,9 +9,12 @@
       "date": "2026-06-09",
       "url": "https://t.me/imatrofAI/2779",
       "preview": "А пам’ятаєте календарик від Claude Code, де вони показували, скільки фіч зарелізили протягом місяця?",
-      "company": "",
-      "product": "",
-      "topics": [],
+      "company": "anthropic",
+      "product": "claude-code",
+      "topics": [
+        "agents",
+        "coding"
+      ],
       "source": "telegram"
     },
     {
@@ -19,9 +22,11 @@
       "date": "2026-06-09",
       "url": "https://t.me/imatrofAI/2780",
       "preview": "Менш ніж за 3 місяці вони випустили Opus 4.7 і Opus 4.8, потім Project Glasswing (Mythos Preview), а тепер ще й Fable 5.",
-      "company": "",
-      "product": "",
-      "topics": [],
+      "company": "anthropic",
+      "product": "opus-4",
+      "topics": [
+        "nova-model"
+      ],
       "source": "telegram"
     },
     {
@@ -32,7 +37,8 @@
       "company": "anthropic",
       "product": "claude-code",
       "topics": [
-        "agents"
+        "agents",
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -41,9 +47,13 @@
       "date": "2026-06-08",
       "url": "https://t.me/imatrofAI/2776",
       "preview": "VibeOS. Операційна система, яка генерує галюцинує.",
-      "company": "",
+      "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "vibe-coding",
+        "mobile",
+        "agents"
+      ],
       "source": "telegram"
     },
     {
@@ -51,9 +61,12 @@
       "date": "2026-06-08",
       "url": "https://t.me/imatrofAI/2777",
       "preview": "Siri тепер стала Siri AI.",
-      "company": "",
-      "product": "",
-      "topics": [],
+      "company": "apple",
+      "product": "gemini",
+      "topics": [
+        "nova-model",
+        "mobile"
+      ],
       "source": "telegram"
     },
     {
@@ -73,7 +86,9 @@
       "preview": "тепер з коментарями 🤖 НЕДІЛЬНИЙ AI ЧЕКІН #85 А що у вас?",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -92,7 +107,7 @@
       "url": "https://t.me/imatrofAI/2771",
       "preview": "Codex потрохи набирає обертів і виходить на 5 мільйонів користувачів за тиждень, що в 6 разів більше, ніж на момент запуску застосунку в лютому.",
       "company": "openai",
-      "product": "",
+      "product": "codex",
       "topics": [
         "agents"
       ],
@@ -104,8 +119,10 @@
       "url": "https://t.me/imatrofAI/2768",
       "preview": "workflow -> [ultracode](https://code.claude.com/docs/en/workflows#ask-for-a-workflow-in-your-prompt) Користувачі жалілися, що коли вони писали це слово у промптах, то у них несподі",
       "company": "anthropic",
-      "product": "",
-      "topics": [],
+      "product": "claude-code",
+      "topics": [
+        "agents"
+      ],
       "source": "telegram"
     },
     {
@@ -115,7 +132,9 @@
       "preview": "Ну все, google 😉 [автор](https://x.com/ironichandle/status/2061887114397061623?s=46&t=TzksdWDU4YgIPS7Vwk4ezw)",
       "company": "google",
       "product": "",
-      "topics": [],
+      "topics": [
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -126,7 +145,9 @@
       "company": "anthropic",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "security",
+        "enterprise"
       ],
       "source": "telegram"
     },
@@ -135,9 +156,11 @@
       "date": "2026-06-04",
       "url": "https://t.me/imatrofAI/2765",
       "preview": "А ви вже бачили новий вебсайт від Microsoft - [MAI](https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/)?",
-      "company": "anthropic",
+      "company": "microsoft",
       "product": "",
-      "topics": [],
+      "topics": [
+        "nova-model"
+      ],
       "source": "telegram"
     },
     {
@@ -147,7 +170,11 @@
       "preview": "Сьогодні інженери Anthropic у середньому [генерують](https://www.anthropic.com/institute/recursive-self-improvement) у 8 разів більше коду за квартал, ніж у період з 2021 по 2025 р",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "coding",
+        "agents",
+        "philosophy"
+      ],
       "source": "telegram"
     },
     {
@@ -157,7 +184,10 @@
       "preview": "Промпти ↓ Скіли / Плагіни ↓ Воркфлови / Ролі Ми все далі рухаємося на вищий рівень абстракції.",
       "company": "anthropic",
       "product": "claude-code",
-      "topics": [],
+      "topics": [
+        "agents",
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -167,7 +197,9 @@
       "preview": "Готуйте тверду валюту 💵 Anthropic [подала](https://www.anthropic.com/news/confidential-draft-s1-sec) документи до американського регулятора.",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -176,8 +208,11 @@
       "url": "https://t.me/imatrofAI/2761",
       "preview": "В продовженні теми. Тепер IB можна [приєднати](https://www.interactivebrokers.com/en/trading/ai-integrations.php) до Claude та ChatGPT.",
       "company": "anthropic",
-      "product": "",
-      "topics": [],
+      "product": "claude-chat",
+      "topics": [
+        "agents",
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -186,9 +221,10 @@
       "url": "https://t.me/imatrofAI/2751",
       "preview": "Був я, значить, у ресторані, і мені подали меню без фотографій.",
       "company": "openai",
-      "product": "",
+      "product": "chatgpt",
       "topics": [
-        "agents"
+        "multimodal",
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -209,7 +245,9 @@
       "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #84 А що у вас?",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -228,8 +266,11 @@
       "url": "https://t.me/imatrofAI/2748",
       "preview": "Історія з інтернету. Codex [зробив](https://x.com/kingbootoshi/status/2058943762207006959?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) повний аналіз MacBook в режимі читання, щоб знайти скільки",
       "company": "openai",
-      "product": "",
-      "topics": [],
+      "product": "codex",
+      "topics": [
+        "coding",
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -238,8 +279,10 @@
       "url": "https://t.me/imatrofAI/2746",
       "preview": "Я таки зняв новий формат відео.",
       "company": "openai",
-      "product": "",
-      "topics": [],
+      "product": "codex",
+      "topics": [
+        "coding"
+      ],
       "source": "telegram"
     },
     {
@@ -249,7 +292,9 @@
       "preview": "Тіпок, в прямому [ефірі](https://youtube.com/@bridgemindai) вайбкодить апки і показує свій шлях до $1M.",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "vibe-coding"
+      ],
       "source": "telegram"
     },
     {
@@ -269,7 +314,10 @@
       "preview": "Що не кажіть, а 200 годин реклами роботи робота в прямому ефірі таки дали свої плоди.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "robotics",
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -279,7 +327,11 @@
       "preview": "Цього тижня мав нагоду [виступати](https://city-adm.lviv.ua/news/government/pratsivnyky-miskrady-vzialy-uchast-u-treninhu-pro-vykorystannia-shtuchnoho-intelektu/) у Львівській місь",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "ukraine",
+        "education",
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -290,7 +342,8 @@
       "company": "anthropic",
       "product": "claude-code",
       "topics": [
-        "agents"
+        "agents",
+        "nova-model"
       ],
       "source": "telegram"
     },
@@ -300,9 +353,10 @@
       "url": "https://t.me/imatrofAI/2739",
       "preview": "2025 пишемо промпти 2026 пишемо скіли Ось вам [скіл](https://github.com/steipete/agent-scripts/blob/main/skills/skill-cleaner/SKILL.md) від засновника OpenClaw, який оптимізує скіл",
       "company": "anthropic",
-      "product": "",
+      "product": "claude-code",
       "topics": [
-        "agents"
+        "agents",
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -313,7 +367,9 @@
       "preview": "Ми бачимо, що ціна за токени росте, а точніше, кількість токенів, яку використовують компанії збільшується.",
       "company": "anthropic",
       "product": "claude-code",
-      "topics": [],
+      "topics": [
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -323,7 +379,9 @@
       "preview": "Площа Ринок доєдналась до команди Anthropic",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -334,7 +392,8 @@
       "company": "anthropic",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "enterprise"
       ],
       "source": "telegram"
     },
@@ -344,9 +403,10 @@
       "url": "https://t.me/imatrofAI/2736",
       "preview": "А мені тут сподобався новий термінальний застосунок [cmux](https://github.com/manaflow-ai/cmux).",
       "company": "anthropic",
-      "product": "",
+      "product": "claude-code",
       "topics": [
-        "agents"
+        "coding",
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -376,8 +436,11 @@
       "url": "https://t.me/imatrofAI/2734",
       "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #83 Цього тижня багато працював з Codex.",
       "company": "openai",
-      "product": "",
-      "topics": [],
+      "product": "codex",
+      "topics": [
+        "community",
+        "coding"
+      ],
       "source": "telegram"
     },
     {
@@ -387,7 +450,10 @@
       "preview": "Запускаємо перший в Україні AI чат-асистент на базі українських великих мовних моделей.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "ukraine",
+        "ukraine-llm"
+      ],
       "source": "telegram"
     },
     {
@@ -395,9 +461,11 @@
       "date": "2026-05-23",
       "url": "https://t.me/imatrofAI/2732",
       "preview": "Всі піднімають ціни, а [Deep Seek](https://x.com/deepseek_ai/status/2057854261699195173?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) опускає ще й назавжди.",
-      "company": "",
+      "company": "deepseek",
       "product": "",
-      "topics": [],
+      "topics": [
+        "nova-model"
+      ],
       "source": "telegram"
     },
     {
@@ -408,7 +476,7 @@
       "company": "anthropic",
       "product": "",
       "topics": [
-        "nova-model"
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -420,7 +488,9 @@
       "company": "anthropic",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "coding",
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -441,7 +511,10 @@
       "preview": "У мене ніяк не виходить з голови цей [підхід](https://x.com/bcherny/status/2038454341884154269?s=46&t=TzksdWDU4YgIPS7Vwk4ezw), про який розповідав Борис Черні.",
       "company": "anthropic",
       "product": "claude-code",
-      "topics": [],
+      "topics": [
+        "coding",
+        "infrastructure"
+      ],
       "source": "telegram"
     },
     {
@@ -451,7 +524,11 @@
       "preview": "А ось ще один цікавий [спосіб](https://x.com/trq212/status/2056415973125796184?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) по роботі зі специфікацією.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "agents",
+        "coding",
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -460,8 +537,11 @@
       "url": "https://t.me/imatrofAI/2721",
       "preview": "Я вам скажу, що робота в Claude Cowork з word документами це одне задоволення.",
       "company": "anthropic",
-      "product": "",
-      "topics": [],
+      "product": "claude-chat",
+      "topics": [
+        "productivity",
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -471,7 +551,10 @@
       "preview": "Що не кажіть, а розробка вже не буде такою, як раніше.",
       "company": "anthropic",
       "product": "claude-code",
-      "topics": [],
+      "topics": [
+        "coding",
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -481,7 +564,9 @@
       "preview": "У Claude Design подвоїли ліміти.",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "design"
+      ],
       "source": "telegram"
     },
     {
@@ -491,7 +576,9 @@
       "preview": "Тепер 19 травня буде не тільки моїм днем народження, а ще й датою, коли Андрей Карпаті доєднався до Anthropic 😄",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -501,7 +588,10 @@
       "preview": "Вони не зупиняються. День #6 автономної роботи і 180,000+ пакунків вже оброблено.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "robotics",
+        "labor-market"
+      ],
       "source": "telegram"
     },
     {
@@ -512,7 +602,9 @@
       "company": "anthropic",
       "product": "claude-code",
       "topics": [
-        "agents"
+        "nova-model",
+        "agents",
+        "video-generation"
       ],
       "source": "telegram"
     },
@@ -524,7 +616,9 @@
       "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "ukraine",
+        "agents",
+        "enterprise"
       ],
       "source": "telegram"
     },
@@ -535,7 +629,10 @@
       "preview": "Роман Кислий набирає команду.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "ukraine",
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -566,7 +663,9 @@
       "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "coding",
+        "community"
       ],
       "source": "telegram"
     },
@@ -587,7 +686,10 @@
       "preview": "Тут [другий](https://x.com/i/broadcasts/1aJbdbgeAaQKX) сезон йде в прямому ефірі.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "robotics",
+        "labor-market"
+      ],
       "source": "telegram"
     },
     {
@@ -608,7 +710,9 @@
       "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "coding",
+        "education"
       ],
       "source": "telegram"
     },
@@ -620,7 +724,9 @@
       "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "coding",
+        "productivity"
       ],
       "source": "telegram"
     },
@@ -630,7 +736,7 @@
       "url": "https://t.me/imatrofAI/2698",
       "preview": "Для всіх Claude-фанів.",
       "company": "anthropic",
-      "product": "",
+      "product": "claude-code",
       "topics": [
         "agents"
       ],
@@ -655,7 +761,10 @@
       "preview": "«Найуспішніші компанії не замінюють людей на Al, а перебудовують ролі і процеси: люди працюють разом з АІ, а не замість нього» Gartner опитав 350 великих компаній, які скорочували",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "labor-market",
+        "enterprise"
+      ],
       "source": "telegram"
     },
     {
@@ -664,8 +773,10 @@
       "url": "https://t.me/imatrofAI/2695",
       "preview": "🏄‍♀️ Google DeepMind щойно перевинайшли курсор мишки.",
       "company": "google",
-      "product": "",
-      "topics": [],
+      "product": "gemini",
+      "topics": [
+        "multimodal"
+      ],
       "source": "telegram"
     },
     {
@@ -675,7 +786,10 @@
       "preview": "«Якщо AI забере офісну роботу, будемо займатись фізичною працею» Тим часом фізична праця: [дивитись](https://x.com/i/broadcasts/1dxYljYVREYJX) Figure працює 8-годинну зміну на сорт",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "robotics",
+        "labor-market"
+      ],
       "source": "telegram"
     },
     {
@@ -695,7 +809,11 @@
       "preview": "SDLC трансформується.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "agents",
+        "coding",
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -706,7 +824,8 @@
       "company": "anthropic",
       "product": "",
       "topics": [
-        "agents"
+        "enterprise",
+        "labor-market"
       ],
       "source": "telegram"
     },
@@ -715,9 +834,12 @@
       "date": "2026-05-12",
       "url": "https://t.me/imatrofAI/2693",
       "preview": "Забудьте все, що ви чули про голосовий AI від OpenAI, Google чи Anthropic.",
-      "company": "anthropic",
+      "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "nova-model",
+        "multimodal"
+      ],
       "source": "telegram"
     },
     {
@@ -727,7 +849,9 @@
       "preview": "Створити щось це вже НЕ найважча частина.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -737,7 +861,10 @@
       "preview": "Так виглядає що AI лабораторії зараз у виграшній позиції.",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "enterprise",
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
@@ -760,7 +887,9 @@
       "company": "anthropic",
       "product": "claude-code",
       "topics": [
-        "agents"
+        "agents",
+        "coding",
+        "community"
       ],
       "source": "telegram"
     },
@@ -771,7 +900,10 @@
       "preview": "Чесно, такими темпами як воно все розвивається, то звучить правдоподібно.",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "agents",
+        "philosophy"
+      ],
       "source": "telegram"
     },
     {
@@ -781,7 +913,9 @@
       "preview": "А є серед нас хакери?",
       "company": "anthropic",
       "product": "",
-      "topics": [],
+      "topics": [
+        "security"
+      ],
       "source": "telegram"
     },
     {
@@ -792,7 +926,8 @@
       "company": "openai",
       "product": "",
       "topics": [
-        "agents"
+        "nova-model",
+        "multimodal"
       ],
       "source": "telegram"
     },
@@ -813,7 +948,10 @@
       "preview": "Ось гарний приклад невеличкого pet-проєкту, який перетворюється в повноцінний стартап зі своєю аудиторією.",
       "company": "anthropic",
       "product": "claude-code",
-      "topics": [],
+      "topics": [
+        "vibe-coding",
+        "video-generation"
+      ],
       "source": "telegram"
     },
     {
@@ -823,7 +961,11 @@
       "preview": "А дивіться, що я знайшов.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "ukraine",
+        "ukraine-llm",
+        "community"
+      ],
       "source": "telegram"
     },
     {
@@ -832,7 +974,7 @@
       "url": "https://t.me/imatrofAI/2682",
       "preview": "А ви звернули увагу що зараз багато сервісів почали робити власні MCP.",
       "company": "anthropic",
-      "product": "",
+      "product": "mcp",
       "topics": [
         "agents"
       ],
@@ -843,10 +985,11 @@
       "date": "2026-05-06",
       "url": "https://t.me/imatrofAI/2677",
       "preview": "Олексія знаю особисто - разом працювали не один рік і зробили ряд спільних проєктів.",
-      "company": "meta",
+      "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "learning"
       ],
       "source": "telegram"
     },
@@ -855,11 +998,11 @@
       "date": "2026-05-06",
       "url": "https://t.me/imatrofAI/2678",
       "preview": "Тут, поки ми спали, стався інженерний прорив.",
-      "company": "anthropic",
+      "company": "",
       "product": "",
       "topics": [
-        "agents",
-        "nova-model"
+        "nova-model",
+        "infrastructure"
       ],
       "source": "telegram"
     },
@@ -869,8 +1012,10 @@
       "url": "https://t.me/imatrofAI/2679",
       "preview": "Тут Anthropic проводить свій Code with Claude [live](https://www.youtube.com/live/GMIWm5y90xA?si=1HSK92fa2iHP_mC9) А ще вони [підписали](https://x.com/claudeai/status/2052060691893",
       "company": "anthropic",
-      "product": "",
-      "topics": [],
+      "product": "claude-code",
+      "topics": [
+        "coding"
+      ],
       "source": "telegram"
     },
     {
@@ -891,7 +1036,8 @@
       "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "enterprise"
       ],
       "source": "telegram"
     },
@@ -903,7 +1049,8 @@
       "company": "anthropic",
       "product": "claude-code",
       "topics": [
-        "agents"
+        "agents",
+        "coding"
       ],
       "source": "telegram"
     },
@@ -913,8 +1060,11 @@
       "url": "https://t.me/imatrofAI/2674",
       "preview": "Один з топ мейнтейнерів OpenClaw [ділиться,](https://x.com/vincent_koc/status/2050983370902184019?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) як він використовує нову функцію “/goal” яка нещода",
       "company": "openai",
-      "product": "",
-      "topics": [],
+      "product": "codex",
+      "topics": [
+        "agents",
+        "coding"
+      ],
       "source": "telegram"
     },
     {
@@ -937,7 +1087,8 @@
       "company": "",
       "product": "",
       "topics": [
-        "agents"
+        "agents",
+        "community"
       ],
       "source": "telegram"
     },
@@ -947,8 +1098,10 @@
       "url": "https://t.me/imatrofAI/2659",
       "preview": "У Codex завезли свою версію [buddy.](https://x.com/openaidevs/status/2050275713824211041?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) Якщо написати /pet то у вашому чаті зявиться маленький робот",
       "company": "openai",
-      "product": "",
-      "topics": [],
+      "product": "codex",
+      "topics": [
+        "nova-model"
+      ],
       "source": "telegram"
     },
     {
@@ -958,7 +1111,9 @@
       "preview": "Ух, ці моделі жартують) [Перший](https://x.com/qisi_ai/status/2049884783921279216?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) промпт заглядає в душу вашому AI улюбленцю та показує себе на фото.",
       "company": "",
       "product": "",
-      "topics": [],
+      "topics": [
+        "multimodal"
+      ],
       "source": "telegram"
     },
     {
@@ -966,9 +1121,11 @@
       "date": "2026-05-01",
       "url": "https://t.me/imatrofAI/2656",
       "preview": "Ніколи не згадуй гоблінів, гремлінів, єнотів, тролів, огрів, голубів чи інших істот, якщо це не є прямо й однозначно доречним до запиту користувача.",
-      "company": "microsoft",
-      "product": "",
-      "topics": [],
+      "company": "openai",
+      "product": "chatgpt",
+      "topics": [
+        "nova-model"
+      ],
       "source": "telegram"
     },
     {
@@ -977,8 +1134,10 @@
       "url": "https://t.me/imatrofAI/2657",
       "preview": "Нові моделі і нові правила промптингу.",
       "company": "anthropic",
-      "product": "",
-      "topics": [],
+      "product": "claude-chat",
+      "topics": [
+        "productivity"
+      ],
       "source": "telegram"
     },
     {
