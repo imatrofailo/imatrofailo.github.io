@@ -213,6 +213,58 @@ let filtered  = [];
 let currentPage = 1;
 let activeCompany = '';
 
+// ── URL hash state (shareable links) ─────────────────────────────────────────
+
+function writeHash() {
+  const q       = document.getElementById('search').value;
+  const year    = document.getElementById('year-sel').value;
+  const topicF  = document.getElementById('topic-sel').value;
+  const srcF    = document.getElementById('src-sel').value;
+
+  const p = new URLSearchParams();
+  if (q)            p.set('q', q);
+  if (year)         p.set('year', year);
+  if (topicF)       p.set('topic', topicF);
+  if (srcF)         p.set('src', srcF);
+  if (activeCompany) p.set('company', activeCompany);
+  if (currentPage > 1) p.set('page', currentPage);
+
+  const str = p.toString();
+  history.replaceState(null, '', str ? '#' + str : location.pathname + location.search);
+}
+
+function readHash() {
+  const hash = location.hash.replace(/^#/, '');
+  if (!hash) return;
+  const p = new URLSearchParams(hash);
+
+  const q       = p.get('q')       || '';
+  const year    = p.get('year')    || '';
+  const topicF  = p.get('topic')   || '';
+  const srcF    = p.get('src')     || '';
+  const company = p.get('company') || '';
+  const page    = parseInt(p.get('page'), 10) || 1;
+
+  document.getElementById('search').value    = q;
+  document.getElementById('year-sel').value  = year;
+  document.getElementById('topic-sel').value = topicF;
+  document.getElementById('src-sel').value   = srcF;
+
+  if (company) {
+    activeCompany = company;
+    // Highlight the matching pill (pills may not be built yet — handled after build)
+  }
+  currentPage = page;
+}
+
+function restoreCompanyPill() {
+  if (!activeCompany) return;
+  const pill = document.querySelector(`.cpill[data-c="${CSS.escape(activeCompany)}"]`);
+  if (pill) pill.classList.add('active');
+}
+
+// ── Build UI from data ────────────────────────────────────────────────────────
+
 function buildTopicSelect(posts) {
   const freq = {};
   for (const p of posts) for (const t of p.topics) freq[t] = (freq[t]||0)+1;
@@ -251,6 +303,7 @@ function setCompany(c, btn) {
   currentPage = 1;
   applyFilters();
   renderGrid();
+  writeHash();
 }
 
 function clearFilters() {
@@ -263,12 +316,14 @@ function clearFilters() {
   currentPage = 1;
   applyFilters();
   renderGrid();
+  writeHash();
 }
 
 function onFilter() {
   currentPage = 1;
   applyFilters();
   renderGrid();
+  writeHash();
 }
 
 function applyFilters() {
@@ -299,7 +354,7 @@ function applyFilters() {
   document.getElementById('clear-btn').classList.toggle('visible', !!hasFilter);
 }
 
-function renderGrid() {
+function renderGrid(scrollToGrid) {
   const start = (currentPage - 1) * PAGE_SIZE;
   const page  = filtered.slice(start, start + PAGE_SIZE);
   const grid  = document.getElementById('grid');
@@ -332,7 +387,10 @@ function renderGrid() {
   }).join('');
 
   renderPagination();
-  grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Scroll only when explicitly requested (pagination change), not on filter/search
+  if (scrollToGrid) {
+    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 function renderPagination() {
@@ -361,7 +419,8 @@ function goPage(p) {
   const pages = Math.ceil(filtered.length / PAGE_SIZE);
   currentPage = Math.max(1, Math.min(pages, p));
   applyFilters();
-  renderGrid();
+  renderGrid(true);  // scroll on pagination only
+  writeHash();
 }
 
 fetch('../data/posts.json')
@@ -374,6 +433,9 @@ fetch('../data/posts.json')
     document.getElementById('loading').style.display = 'none';
     buildTopicSelect(ALL_POSTS);
     buildCompanyPills(ALL_POSTS);
+    // Restore state from URL hash (after data + UI are ready)
+    readHash();
+    restoreCompanyPill();
     applyFilters();
     renderGrid();
   })
