@@ -124,10 +124,13 @@
 
 <footer>
   <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span>Відібрано вручну · 2025–2026</span>
+  <span>Відібрано вручну · 2025–<span class="js-year">2026</span></span>
 </footer>
 
 <script src="../nav.js" defer></script>
+<script>
+document.querySelectorAll('.js-year').forEach(el => el.textContent = new Date().getFullYear());
+</script>
 <script>
 'use strict';
 
