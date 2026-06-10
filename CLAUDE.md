@@ -10,12 +10,19 @@
 
 ```
 imatrofailo.github.io/
-  index.html       ← Bubble Explorer (головна) ✅
-  charts.html      ← Legacy redirect → /pages/karta.html (залишено для старих посилань)
-  tips.html        ← Legacy redirect → /pages/praktyky.html (залишено для старих посилань)
-  nav.js           ← Shared navigation ✅
-  DESIGN.md        ← Дизайн-токени і компоненти (читай перед CSS-змінами) ✅
-  CLAUDE.md        ← Цей файл
+  index.html            ← Bubble Explorer (головна) ✅
+  404.html              ← Branded error page ✅
+  charts.html           ← Legacy redirect → /pages/karta.html (залишено для старих посилань)
+  tips.html             ← Legacy redirect → /pages/praktyky.html (залишено для старих посилань)
+  nav.js                ← Shared navigation ✅
+  style.css             ← :root CSS vars і токени ✅
+  favicon.svg           ← Три бульбашки (clay/blue/olive), viewBox 0 0 64 64 ✅
+  apple-touch-icon.png  ← 180×180 iOS icon ✅
+  og-image.png          ← 1200×630 Open Graph image ✅
+  sitemap.xml           ← 6 URL, lastmod 2026-06-10 ✅
+  robots.txt            ← Allow all + Sitemap ref ✅
+  DESIGN.md             ← Дизайн-токени і компоненти (читай перед CSS-змінами) ✅
+  CLAUDE.md             ← Цей файл
   data/
     topics.json    ← Генерується generate_index.py (не редагувати вручну)
     tips.json      ← Генерується generate_index.py (не редагувати вручну)
