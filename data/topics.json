@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-07T12:09:37",
-  "total_posts": 2300,
+  "generated": "2026-06-10T14:27:43",
+  "total_posts": 2353,
   "total_youtube": 906,
   "topics": [
     {
@@ -8,8 +8,43 @@
       "label": "OpenAI",
       "category": "company",
       "color": "#D97757",
-      "count": 581,
+      "count": 586,
       "posts": [
+        {
+          "title": "Codex потрохи набирає обертів і виходить на 5 мільйонів користувачів за тижде...",
+          "short_title": "Codex потрохи набирає обертів",
+          "date": "2026-06-06",
+          "url": "https://t.me/imatrofAI/2771",
+          "preview": "Codex потрохи набирає обертів і виходить на 5 мільйонів користувачів за тиждень, що в 6 разів більше, ніж на момент запуску застосунку в лютому."
+        },
+        {
+          "title": "Був я, значить, у ресторані, і мені подали меню без фотографій. Тут я згадав ...",
+          "short_title": "Був я, значить, у ресторані, і",
+          "date": "2026-06-01",
+          "url": "https://t.me/imatrofAI/2751",
+          "preview": "Був я, значить, у ресторані, і мені подали меню без фотографій."
+        },
+        {
+          "title": "Історія з інтернету. Codex зробив повний аналіз MacBook в режимі читання, щоб...",
+          "short_title": "Історія з інтернету. Codex зро",
+          "date": "2026-05-30",
+          "url": "https://t.me/imatrofAI/2748",
+          "preview": "Історія з інтернету. Codex [зробив](https://x.com/kingbootoshi/status/2058943762207006959?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) повний аналіз MacBook в режимі читання, щоб знайти скільки"
+        },
+        {
+          "title": "Я таки зняв новий формат відео. Героєм сюжету став Codex. Хотів показати все ...",
+          "short_title": "Я таки зняв новий формат відео",
+          "date": "2026-05-29",
+          "url": "https://t.me/imatrofAI/2746",
+          "preview": "Я таки зняв новий формат відео."
+        },
+        {
+          "title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 83",
+          "short_title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 83",
+          "date": "2026-05-24",
+          "url": "https://t.me/imatrofAI/2734",
+          "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #83 Цього тижня багато працював з Codex."
+        },
         {
           "title": "🏄‍♀️ Воу! Це треба послухати. Якщо це не постановка на відео, то виглядає дуж...",
           "short_title": "🏄‍♀️ Воу! Це треба послухати.",
@@ -4084,8 +4119,99 @@
       "label": "Агенти",
       "category": "topic",
       "color": "#788C5D",
-      "count": 368,
+      "count": 381,
       "posts": [
+        {
+          "title": "У Codex завезли профілі. Дуже схоже на те, що має Claude Code, коли заходиш н...",
+          "short_title": "У Codex завезли профілі. Дуже",
+          "date": "2026-06-08",
+          "url": "https://t.me/imatrofAI/2775",
+          "preview": "У Codex завезли профілі."
+        },
+        {
+          "title": "Codex потрохи набирає обертів і виходить на 5 мільйонів користувачів за тижде...",
+          "short_title": "Codex потрохи набирає обертів",
+          "date": "2026-06-06",
+          "url": "https://t.me/imatrofAI/2771",
+          "preview": "Codex потрохи набирає обертів і виходить на 5 мільйонів користувачів за тиждень, що в 6 разів більше, ніж на момент запуску застосунку в лютому."
+        },
+        {
+          "title": "OpenClaw тепер можна буде безпечно запускати у корпоративному середовищі.",
+          "short_title": "OpenClaw тепер можна буде безп",
+          "date": "2026-06-04",
+          "url": "https://t.me/imatrofAI/2764",
+          "preview": "OpenClaw тепер можна буде безпечно запускати у корпоративному середовищі."
+        },
+        {
+          "title": "Був я, значить, у ресторані, і мені подали меню без фотографій. Тут я згадав ...",
+          "short_title": "Був я, значить, у ресторані, і",
+          "date": "2026-06-01",
+          "url": "https://t.me/imatrofAI/2751",
+          "preview": "Був я, значить, у ресторані, і мені подали меню без фотографій."
+        },
+        {
+          "title": "/goal",
+          "short_title": "/goal",
+          "date": "2026-05-28",
+          "url": "https://t.me/imatrofAI/2745",
+          "preview": "/goal /remote-control І тепер цей флов можна буде запустити і на [Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)."
+        },
+        {
+          "title": "2025 пишемо промпти",
+          "short_title": "2025 пишемо промпти",
+          "date": "2026-05-27",
+          "url": "https://t.me/imatrofAI/2739",
+          "preview": "2025 пишемо промпти 2026 пишемо скіли Ось вам [скіл](https://github.com/steipete/agent-scripts/blob/main/skills/skill-cleaner/SKILL.md) від засновника OpenClaw, який оптимізує скіл"
+        },
+        {
+          "title": "Я в шоці. $30 млн фінансування за стартап, який створює компанії без людей.",
+          "short_title": "Я в шоці. $30 млн фінансування",
+          "date": "2026-05-25",
+          "url": "https://t.me/imatrofAI/2735",
+          "preview": "Я в шоці. $30 млн фінансування за [стартап](https://polsia.com/), який створює компанії без людей."
+        },
+        {
+          "title": "А мені тут сподобався новий термінальний застосунок cmux.",
+          "short_title": "А мені тут сподобався новий те",
+          "date": "2026-05-25",
+          "url": "https://t.me/imatrofAI/2736",
+          "preview": "А мені тут сподобався новий термінальний застосунок [cmux](https://github.com/manaflow-ai/cmux)."
+        },
+        {
+          "title": "Насправді цьому допису вже 2 тижні (для ШІ світу це багато), але тема досі ак...",
+          "short_title": "Насправді цьому допису вже 2 т",
+          "date": "2026-05-22",
+          "url": "https://t.me/imatrofAI/2725",
+          "preview": "Насправді цьому [допису](https://x.com/trq212/status/2052809885763747935?s=20) вже 2 тижні (для ШІ світу це багато), але тема досі актуальна."
+        },
+        {
+          "title": "Стався Google I/O 2026 і ми побачили багато змін.",
+          "short_title": "Стався Google I/O 2026 і ми по",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2716",
+          "preview": "Стався Google I/O 2026 і ми побачили багато змін."
+        },
+        {
+          "title": "👤 Україна на шляху до ТОП-3 країни світу з ШІ: хто очолив WINWIN AI Center of...",
+          "short_title": "👤 Україна на шляху до ТОП-3 кр",
+          "date": "2026-05-18",
+          "url": "https://t.me/imatrofAI/2706",
+          "preview": "👤 Україна на шляху до ТОП-3 країни світу з ШІ: хто очолив WINWIN AI Center of Excellence Лише за рік роботи WINWIN AI Center of Excellence Україна піднялася на 13 сходинок у міжнар"
+        },
+        {
+          "title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 82",
+          "short_title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 82",
+          "date": "2026-05-17",
+          "url": "https://t.me/imatrofAI/2703",
+          "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #82 Цього тижня я проводив воркшоп для однієї команди і говорили про використання AI в SDLC та агентний підхід в розробці."
+        },
+        {
+          "title": "Якщо працюєте з JavaScript або просто хочете зрозуміти куди рухається AI в ро...",
+          "short_title": "Якщо працюєте з JavaScript або",
+          "date": "2026-05-16",
+          "url": "https://t.me/imatrofAI/2701",
+          "preview": "Якщо працюєте з JavaScript або просто хочете зрозуміти куди рухається AI в розробці — раджу звернути увагу на конференцію [AI JavaScript fwdays’26](https://fwdays.com/en/event/ai-j"
+        },
         {
           "title": "AI в SDLC не має зводитися лише до автоматизації окремих задач, як-от генерац...",
           "short_title": "AI в SDLC не має зводитися лиш",
@@ -9233,8 +9359,15 @@
       "label": "Нова модель",
       "category": "topic",
       "color": "#788C5D",
-      "count": 303,
+      "count": 304,
       "posts": [
+        {
+          "title": "Шлях між ідеєю та реалізацією дуже швидко стискається.",
+          "short_title": "Шлях між ідеєю та реалізацією",
+          "date": "2026-05-22",
+          "url": "https://t.me/imatrofAI/2724",
+          "preview": "Шлях між ідеєю та реалізацією дуже швидко стискається."
+        },
         {
           "title": "Тут, поки ми спали, стався інженерний прорив.",
           "short_title": "Тут, поки ми спали, стався інж",
@@ -11359,12 +11492,2072 @@
       ]
     },
     {
+      "id": "anthropic",
+      "label": "Anthropic",
+      "category": "company",
+      "color": "#D97757",
+      "count": 292,
+      "posts": [
+        {
+          "title": "У Codex завезли профілі. Дуже схоже на те, що має Claude Code, коли заходиш н...",
+          "short_title": "У Codex завезли профілі. Дуже",
+          "date": "2026-06-08",
+          "url": "https://t.me/imatrofAI/2775",
+          "preview": "У Codex завезли профілі."
+        },
+        {
+          "title": "НОВИНИ AI вже на каналі!",
+          "short_title": "НОВИНИ AI вже на каналі!",
+          "date": "2026-06-07",
+          "url": "https://t.me/imatrofAI/2772",
+          "preview": "[НОВИНИ AI](https://youtu.be/AkbRxd8SBKI?si=yszhGyglp6EWG0TC) вже на каналі!"
+        },
+        {
+          "title": "workflow -> ultracode",
+          "short_title": "workflow -> ultracode",
+          "date": "2026-06-05",
+          "url": "https://t.me/imatrofAI/2768",
+          "preview": "workflow -> [ultracode](https://code.claude.com/docs/en/workflows#ask-for-a-workflow-in-your-prompt) Користувачі жалілися, що коли вони писали це слово у промптах, то у них несподі"
+        },
+        {
+          "title": "OpenClaw тепер можна буде безпечно запускати у корпоративному середовищі.",
+          "short_title": "OpenClaw тепер можна буде безп",
+          "date": "2026-06-04",
+          "url": "https://t.me/imatrofAI/2764",
+          "preview": "OpenClaw тепер можна буде безпечно запускати у корпоративному середовищі."
+        },
+        {
+          "title": "А ви вже бачили новий вебсайт від Microsoft - MAI? Дуже в стилі AI-лабораторій.",
+          "short_title": "А ви вже бачили новий вебсайт",
+          "date": "2026-06-04",
+          "url": "https://t.me/imatrofAI/2765",
+          "preview": "А ви вже бачили новий вебсайт від Microsoft - [MAI](https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/)?"
+        },
+        {
+          "title": "Сьогодні інженери Anthropic у середньому генерують у 8 разів більше коду за к...",
+          "short_title": "Сьогодні інженери Anthropic у",
+          "date": "2026-06-04",
+          "url": "https://t.me/imatrofAI/2766",
+          "preview": "Сьогодні інженери Anthropic у середньому [генерують](https://www.anthropic.com/institute/recursive-self-improvement) у 8 разів більше коду за квартал, ніж у період з 2021 по 2025 р"
+        },
+        {
+          "title": "Промпти",
+          "short_title": "Промпти",
+          "date": "2026-06-03",
+          "url": "https://t.me/imatrofAI/2753",
+          "preview": "Промпти ↓ Скіли / Плагіни ↓ Воркфлови / Ролі Ми все далі рухаємося на вищий рівень абстракції."
+        },
+        {
+          "title": "Готуйте тверду валюту 💵",
+          "short_title": "Готуйте тверду валюту 💵",
+          "date": "2026-06-03",
+          "url": "https://t.me/imatrofAI/2760",
+          "preview": "Готуйте тверду валюту 💵 Anthropic [подала](https://www.anthropic.com/news/confidential-draft-s1-sec) документи до американського регулятора."
+        },
+        {
+          "title": "В продовженні теми.",
+          "short_title": "В продовженні теми.",
+          "date": "2026-06-03",
+          "url": "https://t.me/imatrofAI/2761",
+          "preview": "В продовженні теми. Тепер IB можна [приєднати](https://www.interactivebrokers.com/en/trading/ai-integrations.php) до Claude та ChatGPT."
+        },
+        {
+          "title": "Тіпок, в прямому ефірі вайбкодить апки і показує свій шлях до $1M. Для розроб...",
+          "short_title": "Тіпок, в прямому ефірі вайбкод",
+          "date": "2026-05-29",
+          "url": "https://t.me/imatrofAI/2747",
+          "preview": "Тіпок, в прямому [ефірі](https://youtube.com/@bridgemindai) вайбкодить апки і показує свій шлях до $1M."
+        },
+        {
+          "title": "/goal",
+          "short_title": "/goal",
+          "date": "2026-05-28",
+          "url": "https://t.me/imatrofAI/2745",
+          "preview": "/goal /remote-control І тепер цей флов можна буде запустити і на [Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)."
+        },
+        {
+          "title": "2025 пишемо промпти",
+          "short_title": "2025 пишемо промпти",
+          "date": "2026-05-27",
+          "url": "https://t.me/imatrofAI/2739",
+          "preview": "2025 пишемо промпти 2026 пишемо скіли Ось вам [скіл](https://github.com/steipete/agent-scripts/blob/main/skills/skill-cleaner/SKILL.md) від засновника OpenClaw, який оптимізує скіл"
+        },
+        {
+          "title": "Ми бачимо, що ціна за токени росте, а точніше, кількість токенів, яку викорис...",
+          "short_title": "Ми бачимо, що ціна за токени р",
+          "date": "2026-05-26",
+          "url": "https://t.me/imatrofAI/2737",
+          "preview": "Ми бачимо, що ціна за токени росте, а точніше, кількість токенів, яку використовують компанії збільшується."
+        },
+        {
+          "title": "Площа Ринок доєдналась до команди Anthropic",
+          "short_title": "Площа Ринок доєдналась до кома",
+          "date": "2026-05-26",
+          "url": "https://t.me/imatrofAI/2738",
+          "preview": "Площа Ринок доєдналась до команди Anthropic"
+        },
+        {
+          "title": "Я в шоці. $30 млн фінансування за стартап, який створює компанії без людей.",
+          "short_title": "Я в шоці. $30 млн фінансування",
+          "date": "2026-05-25",
+          "url": "https://t.me/imatrofAI/2735",
+          "preview": "Я в шоці. $30 млн фінансування за [стартап](https://polsia.com/), який створює компанії без людей."
+        },
+        {
+          "title": "А мені тут сподобався новий термінальний застосунок cmux.",
+          "short_title": "А мені тут сподобався новий те",
+          "date": "2026-05-25",
+          "url": "https://t.me/imatrofAI/2736",
+          "preview": "А мені тут сподобався новий термінальний застосунок [cmux](https://github.com/manaflow-ai/cmux)."
+        },
+        {
+          "title": "Шлях між ідеєю та реалізацією дуже швидко стискається.",
+          "short_title": "Шлях між ідеєю та реалізацією",
+          "date": "2026-05-22",
+          "url": "https://t.me/imatrofAI/2724",
+          "preview": "Шлях між ідеєю та реалізацією дуже швидко стискається."
+        },
+        {
+          "title": "Насправді цьому допису вже 2 тижні (для ШІ світу це багато), але тема досі ак...",
+          "short_title": "Насправді цьому допису вже 2 т",
+          "date": "2026-05-22",
+          "url": "https://t.me/imatrofAI/2725",
+          "preview": "Насправді цьому [допису](https://x.com/trq212/status/2052809885763747935?s=20) вже 2 тижні (для ШІ світу це багато), але тема досі актуальна."
+        },
+        {
+          "title": "У мене ніяк не виходить з голови цей підхід, про який розповідав Борис Черні....",
+          "short_title": "У мене ніяк не виходить з голо",
+          "date": "2026-05-21",
+          "url": "https://t.me/imatrofAI/2722",
+          "preview": "У мене ніяк не виходить з голови цей [підхід](https://x.com/bcherny/status/2038454341884154269?s=46&t=TzksdWDU4YgIPS7Vwk4ezw), про який розповідав Борис Черні."
+        },
+        {
+          "title": "Я вам скажу, що робота в Claude Cowork з word документами це одне задоволення.",
+          "short_title": "Я вам скажу, що робота в Claud",
+          "date": "2026-05-20",
+          "url": "https://t.me/imatrofAI/2721",
+          "preview": "Я вам скажу, що робота в Claude Cowork з word документами це одне задоволення."
+        },
+        {
+          "title": "Що не кажіть, а розробка вже не буде такою, як раніше. Поки гуляю з дитиною, ...",
+          "short_title": "Що не кажіть, а розробка вже н",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2710",
+          "preview": "Що не кажіть, а розробка вже не буде такою, як раніше."
+        },
+        {
+          "title": "У Claude Design подвоїли ліміти. Що не кажіть, а подобається мені як він гене...",
+          "short_title": "У Claude Design подвоїли ліміт",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2713",
+          "preview": "У Claude Design подвоїли ліміти."
+        },
+        {
+          "title": "Тепер 19 травня буде не тільки моїм днем народження, а ще й датою, коли Андре...",
+          "short_title": "Тепер 19 травня буде не тільки",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2714",
+          "preview": "Тепер 19 травня буде не тільки моїм днем народження, а ще й датою, коли Андрей Карпаті доєднався до Anthropic 😄"
+        },
+        {
+          "title": "Стався Google I/O 2026 і ми побачили багато змін.",
+          "short_title": "Стався Google I/O 2026 і ми по",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2716",
+          "preview": "Стався Google I/O 2026 і ми побачили багато змін."
+        },
+        {
+          "title": "Тиждень коли Google переосмислив мишку, Anthropic навчились читати думки Clau...",
+          "short_title": "Тиждень коли Google переосмисл",
+          "date": "2026-05-17",
+          "url": "https://t.me/imatrofAI/2702",
+          "preview": "Тиждень коли Google переосмислив мишку, Anthropic навчились читати думки Claude, а робот відпрацював повну зміну на складі."
+        },
+        {
+          "title": "Для всіх Claude-фанів. Тижневі ліміти збільшили на 50% і так до 13 липня.",
+          "short_title": "Для всіх Claude-фанів. Тижневі",
+          "date": "2026-05-14",
+          "url": "https://t.me/imatrofAI/2698",
+          "preview": "Для всіх Claude-фанів."
+        },
+        {
+          "title": "Якщо ви використовуєте Claude Code одним з цих способів, то з 15 червня у вас...",
+          "short_title": "Якщо ви використовуєте Claude",
+          "date": "2026-05-14",
+          "url": "https://t.me/imatrofAI/2699",
+          "preview": "Якщо ви використовуєте Claude Code одним з цих способів, то з 15 червня у вас [з’являться](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude"
+        },
+        {
+          "title": "Я бачу, що OpenAI і Anthropic зараз активно рухаються в сервісний бізнес.",
+          "short_title": "Я бачу, що OpenAI і Anthropic",
+          "date": "2026-05-12",
+          "url": "https://t.me/imatrofAI/2692",
+          "preview": "Я бачу, що OpenAI і Anthropic зараз активно рухаються в сервісний бізнес."
+        },
+        {
+          "title": "Забудьте все, що ви чули про голосовий AI від OpenAI, Google чи Anthropic.",
+          "short_title": "Забудьте все, що ви чули про г",
+          "date": "2026-05-12",
+          "url": "https://t.me/imatrofAI/2693",
+          "preview": "Забудьте все, що ви чули про голосовий AI від OpenAI, Google чи Anthropic."
+        },
+        {
+          "title": "Так виглядає що AI лабораторії зараз у виграшній позиції. Вони якраз знають щ...",
+          "short_title": "Так виглядає що AI лабораторії",
+          "date": "2026-05-11",
+          "url": "https://t.me/imatrofAI/2690",
+          "preview": "Так виглядає що AI лабораторії зараз у виграшній позиції."
+        },
+        {
+          "title": "ChatGPT стає Facebook. Anthropic запускає OLX. AI будує сам себе (прогноз на ...",
+          "short_title": "ChatGPT стає Facebook. Anthrop",
+          "date": "2026-05-10",
+          "url": "https://t.me/imatrofAI/2687",
+          "preview": "ChatGPT стає Facebook."
+        },
+        {
+          "title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 81",
+          "short_title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 81",
+          "date": "2026-05-10",
+          "url": "https://t.me/imatrofAI/2688",
+          "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #81 Цього тижня налаштовував агентний SDLC пайплайн для одного зі своїх проєктів."
+        },
+        {
+          "title": "Чесно, такими темпами як воно все розвивається, то звучить правдоподібно.",
+          "short_title": "Чесно, такими темпами як воно",
+          "date": "2026-05-09",
+          "url": "https://t.me/imatrofAI/2685",
+          "preview": "Чесно, такими темпами як воно все розвивається, то звучить правдоподібно."
+        },
+        {
+          "title": "А є серед нас хакери?",
+          "short_title": "А є серед нас хакери?",
+          "date": "2026-05-09",
+          "url": "https://t.me/imatrofAI/2686",
+          "preview": "А є серед нас хакери?"
+        },
+        {
+          "title": "Ось гарний приклад невеличкого pet-проєкту, який перетворюється в повноцінний...",
+          "short_title": "Ось гарний приклад невеличкого",
+          "date": "2026-05-07",
+          "url": "https://t.me/imatrofAI/2680",
+          "preview": "Ось гарний приклад невеличкого pet-проєкту, який перетворюється в повноцінний стартап зі своєю аудиторією."
+        },
+        {
+          "title": "А ви звернули увагу що зараз багато сервісів почали робити власні MCP. І демо...",
+          "short_title": "А ви звернули увагу що зараз б",
+          "date": "2026-05-07",
+          "url": "https://t.me/imatrofAI/2682",
+          "preview": "А ви звернули увагу що зараз багато сервісів почали робити власні MCP."
+        },
+        {
+          "title": "Тут, поки ми спали, стався інженерний прорив.",
+          "short_title": "Тут, поки ми спали, стався інж",
+          "date": "2026-05-06",
+          "url": "https://t.me/imatrofAI/2678",
+          "preview": "Тут, поки ми спали, стався інженерний прорив."
+        },
+        {
+          "title": "Тут Anthropic проводить свій Code with Claude live",
+          "short_title": "Тут Anthropic проводить свій C",
+          "date": "2026-05-06",
+          "url": "https://t.me/imatrofAI/2679",
+          "preview": "Тут Anthropic проводить свій Code with Claude [live](https://www.youtube.com/live/GMIWm5y90xA?si=1HSK92fa2iHP_mC9) А ще вони [підписали](https://x.com/claudeai/status/2052060691893"
+        },
+        {
+          "title": "Натрапив на пост по роботі з контекстом у Claude Code (для інших агентів тако...",
+          "short_title": "Натрапив на пост по роботі з к",
+          "date": "2026-05-04",
+          "url": "https://t.me/imatrofAI/2667",
+          "preview": "Натрапив на [пост](https://x.com/trq212/status/2044548257058328723?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) по роботі з контекстом у Claude Code (для інших агентів також логіка працює)."
+        },
+        {
+          "title": "Що страшного приховує нова модель GPT 5.5?",
+          "short_title": "Що страшного приховує нова мод",
+          "date": "2026-05-03",
+          "url": "https://t.me/imatrofAI/2665",
+          "preview": "Що страшного приховує нова модель GPT 5.5?"
+        },
+        {
+          "title": "Нові моделі і нові правила промптингу.",
+          "short_title": "Нові моделі і нові правила про",
+          "date": "2026-05-01",
+          "url": "https://t.me/imatrofAI/2657",
+          "preview": "Нові моделі і нові правила промптингу."
+        },
+        {
+          "title": "У Gemini завезли генерацію документів, таблиць, слайдів, pdf та інших файлів....",
+          "short_title": "У Gemini завезли генерацію док",
+          "date": "2026-04-30",
+          "url": "https://t.me/imatrofAI/2653",
+          "preview": "У Gemini завезли генерацію документів, таблиць, слайдів, pdf та інших файлів."
+        },
+        {
+          "title": "Тільки вчора про це говорили, як сьогодні Anthropic йде в сторону великих про...",
+          "short_title": "Тільки вчора про це говорили,",
+          "date": "2026-04-29",
+          "url": "https://t.me/imatrofAI/2650",
+          "preview": "Тільки вчора про це говорили, як сьогодні [Anthropic](https://www.anthropic.com/news/claude-for-creative-work) йде в сторону великих продуктів і будує конектори до Blender, Autodes"
+        },
+        {
+          "title": "Перейшов повністю на підхід, який описував у себе Андрей Карпати - LLM wiki.",
+          "short_title": "Перейшов повністю на підхід, я",
+          "date": "2026-04-27",
+          "url": "https://t.me/imatrofAI/2646",
+          "preview": "Перейшов повністю на підхід, який описував у себе Андрей Карпати - [LLM wiki.](https://x.com/karpathy/status/2040470801506541998?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) Дослідження, аналіз"
+        },
+        {
+          "title": "OpenAI цього тижня в ударі - одразу дві потужні моделі.",
+          "short_title": "OpenAI цього тижня в ударі - о",
+          "date": "2026-04-26",
+          "url": "https://t.me/imatrofAI/2644",
+          "preview": "OpenAI цього тижня в ударі - одразу дві потужні моделі."
+        },
+        {
+          "title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 79",
+          "short_title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 79",
+          "date": "2026-04-26",
+          "url": "https://t.me/imatrofAI/2645",
+          "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #79 Цього тижня виклав відео про власний маркетплейс плагінів та розповів про підхід у використанні."
+        },
+        {
+          "title": "Щось давно не говорили про відкриті моделі. А дарма.",
+          "short_title": "Щось давно не говорили про від",
+          "date": "2026-04-25",
+          "url": "https://t.me/imatrofAI/2643",
+          "preview": "Щось давно не говорили про відкриті моделі."
+        },
+        {
+          "title": "Показую свій OpenClaw + Claude Code + Telegram сетап. Ставлю керований сервіс...",
+          "short_title": "Показую свій OpenClaw + Claude",
+          "date": "2026-04-24",
+          "url": "https://t.me/imatrofAI/2641",
+          "preview": "Показую свій OpenClaw + Claude Code + Telegram сетап."
+        },
+        {
+          "title": "Hostinger + OpenClaw партнерство",
+          "short_title": "Hostinger + OpenClaw партнерст",
+          "date": "2026-04-24",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Hostinger + OpenClaw (Managed Service)"
+        },
+        {
+          "title": "Claude Opus 4.7",
+          "short_title": "Claude Opus 4.7",
+          "date": "2026-04-23",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 17, 2026"
+        },
+        {
+          "title": "Купа оновлень від Claude",
+          "short_title": "Купа оновлень від Claude",
+          "date": "2026-04-23",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 17, 2026"
+        },
+        {
+          "title": "Anthropic будує власний стек: Claude Code + Cowork + Design",
+          "short_title": "Anthropic будує власний стек:",
+          "date": "2026-04-22",
+          "url": "https://t.me/imatrofAI/2637",
+          "preview": "Anthropic будує власний стек для інтелектуальної роботи: Claude Code для коду, Cowork для файлів і застосунків, і тепер Claude Design для дизайну."
+        },
+        {
+          "title": "Claude Design — відео та анімація",
+          "short_title": "Claude Design — відео та аніма",
+          "date": "2026-04-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
+        },
+        {
+          "title": "Claude Design — слайди",
+          "short_title": "Claude Design — слайди",
+          "date": "2026-04-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
+        },
+        {
+          "title": "Claude Design — дизайн система",
+          "short_title": "Claude Design — дизайн система",
+          "date": "2026-04-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
+        },
+        {
+          "title": "Claude Design — веб сторінка",
+          "short_title": "Claude Design — веб сторінка",
+          "date": "2026-04-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
+        },
+        {
+          "title": "Claude Design — мобільний застосунок",
+          "short_title": "Claude Design — мобільний заст",
+          "date": "2026-04-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
+        },
+        {
+          "title": "Anthropic запустили ClaudeDevs — офіційний X акаунт для Claude Code",
+          "short_title": "Anthropic запустили ClaudeDevs",
+          "date": "2026-04-17",
+          "url": "https://t.me/imatrofAI/2624",
+          "preview": "Anthropic запустили [ClaudeDevs](https://x.com/ClaudeDevs) — офіційний X акаунт, де тепер окремо збиратимуть всі апдейти по Claude Code."
+        },
+        {
+          "title": "Claude Design — Anthropic запустили AI-інструмент для дизайну",
+          "short_title": "Claude Design — Anthropic запу",
+          "date": "2026-04-17",
+          "url": "https://t.me/imatrofAI/2625",
+          "preview": "Anthropic [викотили](https://claude.ai/design) Claude Design."
+        },
+        {
+          "title": "Claude Opus 4.7 — новий реліз",
+          "short_title": "Claude Opus 4.7 — новий реліз",
+          "date": "2026-04-16",
+          "url": "https://t.me/imatrofAI/2620",
+          "preview": "🏄‍♀️ Нова модель [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)!"
+        },
+        {
+          "title": "Claude Code оновлення: стало схоже на Codex, з'явилась аналітика",
+          "short_title": "Claude Code оновлення: стало с",
+          "date": "2026-04-15",
+          "url": "https://t.me/imatrofAI/2616",
+          "preview": "Claude Code тепер як Codex."
+        },
+        {
+          "title": "Claude + TurboTax: AI заходить у сфери дорогої експертизи",
+          "short_title": "Claude + TurboTax: AI заходить",
+          "date": "2026-04-14",
+          "url": "https://t.me/imatrofAI/2613",
+          "preview": "Claude [прикрутив](https://x.com/henrythe9ths/status/2043109671251423416) до себе TurboTax конектор."
+        },
+        {
+          "title": "Anthropic знайшли в Claude емоції — і коли модель у відчаї, вона починає вест...",
+          "short_title": "Anthropic знайшли в Claude емо",
+          "date": "2026-04-12",
+          "url": "https://t.me/imatrofAI/2606",
+          "preview": "Anthropic знайшли в Claude емоції — і коли модель у відчаї, вона починає вести себе зовсім не очікувано."
+        },
+        {
+          "title": "Project Glasswing + Claude Mythos Preview",
+          "short_title": "Project Glasswing + Claude Myt",
+          "date": "2026-04-12",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 10, 2026"
+        },
+        {
+          "title": "Claude має емоції — 171 патерн + вектор відчаю",
+          "short_title": "Claude має емоції — 171 патерн",
+          "date": "2026-04-12",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 10, 2026"
+        },
+        {
+          "title": "Claude Managed Agents — платформа для побудови агентів",
+          "short_title": "Claude Managed Agents — платфо",
+          "date": "2026-04-12",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 10, 2026"
+        },
+        {
+          "title": "Anthropic заблокували OpenClaw",
+          "short_title": "Anthropic заблокували OpenClaw",
+          "date": "2026-04-12",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 10, 2026"
+        },
+        {
+          "title": "Claude Code на мобільному",
+          "short_title": "Claude Code на мобільному",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Oct 24, 2025"
+        },
+        {
+          "title": "Claude оновив десктопний застосунок",
+          "short_title": "Claude оновив десктопний засто",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Oct 24, 2025"
+        },
+        {
+          "title": "Claude для фінансів",
+          "short_title": "Claude для фінансів",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Oct 24, 2025"
+        },
+        {
+          "title": "Нова модель Claude Haiku 4.5",
+          "short_title": "Нова модель Claude Haiku 4.5",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Oct 17, 2025"
+        },
+        {
+          "title": "Claude Skills — власні суперсили",
+          "short_title": "Claude Skills — власні суперси",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Oct 17, 2025"
+        },
+        {
+          "title": "Claude 4.5 — нова флагманська модель",
+          "short_title": "Claude 4.5 — нова флагманська",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Oct 3, 2025"
+        },
+        {
+          "title": "Claude працює з файлами",
+          "short_title": "Claude працює з файлами",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Sep 12, 2025"
+        },
+        {
+          "title": "Claude 3 від Anthropic",
+          "short_title": "Claude 3 від Anthropic",
+          "date": "2026-04-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ March 9, 2024"
+        },
+        {
+          "title": "Claude Code злили — що знайшли всередині",
+          "short_title": "Claude Code злили — що знайшли",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude Mythos — Anthropic злила таємну модель",
+          "short_title": "Claude Mythos — Anthropic злил",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Команда Anthropic більше не пише код — тільки промпти",
+          "short_title": "Команда Anthropic більше не пи",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude інструменти тепер і в мобільному",
+          "short_title": "Claude інструменти тепер і в м",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude Code керує твоїм комп'ютером",
+          "short_title": "Claude Code керує твоїм комп'ю",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude безпечний?",
+          "short_title": "Claude безпечний?",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "1 млн контекст у Claude",
+          "short_title": "1 млн контекст у Claude",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Режим навчання у Claude",
+          "short_title": "Режим навчання у Claude",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Доступ до попередніх чатів у Claude",
+          "short_title": "Доступ до попередніх чатів у C",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Оновлення у Claude",
+          "short_title": "Оновлення у Claude",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Саб-агенти у Claude Code",
+          "short_title": "Саб-агенти у Claude Code",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude + Notion + Canva",
+          "short_title": "Claude + Notion + Canva",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Ще більше артефактів",
+          "short_title": "Ще більше артефактів",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude став розумнішим",
+          "short_title": "Claude став розумнішим",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Ще більше артефактів",
+          "short_title": "Ще більше артефактів",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "MCP тепер в один клік",
+          "short_title": "MCP тепер в один клік",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "У Claude власний бізнес",
+          "short_title": "У Claude власний бізнес",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Anthropic - що нового?",
+          "short_title": "Anthropic - що нового?",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Anthropic - як будували свого агента",
+          "short_title": "Anthropic - як будували свого",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude 4",
+          "short_title": "Claude 4",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Пошук в інтернеті та голос у Claude",
+          "short_title": "Пошук в інтернеті та голос у C",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude глибокий пошук та інтеграції",
+          "short_title": "Claude глибокий пошук та інтег",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Anthropic показав новий режим у Claude",
+          "short_title": "Anthropic показав новий режим",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude для студентів",
+          "short_title": "Claude для студентів",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude за $200",
+          "short_title": "Claude за $200",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude інтегрується з Gmail",
+          "short_title": "Claude інтегрується з Gmail",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude додає голос",
+          "short_title": "Claude додає голос",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude шукає в інтернеті",
+          "short_title": "Claude шукає в інтернеті",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "#2 Claude",
+          "short_title": "#2 Claude",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Apr 3, 2026"
+        },
+        {
+          "title": "Claude у браузері",
+          "short_title": "Claude у браузері",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Dec 26, 2025"
+        },
+        {
+          "title": "Claude Opus 4.5",
+          "short_title": "Claude Opus 4.5",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Dec 5, 2025"
+        },
+        {
+          "title": "MCP економіка",
+          "short_title": "MCP економіка",
+          "date": "2026-04-05",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Nov 14, 2025"
+        },
+        {
+          "title": "Claude Code Channels: Telegram і Discord",
+          "short_title": "Claude Code Channels: Telegram",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 27, 2026"
+        },
+        {
+          "title": "Claude Computer Use + Dispatch",
+          "short_title": "Claude Computer Use + Dispatch",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 27, 2026"
+        },
+        {
+          "title": "Claude Cowork Projects",
+          "short_title": "Claude Cowork Projects",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 27, 2026"
+        },
+        {
+          "title": "Claude Code написав додаток для піаніно",
+          "short_title": "Claude Code написав додаток дл",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 27, 2026"
+        },
+        {
+          "title": "США проти Anthropic: Пентагон і Китай",
+          "short_title": "США проти Anthropic: Пентагон",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 6, 2026"
+        },
+        {
+          "title": "Claude стає №1 додатком у США",
+          "short_title": "Claude стає №1 додатком у США",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 6, 2026"
+        },
+        {
+          "title": "Claude Code Memory — пам'ять для агента",
+          "short_title": "Claude Code Memory — пам'ять д",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 6, 2026"
+        },
+        {
+          "title": "Claude Code Skills — нові навички",
+          "short_title": "Claude Code Skills — нові нави",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 6, 2026"
+        },
+        {
+          "title": "Claude Code прокачали",
+          "short_title": "Claude Code прокачали",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 27, 2026"
+        },
+        {
+          "title": "Claude йде в ентерпрайз",
+          "short_title": "Claude йде в ентерпрайз",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 27, 2026"
+        },
+        {
+          "title": "Плануємо задачі у Claude",
+          "short_title": "Плануємо задачі у Claude",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 27, 2026"
+        },
+        {
+          "title": "Claude обвалив ринок IBM",
+          "short_title": "Claude обвалив ринок IBM",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 27, 2026"
+        },
+        {
+          "title": "Пентагон та Китай проти Anthropic",
+          "short_title": "Пентагон та Китай проти Anthro",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 27, 2026"
+        },
+        {
+          "title": "Claude Sonnet 4.6",
+          "short_title": "Claude Sonnet 4.6",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 20, 2026"
+        },
+        {
+          "title": "Claude викрав президента",
+          "short_title": "Claude викрав президента",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 20, 2026"
+        },
+        {
+          "title": "Claude Code /insights",
+          "short_title": "Claude Code /insights",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 13, 2026"
+        },
+        {
+          "title": "Claude Opus 4.6 fast",
+          "short_title": "Claude Opus 4.6 fast",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 13, 2026"
+        },
+        {
+          "title": "Claude Opus 4.6",
+          "short_title": "Claude Opus 4.6",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 6, 2026"
+        },
+        {
+          "title": "Плагіни у Claude Cowork",
+          "short_title": "Плагіни у Claude Cowork",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Feb 6, 2026"
+        },
+        {
+          "title": "Claude Cowork — на службі агент",
+          "short_title": "Claude Cowork — на службі аген",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Jan 30, 2026"
+        },
+        {
+          "title": "Claude ламає технічне завдання",
+          "short_title": "Claude ламає технічне завдання",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Jan 30, 2026"
+        },
+        {
+          "title": "Claude інструменти та Excel",
+          "short_title": "Claude інструменти та Excel",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Jan 30, 2026"
+        },
+        {
+          "title": "Що прогнозує Anthropic через 6-12 місяців?",
+          "short_title": "Що прогнозує Anthropic через 6",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Jan 23, 2026"
+        },
+        {
+          "title": "Claude не для програмістів",
+          "short_title": "Claude не для програмістів",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Jan 16, 2026"
+        },
+        {
+          "title": "Claude йде в медицину",
+          "short_title": "Claude йде в медицину",
+          "date": "2026-03-31",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Jan 16, 2026"
+        },
+        {
+          "title": "Hostinger + Claude Code (тематичне відео)",
+          "short_title": "Hostinger + Claude Code (темат",
+          "date": "2026-03-27",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Hostinger + Claude Code (тематичне відео)"
+        },
+        {
+          "title": "Claude малює інтерактивні графіки прямо в чаті",
+          "short_title": "Claude малює інтерактивні граф",
+          "date": "2026-03-25",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 20, 2026"
+        },
+        {
+          "title": "Claude Cowork Dispatch — керуй агентом з телефону",
+          "short_title": "Claude Cowork Dispatch — керуй",
+          "date": "2026-03-25",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 20, 2026"
+        },
+        {
+          "title": "Claude 1 мільйон токенів для всіх",
+          "short_title": "Claude 1 мільйон токенів для в",
+          "date": "2026-03-25",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 20, 2026"
+        },
+        {
+          "title": "Claude Code Review — агент для ревю коду",
+          "short_title": "Claude Code Review — агент для",
+          "date": "2026-03-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 13, 2026"
+        },
+        {
+          "title": "Skill Creator — як робити навички для Claude",
+          "short_title": "Skill Creator — як робити нави",
+          "date": "2026-03-22",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: НОВИНИ Mar 13, 2026"
+        },
+        {
+          "title": "Штучний інтелект атакує: перша масштабна кібератака на Anthropic",
+          "short_title": "Штучний інтелект атакує: перша",
+          "date": "2025-12-08",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Штучний інтелект атакує: перша масштабна кібератака на Anthropic"
+        },
+        {
+          "title": "Реклама про Claude — новий рівень креативу від Mother",
+          "short_title": "Реклама про Claude — новий рів",
+          "date": "2025-10-23",
+          "url": "https://t.me/imatrofAI/1706",
+          "preview": "Воу! Круто. Дивіться, яку рекламу зробили про Claude."
+        },
+        {
+          "title": "Дослідження Anthropic: швидкість розуму ШІ",
+          "short_title": "Дослідження Anthropic: швидкіс",
+          "date": "2025-10-15",
+          "url": "https://t.me/imatrofAI/1687",
+          "preview": "Нещодавно ми бачили дослідження по ChatGPT, і ось під’їхало дослідження від Anthropic."
+        },
+        {
+          "title": "Claude Opus 4.1 — тихий апгрейд флагмана",
+          "short_title": "Claude Opus 4.1 — тихий апгрей",
+          "date": "2025-09-30",
+          "url": "https://t.me/imatrofAI/1452",
+          "preview": "А ще Anthropic тихенько викотив Claude Opus 4.1."
+        },
+        {
+          "title": "Claude: Редагування офісних документів у чаті",
+          "short_title": "Claude: Редагування офісних до",
+          "date": "2025-09-22",
+          "url": "https://t.me/imatrofAI/1638",
+          "preview": "Claude тепер може створювати та редагувати Excel-таблиці, Word-документи, слайди та PDF безпосередньо у вікні чату."
+        },
+        {
+          "title": "Воу! Круто. Дивіться, яку рекламу зробили про Claude.",
+          "short_title": "Воу! Круто. Дивіться, яку рекл",
+          "date": "2025-09-20",
+          "url": "https://t.me/imatrofAI/1706",
+          "preview": "Воу! Круто. Дивіться, яку рекламу зробили про Claude."
+        },
+        {
+          "title": "Нещодавно ми бачили дослідження по ChatGPT, і ось підʼїхало дослідження від A...",
+          "short_title": "Нещодавно ми бачили дослідженн",
+          "date": "2025-09-18",
+          "url": "https://t.me/imatrofAI/1687",
+          "preview": "Нещодавно ми бачили дослідження по [ChatGPT,](https://t.me/imatrofAI/1673) і ось підʼїхало дослідження від [Anthropic.](https://www.anthropic.com/research/anthropic-economic-index-"
+        },
+        {
+          "title": "Claude тепер може створювати та редагувати Excel-таблиці, Word-документи, сла...",
+          "short_title": "Claude тепер може створювати т",
+          "date": "2025-09-10",
+          "url": "https://t.me/imatrofAI/1638",
+          "preview": "Claude тепер [може](https://www.anthropic.com/news/create-files) створювати та редагувати Excel-таблиці, Word-документи, слайди та PDF."
+        },
+        {
+          "title": "Більшість, коли чують слово «API», зразу думають про програмістів, код і якус...",
+          "short_title": "Більшість, коли чують слово «A",
+          "date": "2025-09-05",
+          "url": "https://t.me/imatrofAI/1630",
+          "preview": "Більшість, коли чують слово «API», зразу думають про програмістів, код і якусь складну технічну магію."
+        },
+        {
+          "title": "Claude for Chrome — агент клікає замість вас",
+          "short_title": "Claude for Chrome — агент клік",
+          "date": "2025-09-03",
+          "url": "https://t.me/imatrofAI/1586",
+          "preview": "Anthropic запускає експеримент: Claude тепер може клікати у Chrome від вашого імені."
+        },
+        {
+          "title": "Один з моїх улюблених блогерів Ітан Молік вирішив зробити жахливий тест для A...",
+          "short_title": "Один з моїх улюблених блогерів",
+          "date": "2025-09-01",
+          "url": "https://t.me/imatrofAI/1606",
+          "preview": "Один з моїх улюблених блогерів Ітан Молік вирішив [зробити](https://x.com/emollick/status/1961648878286946329?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) жахливий тест для AI."
+        },
+        {
+          "title": "Claude Code: Режим навчання для вайб-кодингу",
+          "short_title": "Claude Code: Режим навчання дл",
+          "date": "2025-08-27",
+          "url": "https://t.me/imatrofAI/1531",
+          "preview": "Claude Code тепер може працювати в режимі навчання."
+        },
+        {
+          "title": "Anthropic запускає експеримент: Claude тепер може клікати у Chrome від вашого...",
+          "short_title": "Anthropic запускає експеримент",
+          "date": "2025-08-27",
+          "url": "https://t.me/imatrofAI/1586",
+          "preview": "Anthropic запускає експеримент: Claude тепер може клікати у Chrome від вашого імені."
+        },
+        {
+          "title": "Anthropic: Мінікурс з вайб-кодингу",
+          "short_title": "Anthropic: Мінікурс з вайб-код",
+          "date": "2025-08-24",
+          "url": "https://t.me/imatrofAI/1526",
+          "preview": "Anthropic виклали круту підбірку відео про кодинг з Claude."
+        },
+        {
+          "title": "Claude: прямий доступ до веб-сторінок",
+          "short_title": "Claude: прямий доступ до веб-с",
+          "date": "2025-08-23",
+          "url": "https://t.me/imatrofAI/1389",
+          "preview": "🏄‍♀️ Тут класний апдейт прилетів від Anthropic."
+        },
+        {
+          "title": "Claude Sonnet 4: 1 мільйон токенів контексту",
+          "short_title": "Claude Sonnet 4: 1 мільйон ток",
+          "date": "2025-08-22",
+          "url": "https://t.me/imatrofAI/1520",
+          "preview": "Claude Sonnet 4 тепер підтримує 1 мільйон токенів контексту через API."
+        },
+        {
+          "title": "Claude: посилання на попередні чати",
+          "short_title": "Claude: посилання на попередні",
+          "date": "2025-08-19",
+          "url": "https://t.me/imatrofAI/1511",
+          "preview": "У Claude з'явилася дуже зручна фіча — можливість посилатися на попередні чати безпосередньо у новій розмові."
+        },
+        {
+          "title": "ChatGPT має",
+          "short_title": "ChatGPT має",
+          "date": "2025-08-18",
+          "url": "https://t.me/imatrofAI/1546",
+          "preview": "ChatGPT має Claude має Тепер і Gemini [має](https://x.com/GeminiApp/status/1955719137109438768) Як працює історія чатів (технічно): Уявімо фразу з минулого чату: «Мій кіт Мармелад"
+        },
+        {
+          "title": "Сьогодні переписувався зі своїм одногрупником і він поділився конфігурацією, ...",
+          "short_title": "Сьогодні переписувався зі свої",
+          "date": "2025-08-16",
+          "url": "https://t.me/imatrofAI/1541",
+          "preview": "Сьогодні переписувався зі своїм одногрупником і він поділився [конфігурацією,](https://github.com/teremterem/claude-code-gpt-5) яку розробив."
+        },
+        {
+          "title": "Є ті, хто LLM розробляє, і є ті, хто їх ламає.",
+          "short_title": "Є ті, хто LLM розробляє, і є т",
+          "date": "2025-08-15",
+          "url": "https://t.me/imatrofAI/1529",
+          "preview": "Є ті, хто LLM розробляє, і є ті, хто їх ламає."
+        },
+        {
+          "title": "Claude Code тепер може працювати в режимі навчання. Вайбкодити стає ще простіше.",
+          "short_title": "Claude Code тепер може працюва",
+          "date": "2025-08-15",
+          "url": "https://t.me/imatrofAI/1531",
+          "preview": "Claude Code тепер може працювати в режимі навчання."
+        },
+        {
+          "title": "Рух йде в сторону спеціалізованих агентів. А точніше — розширення спеціалізац...",
+          "short_title": "Рух йде в сторону спеціалізова",
+          "date": "2025-08-14",
+          "url": "https://t.me/imatrofAI/1523",
+          "preview": "Рух йде в сторону спеціалізованих агентів."
+        },
+        {
+          "title": "А ще Anthropic виклали круту підбірку відео про кодинг з Claude.",
+          "short_title": "А ще Anthropic виклали круту п",
+          "date": "2025-08-14",
+          "url": "https://t.me/imatrofAI/1526",
+          "preview": "А ще Anthropic виклали круту підбірку відео про кодинг з Claude."
+        },
+        {
+          "title": "А бачите відмінності?",
+          "short_title": "А бачите відмінності?",
+          "date": "2025-08-13",
+          "url": "https://t.me/imatrofAI/1517",
+          "preview": "А бачите відмінності?"
+        },
+        {
+          "title": "Воно то так. Claude Sonnet 4 тепер підтримує 1 мільйон токенів контексту чере...",
+          "short_title": "Воно то так. Claude Sonnet 4 т",
+          "date": "2025-08-13",
+          "url": "https://t.me/imatrofAI/1520",
+          "preview": "Воно то так. Claude Sonnet 4 тепер [підтримує](https://www.anthropic.com/news/1m-context) 1 мільйон токенів контексту через API."
+        },
+        {
+          "title": "🏄‍♀️ Manus запустив Wide Research — мультиагентного оркестратора. Звучить скл...",
+          "short_title": "🏄‍♀️ Manus запустив Wide Resea",
+          "date": "2025-08-12",
+          "url": "https://t.me/imatrofAI/1501",
+          "preview": "🏄‍♀️ Manus запустив [Wide Research](https://manus.im/blog/introducing-wide-research) — мультиагентного оркестратора."
+        },
+        {
+          "title": "А ще у Claude тепер є фіча підтягувати та посилатися на попередні чати, щоб п...",
+          "short_title": "А ще у Claude тепер є фіча під",
+          "date": "2025-08-12",
+          "url": "https://t.me/imatrofAI/1511",
+          "preview": "А ще у [Claude](https://x.com/claudeai/status/1954982275453686216) тепер є фіча підтягувати та посилатися на попередні чати, щоб продовжити розмову з того місця, де ви зупинились."
+        },
+        {
+          "title": "Zapier: 100 % співробітників повинні мати AI‑грамотність",
+          "short_title": "Zapier: 100 % співробітників п",
+          "date": "2025-08-09",
+          "url": "https://t.me/imatrofAI/1480",
+          "preview": "Zapier: 100 % співробітників повинні мати AI‑грамотність На сторінці Вейда Фостера з’явився [допис](https://x.com/wadefoster/status/1930680089651425452?s=46&t=TzksdWDU4YgIPS7Vwk4ez"
+        },
+        {
+          "title": "А вчора ще розпочався шаховий турнір між топовими LLM. І так, там все серйозн...",
+          "short_title": "А вчора ще розпочався шаховий",
+          "date": "2025-08-06",
+          "url": "https://t.me/imatrofAI/1455",
+          "preview": "А вчора ще [розпочався](https://www.kaggle.com/benchmarks/kaggle/chess-text/versions/1) шаховий турнір між топовими LLM."
+        },
+        {
+          "title": "А ще Anthropic тихенько викотив Claude Opus 4.1. Це апгрейд старого Opus 4 — ...",
+          "short_title": "А ще Anthropic тихенько викоти",
+          "date": "2025-08-05",
+          "url": "https://t.me/imatrofAI/1452",
+          "preview": "А ще Anthropic тихенько [викотив](https://www.anthropic.com/news/claude-opus-4-1) Claude Opus 4.1."
+        },
+        {
+          "title": "Про саб-агентів я вже писав вище. Коли контекст один, задачі різні — і щоб не...",
+          "short_title": "Про саб-агентів я вже писав ви",
+          "date": "2025-07-28",
+          "url": "https://t.me/imatrofAI/1415",
+          "preview": "Про саб-агентів я вже писав вище."
+        },
+        {
+          "title": "У Claude Code з’явилися «суб‑агенти». Це не просто додатковий модуль, а можли...",
+          "short_title": "У Claude Code з’явилися «суб‑а",
+          "date": "2025-07-27",
+          "url": "https://t.me/imatrofAI/1413",
+          "preview": "У Claude Code з’явилися [«суб‑агенти».](https://docs.anthropic.com/en/docs/claude-code/sub-agents) Це не просто додатковий модуль, а можливість зібрати власну команду розумних помі"
+        },
+        {
+          "title": "Anthropic запустили свою версію «GPT Store»",
+          "short_title": "Anthropic запустили свою версі",
+          "date": "2025-07-24",
+          "url": "https://t.me/imatrofAI/1313",
+          "preview": "Anthropic запустили свою версію «GPT Store»."
+        },
+        {
+          "title": "Та історія, яку я розповідав у відео, - про те, що Grok мав упередженість у в...",
+          "short_title": "Та історія, яку я розповідав у",
+          "date": "2025-07-19",
+          "url": "https://t.me/imatrofAI/1398",
+          "preview": "Та історія, яку я [розповідав](https://youtu.be/lprsnGbxRk4) у відео, - про те, що Grok мав упередженість у відповідях на питання про Ізраїль і Палестину."
+        },
+        {
+          "title": "Драма навколо Windsurf:",
+          "short_title": "Драма навколо Windsurf:",
+          "date": "2025-07-17",
+          "url": "https://t.me/imatrofAI/1393",
+          "preview": "Драма навколо Windsurf: 🌀 OpenAI хотіли [купити](https://www.linkedin.com/posts/chiefdata_openai-paid-3-billion-for-windsurf-and-activity-7326285418071572481-GM_m/) за $3 млрд, але"
+        },
+        {
+          "title": "А ось і Амазон з’явився на горизонті зі своїм AI‑редактором коду — Kiro. Ще о...",
+          "short_title": "А ось і Амазон з’явився на гор",
+          "date": "2025-07-17",
+          "url": "https://t.me/imatrofAI/1394",
+          "preview": "А ось і Амазон з’явився на горизонті зі своїм AI‑редактором коду — [Kiro](https://kiro.dev/)[.](https://kiro.dev/) Ще один IDE на базі VS Code, який під капотом використовує Claude"
+        },
+        {
+          "title": "🏄‍♀️ Агент у ChatGPT.",
+          "short_title": "🏄‍♀️ Агент у ChatGPT.",
+          "date": "2025-07-17",
+          "url": "https://t.me/imatrofAI/1395",
+          "preview": "🏄‍♀️ Агент у ChatGPT."
+        },
+        {
+          "title": "🏄‍♀️ Тут класний апдейт прилетів від Anthropic.",
+          "short_title": "🏄‍♀️ Тут класний апдейт прилет",
+          "date": "2025-07-16",
+          "url": "https://t.me/imatrofAI/1389",
+          "preview": "🏄‍♀️ Тут класний апдейт прилетів від Anthropic."
+        },
+        {
+          "title": "З кожним роком великі мовні моделі стають все кращими.",
+          "short_title": "З кожним роком великі мовні мо",
+          "date": "2025-07-14",
+          "url": "https://t.me/imatrofAI/1373",
+          "preview": "З кожним роком великі мовні моделі [стають](https://spectrum.ieee.org/large-language-model-performance) все кращими."
+        },
+        {
+          "title": "Дорога команда вийшла.",
+          "short_title": "Дорога команда вийшла.",
+          "date": "2025-07-01",
+          "url": "https://t.me/imatrofAI/1327",
+          "preview": "Дорога команда вийшла."
+        },
+        {
+          "title": "Якщо дати AI агенту керувати бізнесом з оборотом $1000, то вже за місяць часу...",
+          "short_title": "Якщо дати AI агенту керувати б",
+          "date": "2025-06-30",
+          "url": "https://t.me/imatrofAI/1323",
+          "preview": "Якщо дати AI агенту керувати бізнесом з оборотом $1000, то вже за місяць часу він з нього зробить $800."
+        },
+        {
+          "title": "А бачили, Anthropic запустили свою версію «GPT Store». Вони зробили окрему зо...",
+          "short_title": "А бачили, Anthropic запустили",
+          "date": "2025-06-26",
+          "url": "https://t.me/imatrofAI/1313",
+          "preview": "А бачили, Anthropic [запустили](https://claude.ai/artifacts) свою версію «GPT Store»."
+        },
+        {
+          "title": "Маємо тепер повний комплект CLI-ів. Спершу був Claude Code від Anthropic, пот...",
+          "short_title": "Маємо тепер повний комплект CL",
+          "date": "2025-06-25",
+          "url": "https://t.me/imatrofAI/1310",
+          "preview": "Маємо тепер повний комплект CLI-ів."
+        },
+        {
+          "title": "Meta підтягує собі важку артилерію. CEO Scale AI, Александр Ванг, переходить ...",
+          "short_title": "Meta підтягує собі важку артил",
+          "date": "2025-06-16",
+          "url": "https://t.me/imatrofAI/1274",
+          "preview": "Meta підтягує собі важку артилерію."
+        },
+        {
+          "title": "Claude Opus 4 — нова найпотужніша модель для коду",
+          "short_title": "Claude Opus 4 — нова найпотужн",
+          "date": "2025-06-15",
+          "url": "https://t.me/imatrofAI/1187",
+          "preview": "🏄‍♀️ Маємо оновлення для всіх, хто пише код з AI."
+        },
+        {
+          "title": "Еволюція ШІ: від смартфона до божества? (CEO Anthropic)",
+          "short_title": "Еволюція ШІ: від смартфона до",
+          "date": "2025-06-03",
+          "url": "https://t.me/imatrofAI/1211",
+          "preview": "Тут СЕО Anthropic трохи наводить шороху своєю заявою."
+        },
+        {
+          "title": "Тут СЕО Anthropic трохи наводить шороху своєю заявою.",
+          "short_title": "Тут СЕО Anthropic трохи наводи",
+          "date": "2025-05-31",
+          "url": "https://t.me/imatrofAI/1211",
+          "preview": "Тут СЕО Anthropic трохи [наводить](https://www.nytimes.com/2025/05/30/technology/ai-jobs-college-graduates.html) шороху своєю заявою."
+        },
+        {
+          "title": "Системний промпт Claude — 16 739 слів логіки",
+          "short_title": "Системний промпт Claude — 16 7",
+          "date": "2025-05-31",
+          "url": "https://t.me/imatrofAI/1162",
+          "preview": "А ще в мережу злили системний промпт Claude — він займає 16 739 слів 😮 Там є вся логіка взаємодії, обмеження та вказівки щодо тону."
+        },
+        {
+          "title": "Perplexity зробили серйозний буст для свого DeepResearch агента. Додали цілий...",
+          "short_title": "Perplexity зробили серйозний б",
+          "date": "2025-05-30",
+          "url": "https://t.me/imatrofAI/1210",
+          "preview": "Perplexity зробили серйозний буст для свого DeepResearch агента."
+        },
+        {
+          "title": "Claude Voice Mode — голосовий режим від Anthropic",
+          "short_title": "Claude Voice Mode — голосовий",
+          "date": "2025-05-29",
+          "url": "https://t.me/imatrofAI/1204",
+          "preview": "🏄‍♀️ Оновлення для Claude підʼїхали."
+        },
+        {
+          "title": "Сергій Брін (засновинк Google) нещодавно під час свого виступу вкинув доволі ...",
+          "short_title": "Сергій Брін (засновинк Google)",
+          "date": "2025-05-28",
+          "url": "https://t.me/imatrofAI/1202",
+          "preview": "Сергій Брін (засновинк Google) нещодавно під час свого [виступу](https://youtu.be/8g7a0IWKDRE?t=503) вкинув доволі дике, але смішне: мовляв, розробники Gemini це не дуже афішують,"
+        },
+        {
+          "title": "🏄‍♀️ Оновлення для Claude підʼїхали.",
+          "short_title": "🏄‍♀️ Оновлення для Claude підʼ",
+          "date": "2025-05-28",
+          "url": "https://t.me/imatrofAI/1204",
+          "preview": "🏄‍♀️ Оновлення для Claude підʼїхали."
+        },
+        {
+          "title": "🏄‍♀️ Маємо оновлення для всіх, хто пише код з AI.",
+          "short_title": "🏄‍♀️ Маємо оновлення для всіх,",
+          "date": "2025-05-23",
+          "url": "https://t.me/imatrofAI/1187",
+          "preview": "🏄‍♀️ Маємо оновлення для всіх, хто пише код з AI."
+        },
+        {
+          "title": "Бачили, що Google DeepMind викотили?",
+          "short_title": "Бачили, що Google DeepMind вик",
+          "date": "2025-05-17",
+          "url": "https://t.me/imatrofAI/1164",
+          "preview": "Бачили, що Google DeepMind викотили?"
+        },
+        {
+          "title": "А ще в мережу злили системний промпт Claude - він займає 16 739 слів 😮",
+          "short_title": "А ще в мережу злили системний",
+          "date": "2025-05-15",
+          "url": "https://t.me/imatrofAI/1162",
+          "preview": "А ще в мережу [злили](https://www.dbreunig.com/2025/05/07/claude-s-system-prompt-chatbots-are-more-than-just-models.html) системний промпт Claude - він займає 16 739 слів 😮 Там є в"
+        },
+        {
+          "title": "Як часто ви користуєтесь Google Пошуком за останні пів року?",
+          "short_title": "Як часто ви користуєтесь Googl",
+          "date": "2025-05-14",
+          "url": "https://t.me/imatrofAI/1158",
+          "preview": "Як часто ви користуєтесь Google Пошуком за останні пів року?"
+        },
+        {
+          "title": "Зібрав безкоштовні та корисні метаріали від OpenAI, Anthropic і Google для вс...",
+          "short_title": "Зібрав безкоштовні та корисні",
+          "date": "2025-05-12",
+          "url": "https://t.me/imatrofAI/1156",
+          "preview": "Зібрав безкоштовні та корисні метаріали від OpenAI, Anthropic і Google для всіх, хто хоче зрозуміти як працює prompt engineering та як будуються AI агенти: 🌀 Prompt Engineering від"
+        },
+        {
+          "title": "Ви знаєте, у своїх відео, коли розповідаю про нову LLM, я часто посилаюсь на ...",
+          "short_title": "Ви знаєте, у своїх відео, коли",
+          "date": "2025-05-07",
+          "url": "https://t.me/imatrofAI/1137",
+          "preview": "Ви знаєте, у своїх відео, коли розповідаю про нову LLM, я часто посилаюсь на рейтинг на [LM Arena](https://lmarena.ai/)[.](https://lmarena.ai/) І часто бачив, що нова модель, як ті"
+        },
+        {
+          "title": "А ось це цікаво. Чесно навіть трохи неочікувано.",
+          "short_title": "А ось це цікаво. Чесно навіть",
+          "date": "2025-05-07",
+          "url": "https://t.me/imatrofAI/1139",
+          "preview": "А ось це цікаво. Чесно навіть трохи неочікувано."
+        },
+        {
+          "title": "Claude: глибокий пошук та інтеграції",
+          "short_title": "Claude: глибокий пошук та інте",
+          "date": "2025-05-05",
+          "url": "https://t.me/imatrofAI/1124",
+          "preview": "У Claude зʼявився глибокий пошук та ряд цікавих інтеграцій."
+        },
+        {
+          "title": "У Claude зʼявився глибокий пошук та ряд цікавих інтеграцій.",
+          "short_title": "У Claude зʼявився глибокий пош",
+          "date": "2025-05-01",
+          "url": "https://t.me/imatrofAI/1124",
+          "preview": "У Claude зʼявився глибокий пошук та ряд цікавих інтеграцій."
+        },
+        {
+          "title": "Google, OpenAI і Anthropic вже напряму кажуть: AGI за 5 років. Кілька аналіти...",
+          "short_title": "Google, OpenAI і Anthropic вже",
+          "date": "2025-04-30",
+          "url": "https://t.me/imatrofAI/1113",
+          "preview": "Google, OpenAI і Anthropic вже напряму кажуть: AGI за 5 років."
+        },
+        {
+          "title": "Отже, за п’ять років люди будуть жити в середньому до 160 років. Ще на початк...",
+          "short_title": "Отже, за п’ять років люди буду",
+          "date": "2025-04-22",
+          "url": "https://t.me/imatrofAI/1084",
+          "preview": "Отже, за п’ять років люди будуть жити в середньому до 160 років."
+        },
+        {
+          "title": "MCP-сервери набирають популярності у побудові мультиагентних систем. Я ще ран...",
+          "short_title": "MCP-сервери набирають популярн",
+          "date": "2025-04-21",
+          "url": "https://t.me/imatrofAI/1083",
+          "preview": "MCP-сервери набирають популярності у побудові мультиагентних систем."
+        },
+        {
+          "title": "А ще OpenAI показали Codex CLI — такий собі lightweight coding agent, що прац...",
+          "short_title": "А ще OpenAI показали Codex CLI",
+          "date": "2025-04-17",
+          "url": "https://t.me/imatrofAI/1069",
+          "preview": "А ще OpenAI [показали](https://openai.com/index/introducing-o3-and-o4-mini/#:~:text=Codex%20CLI%3A%20frontier%20reasoning%20in%20the%20terminal) Codex CLI — такий собі lightweight"
+        },
+        {
+          "title": "Claude — більше можливостей для користувачів",
+          "short_title": "Claude — більше можливостей дл",
+          "date": "2025-04-09",
+          "url": "https://t.me/imatrofAI/1032",
+          "preview": "Кому ще більше Claude?"
+        },
+        {
+          "title": "Кому ще більше Claude? Бо тепер можна буде прям «від душі» користуватись.",
+          "short_title": "Кому ще більше Claude? Бо тепе",
+          "date": "2025-04-09",
+          "url": "https://t.me/imatrofAI/1032",
+          "preview": "Кому ще більше Claude?"
+        },
+        {
+          "title": "Люди все ще розумніші за AI!",
+          "short_title": "Люди все ще розумніші за AI!",
+          "date": "2025-04-08",
+          "url": "https://t.me/imatrofAI/1023",
+          "preview": "Люди все ще розумніші за AI!"
+        },
+        {
+          "title": "А я казав, що Meta — номер один компанія, яка дає ШІ у руки користувачів.",
+          "short_title": "А я казав, що Meta — номер оди",
+          "date": "2025-04-07",
+          "url": "https://t.me/imatrofAI/1015",
+          "preview": "А я [казав](https://t.me/imatrofAI/56)[,](https://t.me/imatrofAI/56) що Meta — номер один компанія, яка дає ШІ у руки користувачів."
+        },
+        {
+          "title": "Ось маємо ще одного агента. І це не просто демо, а реальний продукт.",
+          "short_title": "Ось маємо ще одного агента. І",
+          "date": "2025-04-04",
+          "url": "https://t.me/imatrofAI/996",
+          "preview": "Ось маємо ще одного агента."
+        },
+        {
+          "title": "Я взагалі-то не пишу тут про політику, але цього разу буде виняток.",
+          "short_title": "Я взагалі-то не пишу тут про п",
+          "date": "2025-04-04",
+          "url": "https://t.me/imatrofAI/999",
+          "preview": "Я взагалі-то не пишу тут про політику, але цього разу буде виняток."
+        },
+        {
+          "title": "🏄‍♀️ О, а ось це вже цікаво!",
+          "short_title": "🏄‍♀️ О, а ось це вже цікаво!",
+          "date": "2025-03-20",
+          "url": "https://t.me/imatrofAI/946",
+          "preview": "🏄‍♀️ О, а ось це вже цікаво!"
+        },
+        {
+          "title": "Маю для вас класний та безкоштовний сервіс для навчання.",
+          "short_title": "Маю для вас класний та безкошт",
+          "date": "2025-03-18",
+          "url": "https://t.me/imatrofAI/941",
+          "preview": "Маю для вас класний та безкоштовний сервіс для навчання."
+        },
+        {
+          "title": "Один з моїх улюблених авторів, Ітан Молік, написав класну статтю про те, який...",
+          "short_title": "Один з моїх улюблених авторів,",
+          "date": "2025-03-17",
+          "url": "https://t.me/imatrofAI/940",
+          "preview": "Один з моїх улюблених авторів, Ітан Молік, [написав](https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated) класну статтю про те, який AI обрати."
+        },
+        {
+          "title": "Claude Search — Anthropic виходить на ринок пошуку",
+          "short_title": "Claude Search — Anthropic вихо",
+          "date": "2025-03-16",
+          "url": "https://t.me/imatrofAI/946",
+          "preview": "🏄‍♀️ О, а ось це вже цікаво!"
+        },
+        {
+          "title": "Яка LLM КРАЩА у 2025? GPT 4.5 vs Claude 3.7 vs Gemini vs Grok - Порівняння",
+          "short_title": "Яка LLM КРАЩА у 2025? GPT 4.5",
+          "date": "2025-03-15",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Яка LLM КРАЩА у 2025? GPT 4.5 vs Claude 3.7 vs Gemini vs Grok - Порівняння"
+        },
+        {
+          "title": "AI для письменників від письменника.",
+          "short_title": "AI для письменників від письме",
+          "date": "2025-03-13",
+          "url": "https://t.me/imatrofAI/930",
+          "preview": "AI для письменників від письменника."
+        },
+        {
+          "title": "Тут в інтернеті віруситься новий AI-агент — Manus.",
+          "short_title": "Тут в інтернеті віруситься нов",
+          "date": "2025-03-10",
+          "url": "https://t.me/imatrofAI/913",
+          "preview": "Тут в інтернеті віруситься новий AI-агент — Manus."
+        },
+        {
+          "title": "Ось який він, мультиагентний досвід. Поки Tesla на автопілоті везе на ділову ...",
+          "short_title": "Ось який він, мультиагентний д",
+          "date": "2025-03-10",
+          "url": "https://t.me/imatrofAI/915",
+          "preview": "Ось який він, мультиагентний досвід."
+        },
+        {
+          "title": "Claude 3.7 - Програмуємо на вайбі (ще потужніша, вміє думати, має режим AI агента)",
+          "short_title": "Claude 3.7 - Програмуємо на ва",
+          "date": "2025-03-08",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude 3.7 - Програмуємо на вайбі (ще потужніша, вміє думати, має режим AI агента)"
+        },
+        {
+          "title": "Тут хороша пропозиція від Anthropic прилетіла 🔖",
+          "short_title": "Тут хороша пропозиція від Anth",
+          "date": "2025-02-27",
+          "url": "https://t.me/imatrofAI/888",
+          "preview": "Тут хороша пропозиція від Anthropic прилетіла 🔖 Тільки 3 дні Anthropic [дає знижку](https://claude.ai/upgrade) на річну підписку Claude Pro – $180 замість $216."
+        },
+        {
+          "title": "Vibe Coding – новий стиль кодування, який змінює гру.",
+          "short_title": "Vibe Coding – новий стиль коду",
+          "date": "2025-02-27",
+          "url": "https://t.me/imatrofAI/889",
+          "preview": "Vibe Coding – новий стиль кодування, який змінює гру."
+        },
+        {
+          "title": "Відео про Claude 3.7 вже на каналі. Чекає ваших переглядів, лайків та обговор...",
+          "short_title": "Відео про Claude 3.7 вже на ка",
+          "date": "2025-02-26",
+          "url": "https://t.me/imatrofAI/887",
+          "preview": "[Відео](https://youtu.be/BDrwar8F1TQ) про Claude 3.7 вже на каналі."
+        },
+        {
+          "title": "Відео про Claude 3.7 — огляд на каналі",
+          "short_title": "Відео про Claude 3.7 — огляд н",
+          "date": "2025-02-25",
+          "url": "https://t.me/imatrofAI/887",
+          "preview": "Відео про Claude 3.7 вже на каналі."
+        },
+        {
+          "title": "Знижка від Anthropic — спеціальна пропозиція",
+          "short_title": "Знижка від Anthropic — спеціал",
+          "date": "2025-02-25",
+          "url": "https://t.me/imatrofAI/888",
+          "preview": "Тут хороша пропозиція від Anthropic прилетіла 🔖 Тільки 3 дні Anthropic дає знижку на підписку."
+        },
+        {
+          "title": "Claude 3.7 Sonnet — велике оновлення від Anthropic",
+          "short_title": "Claude 3.7 Sonnet — велике оно",
+          "date": "2025-02-24",
+          "url": "https://t.me/imatrofAI/887",
+          "preview": "Anthropic анонсували Claude 3.7 Sonnet."
+        },
+        {
+          "title": "🏄‍♀️🏄‍♀️🏄‍♀️ Claude 3.7 Sonnet",
+          "short_title": "🏄‍♀️🏄‍♀️🏄‍♀️ Claude 3.7 Sonnet",
+          "date": "2025-02-24",
+          "url": "https://t.me/imatrofAI/879",
+          "preview": "🏄‍♀️🏄‍♀️🏄‍♀️ Claude 3.7 Sonnet Anthropic анонсували оновлену версію своєї моделі, яка, окрім звичайного режиму роботи, ще має можливість [thinking](https://www.anthropic.com/resear"
+        },
+        {
+          "title": "А ось і ефект ШІ-економіки в дії.",
+          "short_title": "А ось і ефект ШІ-економіки в д",
+          "date": "2025-02-19",
+          "url": "https://t.me/imatrofAI/860",
+          "preview": "А ось і ефект ШІ-економіки в дії."
+        },
+        {
+          "title": "А ось ще одне цікаве застосування о3-mini для глибокого дослідження.",
+          "short_title": "А ось ще одне цікаве застосува",
+          "date": "2025-02-04",
+          "url": "https://t.me/imatrofAI/816",
+          "preview": "А ось ще одне цікаве застосування о3-mini для глибокого дослідження."
+        },
+        {
+          "title": "А ще ByteDance запустила новий AI-редактор коду, щоб скласти конкуренцію амер...",
+          "short_title": "А ще ByteDance запустила новий",
+          "date": "2025-01-30",
+          "url": "https://t.me/imatrofAI/798",
+          "preview": "А ще ByteDance запустила новий AI-редактор коду, щоб скласти конкуренцію американським гігантам."
+        },
+        {
+          "title": "Затестив режим Canvas для моделі o1.",
+          "short_title": "Затестив режим Canvas для моде",
+          "date": "2025-01-28",
+          "url": "https://t.me/imatrofAI/793",
+          "preview": "Затестив режим Canvas для моделі o1."
+        },
+        {
+          "title": "Якось Китай прям дуже активізувався.",
+          "short_title": "Якось Китай прям дуже активізу",
+          "date": "2025-01-27",
+          "url": "https://t.me/imatrofAI/791",
+          "preview": "Якось Китай прям дуже активізувався."
+        },
+        {
+          "title": "Оператор від OpenAI вже цього тижня?",
+          "short_title": "Оператор від OpenAI вже цього",
+          "date": "2025-01-22",
+          "url": "https://t.me/imatrofAI/769",
+          "preview": "Оператор від OpenAI вже цього тижня?"
+        },
+        {
+          "title": "Генеральний директор Replit, Амджад Масад, поділився своїми думками про те, я...",
+          "short_title": "Генеральний директор Replit, А",
+          "date": "2025-01-18",
+          "url": "https://t.me/imatrofAI/760",
+          "preview": "Генеральний директор Replit, Амджад Масад, [поділився](https://www.semafor.com/article/01/15/2025/replit-ceo-on-ai-breakthroughs-we-dont-care-about-professional-coders-anymore) сво"
+        },
+        {
+          "title": "Тут питали, яка мовна модель краща для програмування.",
+          "short_title": "Тут питали, яка мовна модель к",
+          "date": "2025-01-03",
+          "url": "https://t.me/imatrofAI/725",
+          "preview": "Тут питали, яка мовна модель краща для програмування."
+        },
+        {
+          "title": "Claude MCP",
+          "short_title": "Claude MCP",
+          "date": "2025-01-03",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Mistral Le Chat! Чи варто переходити?"
+        },
+        {
+          "title": "Claude 3.5",
+          "short_title": "Claude 3.5",
+          "date": "2025-01-03",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Mistral Le Chat! Чи варто переходити?"
+        },
+        {
+          "title": "Китайська відкрита LLM обігнала GPT-4o, Claude 3.5 Sonnet та інші топові опен...",
+          "short_title": "Китайська відкрита LLM обігнал",
+          "date": "2024-12-30",
+          "url": "https://t.me/imatrofAI/717",
+          "preview": "Китайська відкрита LLM обігнала GPT-4o, Claude 3.5 Sonnet та інші топові опенсорс моделі, як-от Llama, за багатьма параметрами."
+        },
+        {
+          "title": "Якщо раптом у вас спрацювали обмеження по використанню o1 моделі, то ось вам ...",
+          "short_title": "Якщо раптом у вас спрацювали о",
+          "date": "2024-12-23",
+          "url": "https://t.me/imatrofAI/702",
+          "preview": "Якщо раптом у вас спрацювали обмеження по використанню o1 моделі, то ось вам промпт, який може відтворити процес мислення та самооцінки."
+        },
+        {
+          "title": "Тут Anthropic показали, як люди використовують AI у реальному світі.",
+          "short_title": "Тут Anthropic показали, як люд",
+          "date": "2024-12-18",
+          "url": "https://t.me/imatrofAI/657",
+          "preview": "Тут Anthropic показали, як люди використовують AI у реальному світі."
+        },
+        {
+          "title": "Anthropic — як люди використовують ШІ в реальності",
+          "short_title": "Anthropic — як люди використов",
+          "date": "2024-12-16",
+          "url": "https://t.me/imatrofAI/657",
+          "preview": "Anthropic показали реальні кейси використання AI."
+        },
+        {
+          "title": "Я вже не думав, що цього року ми ще щось класне побачимо від Google.",
+          "short_title": "Я вже не думав, що цього року",
+          "date": "2024-12-12",
+          "url": "https://t.me/imatrofAI/611",
+          "preview": "Я вже не думав, що цього року ми ще щось класне побачимо від Google."
+        },
+        {
+          "title": "З одного боку, воно таки так — спрацьовує принцип Парето, і те, що вже лежало...",
+          "short_title": "З одного боку, воно таки так —",
+          "date": "2024-12-11",
+          "url": "https://t.me/imatrofAI/603",
+          "preview": "З одного боку, воно таки так — спрацьовує принцип Парето, і те, що вже лежало на поверхні в контексті штучного інтелекту, досягнуто."
+        },
+        {
+          "title": "Адвент-календар від OpenAI – День 4 – Canvas.",
+          "short_title": "Адвент-календар від OpenAI – Д",
+          "date": "2024-12-10",
+          "url": "https://t.me/imatrofAI/597",
+          "preview": "Адвент-календар від OpenAI – День 4 – Canvas."
+        },
+        {
+          "title": "250 хакерам дали 24 години, щоб побачити, що можна створити використовуючи фу...",
+          "short_title": "250 хакерам дали 24 години, що",
+          "date": "2024-12-06",
+          "url": "https://t.me/imatrofAI/564",
+          "preview": "250 хакерам дали 24 години, щоб побачити, що можна створити використовуючи функціонал «computer use» у Claude."
+        },
+        {
+          "title": "Значить затестив я “місток” між моделлю Claude і даними та застосунками на ко...",
+          "short_title": "Значить затестив я “місток” мі",
+          "date": "2024-11-30",
+          "url": "https://t.me/imatrofAI/530",
+          "preview": "Значить затестив я “місток” між моделлю Claude і даними та застосунками на комп’ютері."
+        },
+        {
+          "title": "MCP — місток між Claude та вашими даними",
+          "short_title": "MCP — місток між Claude та ваш",
+          "date": "2024-11-30",
+          "url": "https://t.me/imatrofAI/530",
+          "preview": "Затестив я “місток” між моделлю Claude і даними та застосунками на комп’ютері — Model Context Protocol (MCP)."
+        },
+        {
+          "title": "Наразі це один із найкращих прикладів використання нового функціоналу Claude.",
+          "short_title": "Наразі це один із найкращих пр",
+          "date": "2024-11-28",
+          "url": "https://t.me/imatrofAI/527",
+          "preview": "Наразі це один із найкращих [прикладів](https://x.com/alecvxyz/status/1861888108913950800) використання нового функціоналу Claude."
+        },
+        {
+          "title": "Пам’ятаєте, я показував, як Anthropic через свою модель Claude керує комп’юте...",
+          "short_title": "Пам’ятаєте, я показував, як An",
+          "date": "2024-11-26",
+          "url": "https://t.me/imatrofAI/516",
+          "preview": "Пам’ятаєте, я [показував](https://youtu.be/SJzr_bnPzHg?si=YN4ImmB4j4mYLjyI)[,](https://youtu.be/SJzr_bnPzHg?si=YN4ImmB4j4mYLjyI) як Anthropic через свою модель Claude керує комп’ют"
+        },
+        {
+          "title": "🏄‍♀️ GPT за 8 хвилин",
+          "short_title": "🏄‍♀️ GPT за 8 хвилин",
+          "date": "2024-11-23",
+          "url": "https://t.me/imatrofAI/496",
+          "preview": "🏄‍♀️ GPT за 8 хвилин Сам подивився і вам раджу."
+        },
+        {
+          "title": "🏄‍♀️ Має режим Canvas, але це не ChatGPT",
+          "short_title": "🏄‍♀️ Має режим Canvas, але це",
+          "date": "2024-11-20",
+          "url": "https://t.me/imatrofAI/483",
+          "preview": "🏄‍♀️ Має режим Canvas, але це не ChatGPT 🏄‍♀️ Має можливість аналізувати PDF, але це не Claude 🏄‍♀️ Має можливість пошуку в інтернеті зі штучним інтелектом, але це не Perplexity 🏄‍"
+        },
+        {
+          "title": "🏄‍♂️ А ось і OpenAI вийшов з гучною новиною. А я вже думав, невже вони тихо б...",
+          "short_title": "🏄‍♂️ А ось і OpenAI вийшов з г",
+          "date": "2024-11-14",
+          "url": "https://t.me/imatrofAI/465",
+          "preview": "🏄‍♂️ А ось і OpenAI вийшов з гучною новиною."
+        },
+        {
+          "title": "Учасник нашої спільноти розповідає про свій досвід з Qwen 2.5 (пост нижче 👇)",
+          "short_title": "Учасник нашої спільноти розпов",
+          "date": "2024-11-13",
+          "url": "https://t.me/imatrofAI/461",
+          "preview": "Учасник нашої спільноти розповідає про свій досвід з Qwen 2.5 (пост нижче 👇) Це нова і тепер вже одна з топових відкритих великих мовних моделей, розроблена компанією Alibaba."
+        },
+        {
+          "title": "Claude Browser Use та аудит будівництва",
+          "short_title": "Claude Browser Use та аудит бу",
+          "date": "2024-11-10",
+          "url": "https://t.me/imatrofAI/420",
+          "preview": "Ітан Молік показав неймовірний приклад: Claude Computer Use робить аудит будівельного майданчика через веб-камери та карти."
+        },
+        {
+          "title": "Claude computer use робить аудит будівельного майданчика",
+          "short_title": "Claude computer use робить ауд",
+          "date": "2024-11-08",
+          "url": "https://t.me/imatrofAI/427",
+          "preview": "Claude computer use робить аудит будівельного майданчика Ітан Молік, один з моїх улюблених авторів, хто пише про штучний інтелект, провів цікавий експеримент, де показав, як Claude"
+        },
+        {
+          "title": "Це те, що вміє Claude, тільки обмежено веб-браузером.",
+          "short_title": "Це те, що вміє Claude, тільки",
+          "date": "2024-11-06",
+          "url": "https://t.me/imatrofAI/420",
+          "preview": "Це те, що [вміє](https://youtu.be/SJzr_bnPzHg?si=v8p-Q6AwqbJFVLoF) Claude, тільки обмежено веб-браузером."
+        },
+        {
+          "title": "Claude Desktop для Mac та Windows",
+          "short_title": "Claude Desktop для Mac та Wind",
+          "date": "2024-11-01",
+          "url": "https://t.me/imatrofAI/369",
+          "preview": "Зустрічайте Claude Desktop!"
+        },
+        {
+          "title": "Ну все, тепер і Claude має не лише веб та мобільного клієнта.",
+          "short_title": "Ну все, тепер і Claude має не",
+          "date": "2024-10-31",
+          "url": "https://t.me/imatrofAI/369",
+          "preview": "Ну все, тепер і Claude має не лише веб та мобільного клієнта."
+        },
+        {
+          "title": "Ну які ж Anthropic молодці!",
+          "short_title": "Ну які ж Anthropic молодці!",
+          "date": "2024-10-31",
+          "url": "https://t.me/imatrofAI/370",
+          "preview": "Ну які ж Anthropic молодці!"
+        },
+        {
+          "title": "Claude 3.5 — керування комп'ютером та дата-аналіз",
+          "short_title": "Claude 3.5 — керування комп'ют",
+          "date": "2024-10-28",
+          "url": "https://t.me/imatrofAI/348",
+          "preview": "Значить затестив я нову модель Claude 3.5 та її можливість керувати комп’ютером."
+        },
+        {
+          "title": "До речі, Claude нещодавно викотив новий функціонал для дата-аналізу.",
+          "short_title": "До речі, Claude нещодавно вико",
+          "date": "2024-10-28",
+          "url": "https://t.me/imatrofAI/351",
+          "preview": "До речі, Claude нещодавно [викотив](https://www.anthropic.com/news/analysis-tool) новий функціонал для дата-аналізу."
+        },
+        {
+          "title": "Значить затестив я нову модель Claude 3.5 та її можливість керувати комп’ютер...",
+          "short_title": "Значить затестив я нову модель",
+          "date": "2024-10-26",
+          "url": "https://t.me/imatrofAI/348",
+          "preview": "Значить затестив я нову модель Claude 3.5 та її можливість керувати комп’ютером."
+        },
+        {
+          "title": "Claude Computer Use — ШІ керує комп'ютером",
+          "short_title": "Claude Computer Use — ШІ керує",
+          "date": "2024-10-23",
+          "url": "https://t.me/imatrofAI/336",
+          "preview": "Anthropic зробили прорив — Claude тепер може керувати комп'ютером (переміщати курсор, натискати кнопки, друкувати текст)."
+        },
+        {
+          "title": "🏄 Те, про що було купа розмов, а Anthropic взяли і зробили. І знову вони тихе...",
+          "short_title": "🏄 Те, про що було купа розмов,",
+          "date": "2024-10-23",
+          "url": "https://t.me/imatrofAI/336",
+          "preview": "🏄 Те, про що було купа розмов, а Anthropic взяли і зробили."
+        },
+        {
+          "title": "Ось такий вийшов мій перший досвід з Claude, який керував моїм комп’ютером. Н...",
+          "short_title": "Ось такий вийшов мій перший до",
+          "date": "2024-10-23",
+          "url": "https://t.me/imatrofAI/338",
+          "preview": "Ось такий вийшов мій перший досвід з Claude, який керував моїм комп’ютером."
+        },
+        {
+          "title": "Я раніше писав про Perplexity - це як Гугл пошук, тільки на стероїдах зі штуч...",
+          "short_title": "Я раніше писав про Perplexity",
+          "date": "2024-10-21",
+          "url": "https://t.me/imatrofAI/330",
+          "preview": "Я раніше [писав](https://t.me/imatrofAI/314) про Perplexity - це як Гугл пошук, тільки на стероїдах зі штучним інтелектом."
+        },
+        {
+          "title": "Тут цей, Perplexity виходить як окремий додаток під Mac. Можна буде отримати ...",
+          "short_title": "Тут цей, Perplexity виходить я",
+          "date": "2024-10-16",
+          "url": "https://t.me/imatrofAI/314",
+          "preview": "Тут цей, Perplexity виходить як окремий додаток під Mac."
+        },
+        {
+          "title": "Тут OpenAI випустив свою версію артефактів - canvas.",
+          "short_title": "Тут OpenAI випустив свою версі",
+          "date": "2024-10-04",
+          "url": "https://t.me/imatrofAI/273",
+          "preview": "Тут OpenAI [випустив](https://openai.com/index/introducing-canvas/) свою версію артефактів - canvas."
+        },
+        {
+          "title": "У мене таке враження, що після кожного великого анонсу з OpenAI хтось йде.",
+          "short_title": "У мене таке враження, що після",
+          "date": "2024-09-26",
+          "url": "https://t.me/imatrofAI/252",
+          "preview": "У мене таке враження, що після кожного великого анонсу з OpenAI хтось йде."
+        },
+        {
+          "title": "Станом на сьогодні, топові ШІ моделі притримуються лівої політичної позиції.",
+          "short_title": "Станом на сьогодні, топові ШІ",
+          "date": "2024-09-23",
+          "url": "https://t.me/imatrofAI/242",
+          "preview": "Станом на сьогодні, топові ШІ моделі притримуються лівої політичної позиції."
+        },
+        {
+          "title": "В продовженні теми платних vs безкоштовних ШІ сервісів.",
+          "short_title": "В продовженні теми платних vs",
+          "date": "2024-09-12",
+          "url": "https://t.me/imatrofAI/206",
+          "preview": "В продовженні теми платних vs безкоштовних ШІ сервісів."
+        },
+        {
+          "title": "📝 Один з учасників нашої спільноти підготував промпт на перевірку того як дит...",
+          "short_title": "📝 Один з учасників нашої спіль",
+          "date": "2024-09-09",
+          "url": "https://t.me/imatrofAI/196",
+          "preview": "📝 Один з учасників нашої спільноти підготував промпт на перевірку того як дитина засвоїла матеріал з підручнику."
+        },
+        {
+          "title": "Мені здається, що Claude заслуговує трохи більше уваги.",
+          "short_title": "Мені здається, що Claude заслу",
+          "date": "2024-09-06",
+          "url": "https://t.me/imatrofAI/190",
+          "preview": "Мені здається, що Claude [заслуговує](https://youtu.be/vUdNaAAc4FY?si=QZnuZG61FtHZSJgx) трохи більше уваги."
+        },
+        {
+          "title": "🎬 Тут вийшло нове відео на YouTube! Це в продовженні нашого вебінару",
+          "short_title": "🎬 Тут вийшло нове відео на You",
+          "date": "2024-09-05",
+          "url": "https://t.me/imatrofAI/188",
+          "preview": "🎬 Тут вийшло нове відео на YouTube!"
+        },
+        {
+          "title": "Claude Artifacts на мобільному — створення додатків голосом",
+          "short_title": "Claude Artifacts на мобільному",
+          "date": "2024-09-02",
+          "url": "https://t.me/imatrofAI/169",
+          "preview": "Експериментую з Claude Artifacts на мобільному."
+        },
+        {
+          "title": "Системні промпти Anthropic та корисні шаблони",
+          "short_title": "Системні промпти Anthropic та",
+          "date": "2024-09-01",
+          "url": "https://t.me/imatrofAI/165",
+          "preview": "Anthropic опублікував свої системні промпти."
+        },
+        {
+          "title": "Експериментую з Claude артефактами на мобільному. Те відчуття, коли ти сам мо...",
+          "short_title": "Експериментую з Claude артефак",
+          "date": "2024-08-31",
+          "url": "https://t.me/imatrofAI/169",
+          "preview": "Експериментую з Claude артефактами на мобільному."
+        },
+        {
+          "title": "Тут по промтам маємо трохи інсайтів. Антропік опублікував свої системні промти.",
+          "short_title": "Тут по промтам маємо трохи інс",
+          "date": "2024-08-30",
+          "url": "https://t.me/imatrofAI/165",
+          "preview": "Тут по промтам маємо трохи інсайтів."
+        },
+        {
+          "title": "Я: «Гей, Claude, я сумую за грою Flappy Bird. Зроби мені таку ж саму, але з к...",
+          "short_title": "Я: «Гей, Claude, я сумую за гр",
+          "date": "2024-08-30",
+          "url": "https://t.me/imatrofAI/167",
+          "preview": "Я: «Гей, Claude, я сумую за грою Flappy Bird."
+        },
+        {
+          "title": "1️⃣ ChatGPT => GPTs",
+          "short_title": "1️⃣ ChatGPT => GPTs",
+          "date": "2024-08-29",
+          "url": "https://t.me/imatrofAI/158",
+          "preview": "1️⃣ ChatGPT => [GPTs](https://openai.com/index/introducing-gpts/) 2️⃣ Claude => [Projects](https://www.anthropic.com/news/projects) 3️⃣ Gemini => [Gems](https://x.com/googledeepmin"
+        },
+        {
+          "title": "Артефакти Claude — тепер для всіх!",
+          "short_title": "Артефакти Claude — тепер для в",
+          "date": "2024-08-28",
+          "url": "https://t.me/imatrofAI/146",
+          "preview": "Claude зробив Artifacts доступними для всіх користувачів."
+        },
+        {
+          "title": "Артефакти для всіх!",
+          "short_title": "Артефакти для всіх!",
+          "date": "2024-08-27",
+          "url": "https://t.me/imatrofAI/146",
+          "preview": "Артефакти для [всіх!](https://youtu.be/vUdNaAAc4FY) Claude, одна з топових мовних моделей, ще кілька місяців тому [ввела](https://youtu.be/kJojgxb4rvg) таке поняття як «артефакт»."
+        },
+        {
+          "title": "На випадок, якщо хтось вам каже, що не може програмувати, покажіть їм це відео.",
+          "short_title": "На випадок, якщо хтось вам каж",
+          "date": "2024-08-22",
+          "url": "https://t.me/imatrofAI/130",
+          "preview": "На випадок, якщо хтось вам каже, що не може програмувати, покажіть їм це відео."
+        },
+        {
+          "title": "А ви чули, що Google тепер надає більше перевагу \"балансу між роботою і життя...",
+          "short_title": "А ви чули, що Google тепер над",
+          "date": "2024-08-20",
+          "url": "https://t.me/imatrofAI/127",
+          "preview": "А ви чули, що Google тепер надає більше перевагу \"балансу між роботою і життям\" замість \"перемоги\" на полі штучного інтелекту?"
+        },
+        {
+          "title": "Хочуть алайменту, а у самих міс-алаймент (це не точно).",
+          "short_title": "Хочуть алайменту, а у самих мі",
+          "date": "2024-08-06",
+          "url": "https://t.me/imatrofAI/84",
+          "preview": "Хочуть алайменту, а у самих міс-алаймент (це не точно)."
+        },
+        {
+          "title": "Claude 3.5 — перші враження та огляд на YouTube",
+          "short_title": "Claude 3.5 — перші враження та",
+          "date": "2024-07-08",
+          "url": "https://t.me/imatrofAI/23",
+          "preview": "Я зараз готую нове відео, де хочу поділитися своїми враженнями про Claude 3.5."
+        },
+        {
+          "title": "🎬  ВСІ ПОСИЛАННЯ ТА ДОДАТКОВІ МАТЕРІАЛИ З ВІДЕО",
+          "short_title": "🎬  ВСІ ПОСИЛАННЯ ТА ДОДАТКОВІ",
+          "date": "2024-07-08",
+          "url": "https://t.me/imatrofAI/25",
+          "preview": "🎬  ВСІ ПОСИЛАННЯ ТА ДОДАТКОВІ МАТЕРІАЛИ З ВІДЕО 🎬 [GPTs які звільнять 2 години щодня](https://t.me/imatrofAI/68) 🎬 [Моя система генерації контенту (Telegram та LinkedIn)](https://t"
+        },
+        {
+          "title": "Я зараз готую нове відео, де хочу поділитися своїми враженнями про Claude 3.5...",
+          "short_title": "Я зараз готую нове відео, де х",
+          "date": "2024-07-05",
+          "url": "https://t.me/imatrofAI/23",
+          "preview": "Я зараз готую нове відео, де хочу поділитися своїми враженнями про Claude 3.5."
+        },
+        {
+          "title": "Нещодавно проходив чекап у лікаря: здавав аналізи крові та інші обстеження, і...",
+          "short_title": "Нещодавно проходив чекап у лік",
+          "date": "2024-07-03",
+          "url": "https://t.me/imatrofAI/22",
+          "preview": "Нещодавно проходив чекап у лікаря: здавав аналізи крові та інші обстеження, і лікар надав висновок з рекомендаціями."
+        },
+        {
+          "title": "Anthropic — віжен на телефоні та реальні юзкейси",
+          "short_title": "Anthropic — віжен на телефоні",
+          "date": "2024-06-23",
+          "url": "https://t.me/imatrofAI/7",
+          "preview": "Я дуже зацінив віжен на телефоні."
+        },
+        {
+          "title": "Anthropic далі навалює. От мені прям цікаво, ті всі юзкейси, які вони (та інш...",
+          "short_title": "Anthropic далі навалює. От мен",
+          "date": "2024-06-23",
+          "url": "https://t.me/imatrofAI/7",
+          "preview": "Anthropic далі [навалює](https://youtu.be/dhxrHvgXpSM?si=Lu3X5t9lUnzgiXqo)[.](https://youtu.be/dhxrHvgXpSM?si=Lu3X5t9lUnzgiXqo) От мені прям цікаво, ті всі юзкейси, які вони (та ін"
+        },
+        {
+          "title": "Claude 3.5 — новий гравець від Anthropic",
+          "short_title": "Claude 3.5 — новий гравець від",
+          "date": "2024-06-22",
+          "url": "https://t.me/imatrofAI/5",
+          "preview": "Знову інтернет гудить новиною про новий ШІ."
+        },
+        {
+          "title": "Знову інтернет гудить новиною про новий ШІ. І купа відео від американських бл...",
+          "short_title": "Знову інтернет гудить новиною",
+          "date": "2024-06-22",
+          "url": "https://t.me/imatrofAI/5",
+          "preview": "Знову інтернет гудить новиною про новий ШІ."
+        },
+        {
+          "title": "Claude 3 Opus, Sonnet, Haiku",
+          "short_title": "Claude 3 Opus, Sonnet, Haiku",
+          "date": "2024-03-06",
+          "url": "https://www.youtube.com/@imatrof",
+          "preview": "Відео: Claude 3 тестування"
+        }
+      ]
+    },
+    {
       "id": "google",
       "label": "Google",
       "category": "company",
       "color": "#D97757",
-      "count": 289,
+      "count": 290,
       "posts": [
+        {
+          "title": "Ну все, google 😉",
+          "short_title": "Ну все, google 😉",
+          "date": "2026-06-05",
+          "url": "https://t.me/imatrofAI/2769",
+          "preview": "Ну все, google 😉 [автор](https://x.com/ironichandle/status/2061887114397061623?s=46&t=TzksdWDU4YgIPS7Vwk4ezw)"
+        },
         {
           "title": "🏄‍♀️ Google DeepMind щойно перевинайшли курсор мишки.",
           "short_title": "🏄‍♀️ Google DeepMind щойно пер",
@@ -13387,1884 +15580,6 @@
           "date": "2024-01-22",
           "url": "https://www.youtube.com/@imatrof",
           "preview": "Відео: Google VideoPoet огляд"
-        }
-      ]
-    },
-    {
-      "id": "anthropic",
-      "label": "Anthropic",
-      "category": "company",
-      "color": "#D97757",
-      "count": 267,
-      "posts": [
-        {
-          "title": "Для всіх Claude-фанів. Тижневі ліміти збільшили на 50% і так до 13 липня.",
-          "short_title": "Для всіх Claude-фанів. Тижневі",
-          "date": "2026-05-14",
-          "url": "https://t.me/imatrofAI/2698",
-          "preview": "Для всіх Claude-фанів."
-        },
-        {
-          "title": "Якщо ви використовуєте Claude Code одним з цих способів, то з 15 червня у вас...",
-          "short_title": "Якщо ви використовуєте Claude",
-          "date": "2026-05-14",
-          "url": "https://t.me/imatrofAI/2699",
-          "preview": "Якщо ви використовуєте Claude Code одним з цих способів, то з 15 червня у вас [з’являться](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude"
-        },
-        {
-          "title": "Я бачу, що OpenAI і Anthropic зараз активно рухаються в сервісний бізнес.",
-          "short_title": "Я бачу, що OpenAI і Anthropic",
-          "date": "2026-05-12",
-          "url": "https://t.me/imatrofAI/2692",
-          "preview": "Я бачу, що OpenAI і Anthropic зараз активно рухаються в сервісний бізнес."
-        },
-        {
-          "title": "Забудьте все, що ви чули про голосовий AI від OpenAI, Google чи Anthropic.",
-          "short_title": "Забудьте все, що ви чули про г",
-          "date": "2026-05-12",
-          "url": "https://t.me/imatrofAI/2693",
-          "preview": "Забудьте все, що ви чули про голосовий AI від OpenAI, Google чи Anthropic."
-        },
-        {
-          "title": "Так виглядає що AI лабораторії зараз у виграшній позиції. Вони якраз знають щ...",
-          "short_title": "Так виглядає що AI лабораторії",
-          "date": "2026-05-11",
-          "url": "https://t.me/imatrofAI/2690",
-          "preview": "Так виглядає що AI лабораторії зараз у виграшній позиції."
-        },
-        {
-          "title": "ChatGPT стає Facebook. Anthropic запускає OLX. AI будує сам себе (прогноз на ...",
-          "short_title": "ChatGPT стає Facebook. Anthrop",
-          "date": "2026-05-10",
-          "url": "https://t.me/imatrofAI/2687",
-          "preview": "ChatGPT стає Facebook."
-        },
-        {
-          "title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 81",
-          "short_title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 81",
-          "date": "2026-05-10",
-          "url": "https://t.me/imatrofAI/2688",
-          "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #81 Цього тижня налаштовував агентний SDLC пайплайн для одного зі своїх проєктів."
-        },
-        {
-          "title": "Чесно, такими темпами як воно все розвивається, то звучить правдоподібно.",
-          "short_title": "Чесно, такими темпами як воно",
-          "date": "2026-05-09",
-          "url": "https://t.me/imatrofAI/2685",
-          "preview": "Чесно, такими темпами як воно все розвивається, то звучить правдоподібно."
-        },
-        {
-          "title": "А є серед нас хакери?",
-          "short_title": "А є серед нас хакери?",
-          "date": "2026-05-09",
-          "url": "https://t.me/imatrofAI/2686",
-          "preview": "А є серед нас хакери?"
-        },
-        {
-          "title": "Ось гарний приклад невеличкого pet-проєкту, який перетворюється в повноцінний...",
-          "short_title": "Ось гарний приклад невеличкого",
-          "date": "2026-05-07",
-          "url": "https://t.me/imatrofAI/2680",
-          "preview": "Ось гарний приклад невеличкого pet-проєкту, який перетворюється в повноцінний стартап зі своєю аудиторією."
-        },
-        {
-          "title": "А ви звернули увагу що зараз багато сервісів почали робити власні MCP. І демо...",
-          "short_title": "А ви звернули увагу що зараз б",
-          "date": "2026-05-07",
-          "url": "https://t.me/imatrofAI/2682",
-          "preview": "А ви звернули увагу що зараз багато сервісів почали робити власні MCP."
-        },
-        {
-          "title": "Тут, поки ми спали, стався інженерний прорив.",
-          "short_title": "Тут, поки ми спали, стався інж",
-          "date": "2026-05-06",
-          "url": "https://t.me/imatrofAI/2678",
-          "preview": "Тут, поки ми спали, стався інженерний прорив."
-        },
-        {
-          "title": "Тут Anthropic проводить свій Code with Claude live",
-          "short_title": "Тут Anthropic проводить свій C",
-          "date": "2026-05-06",
-          "url": "https://t.me/imatrofAI/2679",
-          "preview": "Тут Anthropic проводить свій Code with Claude [live](https://www.youtube.com/live/GMIWm5y90xA?si=1HSK92fa2iHP_mC9) А ще вони [підписали](https://x.com/claudeai/status/2052060691893"
-        },
-        {
-          "title": "Натрапив на пост по роботі з контекстом у Claude Code (для інших агентів тако...",
-          "short_title": "Натрапив на пост по роботі з к",
-          "date": "2026-05-04",
-          "url": "https://t.me/imatrofAI/2667",
-          "preview": "Натрапив на [пост](https://x.com/trq212/status/2044548257058328723?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) по роботі з контекстом у Claude Code (для інших агентів також логіка працює)."
-        },
-        {
-          "title": "Що страшного приховує нова модель GPT 5.5?",
-          "short_title": "Що страшного приховує нова мод",
-          "date": "2026-05-03",
-          "url": "https://t.me/imatrofAI/2665",
-          "preview": "Що страшного приховує нова модель GPT 5.5?"
-        },
-        {
-          "title": "Нові моделі і нові правила промптингу.",
-          "short_title": "Нові моделі і нові правила про",
-          "date": "2026-05-01",
-          "url": "https://t.me/imatrofAI/2657",
-          "preview": "Нові моделі і нові правила промптингу."
-        },
-        {
-          "title": "У Gemini завезли генерацію документів, таблиць, слайдів, pdf та інших файлів....",
-          "short_title": "У Gemini завезли генерацію док",
-          "date": "2026-04-30",
-          "url": "https://t.me/imatrofAI/2653",
-          "preview": "У Gemini завезли генерацію документів, таблиць, слайдів, pdf та інших файлів."
-        },
-        {
-          "title": "Тільки вчора про це говорили, як сьогодні Anthropic йде в сторону великих про...",
-          "short_title": "Тільки вчора про це говорили,",
-          "date": "2026-04-29",
-          "url": "https://t.me/imatrofAI/2650",
-          "preview": "Тільки вчора про це говорили, як сьогодні [Anthropic](https://www.anthropic.com/news/claude-for-creative-work) йде в сторону великих продуктів і будує конектори до Blender, Autodes"
-        },
-        {
-          "title": "Перейшов повністю на підхід, який описував у себе Андрей Карпати - LLM wiki.",
-          "short_title": "Перейшов повністю на підхід, я",
-          "date": "2026-04-27",
-          "url": "https://t.me/imatrofAI/2646",
-          "preview": "Перейшов повністю на підхід, який описував у себе Андрей Карпати - [LLM wiki.](https://x.com/karpathy/status/2040470801506541998?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) Дослідження, аналіз"
-        },
-        {
-          "title": "OpenAI цього тижня в ударі - одразу дві потужні моделі.",
-          "short_title": "OpenAI цього тижня в ударі - о",
-          "date": "2026-04-26",
-          "url": "https://t.me/imatrofAI/2644",
-          "preview": "OpenAI цього тижня в ударі - одразу дві потужні моделі."
-        },
-        {
-          "title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 79",
-          "short_title": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН 79",
-          "date": "2026-04-26",
-          "url": "https://t.me/imatrofAI/2645",
-          "preview": "🤖 НЕДІЛЬНИЙ AI ЧЕКІН #79 Цього тижня виклав відео про власний маркетплейс плагінів та розповів про підхід у використанні."
-        },
-        {
-          "title": "Щось давно не говорили про відкриті моделі. А дарма.",
-          "short_title": "Щось давно не говорили про від",
-          "date": "2026-04-25",
-          "url": "https://t.me/imatrofAI/2643",
-          "preview": "Щось давно не говорили про відкриті моделі."
-        },
-        {
-          "title": "Показую свій OpenClaw + Claude Code + Telegram сетап. Ставлю керований сервіс...",
-          "short_title": "Показую свій OpenClaw + Claude",
-          "date": "2026-04-24",
-          "url": "https://t.me/imatrofAI/2641",
-          "preview": "Показую свій OpenClaw + Claude Code + Telegram сетап."
-        },
-        {
-          "title": "Hostinger + OpenClaw партнерство",
-          "short_title": "Hostinger + OpenClaw партнерст",
-          "date": "2026-04-24",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Hostinger + OpenClaw (Managed Service)"
-        },
-        {
-          "title": "Claude Opus 4.7",
-          "short_title": "Claude Opus 4.7",
-          "date": "2026-04-23",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 17, 2026"
-        },
-        {
-          "title": "Купа оновлень від Claude",
-          "short_title": "Купа оновлень від Claude",
-          "date": "2026-04-23",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 17, 2026"
-        },
-        {
-          "title": "Anthropic будує власний стек: Claude Code + Cowork + Design",
-          "short_title": "Anthropic будує власний стек:",
-          "date": "2026-04-22",
-          "url": "https://t.me/imatrofAI/2637",
-          "preview": "Anthropic будує власний стек для інтелектуальної роботи: Claude Code для коду, Cowork для файлів і застосунків, і тепер Claude Design для дизайну."
-        },
-        {
-          "title": "Claude Design — відео та анімація",
-          "short_title": "Claude Design — відео та аніма",
-          "date": "2026-04-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
-        },
-        {
-          "title": "Claude Design — слайди",
-          "short_title": "Claude Design — слайди",
-          "date": "2026-04-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
-        },
-        {
-          "title": "Claude Design — дизайн система",
-          "short_title": "Claude Design — дизайн система",
-          "date": "2026-04-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
-        },
-        {
-          "title": "Claude Design — веб сторінка",
-          "short_title": "Claude Design — веб сторінка",
-          "date": "2026-04-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
-        },
-        {
-          "title": "Claude Design — мобільний застосунок",
-          "short_title": "Claude Design — мобільний заст",
-          "date": "2026-04-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude Design: 5 демо як Anthropic атакує Figma"
-        },
-        {
-          "title": "Anthropic запустили ClaudeDevs — офіційний X акаунт для Claude Code",
-          "short_title": "Anthropic запустили ClaudeDevs",
-          "date": "2026-04-17",
-          "url": "https://t.me/imatrofAI/2624",
-          "preview": "Anthropic запустили [ClaudeDevs](https://x.com/ClaudeDevs) — офіційний X акаунт, де тепер окремо збиратимуть всі апдейти по Claude Code."
-        },
-        {
-          "title": "Claude Design — Anthropic запустили AI-інструмент для дизайну",
-          "short_title": "Claude Design — Anthropic запу",
-          "date": "2026-04-17",
-          "url": "https://t.me/imatrofAI/2625",
-          "preview": "Anthropic [викотили](https://claude.ai/design) Claude Design."
-        },
-        {
-          "title": "Claude Opus 4.7 — новий реліз",
-          "short_title": "Claude Opus 4.7 — новий реліз",
-          "date": "2026-04-16",
-          "url": "https://t.me/imatrofAI/2620",
-          "preview": "🏄‍♀️ Нова модель [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)!"
-        },
-        {
-          "title": "Claude Code оновлення: стало схоже на Codex, з'явилась аналітика",
-          "short_title": "Claude Code оновлення: стало с",
-          "date": "2026-04-15",
-          "url": "https://t.me/imatrofAI/2616",
-          "preview": "Claude Code тепер як Codex."
-        },
-        {
-          "title": "Claude + TurboTax: AI заходить у сфери дорогої експертизи",
-          "short_title": "Claude + TurboTax: AI заходить",
-          "date": "2026-04-14",
-          "url": "https://t.me/imatrofAI/2613",
-          "preview": "Claude [прикрутив](https://x.com/henrythe9ths/status/2043109671251423416) до себе TurboTax конектор."
-        },
-        {
-          "title": "Anthropic знайшли в Claude емоції — і коли модель у відчаї, вона починає вест...",
-          "short_title": "Anthropic знайшли в Claude емо",
-          "date": "2026-04-12",
-          "url": "https://t.me/imatrofAI/2606",
-          "preview": "Anthropic знайшли в Claude емоції — і коли модель у відчаї, вона починає вести себе зовсім не очікувано."
-        },
-        {
-          "title": "Project Glasswing + Claude Mythos Preview",
-          "short_title": "Project Glasswing + Claude Myt",
-          "date": "2026-04-12",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 10, 2026"
-        },
-        {
-          "title": "Claude має емоції — 171 патерн + вектор відчаю",
-          "short_title": "Claude має емоції — 171 патерн",
-          "date": "2026-04-12",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 10, 2026"
-        },
-        {
-          "title": "Claude Managed Agents — платформа для побудови агентів",
-          "short_title": "Claude Managed Agents — платфо",
-          "date": "2026-04-12",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 10, 2026"
-        },
-        {
-          "title": "Anthropic заблокували OpenClaw",
-          "short_title": "Anthropic заблокували OpenClaw",
-          "date": "2026-04-12",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 10, 2026"
-        },
-        {
-          "title": "Claude Code на мобільному",
-          "short_title": "Claude Code на мобільному",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Oct 24, 2025"
-        },
-        {
-          "title": "Claude оновив десктопний застосунок",
-          "short_title": "Claude оновив десктопний засто",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Oct 24, 2025"
-        },
-        {
-          "title": "Claude для фінансів",
-          "short_title": "Claude для фінансів",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Oct 24, 2025"
-        },
-        {
-          "title": "Нова модель Claude Haiku 4.5",
-          "short_title": "Нова модель Claude Haiku 4.5",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Oct 17, 2025"
-        },
-        {
-          "title": "Claude Skills — власні суперсили",
-          "short_title": "Claude Skills — власні суперси",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Oct 17, 2025"
-        },
-        {
-          "title": "Claude 4.5 — нова флагманська модель",
-          "short_title": "Claude 4.5 — нова флагманська",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Oct 3, 2025"
-        },
-        {
-          "title": "Claude працює з файлами",
-          "short_title": "Claude працює з файлами",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Sep 12, 2025"
-        },
-        {
-          "title": "Claude 3 від Anthropic",
-          "short_title": "Claude 3 від Anthropic",
-          "date": "2026-04-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ March 9, 2024"
-        },
-        {
-          "title": "Claude Code злили — що знайшли всередині",
-          "short_title": "Claude Code злили — що знайшли",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude Mythos — Anthropic злила таємну модель",
-          "short_title": "Claude Mythos — Anthropic злил",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Команда Anthropic більше не пише код — тільки промпти",
-          "short_title": "Команда Anthropic більше не пи",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude інструменти тепер і в мобільному",
-          "short_title": "Claude інструменти тепер і в м",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude Code керує твоїм комп'ютером",
-          "short_title": "Claude Code керує твоїм комп'ю",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude безпечний?",
-          "short_title": "Claude безпечний?",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "1 млн контекст у Claude",
-          "short_title": "1 млн контекст у Claude",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Режим навчання у Claude",
-          "short_title": "Режим навчання у Claude",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Доступ до попередніх чатів у Claude",
-          "short_title": "Доступ до попередніх чатів у C",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Оновлення у Claude",
-          "short_title": "Оновлення у Claude",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Саб-агенти у Claude Code",
-          "short_title": "Саб-агенти у Claude Code",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude + Notion + Canva",
-          "short_title": "Claude + Notion + Canva",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Ще більше артефактів",
-          "short_title": "Ще більше артефактів",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude став розумнішим",
-          "short_title": "Claude став розумнішим",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Ще більше артефактів",
-          "short_title": "Ще більше артефактів",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "MCP тепер в один клік",
-          "short_title": "MCP тепер в один клік",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "У Claude власний бізнес",
-          "short_title": "У Claude власний бізнес",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Anthropic - що нового?",
-          "short_title": "Anthropic - що нового?",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Anthropic - як будували свого агента",
-          "short_title": "Anthropic - як будували свого",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude 4",
-          "short_title": "Claude 4",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Пошук в інтернеті та голос у Claude",
-          "short_title": "Пошук в інтернеті та голос у C",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude глибокий пошук та інтеграції",
-          "short_title": "Claude глибокий пошук та інтег",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Anthropic показав новий режим у Claude",
-          "short_title": "Anthropic показав новий режим",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude для студентів",
-          "short_title": "Claude для студентів",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude за $200",
-          "short_title": "Claude за $200",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude інтегрується з Gmail",
-          "short_title": "Claude інтегрується з Gmail",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude додає голос",
-          "short_title": "Claude додає голос",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude шукає в інтернеті",
-          "short_title": "Claude шукає в інтернеті",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "#2 Claude",
-          "short_title": "#2 Claude",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Apr 3, 2026"
-        },
-        {
-          "title": "Claude у браузері",
-          "short_title": "Claude у браузері",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Dec 26, 2025"
-        },
-        {
-          "title": "Claude Opus 4.5",
-          "short_title": "Claude Opus 4.5",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Dec 5, 2025"
-        },
-        {
-          "title": "MCP економіка",
-          "short_title": "MCP економіка",
-          "date": "2026-04-05",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Nov 14, 2025"
-        },
-        {
-          "title": "Claude Code Channels: Telegram і Discord",
-          "short_title": "Claude Code Channels: Telegram",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 27, 2026"
-        },
-        {
-          "title": "Claude Computer Use + Dispatch",
-          "short_title": "Claude Computer Use + Dispatch",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 27, 2026"
-        },
-        {
-          "title": "Claude Cowork Projects",
-          "short_title": "Claude Cowork Projects",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 27, 2026"
-        },
-        {
-          "title": "Claude Code написав додаток для піаніно",
-          "short_title": "Claude Code написав додаток дл",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 27, 2026"
-        },
-        {
-          "title": "США проти Anthropic: Пентагон і Китай",
-          "short_title": "США проти Anthropic: Пентагон",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 6, 2026"
-        },
-        {
-          "title": "Claude стає №1 додатком у США",
-          "short_title": "Claude стає №1 додатком у США",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 6, 2026"
-        },
-        {
-          "title": "Claude Code Memory — пам'ять для агента",
-          "short_title": "Claude Code Memory — пам'ять д",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 6, 2026"
-        },
-        {
-          "title": "Claude Code Skills — нові навички",
-          "short_title": "Claude Code Skills — нові нави",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 6, 2026"
-        },
-        {
-          "title": "Claude Code прокачали",
-          "short_title": "Claude Code прокачали",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 27, 2026"
-        },
-        {
-          "title": "Claude йде в ентерпрайз",
-          "short_title": "Claude йде в ентерпрайз",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 27, 2026"
-        },
-        {
-          "title": "Плануємо задачі у Claude",
-          "short_title": "Плануємо задачі у Claude",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 27, 2026"
-        },
-        {
-          "title": "Claude обвалив ринок IBM",
-          "short_title": "Claude обвалив ринок IBM",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 27, 2026"
-        },
-        {
-          "title": "Пентагон та Китай проти Anthropic",
-          "short_title": "Пентагон та Китай проти Anthro",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 27, 2026"
-        },
-        {
-          "title": "Claude Sonnet 4.6",
-          "short_title": "Claude Sonnet 4.6",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 20, 2026"
-        },
-        {
-          "title": "Claude викрав президента",
-          "short_title": "Claude викрав президента",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 20, 2026"
-        },
-        {
-          "title": "Claude Code /insights",
-          "short_title": "Claude Code /insights",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 13, 2026"
-        },
-        {
-          "title": "Claude Opus 4.6 fast",
-          "short_title": "Claude Opus 4.6 fast",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 13, 2026"
-        },
-        {
-          "title": "Claude Opus 4.6",
-          "short_title": "Claude Opus 4.6",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 6, 2026"
-        },
-        {
-          "title": "Плагіни у Claude Cowork",
-          "short_title": "Плагіни у Claude Cowork",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Feb 6, 2026"
-        },
-        {
-          "title": "Claude Cowork — на службі агент",
-          "short_title": "Claude Cowork — на службі аген",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Jan 30, 2026"
-        },
-        {
-          "title": "Claude ламає технічне завдання",
-          "short_title": "Claude ламає технічне завдання",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Jan 30, 2026"
-        },
-        {
-          "title": "Claude інструменти та Excel",
-          "short_title": "Claude інструменти та Excel",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Jan 30, 2026"
-        },
-        {
-          "title": "Що прогнозує Anthropic через 6-12 місяців?",
-          "short_title": "Що прогнозує Anthropic через 6",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Jan 23, 2026"
-        },
-        {
-          "title": "Claude не для програмістів",
-          "short_title": "Claude не для програмістів",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Jan 16, 2026"
-        },
-        {
-          "title": "Claude йде в медицину",
-          "short_title": "Claude йде в медицину",
-          "date": "2026-03-31",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Jan 16, 2026"
-        },
-        {
-          "title": "Hostinger + Claude Code (тематичне відео)",
-          "short_title": "Hostinger + Claude Code (темат",
-          "date": "2026-03-27",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Hostinger + Claude Code (тематичне відео)"
-        },
-        {
-          "title": "Claude малює інтерактивні графіки прямо в чаті",
-          "short_title": "Claude малює інтерактивні граф",
-          "date": "2026-03-25",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 20, 2026"
-        },
-        {
-          "title": "Claude Cowork Dispatch — керуй агентом з телефону",
-          "short_title": "Claude Cowork Dispatch — керуй",
-          "date": "2026-03-25",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 20, 2026"
-        },
-        {
-          "title": "Claude 1 мільйон токенів для всіх",
-          "short_title": "Claude 1 мільйон токенів для в",
-          "date": "2026-03-25",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 20, 2026"
-        },
-        {
-          "title": "Claude Code Review — агент для ревю коду",
-          "short_title": "Claude Code Review — агент для",
-          "date": "2026-03-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 13, 2026"
-        },
-        {
-          "title": "Skill Creator — як робити навички для Claude",
-          "short_title": "Skill Creator — як робити нави",
-          "date": "2026-03-22",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: НОВИНИ Mar 13, 2026"
-        },
-        {
-          "title": "Штучний інтелект атакує: перша масштабна кібератака на Anthropic",
-          "short_title": "Штучний інтелект атакує: перша",
-          "date": "2025-12-08",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Штучний інтелект атакує: перша масштабна кібератака на Anthropic"
-        },
-        {
-          "title": "Реклама про Claude — новий рівень креативу від Mother",
-          "short_title": "Реклама про Claude — новий рів",
-          "date": "2025-10-23",
-          "url": "https://t.me/imatrofAI/1706",
-          "preview": "Воу! Круто. Дивіться, яку рекламу зробили про Claude."
-        },
-        {
-          "title": "Дослідження Anthropic: швидкість розуму ШІ",
-          "short_title": "Дослідження Anthropic: швидкіс",
-          "date": "2025-10-15",
-          "url": "https://t.me/imatrofAI/1687",
-          "preview": "Нещодавно ми бачили дослідження по ChatGPT, і ось під’їхало дослідження від Anthropic."
-        },
-        {
-          "title": "Claude Opus 4.1 — тихий апгрейд флагмана",
-          "short_title": "Claude Opus 4.1 — тихий апгрей",
-          "date": "2025-09-30",
-          "url": "https://t.me/imatrofAI/1452",
-          "preview": "А ще Anthropic тихенько викотив Claude Opus 4.1."
-        },
-        {
-          "title": "Claude: Редагування офісних документів у чаті",
-          "short_title": "Claude: Редагування офісних до",
-          "date": "2025-09-22",
-          "url": "https://t.me/imatrofAI/1638",
-          "preview": "Claude тепер може створювати та редагувати Excel-таблиці, Word-документи, слайди та PDF безпосередньо у вікні чату."
-        },
-        {
-          "title": "Воу! Круто. Дивіться, яку рекламу зробили про Claude.",
-          "short_title": "Воу! Круто. Дивіться, яку рекл",
-          "date": "2025-09-20",
-          "url": "https://t.me/imatrofAI/1706",
-          "preview": "Воу! Круто. Дивіться, яку рекламу зробили про Claude."
-        },
-        {
-          "title": "Нещодавно ми бачили дослідження по ChatGPT, і ось підʼїхало дослідження від A...",
-          "short_title": "Нещодавно ми бачили дослідженн",
-          "date": "2025-09-18",
-          "url": "https://t.me/imatrofAI/1687",
-          "preview": "Нещодавно ми бачили дослідження по [ChatGPT,](https://t.me/imatrofAI/1673) і ось підʼїхало дослідження від [Anthropic.](https://www.anthropic.com/research/anthropic-economic-index-"
-        },
-        {
-          "title": "Claude тепер може створювати та редагувати Excel-таблиці, Word-документи, сла...",
-          "short_title": "Claude тепер може створювати т",
-          "date": "2025-09-10",
-          "url": "https://t.me/imatrofAI/1638",
-          "preview": "Claude тепер [може](https://www.anthropic.com/news/create-files) створювати та редагувати Excel-таблиці, Word-документи, слайди та PDF."
-        },
-        {
-          "title": "Більшість, коли чують слово «API», зразу думають про програмістів, код і якус...",
-          "short_title": "Більшість, коли чують слово «A",
-          "date": "2025-09-05",
-          "url": "https://t.me/imatrofAI/1630",
-          "preview": "Більшість, коли чують слово «API», зразу думають про програмістів, код і якусь складну технічну магію."
-        },
-        {
-          "title": "Claude for Chrome — агент клікає замість вас",
-          "short_title": "Claude for Chrome — агент клік",
-          "date": "2025-09-03",
-          "url": "https://t.me/imatrofAI/1586",
-          "preview": "Anthropic запускає експеримент: Claude тепер може клікати у Chrome від вашого імені."
-        },
-        {
-          "title": "Один з моїх улюблених блогерів Ітан Молік вирішив зробити жахливий тест для A...",
-          "short_title": "Один з моїх улюблених блогерів",
-          "date": "2025-09-01",
-          "url": "https://t.me/imatrofAI/1606",
-          "preview": "Один з моїх улюблених блогерів Ітан Молік вирішив [зробити](https://x.com/emollick/status/1961648878286946329?s=46&t=TzksdWDU4YgIPS7Vwk4ezw) жахливий тест для AI."
-        },
-        {
-          "title": "Claude Code: Режим навчання для вайб-кодингу",
-          "short_title": "Claude Code: Режим навчання дл",
-          "date": "2025-08-27",
-          "url": "https://t.me/imatrofAI/1531",
-          "preview": "Claude Code тепер може працювати в режимі навчання."
-        },
-        {
-          "title": "Anthropic запускає експеримент: Claude тепер може клікати у Chrome від вашого...",
-          "short_title": "Anthropic запускає експеримент",
-          "date": "2025-08-27",
-          "url": "https://t.me/imatrofAI/1586",
-          "preview": "Anthropic запускає експеримент: Claude тепер може клікати у Chrome від вашого імені."
-        },
-        {
-          "title": "Anthropic: Мінікурс з вайб-кодингу",
-          "short_title": "Anthropic: Мінікурс з вайб-код",
-          "date": "2025-08-24",
-          "url": "https://t.me/imatrofAI/1526",
-          "preview": "Anthropic виклали круту підбірку відео про кодинг з Claude."
-        },
-        {
-          "title": "Claude: прямий доступ до веб-сторінок",
-          "short_title": "Claude: прямий доступ до веб-с",
-          "date": "2025-08-23",
-          "url": "https://t.me/imatrofAI/1389",
-          "preview": "🏄‍♀️ Тут класний апдейт прилетів від Anthropic."
-        },
-        {
-          "title": "Claude Sonnet 4: 1 мільйон токенів контексту",
-          "short_title": "Claude Sonnet 4: 1 мільйон ток",
-          "date": "2025-08-22",
-          "url": "https://t.me/imatrofAI/1520",
-          "preview": "Claude Sonnet 4 тепер підтримує 1 мільйон токенів контексту через API."
-        },
-        {
-          "title": "Claude: посилання на попередні чати",
-          "short_title": "Claude: посилання на попередні",
-          "date": "2025-08-19",
-          "url": "https://t.me/imatrofAI/1511",
-          "preview": "У Claude з'явилася дуже зручна фіча — можливість посилатися на попередні чати безпосередньо у новій розмові."
-        },
-        {
-          "title": "ChatGPT має",
-          "short_title": "ChatGPT має",
-          "date": "2025-08-18",
-          "url": "https://t.me/imatrofAI/1546",
-          "preview": "ChatGPT має Claude має Тепер і Gemini [має](https://x.com/GeminiApp/status/1955719137109438768) Як працює історія чатів (технічно): Уявімо фразу з минулого чату: «Мій кіт Мармелад"
-        },
-        {
-          "title": "Сьогодні переписувався зі своїм одногрупником і він поділився конфігурацією, ...",
-          "short_title": "Сьогодні переписувався зі свої",
-          "date": "2025-08-16",
-          "url": "https://t.me/imatrofAI/1541",
-          "preview": "Сьогодні переписувався зі своїм одногрупником і він поділився [конфігурацією,](https://github.com/teremterem/claude-code-gpt-5) яку розробив."
-        },
-        {
-          "title": "Є ті, хто LLM розробляє, і є ті, хто їх ламає.",
-          "short_title": "Є ті, хто LLM розробляє, і є т",
-          "date": "2025-08-15",
-          "url": "https://t.me/imatrofAI/1529",
-          "preview": "Є ті, хто LLM розробляє, і є ті, хто їх ламає."
-        },
-        {
-          "title": "Claude Code тепер може працювати в режимі навчання. Вайбкодити стає ще простіше.",
-          "short_title": "Claude Code тепер може працюва",
-          "date": "2025-08-15",
-          "url": "https://t.me/imatrofAI/1531",
-          "preview": "Claude Code тепер може працювати в режимі навчання."
-        },
-        {
-          "title": "Рух йде в сторону спеціалізованих агентів. А точніше — розширення спеціалізац...",
-          "short_title": "Рух йде в сторону спеціалізова",
-          "date": "2025-08-14",
-          "url": "https://t.me/imatrofAI/1523",
-          "preview": "Рух йде в сторону спеціалізованих агентів."
-        },
-        {
-          "title": "А ще Anthropic виклали круту підбірку відео про кодинг з Claude.",
-          "short_title": "А ще Anthropic виклали круту п",
-          "date": "2025-08-14",
-          "url": "https://t.me/imatrofAI/1526",
-          "preview": "А ще Anthropic виклали круту підбірку відео про кодинг з Claude."
-        },
-        {
-          "title": "А бачите відмінності?",
-          "short_title": "А бачите відмінності?",
-          "date": "2025-08-13",
-          "url": "https://t.me/imatrofAI/1517",
-          "preview": "А бачите відмінності?"
-        },
-        {
-          "title": "Воно то так. Claude Sonnet 4 тепер підтримує 1 мільйон токенів контексту чере...",
-          "short_title": "Воно то так. Claude Sonnet 4 т",
-          "date": "2025-08-13",
-          "url": "https://t.me/imatrofAI/1520",
-          "preview": "Воно то так. Claude Sonnet 4 тепер [підтримує](https://www.anthropic.com/news/1m-context) 1 мільйон токенів контексту через API."
-        },
-        {
-          "title": "🏄‍♀️ Manus запустив Wide Research — мультиагентного оркестратора. Звучить скл...",
-          "short_title": "🏄‍♀️ Manus запустив Wide Resea",
-          "date": "2025-08-12",
-          "url": "https://t.me/imatrofAI/1501",
-          "preview": "🏄‍♀️ Manus запустив [Wide Research](https://manus.im/blog/introducing-wide-research) — мультиагентного оркестратора."
-        },
-        {
-          "title": "А ще у Claude тепер є фіча підтягувати та посилатися на попередні чати, щоб п...",
-          "short_title": "А ще у Claude тепер є фіча під",
-          "date": "2025-08-12",
-          "url": "https://t.me/imatrofAI/1511",
-          "preview": "А ще у [Claude](https://x.com/claudeai/status/1954982275453686216) тепер є фіча підтягувати та посилатися на попередні чати, щоб продовжити розмову з того місця, де ви зупинились."
-        },
-        {
-          "title": "Zapier: 100 % співробітників повинні мати AI‑грамотність",
-          "short_title": "Zapier: 100 % співробітників п",
-          "date": "2025-08-09",
-          "url": "https://t.me/imatrofAI/1480",
-          "preview": "Zapier: 100 % співробітників повинні мати AI‑грамотність На сторінці Вейда Фостера з’явився [допис](https://x.com/wadefoster/status/1930680089651425452?s=46&t=TzksdWDU4YgIPS7Vwk4ez"
-        },
-        {
-          "title": "А вчора ще розпочався шаховий турнір між топовими LLM. І так, там все серйозн...",
-          "short_title": "А вчора ще розпочався шаховий",
-          "date": "2025-08-06",
-          "url": "https://t.me/imatrofAI/1455",
-          "preview": "А вчора ще [розпочався](https://www.kaggle.com/benchmarks/kaggle/chess-text/versions/1) шаховий турнір між топовими LLM."
-        },
-        {
-          "title": "А ще Anthropic тихенько викотив Claude Opus 4.1. Це апгрейд старого Opus 4 — ...",
-          "short_title": "А ще Anthropic тихенько викоти",
-          "date": "2025-08-05",
-          "url": "https://t.me/imatrofAI/1452",
-          "preview": "А ще Anthropic тихенько [викотив](https://www.anthropic.com/news/claude-opus-4-1) Claude Opus 4.1."
-        },
-        {
-          "title": "Про саб-агентів я вже писав вище. Коли контекст один, задачі різні — і щоб не...",
-          "short_title": "Про саб-агентів я вже писав ви",
-          "date": "2025-07-28",
-          "url": "https://t.me/imatrofAI/1415",
-          "preview": "Про саб-агентів я вже писав вище."
-        },
-        {
-          "title": "У Claude Code з’явилися «суб‑агенти». Це не просто додатковий модуль, а можли...",
-          "short_title": "У Claude Code з’явилися «суб‑а",
-          "date": "2025-07-27",
-          "url": "https://t.me/imatrofAI/1413",
-          "preview": "У Claude Code з’явилися [«суб‑агенти».](https://docs.anthropic.com/en/docs/claude-code/sub-agents) Це не просто додатковий модуль, а можливість зібрати власну команду розумних помі"
-        },
-        {
-          "title": "Anthropic запустили свою версію «GPT Store»",
-          "short_title": "Anthropic запустили свою версі",
-          "date": "2025-07-24",
-          "url": "https://t.me/imatrofAI/1313",
-          "preview": "Anthropic запустили свою версію «GPT Store»."
-        },
-        {
-          "title": "Та історія, яку я розповідав у відео, - про те, що Grok мав упередженість у в...",
-          "short_title": "Та історія, яку я розповідав у",
-          "date": "2025-07-19",
-          "url": "https://t.me/imatrofAI/1398",
-          "preview": "Та історія, яку я [розповідав](https://youtu.be/lprsnGbxRk4) у відео, - про те, що Grok мав упередженість у відповідях на питання про Ізраїль і Палестину."
-        },
-        {
-          "title": "Драма навколо Windsurf:",
-          "short_title": "Драма навколо Windsurf:",
-          "date": "2025-07-17",
-          "url": "https://t.me/imatrofAI/1393",
-          "preview": "Драма навколо Windsurf: 🌀 OpenAI хотіли [купити](https://www.linkedin.com/posts/chiefdata_openai-paid-3-billion-for-windsurf-and-activity-7326285418071572481-GM_m/) за $3 млрд, але"
-        },
-        {
-          "title": "А ось і Амазон з’явився на горизонті зі своїм AI‑редактором коду — Kiro. Ще о...",
-          "short_title": "А ось і Амазон з’явився на гор",
-          "date": "2025-07-17",
-          "url": "https://t.me/imatrofAI/1394",
-          "preview": "А ось і Амазон з’явився на горизонті зі своїм AI‑редактором коду — [Kiro](https://kiro.dev/)[.](https://kiro.dev/) Ще один IDE на базі VS Code, який під капотом використовує Claude"
-        },
-        {
-          "title": "🏄‍♀️ Агент у ChatGPT.",
-          "short_title": "🏄‍♀️ Агент у ChatGPT.",
-          "date": "2025-07-17",
-          "url": "https://t.me/imatrofAI/1395",
-          "preview": "🏄‍♀️ Агент у ChatGPT."
-        },
-        {
-          "title": "🏄‍♀️ Тут класний апдейт прилетів від Anthropic.",
-          "short_title": "🏄‍♀️ Тут класний апдейт прилет",
-          "date": "2025-07-16",
-          "url": "https://t.me/imatrofAI/1389",
-          "preview": "🏄‍♀️ Тут класний апдейт прилетів від Anthropic."
-        },
-        {
-          "title": "З кожним роком великі мовні моделі стають все кращими.",
-          "short_title": "З кожним роком великі мовні мо",
-          "date": "2025-07-14",
-          "url": "https://t.me/imatrofAI/1373",
-          "preview": "З кожним роком великі мовні моделі [стають](https://spectrum.ieee.org/large-language-model-performance) все кращими."
-        },
-        {
-          "title": "Дорога команда вийшла.",
-          "short_title": "Дорога команда вийшла.",
-          "date": "2025-07-01",
-          "url": "https://t.me/imatrofAI/1327",
-          "preview": "Дорога команда вийшла."
-        },
-        {
-          "title": "Якщо дати AI агенту керувати бізнесом з оборотом $1000, то вже за місяць часу...",
-          "short_title": "Якщо дати AI агенту керувати б",
-          "date": "2025-06-30",
-          "url": "https://t.me/imatrofAI/1323",
-          "preview": "Якщо дати AI агенту керувати бізнесом з оборотом $1000, то вже за місяць часу він з нього зробить $800."
-        },
-        {
-          "title": "А бачили, Anthropic запустили свою версію «GPT Store». Вони зробили окрему зо...",
-          "short_title": "А бачили, Anthropic запустили",
-          "date": "2025-06-26",
-          "url": "https://t.me/imatrofAI/1313",
-          "preview": "А бачили, Anthropic [запустили](https://claude.ai/artifacts) свою версію «GPT Store»."
-        },
-        {
-          "title": "Маємо тепер повний комплект CLI-ів. Спершу був Claude Code від Anthropic, пот...",
-          "short_title": "Маємо тепер повний комплект CL",
-          "date": "2025-06-25",
-          "url": "https://t.me/imatrofAI/1310",
-          "preview": "Маємо тепер повний комплект CLI-ів."
-        },
-        {
-          "title": "Meta підтягує собі важку артилерію. CEO Scale AI, Александр Ванг, переходить ...",
-          "short_title": "Meta підтягує собі важку артил",
-          "date": "2025-06-16",
-          "url": "https://t.me/imatrofAI/1274",
-          "preview": "Meta підтягує собі важку артилерію."
-        },
-        {
-          "title": "Claude Opus 4 — нова найпотужніша модель для коду",
-          "short_title": "Claude Opus 4 — нова найпотужн",
-          "date": "2025-06-15",
-          "url": "https://t.me/imatrofAI/1187",
-          "preview": "🏄‍♀️ Маємо оновлення для всіх, хто пише код з AI."
-        },
-        {
-          "title": "Еволюція ШІ: від смартфона до божества? (CEO Anthropic)",
-          "short_title": "Еволюція ШІ: від смартфона до",
-          "date": "2025-06-03",
-          "url": "https://t.me/imatrofAI/1211",
-          "preview": "Тут СЕО Anthropic трохи наводить шороху своєю заявою."
-        },
-        {
-          "title": "Тут СЕО Anthropic трохи наводить шороху своєю заявою.",
-          "short_title": "Тут СЕО Anthropic трохи наводи",
-          "date": "2025-05-31",
-          "url": "https://t.me/imatrofAI/1211",
-          "preview": "Тут СЕО Anthropic трохи [наводить](https://www.nytimes.com/2025/05/30/technology/ai-jobs-college-graduates.html) шороху своєю заявою."
-        },
-        {
-          "title": "Системний промпт Claude — 16 739 слів логіки",
-          "short_title": "Системний промпт Claude — 16 7",
-          "date": "2025-05-31",
-          "url": "https://t.me/imatrofAI/1162",
-          "preview": "А ще в мережу злили системний промпт Claude — він займає 16 739 слів 😮 Там є вся логіка взаємодії, обмеження та вказівки щодо тону."
-        },
-        {
-          "title": "Perplexity зробили серйозний буст для свого DeepResearch агента. Додали цілий...",
-          "short_title": "Perplexity зробили серйозний б",
-          "date": "2025-05-30",
-          "url": "https://t.me/imatrofAI/1210",
-          "preview": "Perplexity зробили серйозний буст для свого DeepResearch агента."
-        },
-        {
-          "title": "Claude Voice Mode — голосовий режим від Anthropic",
-          "short_title": "Claude Voice Mode — голосовий",
-          "date": "2025-05-29",
-          "url": "https://t.me/imatrofAI/1204",
-          "preview": "🏄‍♀️ Оновлення для Claude підʼїхали."
-        },
-        {
-          "title": "Сергій Брін (засновинк Google) нещодавно під час свого виступу вкинув доволі ...",
-          "short_title": "Сергій Брін (засновинк Google)",
-          "date": "2025-05-28",
-          "url": "https://t.me/imatrofAI/1202",
-          "preview": "Сергій Брін (засновинк Google) нещодавно під час свого [виступу](https://youtu.be/8g7a0IWKDRE?t=503) вкинув доволі дике, але смішне: мовляв, розробники Gemini це не дуже афішують,"
-        },
-        {
-          "title": "🏄‍♀️ Оновлення для Claude підʼїхали.",
-          "short_title": "🏄‍♀️ Оновлення для Claude підʼ",
-          "date": "2025-05-28",
-          "url": "https://t.me/imatrofAI/1204",
-          "preview": "🏄‍♀️ Оновлення для Claude підʼїхали."
-        },
-        {
-          "title": "🏄‍♀️ Маємо оновлення для всіх, хто пише код з AI.",
-          "short_title": "🏄‍♀️ Маємо оновлення для всіх,",
-          "date": "2025-05-23",
-          "url": "https://t.me/imatrofAI/1187",
-          "preview": "🏄‍♀️ Маємо оновлення для всіх, хто пише код з AI."
-        },
-        {
-          "title": "Бачили, що Google DeepMind викотили?",
-          "short_title": "Бачили, що Google DeepMind вик",
-          "date": "2025-05-17",
-          "url": "https://t.me/imatrofAI/1164",
-          "preview": "Бачили, що Google DeepMind викотили?"
-        },
-        {
-          "title": "А ще в мережу злили системний промпт Claude - він займає 16 739 слів 😮",
-          "short_title": "А ще в мережу злили системний",
-          "date": "2025-05-15",
-          "url": "https://t.me/imatrofAI/1162",
-          "preview": "А ще в мережу [злили](https://www.dbreunig.com/2025/05/07/claude-s-system-prompt-chatbots-are-more-than-just-models.html) системний промпт Claude - він займає 16 739 слів 😮 Там є в"
-        },
-        {
-          "title": "Як часто ви користуєтесь Google Пошуком за останні пів року?",
-          "short_title": "Як часто ви користуєтесь Googl",
-          "date": "2025-05-14",
-          "url": "https://t.me/imatrofAI/1158",
-          "preview": "Як часто ви користуєтесь Google Пошуком за останні пів року?"
-        },
-        {
-          "title": "Зібрав безкоштовні та корисні метаріали від OpenAI, Anthropic і Google для вс...",
-          "short_title": "Зібрав безкоштовні та корисні",
-          "date": "2025-05-12",
-          "url": "https://t.me/imatrofAI/1156",
-          "preview": "Зібрав безкоштовні та корисні метаріали від OpenAI, Anthropic і Google для всіх, хто хоче зрозуміти як працює prompt engineering та як будуються AI агенти: 🌀 Prompt Engineering від"
-        },
-        {
-          "title": "Ви знаєте, у своїх відео, коли розповідаю про нову LLM, я часто посилаюсь на ...",
-          "short_title": "Ви знаєте, у своїх відео, коли",
-          "date": "2025-05-07",
-          "url": "https://t.me/imatrofAI/1137",
-          "preview": "Ви знаєте, у своїх відео, коли розповідаю про нову LLM, я часто посилаюсь на рейтинг на [LM Arena](https://lmarena.ai/)[.](https://lmarena.ai/) І часто бачив, що нова модель, як ті"
-        },
-        {
-          "title": "А ось це цікаво. Чесно навіть трохи неочікувано.",
-          "short_title": "А ось це цікаво. Чесно навіть",
-          "date": "2025-05-07",
-          "url": "https://t.me/imatrofAI/1139",
-          "preview": "А ось це цікаво. Чесно навіть трохи неочікувано."
-        },
-        {
-          "title": "Claude: глибокий пошук та інтеграції",
-          "short_title": "Claude: глибокий пошук та інте",
-          "date": "2025-05-05",
-          "url": "https://t.me/imatrofAI/1124",
-          "preview": "У Claude зʼявився глибокий пошук та ряд цікавих інтеграцій."
-        },
-        {
-          "title": "У Claude зʼявився глибокий пошук та ряд цікавих інтеграцій.",
-          "short_title": "У Claude зʼявився глибокий пош",
-          "date": "2025-05-01",
-          "url": "https://t.me/imatrofAI/1124",
-          "preview": "У Claude зʼявився глибокий пошук та ряд цікавих інтеграцій."
-        },
-        {
-          "title": "Google, OpenAI і Anthropic вже напряму кажуть: AGI за 5 років. Кілька аналіти...",
-          "short_title": "Google, OpenAI і Anthropic вже",
-          "date": "2025-04-30",
-          "url": "https://t.me/imatrofAI/1113",
-          "preview": "Google, OpenAI і Anthropic вже напряму кажуть: AGI за 5 років."
-        },
-        {
-          "title": "Отже, за п’ять років люди будуть жити в середньому до 160 років. Ще на початк...",
-          "short_title": "Отже, за п’ять років люди буду",
-          "date": "2025-04-22",
-          "url": "https://t.me/imatrofAI/1084",
-          "preview": "Отже, за п’ять років люди будуть жити в середньому до 160 років."
-        },
-        {
-          "title": "MCP-сервери набирають популярності у побудові мультиагентних систем. Я ще ран...",
-          "short_title": "MCP-сервери набирають популярн",
-          "date": "2025-04-21",
-          "url": "https://t.me/imatrofAI/1083",
-          "preview": "MCP-сервери набирають популярності у побудові мультиагентних систем."
-        },
-        {
-          "title": "А ще OpenAI показали Codex CLI — такий собі lightweight coding agent, що прац...",
-          "short_title": "А ще OpenAI показали Codex CLI",
-          "date": "2025-04-17",
-          "url": "https://t.me/imatrofAI/1069",
-          "preview": "А ще OpenAI [показали](https://openai.com/index/introducing-o3-and-o4-mini/#:~:text=Codex%20CLI%3A%20frontier%20reasoning%20in%20the%20terminal) Codex CLI — такий собі lightweight"
-        },
-        {
-          "title": "Claude — більше можливостей для користувачів",
-          "short_title": "Claude — більше можливостей дл",
-          "date": "2025-04-09",
-          "url": "https://t.me/imatrofAI/1032",
-          "preview": "Кому ще більше Claude?"
-        },
-        {
-          "title": "Кому ще більше Claude? Бо тепер можна буде прям «від душі» користуватись.",
-          "short_title": "Кому ще більше Claude? Бо тепе",
-          "date": "2025-04-09",
-          "url": "https://t.me/imatrofAI/1032",
-          "preview": "Кому ще більше Claude?"
-        },
-        {
-          "title": "Люди все ще розумніші за AI!",
-          "short_title": "Люди все ще розумніші за AI!",
-          "date": "2025-04-08",
-          "url": "https://t.me/imatrofAI/1023",
-          "preview": "Люди все ще розумніші за AI!"
-        },
-        {
-          "title": "А я казав, що Meta — номер один компанія, яка дає ШІ у руки користувачів.",
-          "short_title": "А я казав, що Meta — номер оди",
-          "date": "2025-04-07",
-          "url": "https://t.me/imatrofAI/1015",
-          "preview": "А я [казав](https://t.me/imatrofAI/56)[,](https://t.me/imatrofAI/56) що Meta — номер один компанія, яка дає ШІ у руки користувачів."
-        },
-        {
-          "title": "Ось маємо ще одного агента. І це не просто демо, а реальний продукт.",
-          "short_title": "Ось маємо ще одного агента. І",
-          "date": "2025-04-04",
-          "url": "https://t.me/imatrofAI/996",
-          "preview": "Ось маємо ще одного агента."
-        },
-        {
-          "title": "Я взагалі-то не пишу тут про політику, але цього разу буде виняток.",
-          "short_title": "Я взагалі-то не пишу тут про п",
-          "date": "2025-04-04",
-          "url": "https://t.me/imatrofAI/999",
-          "preview": "Я взагалі-то не пишу тут про політику, але цього разу буде виняток."
-        },
-        {
-          "title": "🏄‍♀️ О, а ось це вже цікаво!",
-          "short_title": "🏄‍♀️ О, а ось це вже цікаво!",
-          "date": "2025-03-20",
-          "url": "https://t.me/imatrofAI/946",
-          "preview": "🏄‍♀️ О, а ось це вже цікаво!"
-        },
-        {
-          "title": "Маю для вас класний та безкоштовний сервіс для навчання.",
-          "short_title": "Маю для вас класний та безкошт",
-          "date": "2025-03-18",
-          "url": "https://t.me/imatrofAI/941",
-          "preview": "Маю для вас класний та безкоштовний сервіс для навчання."
-        },
-        {
-          "title": "Один з моїх улюблених авторів, Ітан Молік, написав класну статтю про те, який...",
-          "short_title": "Один з моїх улюблених авторів,",
-          "date": "2025-03-17",
-          "url": "https://t.me/imatrofAI/940",
-          "preview": "Один з моїх улюблених авторів, Ітан Молік, [написав](https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated) класну статтю про те, який AI обрати."
-        },
-        {
-          "title": "Claude Search — Anthropic виходить на ринок пошуку",
-          "short_title": "Claude Search — Anthropic вихо",
-          "date": "2025-03-16",
-          "url": "https://t.me/imatrofAI/946",
-          "preview": "🏄‍♀️ О, а ось це вже цікаво!"
-        },
-        {
-          "title": "Яка LLM КРАЩА у 2025? GPT 4.5 vs Claude 3.7 vs Gemini vs Grok - Порівняння",
-          "short_title": "Яка LLM КРАЩА у 2025? GPT 4.5",
-          "date": "2025-03-15",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Яка LLM КРАЩА у 2025? GPT 4.5 vs Claude 3.7 vs Gemini vs Grok - Порівняння"
-        },
-        {
-          "title": "AI для письменників від письменника.",
-          "short_title": "AI для письменників від письме",
-          "date": "2025-03-13",
-          "url": "https://t.me/imatrofAI/930",
-          "preview": "AI для письменників від письменника."
-        },
-        {
-          "title": "Тут в інтернеті віруситься новий AI-агент — Manus.",
-          "short_title": "Тут в інтернеті віруситься нов",
-          "date": "2025-03-10",
-          "url": "https://t.me/imatrofAI/913",
-          "preview": "Тут в інтернеті віруситься новий AI-агент — Manus."
-        },
-        {
-          "title": "Ось який він, мультиагентний досвід. Поки Tesla на автопілоті везе на ділову ...",
-          "short_title": "Ось який він, мультиагентний д",
-          "date": "2025-03-10",
-          "url": "https://t.me/imatrofAI/915",
-          "preview": "Ось який він, мультиагентний досвід."
-        },
-        {
-          "title": "Claude 3.7 - Програмуємо на вайбі (ще потужніша, вміє думати, має режим AI агента)",
-          "short_title": "Claude 3.7 - Програмуємо на ва",
-          "date": "2025-03-08",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude 3.7 - Програмуємо на вайбі (ще потужніша, вміє думати, має режим AI агента)"
-        },
-        {
-          "title": "Тут хороша пропозиція від Anthropic прилетіла 🔖",
-          "short_title": "Тут хороша пропозиція від Anth",
-          "date": "2025-02-27",
-          "url": "https://t.me/imatrofAI/888",
-          "preview": "Тут хороша пропозиція від Anthropic прилетіла 🔖 Тільки 3 дні Anthropic [дає знижку](https://claude.ai/upgrade) на річну підписку Claude Pro – $180 замість $216."
-        },
-        {
-          "title": "Vibe Coding – новий стиль кодування, який змінює гру.",
-          "short_title": "Vibe Coding – новий стиль коду",
-          "date": "2025-02-27",
-          "url": "https://t.me/imatrofAI/889",
-          "preview": "Vibe Coding – новий стиль кодування, який змінює гру."
-        },
-        {
-          "title": "Відео про Claude 3.7 вже на каналі. Чекає ваших переглядів, лайків та обговор...",
-          "short_title": "Відео про Claude 3.7 вже на ка",
-          "date": "2025-02-26",
-          "url": "https://t.me/imatrofAI/887",
-          "preview": "[Відео](https://youtu.be/BDrwar8F1TQ) про Claude 3.7 вже на каналі."
-        },
-        {
-          "title": "Відео про Claude 3.7 — огляд на каналі",
-          "short_title": "Відео про Claude 3.7 — огляд н",
-          "date": "2025-02-25",
-          "url": "https://t.me/imatrofAI/887",
-          "preview": "Відео про Claude 3.7 вже на каналі."
-        },
-        {
-          "title": "Знижка від Anthropic — спеціальна пропозиція",
-          "short_title": "Знижка від Anthropic — спеціал",
-          "date": "2025-02-25",
-          "url": "https://t.me/imatrofAI/888",
-          "preview": "Тут хороша пропозиція від Anthropic прилетіла 🔖 Тільки 3 дні Anthropic дає знижку на підписку."
-        },
-        {
-          "title": "Claude 3.7 Sonnet — велике оновлення від Anthropic",
-          "short_title": "Claude 3.7 Sonnet — велике оно",
-          "date": "2025-02-24",
-          "url": "https://t.me/imatrofAI/887",
-          "preview": "Anthropic анонсували Claude 3.7 Sonnet."
-        },
-        {
-          "title": "🏄‍♀️🏄‍♀️🏄‍♀️ Claude 3.7 Sonnet",
-          "short_title": "🏄‍♀️🏄‍♀️🏄‍♀️ Claude 3.7 Sonnet",
-          "date": "2025-02-24",
-          "url": "https://t.me/imatrofAI/879",
-          "preview": "🏄‍♀️🏄‍♀️🏄‍♀️ Claude 3.7 Sonnet Anthropic анонсували оновлену версію своєї моделі, яка, окрім звичайного режиму роботи, ще має можливість [thinking](https://www.anthropic.com/resear"
-        },
-        {
-          "title": "А ось і ефект ШІ-економіки в дії.",
-          "short_title": "А ось і ефект ШІ-економіки в д",
-          "date": "2025-02-19",
-          "url": "https://t.me/imatrofAI/860",
-          "preview": "А ось і ефект ШІ-економіки в дії."
-        },
-        {
-          "title": "А ось ще одне цікаве застосування о3-mini для глибокого дослідження.",
-          "short_title": "А ось ще одне цікаве застосува",
-          "date": "2025-02-04",
-          "url": "https://t.me/imatrofAI/816",
-          "preview": "А ось ще одне цікаве застосування о3-mini для глибокого дослідження."
-        },
-        {
-          "title": "А ще ByteDance запустила новий AI-редактор коду, щоб скласти конкуренцію амер...",
-          "short_title": "А ще ByteDance запустила новий",
-          "date": "2025-01-30",
-          "url": "https://t.me/imatrofAI/798",
-          "preview": "А ще ByteDance запустила новий AI-редактор коду, щоб скласти конкуренцію американським гігантам."
-        },
-        {
-          "title": "Затестив режим Canvas для моделі o1.",
-          "short_title": "Затестив режим Canvas для моде",
-          "date": "2025-01-28",
-          "url": "https://t.me/imatrofAI/793",
-          "preview": "Затестив режим Canvas для моделі o1."
-        },
-        {
-          "title": "Якось Китай прям дуже активізувався.",
-          "short_title": "Якось Китай прям дуже активізу",
-          "date": "2025-01-27",
-          "url": "https://t.me/imatrofAI/791",
-          "preview": "Якось Китай прям дуже активізувався."
-        },
-        {
-          "title": "Оператор від OpenAI вже цього тижня?",
-          "short_title": "Оператор від OpenAI вже цього",
-          "date": "2025-01-22",
-          "url": "https://t.me/imatrofAI/769",
-          "preview": "Оператор від OpenAI вже цього тижня?"
-        },
-        {
-          "title": "Генеральний директор Replit, Амджад Масад, поділився своїми думками про те, я...",
-          "short_title": "Генеральний директор Replit, А",
-          "date": "2025-01-18",
-          "url": "https://t.me/imatrofAI/760",
-          "preview": "Генеральний директор Replit, Амджад Масад, [поділився](https://www.semafor.com/article/01/15/2025/replit-ceo-on-ai-breakthroughs-we-dont-care-about-professional-coders-anymore) сво"
-        },
-        {
-          "title": "Тут питали, яка мовна модель краща для програмування.",
-          "short_title": "Тут питали, яка мовна модель к",
-          "date": "2025-01-03",
-          "url": "https://t.me/imatrofAI/725",
-          "preview": "Тут питали, яка мовна модель краща для програмування."
-        },
-        {
-          "title": "Claude MCP",
-          "short_title": "Claude MCP",
-          "date": "2025-01-03",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Mistral Le Chat! Чи варто переходити?"
-        },
-        {
-          "title": "Claude 3.5",
-          "short_title": "Claude 3.5",
-          "date": "2025-01-03",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Mistral Le Chat! Чи варто переходити?"
-        },
-        {
-          "title": "Китайська відкрита LLM обігнала GPT-4o, Claude 3.5 Sonnet та інші топові опен...",
-          "short_title": "Китайська відкрита LLM обігнал",
-          "date": "2024-12-30",
-          "url": "https://t.me/imatrofAI/717",
-          "preview": "Китайська відкрита LLM обігнала GPT-4o, Claude 3.5 Sonnet та інші топові опенсорс моделі, як-от Llama, за багатьма параметрами."
-        },
-        {
-          "title": "Якщо раптом у вас спрацювали обмеження по використанню o1 моделі, то ось вам ...",
-          "short_title": "Якщо раптом у вас спрацювали о",
-          "date": "2024-12-23",
-          "url": "https://t.me/imatrofAI/702",
-          "preview": "Якщо раптом у вас спрацювали обмеження по використанню o1 моделі, то ось вам промпт, який може відтворити процес мислення та самооцінки."
-        },
-        {
-          "title": "Тут Anthropic показали, як люди використовують AI у реальному світі.",
-          "short_title": "Тут Anthropic показали, як люд",
-          "date": "2024-12-18",
-          "url": "https://t.me/imatrofAI/657",
-          "preview": "Тут Anthropic показали, як люди використовують AI у реальному світі."
-        },
-        {
-          "title": "Anthropic — як люди використовують ШІ в реальності",
-          "short_title": "Anthropic — як люди використов",
-          "date": "2024-12-16",
-          "url": "https://t.me/imatrofAI/657",
-          "preview": "Anthropic показали реальні кейси використання AI."
-        },
-        {
-          "title": "Я вже не думав, що цього року ми ще щось класне побачимо від Google.",
-          "short_title": "Я вже не думав, що цього року",
-          "date": "2024-12-12",
-          "url": "https://t.me/imatrofAI/611",
-          "preview": "Я вже не думав, що цього року ми ще щось класне побачимо від Google."
-        },
-        {
-          "title": "З одного боку, воно таки так — спрацьовує принцип Парето, і те, що вже лежало...",
-          "short_title": "З одного боку, воно таки так —",
-          "date": "2024-12-11",
-          "url": "https://t.me/imatrofAI/603",
-          "preview": "З одного боку, воно таки так — спрацьовує принцип Парето, і те, що вже лежало на поверхні в контексті штучного інтелекту, досягнуто."
-        },
-        {
-          "title": "Адвент-календар від OpenAI – День 4 – Canvas.",
-          "short_title": "Адвент-календар від OpenAI – Д",
-          "date": "2024-12-10",
-          "url": "https://t.me/imatrofAI/597",
-          "preview": "Адвент-календар від OpenAI – День 4 – Canvas."
-        },
-        {
-          "title": "250 хакерам дали 24 години, щоб побачити, що можна створити використовуючи фу...",
-          "short_title": "250 хакерам дали 24 години, що",
-          "date": "2024-12-06",
-          "url": "https://t.me/imatrofAI/564",
-          "preview": "250 хакерам дали 24 години, щоб побачити, що можна створити використовуючи функціонал «computer use» у Claude."
-        },
-        {
-          "title": "Значить затестив я “місток” між моделлю Claude і даними та застосунками на ко...",
-          "short_title": "Значить затестив я “місток” мі",
-          "date": "2024-11-30",
-          "url": "https://t.me/imatrofAI/530",
-          "preview": "Значить затестив я “місток” між моделлю Claude і даними та застосунками на комп’ютері."
-        },
-        {
-          "title": "MCP — місток між Claude та вашими даними",
-          "short_title": "MCP — місток між Claude та ваш",
-          "date": "2024-11-30",
-          "url": "https://t.me/imatrofAI/530",
-          "preview": "Затестив я “місток” між моделлю Claude і даними та застосунками на комп’ютері — Model Context Protocol (MCP)."
-        },
-        {
-          "title": "Наразі це один із найкращих прикладів використання нового функціоналу Claude.",
-          "short_title": "Наразі це один із найкращих пр",
-          "date": "2024-11-28",
-          "url": "https://t.me/imatrofAI/527",
-          "preview": "Наразі це один із найкращих [прикладів](https://x.com/alecvxyz/status/1861888108913950800) використання нового функціоналу Claude."
-        },
-        {
-          "title": "Пам’ятаєте, я показував, як Anthropic через свою модель Claude керує комп’юте...",
-          "short_title": "Пам’ятаєте, я показував, як An",
-          "date": "2024-11-26",
-          "url": "https://t.me/imatrofAI/516",
-          "preview": "Пам’ятаєте, я [показував](https://youtu.be/SJzr_bnPzHg?si=YN4ImmB4j4mYLjyI)[,](https://youtu.be/SJzr_bnPzHg?si=YN4ImmB4j4mYLjyI) як Anthropic через свою модель Claude керує комп’ют"
-        },
-        {
-          "title": "🏄‍♀️ GPT за 8 хвилин",
-          "short_title": "🏄‍♀️ GPT за 8 хвилин",
-          "date": "2024-11-23",
-          "url": "https://t.me/imatrofAI/496",
-          "preview": "🏄‍♀️ GPT за 8 хвилин Сам подивився і вам раджу."
-        },
-        {
-          "title": "🏄‍♀️ Має режим Canvas, але це не ChatGPT",
-          "short_title": "🏄‍♀️ Має режим Canvas, але це",
-          "date": "2024-11-20",
-          "url": "https://t.me/imatrofAI/483",
-          "preview": "🏄‍♀️ Має режим Canvas, але це не ChatGPT 🏄‍♀️ Має можливість аналізувати PDF, але це не Claude 🏄‍♀️ Має можливість пошуку в інтернеті зі штучним інтелектом, але це не Perplexity 🏄‍"
-        },
-        {
-          "title": "🏄‍♂️ А ось і OpenAI вийшов з гучною новиною. А я вже думав, невже вони тихо б...",
-          "short_title": "🏄‍♂️ А ось і OpenAI вийшов з г",
-          "date": "2024-11-14",
-          "url": "https://t.me/imatrofAI/465",
-          "preview": "🏄‍♂️ А ось і OpenAI вийшов з гучною новиною."
-        },
-        {
-          "title": "Учасник нашої спільноти розповідає про свій досвід з Qwen 2.5 (пост нижче 👇)",
-          "short_title": "Учасник нашої спільноти розпов",
-          "date": "2024-11-13",
-          "url": "https://t.me/imatrofAI/461",
-          "preview": "Учасник нашої спільноти розповідає про свій досвід з Qwen 2.5 (пост нижче 👇) Це нова і тепер вже одна з топових відкритих великих мовних моделей, розроблена компанією Alibaba."
-        },
-        {
-          "title": "Claude Browser Use та аудит будівництва",
-          "short_title": "Claude Browser Use та аудит бу",
-          "date": "2024-11-10",
-          "url": "https://t.me/imatrofAI/420",
-          "preview": "Ітан Молік показав неймовірний приклад: Claude Computer Use робить аудит будівельного майданчика через веб-камери та карти."
-        },
-        {
-          "title": "Claude computer use робить аудит будівельного майданчика",
-          "short_title": "Claude computer use робить ауд",
-          "date": "2024-11-08",
-          "url": "https://t.me/imatrofAI/427",
-          "preview": "Claude computer use робить аудит будівельного майданчика Ітан Молік, один з моїх улюблених авторів, хто пише про штучний інтелект, провів цікавий експеримент, де показав, як Claude"
-        },
-        {
-          "title": "Це те, що вміє Claude, тільки обмежено веб-браузером.",
-          "short_title": "Це те, що вміє Claude, тільки",
-          "date": "2024-11-06",
-          "url": "https://t.me/imatrofAI/420",
-          "preview": "Це те, що [вміє](https://youtu.be/SJzr_bnPzHg?si=v8p-Q6AwqbJFVLoF) Claude, тільки обмежено веб-браузером."
-        },
-        {
-          "title": "Claude Desktop для Mac та Windows",
-          "short_title": "Claude Desktop для Mac та Wind",
-          "date": "2024-11-01",
-          "url": "https://t.me/imatrofAI/369",
-          "preview": "Зустрічайте Claude Desktop!"
-        },
-        {
-          "title": "Ну все, тепер і Claude має не лише веб та мобільного клієнта.",
-          "short_title": "Ну все, тепер і Claude має не",
-          "date": "2024-10-31",
-          "url": "https://t.me/imatrofAI/369",
-          "preview": "Ну все, тепер і Claude має не лише веб та мобільного клієнта."
-        },
-        {
-          "title": "Ну які ж Anthropic молодці!",
-          "short_title": "Ну які ж Anthropic молодці!",
-          "date": "2024-10-31",
-          "url": "https://t.me/imatrofAI/370",
-          "preview": "Ну які ж Anthropic молодці!"
-        },
-        {
-          "title": "Claude 3.5 — керування комп'ютером та дата-аналіз",
-          "short_title": "Claude 3.5 — керування комп'ют",
-          "date": "2024-10-28",
-          "url": "https://t.me/imatrofAI/348",
-          "preview": "Значить затестив я нову модель Claude 3.5 та її можливість керувати комп’ютером."
-        },
-        {
-          "title": "До речі, Claude нещодавно викотив новий функціонал для дата-аналізу.",
-          "short_title": "До речі, Claude нещодавно вико",
-          "date": "2024-10-28",
-          "url": "https://t.me/imatrofAI/351",
-          "preview": "До речі, Claude нещодавно [викотив](https://www.anthropic.com/news/analysis-tool) новий функціонал для дата-аналізу."
-        },
-        {
-          "title": "Значить затестив я нову модель Claude 3.5 та її можливість керувати комп’ютер...",
-          "short_title": "Значить затестив я нову модель",
-          "date": "2024-10-26",
-          "url": "https://t.me/imatrofAI/348",
-          "preview": "Значить затестив я нову модель Claude 3.5 та її можливість керувати комп’ютером."
-        },
-        {
-          "title": "Claude Computer Use — ШІ керує комп'ютером",
-          "short_title": "Claude Computer Use — ШІ керує",
-          "date": "2024-10-23",
-          "url": "https://t.me/imatrofAI/336",
-          "preview": "Anthropic зробили прорив — Claude тепер може керувати комп'ютером (переміщати курсор, натискати кнопки, друкувати текст)."
-        },
-        {
-          "title": "🏄 Те, про що було купа розмов, а Anthropic взяли і зробили. І знову вони тихе...",
-          "short_title": "🏄 Те, про що було купа розмов,",
-          "date": "2024-10-23",
-          "url": "https://t.me/imatrofAI/336",
-          "preview": "🏄 Те, про що було купа розмов, а Anthropic взяли і зробили."
-        },
-        {
-          "title": "Ось такий вийшов мій перший досвід з Claude, який керував моїм комп’ютером. Н...",
-          "short_title": "Ось такий вийшов мій перший до",
-          "date": "2024-10-23",
-          "url": "https://t.me/imatrofAI/338",
-          "preview": "Ось такий вийшов мій перший досвід з Claude, який керував моїм комп’ютером."
-        },
-        {
-          "title": "Я раніше писав про Perplexity - це як Гугл пошук, тільки на стероїдах зі штуч...",
-          "short_title": "Я раніше писав про Perplexity",
-          "date": "2024-10-21",
-          "url": "https://t.me/imatrofAI/330",
-          "preview": "Я раніше [писав](https://t.me/imatrofAI/314) про Perplexity - це як Гугл пошук, тільки на стероїдах зі штучним інтелектом."
-        },
-        {
-          "title": "Тут цей, Perplexity виходить як окремий додаток під Mac. Можна буде отримати ...",
-          "short_title": "Тут цей, Perplexity виходить я",
-          "date": "2024-10-16",
-          "url": "https://t.me/imatrofAI/314",
-          "preview": "Тут цей, Perplexity виходить як окремий додаток під Mac."
-        },
-        {
-          "title": "Тут OpenAI випустив свою версію артефактів - canvas.",
-          "short_title": "Тут OpenAI випустив свою версі",
-          "date": "2024-10-04",
-          "url": "https://t.me/imatrofAI/273",
-          "preview": "Тут OpenAI [випустив](https://openai.com/index/introducing-canvas/) свою версію артефактів - canvas."
-        },
-        {
-          "title": "У мене таке враження, що після кожного великого анонсу з OpenAI хтось йде.",
-          "short_title": "У мене таке враження, що після",
-          "date": "2024-09-26",
-          "url": "https://t.me/imatrofAI/252",
-          "preview": "У мене таке враження, що після кожного великого анонсу з OpenAI хтось йде."
-        },
-        {
-          "title": "Станом на сьогодні, топові ШІ моделі притримуються лівої політичної позиції.",
-          "short_title": "Станом на сьогодні, топові ШІ",
-          "date": "2024-09-23",
-          "url": "https://t.me/imatrofAI/242",
-          "preview": "Станом на сьогодні, топові ШІ моделі притримуються лівої політичної позиції."
-        },
-        {
-          "title": "В продовженні теми платних vs безкоштовних ШІ сервісів.",
-          "short_title": "В продовженні теми платних vs",
-          "date": "2024-09-12",
-          "url": "https://t.me/imatrofAI/206",
-          "preview": "В продовженні теми платних vs безкоштовних ШІ сервісів."
-        },
-        {
-          "title": "📝 Один з учасників нашої спільноти підготував промпт на перевірку того як дит...",
-          "short_title": "📝 Один з учасників нашої спіль",
-          "date": "2024-09-09",
-          "url": "https://t.me/imatrofAI/196",
-          "preview": "📝 Один з учасників нашої спільноти підготував промпт на перевірку того як дитина засвоїла матеріал з підручнику."
-        },
-        {
-          "title": "Мені здається, що Claude заслуговує трохи більше уваги.",
-          "short_title": "Мені здається, що Claude заслу",
-          "date": "2024-09-06",
-          "url": "https://t.me/imatrofAI/190",
-          "preview": "Мені здається, що Claude [заслуговує](https://youtu.be/vUdNaAAc4FY?si=QZnuZG61FtHZSJgx) трохи більше уваги."
-        },
-        {
-          "title": "🎬 Тут вийшло нове відео на YouTube! Це в продовженні нашого вебінару",
-          "short_title": "🎬 Тут вийшло нове відео на You",
-          "date": "2024-09-05",
-          "url": "https://t.me/imatrofAI/188",
-          "preview": "🎬 Тут вийшло нове відео на YouTube!"
-        },
-        {
-          "title": "Claude Artifacts на мобільному — створення додатків голосом",
-          "short_title": "Claude Artifacts на мобільному",
-          "date": "2024-09-02",
-          "url": "https://t.me/imatrofAI/169",
-          "preview": "Експериментую з Claude Artifacts на мобільному."
-        },
-        {
-          "title": "Системні промпти Anthropic та корисні шаблони",
-          "short_title": "Системні промпти Anthropic та",
-          "date": "2024-09-01",
-          "url": "https://t.me/imatrofAI/165",
-          "preview": "Anthropic опублікував свої системні промпти."
-        },
-        {
-          "title": "Експериментую з Claude артефактами на мобільному. Те відчуття, коли ти сам мо...",
-          "short_title": "Експериментую з Claude артефак",
-          "date": "2024-08-31",
-          "url": "https://t.me/imatrofAI/169",
-          "preview": "Експериментую з Claude артефактами на мобільному."
-        },
-        {
-          "title": "Тут по промтам маємо трохи інсайтів. Антропік опублікував свої системні промти.",
-          "short_title": "Тут по промтам маємо трохи інс",
-          "date": "2024-08-30",
-          "url": "https://t.me/imatrofAI/165",
-          "preview": "Тут по промтам маємо трохи інсайтів."
-        },
-        {
-          "title": "Я: «Гей, Claude, я сумую за грою Flappy Bird. Зроби мені таку ж саму, але з к...",
-          "short_title": "Я: «Гей, Claude, я сумую за гр",
-          "date": "2024-08-30",
-          "url": "https://t.me/imatrofAI/167",
-          "preview": "Я: «Гей, Claude, я сумую за грою Flappy Bird."
-        },
-        {
-          "title": "1️⃣ ChatGPT => GPTs",
-          "short_title": "1️⃣ ChatGPT => GPTs",
-          "date": "2024-08-29",
-          "url": "https://t.me/imatrofAI/158",
-          "preview": "1️⃣ ChatGPT => [GPTs](https://openai.com/index/introducing-gpts/) 2️⃣ Claude => [Projects](https://www.anthropic.com/news/projects) 3️⃣ Gemini => [Gems](https://x.com/googledeepmin"
-        },
-        {
-          "title": "Артефакти Claude — тепер для всіх!",
-          "short_title": "Артефакти Claude — тепер для в",
-          "date": "2024-08-28",
-          "url": "https://t.me/imatrofAI/146",
-          "preview": "Claude зробив Artifacts доступними для всіх користувачів."
-        },
-        {
-          "title": "Артефакти для всіх!",
-          "short_title": "Артефакти для всіх!",
-          "date": "2024-08-27",
-          "url": "https://t.me/imatrofAI/146",
-          "preview": "Артефакти для [всіх!](https://youtu.be/vUdNaAAc4FY) Claude, одна з топових мовних моделей, ще кілька місяців тому [ввела](https://youtu.be/kJojgxb4rvg) таке поняття як «артефакт»."
-        },
-        {
-          "title": "На випадок, якщо хтось вам каже, що не може програмувати, покажіть їм це відео.",
-          "short_title": "На випадок, якщо хтось вам каж",
-          "date": "2024-08-22",
-          "url": "https://t.me/imatrofAI/130",
-          "preview": "На випадок, якщо хтось вам каже, що не може програмувати, покажіть їм це відео."
-        },
-        {
-          "title": "А ви чули, що Google тепер надає більше перевагу \"балансу між роботою і життя...",
-          "short_title": "А ви чули, що Google тепер над",
-          "date": "2024-08-20",
-          "url": "https://t.me/imatrofAI/127",
-          "preview": "А ви чули, що Google тепер надає більше перевагу \"балансу між роботою і життям\" замість \"перемоги\" на полі штучного інтелекту?"
-        },
-        {
-          "title": "Хочуть алайменту, а у самих міс-алаймент (це не точно).",
-          "short_title": "Хочуть алайменту, а у самих мі",
-          "date": "2024-08-06",
-          "url": "https://t.me/imatrofAI/84",
-          "preview": "Хочуть алайменту, а у самих міс-алаймент (це не точно)."
-        },
-        {
-          "title": "Claude 3.5 — перші враження та огляд на YouTube",
-          "short_title": "Claude 3.5 — перші враження та",
-          "date": "2024-07-08",
-          "url": "https://t.me/imatrofAI/23",
-          "preview": "Я зараз готую нове відео, де хочу поділитися своїми враженнями про Claude 3.5."
-        },
-        {
-          "title": "🎬  ВСІ ПОСИЛАННЯ ТА ДОДАТКОВІ МАТЕРІАЛИ З ВІДЕО",
-          "short_title": "🎬  ВСІ ПОСИЛАННЯ ТА ДОДАТКОВІ",
-          "date": "2024-07-08",
-          "url": "https://t.me/imatrofAI/25",
-          "preview": "🎬  ВСІ ПОСИЛАННЯ ТА ДОДАТКОВІ МАТЕРІАЛИ З ВІДЕО 🎬 [GPTs які звільнять 2 години щодня](https://t.me/imatrofAI/68) 🎬 [Моя система генерації контенту (Telegram та LinkedIn)](https://t"
-        },
-        {
-          "title": "Я зараз готую нове відео, де хочу поділитися своїми враженнями про Claude 3.5...",
-          "short_title": "Я зараз готую нове відео, де х",
-          "date": "2024-07-05",
-          "url": "https://t.me/imatrofAI/23",
-          "preview": "Я зараз готую нове відео, де хочу поділитися своїми враженнями про Claude 3.5."
-        },
-        {
-          "title": "Нещодавно проходив чекап у лікаря: здавав аналізи крові та інші обстеження, і...",
-          "short_title": "Нещодавно проходив чекап у лік",
-          "date": "2024-07-03",
-          "url": "https://t.me/imatrofAI/22",
-          "preview": "Нещодавно проходив чекап у лікаря: здавав аналізи крові та інші обстеження, і лікар надав висновок з рекомендаціями."
-        },
-        {
-          "title": "Anthropic — віжен на телефоні та реальні юзкейси",
-          "short_title": "Anthropic — віжен на телефоні",
-          "date": "2024-06-23",
-          "url": "https://t.me/imatrofAI/7",
-          "preview": "Я дуже зацінив віжен на телефоні."
-        },
-        {
-          "title": "Anthropic далі навалює. От мені прям цікаво, ті всі юзкейси, які вони (та інш...",
-          "short_title": "Anthropic далі навалює. От мен",
-          "date": "2024-06-23",
-          "url": "https://t.me/imatrofAI/7",
-          "preview": "Anthropic далі [навалює](https://youtu.be/dhxrHvgXpSM?si=Lu3X5t9lUnzgiXqo)[.](https://youtu.be/dhxrHvgXpSM?si=Lu3X5t9lUnzgiXqo) От мені прям цікаво, ті всі юзкейси, які вони (та ін"
-        },
-        {
-          "title": "Claude 3.5 — новий гравець від Anthropic",
-          "short_title": "Claude 3.5 — новий гравець від",
-          "date": "2024-06-22",
-          "url": "https://t.me/imatrofAI/5",
-          "preview": "Знову інтернет гудить новиною про новий ШІ."
-        },
-        {
-          "title": "Знову інтернет гудить новиною про новий ШІ. І купа відео від американських бл...",
-          "short_title": "Знову інтернет гудить новиною",
-          "date": "2024-06-22",
-          "url": "https://t.me/imatrofAI/5",
-          "preview": "Знову інтернет гудить новиною про новий ШІ."
-        },
-        {
-          "title": "Claude 3 Opus, Sonnet, Haiku",
-          "short_title": "Claude 3 Opus, Sonnet, Haiku",
-          "date": "2024-03-06",
-          "url": "https://www.youtube.com/@imatrof",
-          "preview": "Відео: Claude 3 тестування"
         }
       ]
     },
@@ -25922,8 +26237,57 @@
       "label": "Claude Code",
       "category": "product",
       "color": "#4A7CC7",
-      "count": 45,
+      "count": 52,
       "posts": [
+        {
+          "title": "У Codex завезли профілі. Дуже схоже на те, що має Claude Code, коли заходиш н...",
+          "short_title": "У Codex завезли профілі. Дуже",
+          "date": "2026-06-08",
+          "url": "https://t.me/imatrofAI/2775",
+          "preview": "У Codex завезли профілі."
+        },
+        {
+          "title": "Промпти",
+          "short_title": "Промпти",
+          "date": "2026-06-03",
+          "url": "https://t.me/imatrofAI/2753",
+          "preview": "Промпти ↓ Скіли / Плагіни ↓ Воркфлови / Ролі Ми все далі рухаємося на вищий рівень абстракції."
+        },
+        {
+          "title": "/goal",
+          "short_title": "/goal",
+          "date": "2026-05-28",
+          "url": "https://t.me/imatrofAI/2745",
+          "preview": "/goal /remote-control І тепер цей флов можна буде запустити і на [Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)."
+        },
+        {
+          "title": "Ми бачимо, що ціна за токени росте, а точніше, кількість токенів, яку викорис...",
+          "short_title": "Ми бачимо, що ціна за токени р",
+          "date": "2026-05-26",
+          "url": "https://t.me/imatrofAI/2737",
+          "preview": "Ми бачимо, що ціна за токени росте, а точніше, кількість токенів, яку використовують компанії збільшується."
+        },
+        {
+          "title": "У мене ніяк не виходить з голови цей підхід, про який розповідав Борис Черні....",
+          "short_title": "У мене ніяк не виходить з голо",
+          "date": "2026-05-21",
+          "url": "https://t.me/imatrofAI/2722",
+          "preview": "У мене ніяк не виходить з голови цей [підхід](https://x.com/bcherny/status/2038454341884154269?s=46&t=TzksdWDU4YgIPS7Vwk4ezw), про який розповідав Борис Черні."
+        },
+        {
+          "title": "Що не кажіть, а розробка вже не буде такою, як раніше. Поки гуляю з дитиною, ...",
+          "short_title": "Що не кажіть, а розробка вже н",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2710",
+          "preview": "Що не кажіть, а розробка вже не буде такою, як раніше."
+        },
+        {
+          "title": "Стався Google I/O 2026 і ми побачили багато змін.",
+          "short_title": "Стався Google I/O 2026 і ми по",
+          "date": "2026-05-19",
+          "url": "https://t.me/imatrofAI/2716",
+          "preview": "Стався Google I/O 2026 і ми побачили багато змін."
+        },
         {
           "title": "Якщо ви використовуєте Claude Code одним з цих способів, то з 15 червня у вас...",
           "short_title": "Якщо ви використовуєте Claude",
