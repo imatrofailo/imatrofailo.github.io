@@ -1,7 +1,7 @@
 # ROADMAP — imatrofailo.github.io
 
-> Останнє оновлення: 2026-05-16
-> Статус: 9/10 виконано. Лишився [10] wiki-deploy plugin.
+> Останнє оновлення: 2026-06-10
+> Статус: 10/10 виконано + Сесія E (hygiene & automation). Wiki-deploy plugin лишається опціональним (щоденна автоматизація вже реалізована через cron).
 
 Повний план із 10 пунктів (Сесії A–D). Читай перед початком нової сесії.
 
@@ -11,7 +11,7 @@
 
 | Репо | Шлях | Роль |
 |------|------|------|
-| imatrofailo.github.io | `/tmp/imatrofailo-pages/` | Публічний сайт (цей репо) |
+| imatrofailo.github.io | `/home/claude-agent/imatrof-space/imatrofailo.github.io/` | Публічний сайт (цей репо) |
 | imatrof-wiki | `~/imatrof-space/imatrof-wiki/` | Сирі дані та wiki |
 | imatrof-marketplace | `~/imatrof-space/imatrof-marketplace/` | Плагіни та автоматизація |
 
@@ -47,7 +47,7 @@ python3 scripts/generate_index.py \
 ## Сесія B — Сторінки
 
 ### [4] nav.js ✅ DONE
-**Файл:** `nav.js` — shared navigation, 3 пункти: Home | Charts | Tips.
+**Файл:** `nav.js` — shared navigation, 5 пунктів: Бульбашки | Карта | Грід | Практики | Архів.
 Активний пункт підсвічується по `window.location`.
 
 ### [5] index.html — Bubble Explorer ✅ DONE
@@ -89,20 +89,16 @@ python3 scripts/import_telegram_json.py --json [path]
 
 ## Сесія D — Automation
 
-### [10] wiki-deploy плагін ⏳ TODO
+### [10] wiki-deploy плагін ✅ DONE (опціональний)
 **Файл:** `~/imatrof-space/imatrof-marketplace/plugins/wiki-deploy/`
 
-```
-plugins/wiki-deploy/
-  .claude-plugin/plugin.json
-  skills/wiki-deploy/SKILL.md
-```
+> **Примітка (2026-06-10):** щоденна автоматизація вже реалізована інакше — `site-update.sh` cron о 08:00 Kyiv + `auto-tag.sh` chain після import-telegram. Деталі: `imatrof-marketplace/automations/README.md`. Плагін лишається опціональним для ручного deploy-флоу (коли потрібен інтерактивний контроль кожного кроку).
 
-`SKILL.md` має містити 4-кроковий deploy routine:
+4-кроковий deploy routine:
 1. **LINT** — `python3 scripts/wiki_lint.py`
 2. **IMPORT** — `import_telegram_json.py --dry-run` → підтвердження → без dry-run
-3. **GENERATE** — `generate_index.py --wiki . --output /tmp/imatrofailo-pages/data/`
-4. **DEPLOY** — `cd /tmp/imatrofailo-pages && git add data/ && git commit && git push`
+3. **GENERATE** — `generate_index.py --wiki . --output /home/claude-agent/imatrof-space/imatrofailo.github.io/data/`
+4. **DEPLOY** — `cd /home/claude-agent/imatrof-space/imatrofailo.github.io && git add data/ && git commit && git push`
 
 Показувати результат кожного кроку перед наступним. Push тільки після підтвердження Ігоря.
 
@@ -119,3 +115,15 @@ plugins/wiki-deploy/
 7. Теги для Practical Tips = `#практика` (без нових тегів)
 8. Automation = скіл у imatrof-marketplace (ручний запуск через Claude Code)
 9. **generate_index.py запускати з worktree** де є нові пости, до merge в main
+
+---
+
+## Сесія E (2026-06-10) — виконано
+
+- **SEO-пакет:** favicon.svg (три бульбашки), apple-touch-icon.png, og-image.png, sitemap.xml (6 URL), robots.txt, 404.html з навігацією
+- **Perf — meta + lazy:** topics-meta.json (~8KB), data/topics/<id>.json — bubbles і karta стартують без завантаження повних постів
+- **tags.json машинне джерело:** generate_index.py читає tags.json з wiki; wiki_lint.py перевіряє синхронність словника
+- **UX/A11y + labels:** labels у posts.json, URL-стан фільтрів Архіву, accessibility-атрибути
+- **CSS consolidation:** спільні :root-змінні і компоненти переїхали у style.css; сторінки підключають один файл
+- **auto-tag.sh:** chain після import-telegram.sh — автоматичне семантичне тегування нових постів батчами
+- **Cron stagger:** site-update.sh, wiki-update.sh, import-telegram/youtube рознесені по часу, щоб не конфліктували

@@ -24,8 +24,11 @@ imatrofailo.github.io/
   DESIGN.md             ← Дизайн-токени і компоненти (читай перед CSS-змінами) ✅
   CLAUDE.md             ← Цей файл
   data/
-    topics.json    ← Генерується generate_index.py (не редагувати вручну)
-    tips.json      ← Генерується generate_index.py (не редагувати вручну)
+    topics-meta.json ← Легкий мета-файл (id/label/category/color/count), ~8KB ✅
+    topics.json      ← Повний список тем (сумісність; може видалятись) ← generate_index.py
+    posts.json       ← Всі пости TG+YT з labels; для Архіву ← generate_index.py
+    cards.json       ← Editorial картки Практик; оновлюється scripts/site/update_cards.py
+    topics/          ← data/topics/<id>.json — повні пости теми, lazy fetch ✅
   docs/
     ROADMAP.md     ← План 10 пунктів (9/10 done), що лишилось ✅
     adr/           ← Architecture Decision Records
@@ -48,27 +51,26 @@ imatrofailo.github.io/
 
 ---
 
-## Як оновити дані (topics.json, tips.json)
+## Як оновити дані
 
 ```bash
-# З директорії imatrof-wiki:
-python3 scripts/generate_index.py --output /tmp/imatrof-pages/data/
-
-# Або з абсолютним шляхом до wiki:
-python3 ~/imatrof-space/imatrof-wiki/scripts/generate_index.py \
-  --wiki ~/imatrof-space/imatrof-wiki \
-  --output /tmp/imatrof-pages/data/
+# З директорії imatrof-wiki (або worktree з новими постами):
+python3 scripts/site/generate_index.py \
+  --wiki /home/claude-agent/imatrof-space/imatrof-wiki \
+  --output /home/claude-agent/imatrof-space/imatrofailo.github.io/data/
 ```
 
-Скрипт сканує всі `raw/telegram-history/*.md` і генерує JSON.
-Запускати після кожного імпорту нових Telegram-постів.
+Скрипт сканує всі `raw/telegram-history/*.md` і `raw/youtube-history/news-index.md`, генерує JSON.
+Запускати після кожного імпорту нових Telegram-постів або вручну.
+
+> **Автоматично:** cron site-update.sh запускає `scripts/site/site_update.py` щодня о 08:00 Kyiv (05:00 UTC).
 
 ---
 
 ## Як задеплоїти
 
 ```bash
-cd /tmp/imatrof-pages
+cd /home/claude-agent/imatrof-space/imatrofailo.github.io
 git add data/ index.html charts.html tips.html nav.js
 git commit -m "data: update index $(date +%Y-%m-%d)"
 git push
@@ -77,58 +79,66 @@ git push
 GitHub Pages автоматично деплоїть після push на main.
 URL: https://imatrofailo.github.io
 
-**Правило:** агент НЕ пушить без явного підтвердження від Ігоря.
+> **Автоматично:** cron `site-update.sh` робить це щодня о 08:00 Kyiv (05:00 UTC) без участі Ігоря.
+> **Ручний push:** тільки після явного підтвердження від Ігоря — агент самостійно НЕ пушить.
 
 ---
 
 ## Правила розробки
 
 1. **Zero dependencies** — тільки vanilla JS, без React, D3, npm
-2. **Single-file pages** — кожна сторінка самодостатня, крім `nav.js` і `data/*.json`
+2. **Single-file pages** — кожна сторінка самодостатня, крім `nav.js`, `style.css` і `data/*.json`
 3. **Fetch from JSON** — ніколи не хардкодь дані тем в HTML
 4. **No build step** — файли деплояться as-is
 5. Дизайн-рішення → читай [DESIGN.md](DESIGN.md) перед змінами CSS
 
 ---
 
-## Формат data/topics.json
+## Формати JSON-файлів
 
+### data/topics-meta.json (~8KB, lazy-start)
 ```json
 {
-  "generated": "2026-05-16T10:00:00",
-  "total_posts": 1358,
+  "generated": "2026-06-10T08:00:00",
+  "total_posts": 2355,
+  "total_youtube": 165,
+  "total": 2520,
   "topics": [
+    { "id": "openai", "label": "OpenAI", "category": "company", "color": "#...", "count": 163 }
+  ]
+}
+```
+
+### data/topics/\<id\>.json (повні пости теми, lazy fetch)
+```json
+{
+  "id": "openai",
+  "posts": [
+    { "title": "...", "date": "2026-05-01", "url": "https://t.me/imatrofAI/2010", "preview": "..." }
+  ]
+}
+```
+
+### data/posts.json (для Архіву)
+```json
+{
+  "total": 3110, "total_telegram": 2355, "total_youtube": 165,
+  "posts": [
     {
-      "id": "openai",
-      "label": "OpenAI",
-      "category": "company",
-      "count": 163,
-      "posts": [
-        {
-          "title": "Назва посту",
-          "date": "2026-05-01",
-          "url": "https://t.me/imatrofAI/2010",
-          "preview": "Перше речення посту для preview..."
-        }
-      ]
+      "title": "...", "date": "YYYY-MM-DD", "url": "...", "preview": "...",
+      "source": "telegram",
+      "labels": ["новина", "anthropic", "claude-code"]
     }
   ]
 }
 ```
 
-## Формат data/tips.json
-
+### data/cards.json (Editorial практики, оновлюється scripts/site/update_cards.py)
 ```json
 {
-  "generated": "2026-05-16T10:00:00",
-  "tips": [
-    {
-      "title": "Назва практичного посту",
-      "date": "2026-05-01",
-      "url": "https://t.me/imatrofAI/2010",
-      "preview": "Перше речення...",
-      "tags": ["#anthropic", "#практика", "#claude-code"]
-    }
+  "generated": "2026-06-10",
+  "cards": [
+    { "title": "...", "date": "YYYY-MM-DD", "url": "...", "preview": "...", "segment": "..." }
   ]
 }
 ```
