@@ -133,7 +133,7 @@
 <header class="hero">
   <div class="hero-eyebrow">@imatrofAI · YouTube + Telegram</div>
   <h1>Ігор Матрофайло<br>досліджує <em>AI</em></h1>
-  <p class="hero-sub">2300+ постів і відео про штучний інтелект — компанії, продукти, тренди. Обирай зручний спосіб дослідження.</p>
+  <p class="hero-sub"><span class="js-total">2300+</span> постів і відео про штучний інтелект — компанії, продукти, тренди. Обирай зручний спосіб дослідження.</p>
   <div class="hero-links">
     <a href="https://www.youtube.com/@imatrof" target="_blank" class="hero-link">▶ YouTube</a>
     <a href="https://t.me/imatrofAI" target="_blank" class="hero-link">✈ Telegram</a>
@@ -347,7 +347,7 @@
         </svg>
       </div>
       <div class="tile-name">Архів</div>
-      <div class="tile-desc">Повний архів 2300+ постів каналу з 2024 по 2026. Пошук по тексту, фільтр по році, темі та компанії. 48 постів на сторінку з пагінацією.</div>
+      <div class="tile-desc">Повний архів <span class="js-total">2300+</span> постів каналу з 2024 по 2026. Пошук по тексту, фільтр по році, темі та компанії. 48 постів на сторінку з пагінацією.</div>
       <div class="tile-arrow">Відкрити →</div>
     </a>
 
@@ -360,5 +360,11 @@
 </footer>
 
 <script src="nav.js"></script>
+<script>
+fetch('/data/posts.json').then(r => r.json()).then(d => {
+  const n = (d.total || 0) + '+';
+  document.querySelectorAll('.js-total').forEach(el => el.textContent = n);
+}).catch(() => {});
+</script>
 </body>
 </html>
