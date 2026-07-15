@@ -48,6 +48,7 @@ imatrofailo.github.io/
 |------|------|------|
 | imatrof-wiki | `~/imatrof-space/imatrof-wiki/` | Сирі дані (raw/) і wiki/topics/ |
 | imatrof-marketplace | `~/imatrof-space/imatrof-marketplace/` | Плагіни і автоматизація |
+| imatrof-docs | приватне репо | Ecosystem-рівнева документація: крос-репо патерни, automation-політики |
 
 ---
 
