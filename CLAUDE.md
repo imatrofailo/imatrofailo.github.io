@@ -57,8 +57,8 @@ imatrofailo.github.io/
 ```bash
 # З директорії imatrof-wiki (або worktree з новими постами):
 python3 scripts/site/generate_index.py \
-  --wiki /home/claude-agent/imatrof-space/imatrof-wiki \
-  --output /home/claude-agent/imatrof-space/imatrofailo.github.io/data/
+  --wiki ../imatrof-wiki \
+  --output ../imatrofailo.github.io/data/
 ```
 
 Скрипт сканує всі `raw/telegram-history/*.md` і `raw/youtube-history/news-index.md`, генерує JSON.
@@ -71,7 +71,7 @@ python3 scripts/site/generate_index.py \
 ## Як задеплоїти
 
 ```bash
-cd /home/claude-agent/imatrof-space/imatrofailo.github.io
+cd imatrofailo.github.io
 git add data/ index.html charts.html tips.html nav.js
 git commit -m "data: update index $(date +%Y-%m-%d)"
 git push
