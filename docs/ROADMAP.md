@@ -11,7 +11,7 @@
 
 | Репо | Шлях | Роль |
 |------|------|------|
-| imatrofailo.github.io | `/home/claude-agent/imatrof-space/imatrofailo.github.io/` | Публічний сайт (цей репо) |
+| imatrofailo.github.io | `~/imatrof-space/imatrofailo.github.io/` | Публічний сайт (цей репо) |
 | imatrof-wiki | `~/imatrof-space/imatrof-wiki/` | Сирі дані та wiki |
 | imatrof-marketplace | `~/imatrof-space/imatrof-marketplace/` | Плагіни та автоматизація |
 
@@ -39,7 +39,7 @@ Color tokens, fonts, component patterns. Читати перед будь-яки
 ```bash
 python3 scripts/site/generate_index.py \
   --wiki /path/to/worktree \
-  --output /home/claude-agent/imatrof-space/imatrofailo.github.io/data/
+  --output ~/imatrof-space/imatrofailo.github.io/data/
 ```
 
 **Ключове:** запускати з worktree де є нові пости (до merge в main).
@@ -100,8 +100,8 @@ python3 scripts/import_telegram_json.py --json [path]
 4-кроковий deploy routine:
 1. **LINT** — `python3 scripts/wiki_lint.py`
 2. **IMPORT** — `import_telegram_json.py --dry-run` → підтвердження → без dry-run
-3. **GENERATE** — `generate_index.py --wiki . --output /home/claude-agent/imatrof-space/imatrofailo.github.io/data/`
-4. **DEPLOY** — `cd /home/claude-agent/imatrof-space/imatrofailo.github.io && git add data/ && git commit && git push`
+3. **GENERATE** — `generate_index.py --wiki . --output ~/imatrof-space/imatrofailo.github.io/data/`
+4. **DEPLOY** — `cd ~/imatrof-space/imatrofailo.github.io && git add data/ && git commit && git push`
 
 Показувати результат кожного кроку перед наступним. Push тільки після підтвердження Ігоря.
 
