@@ -46,8 +46,8 @@ imatrofailo.github.io/
 
 | Репо | Шлях | Роль |
 |------|------|------|
-| imatrof-wiki | `~/imatrof-space/imatrof-wiki/` | Сирі дані (raw/) і wiki/topics/ |
-| imatrof-marketplace | `~/imatrof-space/imatrof-marketplace/` | Плагіни і автоматизація |
+| imatrof-wiki | приватне репо `imatrofailo/imatrof-wiki` | Сирі дані (raw/) і wiki/topics/ |
+| imatrof-marketplace | приватне репо `imatrofailo/imatrof-marketplace` | Плагіни і автоматизація |
 | imatrof-docs | приватне репо `imatrofailo/imatrof-docs` | Ecosystem-рівнева документація: крос-репо патерни, automation-політики |
 
 Перед новою роботою прочитай патерни/архітектуру в приватному `imatrofailo/imatrof-docs`; якщо доступу/клону немає — спитай власника.

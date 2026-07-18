@@ -11,9 +11,9 @@
 
 | Репо | Шлях | Роль |
 |------|------|------|
-| imatrofailo.github.io | `~/imatrof-space/imatrofailo.github.io/` | Публічний сайт (цей репо) |
-| imatrof-wiki | `~/imatrof-space/imatrof-wiki/` | Сирі дані та wiki |
-| imatrof-marketplace | `~/imatrof-space/imatrof-marketplace/` | Плагіни та автоматизація |
+| imatrofailo.github.io | цей репо | Публічний сайт |
+| imatrof-wiki | приватне репо `imatrofailo/imatrof-wiki` | Сирі дані та wiki |
+| imatrof-marketplace | приватне репо `imatrofailo/imatrof-marketplace` | Плагіни та автоматизація |
 
 ---
 
@@ -28,7 +28,7 @@ Color tokens, fonts, component patterns. Читати перед будь-яки
 Структура репо, як оновлювати дані, як деплоїти, правила розробки.
 
 ### [3] generate_index.py ✅ DONE → переїхав у scripts/site/
-**Файл:** `~/imatrof-space/imatrof-wiki/scripts/site/generate_index.py` (оркестратор: site_update.py)
+**Файл:** `imatrof-wiki: scripts/site/generate_index.py` (оркестратор: site_update.py)
 
 Сканує `raw/telegram-history/*.md` + `raw/youtube-history/news-index.md` → пише:
 - `data/topics-meta.json` — легкий мета (~8KB): id/label/category/color/count
@@ -39,7 +39,7 @@ Color tokens, fonts, component patterns. Читати перед будь-яки
 ```bash
 python3 scripts/site/generate_index.py \
   --wiki /path/to/worktree \
-  --output ~/imatrof-space/imatrofailo.github.io/data/
+  --output /path/to/imatrofailo.github.io/data/
 ```
 
 **Ключове:** запускати з worktree де є нові пости (до merge в main).
@@ -93,15 +93,15 @@ python3 scripts/import_telegram_json.py --json [path]
 ## Сесія D — Automation
 
 ### [10] wiki-deploy плагін ✅ DONE (опціональний)
-**Файл:** `~/imatrof-space/imatrof-marketplace/plugins/wiki-deploy/`
+**Файл:** `imatrof-marketplace: plugins/wiki-deploy/`
 
 > **Примітка (2026-06-10):** щоденна автоматизація вже реалізована інакше — `site-update.sh` cron о 08:00 Kyiv + `auto-tag.sh` chain після import-telegram. Деталі: `imatrof-marketplace/automations/README.md`. Плагін лишається опціональним для ручного deploy-флоу (коли потрібен інтерактивний контроль кожного кроку).
 
 4-кроковий deploy routine:
 1. **LINT** — `python3 scripts/wiki_lint.py`
 2. **IMPORT** — `import_telegram_json.py --dry-run` → підтвердження → без dry-run
-3. **GENERATE** — `generate_index.py --wiki . --output ~/imatrof-space/imatrofailo.github.io/data/`
-4. **DEPLOY** — `cd ~/imatrof-space/imatrofailo.github.io && git add data/ && git commit && git push`
+3. **GENERATE** — `generate_index.py --wiki . --output /path/to/imatrofailo.github.io/data/`
+4. **DEPLOY** — у клоні `imatrofailo.github.io`: `git add data/ && git commit && git push`
 
 Показувати результат кожного кроку перед наступним. Push тільки після підтвердження Ігоря.
 
