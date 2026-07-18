@@ -1,0 +1,25 @@
+docs/ROADMAP.md
+  s_93cfa78ec5e6fd::t_cad8738b2a785d 14-16
+  s_93cfa78ec5e6fd::t_92c05073d4ea5d 103-104
+  s_93cfa78ec5e6fd::t_efcd5967470e28 96
+  s_93cfa78ec5e6fd::t_548cd75e6809ca 42
+  s_93cfa78ec5e6fd::t_aeb23590ea8404 31
+CLAUDE.md
+  s_93cfa78ec5e6fd::t_6a1e025c191264 49-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "7692fb199d6bb996340ab83896760c756e3be784",
+  "prompts": {},
+  "sessions": {
+    "s_93cfa78ec5e6fd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "33be49cd-a03e-4d80-8c46-53b1a9c6cdf2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
