@@ -1,0 +1,15 @@
+{
+  "generated": "2026-07-21",
+  "total": 1,
+  "books": [
+    {
+      "slug": "printsyp-80-20",
+      "title": "Принцип 80/20",
+      "author": "Річард Кох",
+      "year": 1997,
+      "status": "reading",
+      "rating": null,
+      "date_read": null
+    }
+  ]
+}

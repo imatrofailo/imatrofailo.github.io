@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Книги, які читає Ігор Матрофайло — статуси, оцінки, рік.">
+<meta property="og:title" content="Книги — Ігор Матрофайло">
+<meta property="og:description" content="Книги, які читає Ігор Матрофайло — статуси, оцінки, рік.">
+<meta property="og:url" content="https://imatrofailo.github.io/pages/knygy.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://imatrofailo.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="uk_UA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAF9F5">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://imatrofailo.github.io/pages/knygy.html">
+<title>Книги — Ігор Матрофайло</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+  .content { max-width: 900px; margin: 0 auto; padding: 28px 52px 60px; }
+  .books-group { margin-bottom: 34px; }
+  .books-group h2 { font-size: 15px; font-family: var(--mono); color: var(--g700); margin: 0 0 12px; }
+  .book-card {
+    display: flex; align-items: baseline; gap: 12px; padding: 12px 16px;
+    border: 1.5px solid var(--g200); border-radius: 10px; background: var(--paper);
+    margin-bottom: 8px;
+  }
+  .book-title { font-weight: 600; color: var(--slate); }
+  .book-author { color: var(--g600); font-size: 13px; }
+  .book-year { color: var(--g500); font-size: 12px; font-family: var(--mono); margin-left: auto; }
+  .book-rating { color: var(--clay-d); font-size: 12.5px; font-family: var(--mono); }
+  .loading { color: var(--g500); font-family: var(--mono); font-size: 13px; }
+  @media (max-width: 640px) { .content { padding: 20px 18px 40px; } }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <div class="page-eyebrow">@imatrofAI · книжкова полиця</div>
+    <h1>Книги</h1>
+    <p>Що читаю, що прочитав, що в планах — зі статусами й оцінками.</p>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-num" id="stat-total">—</div><div class="stat-label">книг</div></div>
+  </div>
+</header>
+
+<main class="content">
+  <div id="loading" class="loading">Завантаження книг…</div>
+  <div id="groups"></div>
+</main>
+
+<script>
+const GROUPS = [
+  { key: 'reading',   title: 'Читаю зараз' },
+  { key: 'to-read',   title: 'Хочу прочитати' },
+  { key: 'read',      title: 'Прочитані' },
+  { key: 'abandoned', title: 'Покинуті' },
+];
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function bookCard(b) {
+  const author = b.author ? `<span class="book-author">${esc(b.author)}</span>` : '';
+  const year = b.year ? `<span class="book-year">${esc(b.year)}</span>` : '';
+  const rating = (b.rating != null && b.rating !== '') ? `<span class="book-rating">★ ${esc(b.rating)}/10</span>` : '';
+  return `<div class="book-card">
+    <span class="book-title">${esc(b.title)}</span>
+    ${author} ${rating} ${year}
+  </div>`;
+}
+
+fetch('../data/books.json')
+  .then(r => r.json())
+  .then(data => {
+    const books = data.books || [];
+    document.getElementById('stat-total').textContent = (data.total || books.length).toLocaleString('uk');
+    document.getElementById('loading').style.display = 'none';
+    const container = document.getElementById('groups');
+    for (const g of GROUPS) {
+      const items = books.filter(b => b.status === g.key);
+      if (!items.length) continue;
+      const html = items.map(bookCard).join('');
+      const div = document.createElement('div');
+      div.className = 'books-group';
+      div.innerHTML = `<h2>${g.title} · ${items.length}</h2>${html}`;
+      container.appendChild(div);
+    }
+    if (!books.length) container.innerHTML = '<p class="loading">Поки що порожньо.</p>';
+  })
+  .catch(() => {
+    document.getElementById('loading').textContent = 'Помилка завантаження.';
+  });
+</script>
+
+<script src="../nav.js"></script>
+<script>
+document.querySelectorAll('.js-year').forEach(el => el.textContent = new Date().getFullYear());
+</script>
+</body>
+</html>
