@@ -7,6 +7,7 @@
     { href: '/pages/hrid.html',     label: 'Грід',       key: 'hrid.html' },
     { href: '/pages/praktyky.html', label: 'Практики',   key: 'praktyky.html' },
     { href: '/pages/arkhiv.html',   label: 'Архів',      key: 'arkhiv.html' },
+    { href: '/pages/knygy.html',    label: 'Книги',      key: 'knygy.html' },
   ];
 
   const current = window.location.pathname.split('/').pop() || 'index.html';

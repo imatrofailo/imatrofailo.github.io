@@ -19,7 +19,7 @@ imatrofailo.github.io/
   favicon.svg           ← Три бульбашки (clay/blue/olive), viewBox 0 0 64 64 ✅
   apple-touch-icon.png  ← 180×180 iOS icon ✅
   og-image.png          ← 1200×630 Open Graph image ✅
-  sitemap.xml           ← 6 URL, lastmod 2026-06-10 ✅
+  sitemap.xml           ← 7 URL, lastmod 2026-06-10/2026-07-23 ✅
   robots.txt            ← Allow all + Sitemap ref ✅
   DESIGN.md             ← Дизайн-токени і компоненти (читай перед CSS-змінами) ✅
   CLAUDE.md             ← Цей файл
@@ -38,6 +38,7 @@ imatrofailo.github.io/
     hrid.html      ← Grid view ✅
     praktyky.html  ← Practical Tips ✅
     arkhiv.html    ← Archive ✅
+    knygy.html     ← Книги (books) ✅
 ```
 
 ---
