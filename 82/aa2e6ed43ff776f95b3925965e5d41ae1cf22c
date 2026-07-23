@@ -1,0 +1,24 @@
+CLAUDE.md
+  s_b4e5ef506cf35c::t_4031b7818d5f79 22
+  s_b4e5ef506cf35c::t_84470e89d447f5 41
+sitemap.xml
+  s_b4e5ef506cf35c::t_837c959f78686d 39-44
+nav.js
+  s_b4e5ef506cf35c::t_952ab2811187f9 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "82aa2e6ed43ff776f95b3925965e5d41ae1cf22c",
+  "prompts": {},
+  "sessions": {
+    "s_b4e5ef506cf35c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6e583e98-f727-430e-8f16-e187f1fe9ebb",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
