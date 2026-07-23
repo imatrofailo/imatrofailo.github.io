@@ -1,0 +1,22 @@
+pages/knygy.html
+  s_b4e5ef506cf35c::t_d54bab5e1118ac 27,31,36
+  s_b4e5ef506cf35c::t_645d35f7aee8e3 76,78-82
+data/books.json
+  s_b4e5ef506cf35c::t_4b2aade93b3a10 10,12-13,20,22-23,30,32-33,40,42-43,50,52-53,60,62-63,70,72-73,80,82-83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "208addb3d69d6ba748723aecf0b0f7396464515b",
+  "prompts": {},
+  "sessions": {
+    "s_b4e5ef506cf35c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6e583e98-f727-430e-8f16-e187f1fe9ebb",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
