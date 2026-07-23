@@ -1,13 +1,76 @@
 {
-  "generated": "2026-07-22",
-  "total": 1,
+  "generated": "2026-07-23",
+  "total": 8,
   "books": [
+    {
+      "slug": "atomic-habits",
+      "title": "Atomic Habits",
+      "author": "Джеймс Клір",
+      "year": 2018,
+      "status": "to-read",
+      "rating": null,
+      "date_read": null
+    },
+    {
+      "slug": "naybahatsha-lyudyna-u-vavyloni",
+      "title": "Найбагатша людина у Вавилоні",
+      "author": "Джордж С. Клейсон",
+      "year": 1926,
+      "status": "to-read",
+      "rating": null,
+      "date_read": null
+    },
+    {
+      "slug": "neural-networks-from-scratch",
+      "title": "Neural Networks from Scratch in Python",
+      "author": "Harrison Kinsley, Daniel Kukiela",
+      "year": 2020,
+      "status": "to-read",
+      "rating": null,
+      "date_read": null
+    },
     {
       "slug": "printsyp-80-20",
       "title": "Принцип 80/20",
       "author": "Річард Кох",
       "year": 1997,
       "status": "reading",
+      "rating": null,
+      "date_read": null
+    },
+    {
+      "slug": "proekt-feniks",
+      "title": "Проект Фенікс",
+      "author": "Джин Кім, Кевін Бер, Джордж Спаффорд",
+      "year": 2013,
+      "status": "to-read",
+      "rating": null,
+      "date_read": null
+    },
+    {
+      "slug": "superintelligence",
+      "title": "Superintelligence: Paths, Dangers, Strategies",
+      "author": "Нік Бостром",
+      "year": 2014,
+      "status": "to-read",
+      "rating": null,
+      "date_read": null
+    },
+    {
+      "slug": "the-singularity-is-near",
+      "title": "The Singularity Is Near",
+      "author": "Рей Курцвейл",
+      "year": 2005,
+      "status": "to-read",
+      "rating": null,
+      "date_read": null
+    },
+    {
+      "slug": "zero-to-one",
+      "title": "Zero to One",
+      "author": "Пітер Тіль, Блейк Мастерс",
+      "year": 2014,
+      "status": "to-read",
       "rating": null,
       "date_read": null
     }
