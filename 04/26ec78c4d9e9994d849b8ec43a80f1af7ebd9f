@@ -1,0 +1,48 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/agents.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/chatgpt.json
+  h_1e5e5a2de7e036 1
+data/topics/codex.json
+  h_1e5e5a2de7e036 1
+data/topics/coding.json
+  h_1e5e5a2de7e036 1
+data/topics/enterprise.json
+  h_1e5e5a2de7e036 1
+data/topics/hardware.json
+  h_1e5e5a2de7e036 1
+data/topics/health.json
+  h_1e5e5a2de7e036 1
+data/topics/infrastructure.json
+  h_1e5e5a2de7e036 1
+data/topics/labor-market.json
+  h_1e5e5a2de7e036 1
+data/topics/mcp.json
+  h_1e5e5a2de7e036 1
+data/topics/nvidia.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+data/topics/security.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "0426ec78c4d9e9994d849b8ec43a80f1af7ebd9f",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
