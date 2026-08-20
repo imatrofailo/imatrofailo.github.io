@@ -1,0 +1,56 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/agents.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/chatgpt.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-code.json
+  h_1e5e5a2de7e036 1
+data/topics/codex.json
+  h_1e5e5a2de7e036 1
+data/topics/coding.json
+  h_1e5e5a2de7e036 1
+data/topics/hardware.json
+  h_1e5e5a2de7e036 1
+data/topics/hermes.json
+  h_1e5e5a2de7e036 1
+data/topics/infrastructure.json
+  h_1e5e5a2de7e036 1
+data/topics/local-llm.json
+  h_1e5e5a2de7e036 1
+data/topics/nvidia.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+data/topics/openclaw.json
+  h_1e5e5a2de7e036 1
+data/topics/productivity.json
+  h_1e5e5a2de7e036 1
+data/topics/qwen.json
+  h_1e5e5a2de7e036 1
+data/topics/suno.json
+  h_1e5e5a2de7e036 1
+data/topics/vibe-coding.json
+  h_1e5e5a2de7e036 1
+data/topics/video-generation.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "b7b7364201b5ee36ae52847816a497fea40a3225",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
