@@ -1,0 +1,24 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-code.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "8f54d376cda82081a29a2a1636de42d2597a904f",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
