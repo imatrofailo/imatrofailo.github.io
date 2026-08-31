@@ -1,0 +1,56 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/agents.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/apple.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-code.json
+  h_1e5e5a2de7e036 1
+data/topics/codex.json
+  h_1e5e5a2de7e036 1
+data/topics/education.json
+  h_1e5e5a2de7e036 1
+data/topics/enterprise.json
+  h_1e5e5a2de7e036 1
+data/topics/gemini.json
+  h_1e5e5a2de7e036 1
+data/topics/google.json
+  h_1e5e5a2de7e036 1
+data/topics/hardware.json
+  h_1e5e5a2de7e036 1
+data/topics/health.json
+  h_1e5e5a2de7e036 1
+data/topics/infrastructure.json
+  h_1e5e5a2de7e036 1
+data/topics/nova-model.json
+  h_1e5e5a2de7e036 1
+data/topics/nvidia.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+data/topics/productivity.json
+  h_1e5e5a2de7e036 1
+data/topics/robotics.json
+  h_1e5e5a2de7e036 1
+data/topics/security.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "289de1f4ed1d08ca027423f4026970b1157b3513",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
