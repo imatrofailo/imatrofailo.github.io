@@ -1,0 +1,58 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/agents.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/chatgpt.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-chat.json
+  h_1e5e5a2de7e036 1
+data/topics/codex.json
+  h_1e5e5a2de7e036 1
+data/topics/education.json
+  h_1e5e5a2de7e036 1
+data/topics/gemini.json
+  h_1e5e5a2de7e036 1
+data/topics/google.json
+  h_1e5e5a2de7e036 1
+data/topics/hermes.json
+  h_1e5e5a2de7e036 1
+data/topics/image-generation.json
+  h_1e5e5a2de7e036 1
+data/topics/local-llm.json
+  h_1e5e5a2de7e036 1
+data/topics/meta.json
+  h_1e5e5a2de7e036 1
+data/topics/microsoft.json
+  h_1e5e5a2de7e036 1
+data/topics/music-generation.json
+  h_1e5e5a2de7e036 1
+data/topics/nous-research.json
+  h_1e5e5a2de7e036 1
+data/topics/nvidia.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+data/topics/reasoning.json
+  h_1e5e5a2de7e036 1
+data/topics/security.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9569b0254d93a9290f315713e95233f1623ce0e0",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
