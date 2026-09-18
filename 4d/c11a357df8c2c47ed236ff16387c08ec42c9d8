@@ -1,0 +1,34 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-code.json
+  h_1e5e5a2de7e036 1
+data/topics/cursor.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+data/topics/security.json
+  h_1e5e5a2de7e036 1
+data/topics/ukraine.json
+  h_1e5e5a2de7e036 1
+data/topics/vibe-coding.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4dc11a357df8c2c47ed236ff16387c08ec42c9d8",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
