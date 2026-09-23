@@ -1,0 +1,28 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/codex.json
+  h_1e5e5a2de7e036 1
+data/topics/computer-vision.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ac42691a398a1bef8ac1da54f35413663f0a6921",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
