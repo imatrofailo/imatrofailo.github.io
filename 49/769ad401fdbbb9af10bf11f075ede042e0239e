@@ -1,0 +1,36 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/chatgpt.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-code.json
+  h_1e5e5a2de7e036 1
+data/topics/coding.json
+  h_1e5e5a2de7e036 1
+data/topics/hardware.json
+  h_1e5e5a2de7e036 1
+data/topics/meta.json
+  h_1e5e5a2de7e036 1
+data/topics/mobile.json
+  h_1e5e5a2de7e036 1
+data/topics/productivity.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "49769ad401fdbbb9af10bf11f075ede042e0239e",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
