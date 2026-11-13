@@ -2,88 +2,13 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Сторінку не знайдено — imatrofailo.github.io">
-<meta name="robots" content="noindex">
-<title>404 — Сторінка не знайдена</title>
-<link rel="stylesheet" href="/style.css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<style>
-  /* 404 uses full-height flex layout — override body and key containers */
-  body { display: flex; flex-direction: column; } /* override: adds flex layout for sticky footer */
-  .page-header { width: 100%; grid-template-columns: 1fr; } /* override: no stats column, full-width */
-  .page-header p { max-width: none; } /* override: no max-width constraint */
-  footer { width: 100%; } /* override: explicit width for flex child */
-
-  .content {
-    max-width: 1100px; margin: 0 auto; width: 100%;
-    padding: 64px 52px 72px; flex: 1;
-    display: flex; flex-direction: column; align-items: flex-start; gap: 24px;
-  }
-
-  .error-code {
-    font-family: var(--serif); font-size: clamp(72px, 12vw, 144px);
-    font-weight: 500; line-height: 1; color: var(--clay); opacity: 0.22;
-    letter-spacing: -0.04em; margin-bottom: -8px;
-  }
-
-  .error-title {
-    font-family: var(--serif); font-size: clamp(26px, 4vw, 40px);
-    font-weight: 500; color: var(--slate);
-  }
-
-  .error-desc { font-size: 15px; color: var(--g500); max-width: 420px; }
-
-  .error-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
-
-  .btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 10px 22px; border-radius: 999px; border: 1.5px solid var(--g300);
-    font-size: 14px; text-decoration: none; color: var(--slate);
-    background: var(--paper); transition: all 0.15s; font-weight: 500;
-  }
-  .btn:hover { border-color: var(--clay); color: var(--clay); background: var(--clay-l); }
-  .btn-primary {
-    background: var(--clay); border-color: var(--clay); color: #fff;
-  }
-  .btn-primary:hover { background: var(--clay-d); border-color: var(--clay-d); color: #fff; }
-
-  @media (max-width: 768px) {
-    .content { padding-top: 40px; }
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ігор Матрофайло — imatrof.com</title>
+<link rel="canonical" href="https://imatrof.com/">
+<meta http-equiv="refresh" content="0; url=https://imatrof.com/">
+<script>window.location.replace("https://imatrof.com/");</script>
 </head>
 <body>
-
-<header class="page-header">
-  <div class="page-eyebrow">Помилка</div>
-  <h1>Ігор Матрофайло</h1>
-  <p>AI-дослідник · 3200+ постів і відео про штучний інтелект</p>
-</header>
-
-<main class="content">
-  <div class="error-code">404</div>
-  <div class="error-title">Такої сторінки немає</div>
-  <p class="error-desc">
-    Можливо, посилання застаріле або адресу введено з помилкою.
-  </p>
-  <div class="error-actions">
-    <a href="/" class="btn btn-primary">На головну</a>
-    <a href="/pages/arkhiv.html" class="btn">Архів постів</a>
-  </div>
-</main>
-
-<footer>
-  <span>Ігор Матрофайло · <a href="https://t.me/imatrofAI" target="_blank">@imatrofAI</a></span>
-  <span id="footer-year">2025–2026</span>
-</footer>
-
-<script src="/nav.js" defer></script>
-<script>
-  const y = new Date().getFullYear();
-  const el = document.getElementById('footer-year');
-  if (el && y > 2026) el.textContent = '2025–' + y;
-</script>
+<p>Сайт переїхав на <a href="https://imatrof.com/">imatrof.com</a>.</p>
 </body>
 </html>
