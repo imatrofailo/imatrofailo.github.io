@@ -1,0 +1,64 @@
+data/books.json
+  h_1e5e5a2de7e036 2
+data/posts.json
+  h_1e5e5a2de7e036 1
+data/topics-meta.json
+  h_1e5e5a2de7e036 1
+data/topics.json
+  h_1e5e5a2de7e036 1
+data/topics/agents.json
+  h_1e5e5a2de7e036 1
+data/topics/ai-policy.json
+  h_1e5e5a2de7e036 1
+data/topics/anthropic.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-chat.json
+  h_1e5e5a2de7e036 1
+data/topics/claude-code.json
+  h_1e5e5a2de7e036 1
+data/topics/coding.json
+  h_1e5e5a2de7e036 1
+data/topics/education.json
+  h_1e5e5a2de7e036 1
+data/topics/enterprise.json
+  h_1e5e5a2de7e036 1
+data/topics/gemini.json
+  h_1e5e5a2de7e036 1
+data/topics/google-deepmind.json
+  h_1e5e5a2de7e036 1
+data/topics/google.json
+  h_1e5e5a2de7e036 1
+data/topics/hardware.json
+  h_1e5e5a2de7e036 1
+data/topics/health.json
+  h_1e5e5a2de7e036 1
+data/topics/microsoft.json
+  h_1e5e5a2de7e036 1
+data/topics/mobile.json
+  h_1e5e5a2de7e036 1
+data/topics/multimodal.json
+  h_1e5e5a2de7e036 1
+data/topics/neuroscience.json
+  h_1e5e5a2de7e036 1
+data/topics/notebooklm.json
+  h_1e5e5a2de7e036 1
+data/topics/nvidia.json
+  h_1e5e5a2de7e036 1
+data/topics/openai.json
+  h_1e5e5a2de7e036 1
+data/topics/productivity.json
+  h_1e5e5a2de7e036 1
+data/topics/reasoning.json
+  h_1e5e5a2de7e036 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "87ba7781442479f600ec07c95c8ec6391e820560",
+  "prompts": {},
+  "humans": {
+    "h_1e5e5a2de7e036": {
+      "author": "Igor Matrofailo <imatrofaylo@gmail.com>"
+    }
+  }
+}
